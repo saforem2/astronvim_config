@@ -121,32 +121,21 @@ return {
       })
     end,
   },
-    {
+  {
     'lervag/vimtex',
   },
   {
     'norcalli/nvim-colorizer.lua',
-    config = function()
-      require('colorizer').setup({ "*" }, {
-        RGB = true, -- #RGB hex codes
-        RRGGBB = true, -- #RRGGBB hex codes
-        RRGGBBAA = true, -- #RRGGBBAA hex codes
-        rgb_fn = true, -- CSS rgb() and rgba() functions
-        hsl_fn = true, -- CSS hsl() and hsla() functions
-        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-      })
-    end,
   },
   {
     "rmagatti/goto-preview",
     config = function()
       require('goto-preview').setup({
-        width = 120;
-        height = 25;
-        default_mappings = false;
-        debug = false;
-        opacity = nil;
+        width = 120,
+        height = 25,
+        default_mappings = false,
+        debug = false,
+        opacity = nil,
         post_open_hook = nil,
       })
     end,
@@ -215,32 +204,32 @@ return {
       require('zen-mode').setup({
         window = {
           backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
-                -- height and width can be:
-                -- * an absolute number of cells when > 1
-                -- * a percentage of the width / height of the editor when <= 1
-                -- * a function that returns the width or the height
-                -- by default, no options are changed for the Zen window
-                -- uncomment any of the options below, or add other vim.wo options you want to apply
+          -- height and width can be:
+          -- * an absolute number of cells when > 1
+          -- * a percentage of the width / height of the editor when <= 1
+          -- * a function that returns the width or the height
+          -- by default, no options are changed for the Zen window
+          -- uncomment any of the options below, or add other vim.wo options you want to apply
           width = 120, -- width of the Zen window
-          height = 1, -- height of the Zen window
+          height = 1,  -- height of the Zen window
           options = {
             -- signcolumn = "no", -- disable signcolumn
-            number = false, -- disable number column
+            number = false,         -- disable number column
             relativenumber = false, -- disable relative numbers
-            cursorline = false, -- disable cursorline
-            cursorcolumn = false, -- disable cursor column
-            foldcolumn = "0", -- disable fold column
-            list = false, -- disable whitespace characters
+            cursorline = false,     -- disable cursorline
+            cursorcolumn = false,   -- disable cursor column
+            foldcolumn = "0",       -- disable fold column
+            list = false,           -- disable whitespace characters
           },
         },
         plugins = {
           options = {
             enabled = true,
-            ruler = false, -- disables the ruler text in the cmd line area
-            showcmd = false, -- disables the command in the last line of the screen,
-            twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+            ruler = false,                  -- disables the ruler text in the cmd line area
+            showcmd = false,                -- disables the command in the last line of the screen,
+            twilight = { enabled = true },  -- enable to start Twilight when zen mode opens
             gitsigns = { enabled = false }, -- disables git signs
-            tmux = { enabled = false }, -- disables the tmux statusline this will change the font size on kitty when in zen mode
+            tmux = { enabled = false },     -- disables the tmux statusline this will change the font size on kitty when in zen mode
             kitty = {
               enabled = true,
               font = "+4", -- font size increment
@@ -259,18 +248,18 @@ return {
         -- Defaults configuration options
         enable = true,
         options = {
-                    -- If lualine is installed tabline will use separators configured in lualine by default.
-                    -- These options can be used to override those settings.
-                    -- section_separators = { '', '' },
-                    -- component_separators = { '', '' },
+          -- If lualine is installed tabline will use separators configured in lualine by default.
+          -- These options can be used to override those settings.
+          -- section_separators = { '', '' },
+          -- component_separators = { '', '' },
           max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
-          show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
-          show_devicons = true, -- this shows devicons in buffer section
-          show_bufnr = false, -- this appends [bufnr] to buffer section,
-          show_filename_only = true, -- shows base filename only instead of relative path in filename
-                    -- modified_icon = "+ ", -- change the default modified icon
-          modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-          show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
+          show_tabs_always = false,    -- this shows tabs only when there are more than one tab or if the first tab is named
+          show_devicons = true,        -- this shows devicons in buffer section
+          show_bufnr = false,          -- this appends [bufnr] to buffer section,
+          show_filename_only = true,   -- shows base filename only instead of relative path in filename
+          -- modified_icon = "+ ", -- change the default modified icon
+          modified_italic = false,     -- set to true by default; this determines whether the filename turns italic if modified
+          show_tabs_only = false,      -- this shows only tabs instead of tabs + buffers
         },
       })
     end
@@ -280,10 +269,10 @@ return {
     "romgrk/nvim-treesitter-context",
     config = function()
       require('treesitter-context').setup({
-        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
-        patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+        max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
+        patterns = {     -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
           -- Note that setting an entry here replaces all other patterns for this entry.
           -- By setting the 'default' entry below, you can control which nodes you want to
@@ -310,10 +299,10 @@ return {
   {
     "johnfrankmorgan/whitespace.nvim",
     config = function()
-    require('whitespace-nvim').setup({
-          -- configuration options and their defaults `highlight` configures
-          -- which highlight is used to display
-          -- trailing whitespace
+      require('whitespace-nvim').setup({
+        -- configuration options and their defaults `highlight` configures
+        -- which highlight is used to display
+        -- trailing whitespace
         highlight = 'DiffDelete',
         -- `ignored_filetypes` configures which filetypes to ignore when
         -- displaying trailing whitespace
@@ -344,9 +333,9 @@ return {
   { "nvim-telescope/telescope-file-browser.nvim" },
   {
     "folke/todo-comments.nvim",
-        -- config = function()
-        -- require("user.todo-comments").config()
-        -- end,
+    -- config = function()
+    -- require("user.todo-comments").config()
+    -- end,
   },
   {
     "mfussenegger/nvim-dap-python",
@@ -410,13 +399,16 @@ return {
   {
     'quarto-dev/quarto-nvim',
     requires = {
-      'neovim/nvim-lspconfig' ,
+      'neovim/nvim-lspconfig',
       'jmbuhr/otter.nvim'
     },
   },
   { 'Bekaboo/deadcolumn.nvim' },
   {
     "projekt0n/circles.nvim",
-    requires = {"nvim-tree/nvim-web-devicons"}
+    requires = { "nvim-tree/nvim-web-devicons" }
   },
+  {
+    "rktjmp/lush.nvim"
+  }
 }
