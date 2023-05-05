@@ -3,11 +3,22 @@
 -- Please use this mappings table to set keyboard mapping since this is the
 -- lower level configuration and more robust one. (which-key will
 -- automatically pick-up stored data by this setting.)
+-- vim.api.nvim_set_keymap('n', '0', '^', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-J>', 'J', { silent = true })
+-- vim.api.nvim_set_keymap('n', 'X', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })                                                                                                                   
+-- vim.api.nvim_set_keymap('n', '<C-S>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })                                                                                                               
+-- vim.api.nvim_set_keymap('n', '<C-k>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })                                                                                                               
 return {
   -- first key is the mode
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
+    ["0"] = { "^", desc = "Beginning of line"},
+    ["<C-J>"] = { "J", desc="Join line" },
+    ["X"] = {
+      [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]],
+      desc="Split line"
+    },
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bD"] = {
       function()

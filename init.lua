@@ -34,7 +34,7 @@ return {
   --   end
   -- })
   -- Set colorscheme to use
-  colorscheme = "oxocarbon",
+  colorscheme = "sam_molokai",
 
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -48,12 +48,12 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true,     -- enable or disable format on save globally
+        enabled = false,    -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
+          "python",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -81,6 +81,7 @@ return {
       },
     },
   },
+
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
