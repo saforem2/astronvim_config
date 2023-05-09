@@ -278,9 +278,9 @@ return {
           -- By setting the 'default' entry below, you can control which nodes you want to
           -- appear in the context window.
           -- default = {
-          --   'class',
-          --   'function',
-          --   'method',
+            'class',
+            'function',
+            'method',
           -- },
         },
       })
@@ -296,43 +296,47 @@ return {
     cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
     run = "npm install --prefix server",
   },
-  {
-    "johnfrankmorgan/whitespace.nvim",
-    config = function()
-      require('whitespace-nvim').setup({
-        -- configuration options and their defaults `highlight` configures
-        -- which highlight is used to display
-        -- trailing whitespace
-        highlight = 'DiffDelete',
-        -- `ignored_filetypes` configures which filetypes to ignore when
-        -- displaying trailing whitespace
-        ignored_filetypes = { 'TelescopePrompt' },
-        -- remove trailing whitespace with a keybinding
-        vim.api.nvim_set_keymap(
-          'n',
-          '<Leader>t', "[[<cmd>lua require('whitespace-nvim').trim()<CR>]]",
-          { noremap = true }
-        )
-      })
-    end,
-  },
+  -- {
+  --   "johnfrankmorgan/whitespace.nvim",
+  --   config = function()
+  --     require('whitespace-nvim').setup({
+  --       -- configuration options and their defaults `highlight` configures
+  --       -- which highlight is used to display
+  --       -- trailing whitespace
+  --       highlight = 'DiffDelete',
+  --       -- `ignored_filetypes` configures which filetypes to ignore when
+  --       -- displaying trailing whitespace
+  --       ignored_filetypes = { 'TelescopePrompt' },
+  --       -- remove trailing whitespace with a keybinding
+  --       vim.api.nvim_set_keymap(
+  --         'n',
+  --         '<Leader>t', "[[<cmd>lua require('whitespace-nvim').trim()<CR>]]",
+  --         { noremap = true }
+  --       )
+  --     })
+  --   end,
+  -- },
   { 'godlygeek/tabular' },
   { 'preservim/vim-markdown', },
-  { 'Iron-E/nvim-highlite' },
+  -- { 'Iron-E/nvim-highlite' },
   { 'brenoprata10/nvim-highlight-colors' },
-  {
-    'rrethy/vim-hexokinase',
-    run = 'make hexokinase',
-    config = function()
-      vim.g["Hexokinase_highlighters"] = {
-        'virtual',
-        'sign_column',
-      }
-    end,
-  },
+  -- {
+  --   'rrethy/vim-hexokinase',
+  --   run = 'make hexokinase',
+  --   config = function()
+  --     vim.g["Hexokinase_highlighters"] = {
+  --       'virtual',
+  --       'sign_column',
+  --     }
+  --   end,
+  -- },
   { "nvim-telescope/telescope-file-browser.nvim" },
   {
     "folke/todo-comments.nvim",
+    lazy = false,
+    -- config = function()
+    --   require('todo-comments.nvim').setup({})
+    -- end
     -- config = function()
     -- require("user.todo-comments").config()
     -- end,
@@ -394,8 +398,18 @@ return {
   { 'cpea2506/one_monokai.nvim' },
   { 'jghauser/mkdir.nvim' },
   { 'navarasu/onedark.nvim', },
-  { 'hkupty/iron.nvim' },
+  { 'hkupty/iron.nvim' }, -- { 
+  --   'hkupty/iron.nvim',
+  --   config = function()
+  --     require('user.plugins.iron')
+  --   end
+  -- },
   { 'bfredl/nvim-ipy' },
+  { 
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make',
+    lazy = false 
+  },
   {
     'quarto-dev/quarto-nvim',
     requires = {
@@ -403,6 +417,7 @@ return {
       'jmbuhr/otter.nvim'
     },
   },
+  { 'jmbuhr/otter.nvim' },
   { 'Bekaboo/deadcolumn.nvim' },
   {
     "projekt0n/circles.nvim",
@@ -475,4 +490,7 @@ return {
   {
     "HiPhish/nvim-ts-rainbow2"
   },
+  {
+    'vim-pandoc/vim-pandoc-syntax',
+  }
 }
