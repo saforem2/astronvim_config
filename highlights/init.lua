@@ -14,9 +14,22 @@ return {
   -- Normal = { guibg="#1c1c1c" },
   -- string = { fg='#f1e05a' },
   -- string = { fg='#fddc69' },
+  DiagnosticWarn = { fg = "#FFB53D" },
+  Pmenu  = {fg="#d0d0d0", bg="#262626"},
+  PmenuSel = { fg="#3ddbd9", bg="#393939"},
+  -- PmenuKind      links to Pmenu
+  -- PmenuKindSel   links to PmenuSel
+  -- PmenuExtra     links to Pmenu
+  -- PmenuExtraSel  links to PmenuSel
+  PmenuSbar = {fg="#d0d0d0", bg="#262626"},
+  PmenuThumb = {fg="#3ddbd9", bg="#393939"},
+  -- ['@method.call'] = { fg = "#36ce5e" },
+  -- ['@string.documentation'] = { fg = "#697077" },
+  -- ['@parameter'] = { fg = "#FFB53D" },
   ['@method.call'] = { fg = "#36ce5e" },
   ['@string.documentation'] = { fg = "#697077" },
   ['@parameter'] = { fg = "#FFB53D" },
+  ['@text.literal'] = { fg = "#AE81FF" },
   -- ['@constant'] = { fg = "#a9ff68" },
   -- ['@variable.builtin'] = { fg = "#d4bbff" },
   -- ['@variable.builtin'] = { fg = "#a2a9b0" },
