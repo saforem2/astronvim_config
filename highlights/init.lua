@@ -14,27 +14,30 @@ return {
   -- Normal = { guibg="#1c1c1c" },
   -- string = { fg='#f1e05a' },
   -- string = { fg='#fddc69' },
+  ['@parameter'] = { fg = "#FFB53D" },
+  ['@type.builtin'] = { fg="#26C99E" },
+  ['@method.call'] = { fg = "#36ce5e" },
+  ['@text.literal'] = { fg = "#AE81FF" },
+  ['@string.documentation'] = { fg = "#697077" },
+  --  ------------------------------------------------
+  Keyword =  { fg="#FF79FF" },
   DiagnosticWarn = { fg = "#FFB53D" },
   Pmenu  = {fg="#d0d0d0", bg="#262626"},
-  PmenuSel = { fg="#3ddbd9", bg="#393939"},
-  -- PmenuKind      links to Pmenu
-  -- PmenuKindSel   links to PmenuSel
-  -- PmenuExtra     links to Pmenu
-  -- PmenuExtraSel  links to PmenuSel
   PmenuSbar = {fg="#d0d0d0", bg="#262626"},
+  PmenuSel = { fg="#3ddbd9", bg="#393939"},
   PmenuThumb = {fg="#3ddbd9", bg="#393939"},
-  -- ['@method.call'] = { fg = "#36ce5e" },
-  -- ['@string.documentation'] = { fg = "#697077" },
-  -- ['@parameter'] = { fg = "#FFB53D" },
-  ['@method.call'] = { fg = "#36ce5e" },
-  ['@string.documentation'] = { fg = "#697077" },
-  ['@parameter'] = { fg = "#FFB53D" },
-  ['@text.literal'] = { fg = "#AE81FF" },
+  IlluminatedWordText = { bg="#333333", fg="#ff5252" },
+  IlluminatedWordRead = { bg="#333333", fg="#ffffff" },
+  IlluminatedWordWrite = { bg="#252525", fg="#bdbdbd" },
+  --  ------------------------------------------------
   -- ['@constant'] = { fg = "#a9ff68" },
+  -- ['@parameter'] = { fg = "#FFB53D" },
+  -- ['@method.call'] = { fg = "#36ce5e" },
   -- ['@variable.builtin'] = { fg = "#d4bbff" },
   -- ['@variable.builtin'] = { fg = "#a2a9b0" },
   -- ['@keyword.function'] = { fg = "#ee5396" },
   -- ['@punctuation.bracket'] = { fg = '#8cff48' },
+  -- ['@string.documentation'] = { fg = "#697077" },
 }
 
 -- Preview
