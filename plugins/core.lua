@@ -20,8 +20,8 @@ return {
       return opts
     end,
   },
-  { "NvChad/nvim-colorizer.lua", enabled = false },
-
+  -- { "NvChad/nvim-colorizer.lua", enabled = false },
+  -- { 'norcalli/nvim-colorizer.lua' },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --

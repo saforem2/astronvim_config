@@ -170,7 +170,7 @@ return {
   },
   {
     "npxbr/glow.nvim",
-    ft = { "markdown" }
+    ft = { "markdown", "quarto" }
   },
   {
     'glacambre/firenvim',
@@ -331,16 +331,28 @@ return {
   --   end,
   -- },
   { "nvim-telescope/telescope-file-browser.nvim" },
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   lazy = false,
+  --   -- config = function()
+  --   --   require('todo-comments.nvim').setup({})
+  --   -- end
+  --   -- config = function()
+  --   -- require("user.todo-comments").config()
+  --   -- end,
+  -- },
   {
     "folke/todo-comments.nvim",
-    lazy = false,
-    -- config = function()
-    --   require('todo-comments.nvim').setup({})
-    -- end
-    -- config = function()
-    -- require("user.todo-comments").config()
-    -- end,
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup({
+        -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+      })
+    end,
   },
+  { 'rrethy/vim-illuminate' },
   {
     "mfussenegger/nvim-dap-python",
     config = function()
@@ -492,5 +504,11 @@ return {
   },
   {
     'vim-pandoc/vim-pandoc-syntax',
-  }
+  },
+  -- {
+  --   "Cassin01/wf.nvim",
+  --   config = function()
+  --   require('wf').setup()
+  --   end
+  -- }
 }
