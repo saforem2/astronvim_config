@@ -36,16 +36,6 @@ return {
   -- Set colorscheme to use
   colorscheme = "sam_molokai",
 
-  vim.api.nvim_create_autocmd({ "BufEnter" }, {
-    pattern = { "*.md" },
-    callback = function()
-      local otter = require('otter')
-      otter.activate({ 'r', 'python', 'lua' }, true)
-      vim.api.nvim_buf_set_keymap(0, 'n', 'gd', ":lua require'otter'.ask_definition()<cr>", { silent = true })
-      vim.api.nvim_buf_set_keymap(0, 'n', 'K', ":lua require'otter'.ask_hover()<cr>", { silent = true })
-    end,
-  }),
-
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
@@ -91,6 +81,15 @@ return {
     },
   },
 
+  vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = { "*.md" },
+    callback = function()
+      local otter = require('otter')
+      otter.activate({ 'r', 'python', 'lua' }, true)
+      vim.api.nvim_buf_set_keymap(0, 'n', 'gd', ":lua require'otter'.ask_definition()<cr>", { silent = true })
+      vim.api.nvim_buf_set_keymap(0, 'n', 'K', ":lua require'otter'.ask_hover()<cr>", { silent = true })
+    end,
+  }),
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so

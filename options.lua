@@ -15,7 +15,7 @@ return {
     showbreak = "↪ ",
     showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1,
     -- spellfile = vim.fn.expand "~/.config/nvim/lua/user/spell/en.utf-8.add",
-    -- swapfile = false,
+    swapfile = false,
     -- thesaurus = vim.fn.expand "~/.config/nvim/lua/user/spell/mthesaur.txt",
     wrap = true, -- soft wrap lines
     relativenumber = true, -- sets vim.opt.relativenumber
@@ -28,10 +28,11 @@ return {
     autoformat_enabled = false,      -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
     cmp_enabled = true,              -- enable completion at start
     autopairs_enabled = true,        -- enable autopairs at start
-    diagnostics_mode = 2,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
+    diagnostics_mode = 1,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     slime_target = "kitty",
     ui_notifications_enabled = false, -- disable notifications when toggling UI elements
+    tex_conceal = 'gm',
     -- vim.g['pandoc#syntax#conceal#use'] = false
     -- disable conceal in markdown/quarto
     -- vim.g['pandoc#syntax#conceal#use'] = false
