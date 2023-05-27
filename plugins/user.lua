@@ -505,6 +505,12 @@ return {
   {
     'vim-pandoc/vim-pandoc-syntax',
   },
+  {
+    'norcalli/nvim-terminal.lua',
+    config = function()
+      require('terminal').setup()
+    end
+  },
   -- {
   --   "Cassin01/wf.nvim",
   --   config = function()
