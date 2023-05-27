@@ -22,6 +22,7 @@ return {
   --  ------------------------------------------------
   Keyword =  { fg="#FF79FF" },
   DiagnosticWarn = { fg = "#FFB53D" },
+  TerminalCSIColorCode = { fg = "#00CCFF" },
   Pmenu  = {fg="#d0d0d0", bg="#262626"},
   PmenuSbar = {fg="#d0d0d0", bg="#262626"},
   PmenuSel = { fg="#3ddbd9", bg="#393939"},
@@ -29,6 +30,22 @@ return {
   IlluminatedWordText = { bg="#333333", fg="#ff5252" },
   IlluminatedWordRead = { bg="#333333", fg="#ffffff" },
   IlluminatedWordWrite = { bg="#252525", fg="#bdbdbd" },
+  termcolorcode_cfg_246_gfg_949494 = { fg="#838383" },
+  termcolorcode_cfg_208_gfg_FF8700 = { fg="#ff8700" },
+  termcolorcode_cfg_37_gfg_00AFAF = { fg="#46D9FF" },
+  termcolorcode_cfg_39_gfg_00AFFF = { fg="#00afff" },
+  termcolorcode_cfg_5_gfg_AA00AA = { fg="#ff79ff" },
+  termcolorcode_cfg_2_gfg_00AA00 = { fg="#00aa00" },
+  termcolorcode_c_bold_cfg_5_g_bold_gfg_AA00AA = { fg="#d4bbff" },
+  termcolorcode_cfg_3_gfg_AA5500 = { fg="#FFFF00" },
+  termcolorcode_cfg_10_gfg_55FF55 = { fg="#55ff55" },
+  termcolorcode_cfg_13_gfg_FF55FF = { fg="#ff55ff" },
+  -- termcolorcode_c_bold_g_bold {},
+-- WhichKeyDesc   cterm= gui= links to Identifier
+-- WhichKeyGroup  cterm= gui= links to Keyword
+-- WhichKeyBorder cterm= gui= links to FloatBorder
+-- WhichKeyFloat  cterm= gui= links to NormalFloat
+-- WhichKeyValue  cterm= gui= links to Comment
   --  ------------------------------------------------
   -- ['@constant'] = { fg = "#a9ff68" },
   -- ['@parameter'] = { fg = "#FFB53D" },
