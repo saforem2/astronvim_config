@@ -18,7 +18,7 @@ return {
   ['@type.builtin'] = { fg="#26C99E" },
   ['@method.call'] = { fg = "#36ce5e" },
   ['@text.literal'] = { fg = "#AE81FF" },
-  ['@string.documentation'] = { fg = "#697077" },
+  ['@string.documentation'] = { fg = "#697077", italic=true },
   --  ------------------------------------------------
   Keyword =  { fg="#FF79FF" },
   DiagnosticWarn = { fg = "#FFB53D" },
@@ -40,6 +40,12 @@ return {
   termcolorcode_cfg_3_gfg_AA5500 = { fg="#FFFF00" },
   termcolorcode_cfg_10_gfg_55FF55 = { fg="#55ff55" },
   termcolorcode_cfg_13_gfg_FF55FF = { fg="#ff55ff" },
+  CurSearch = { reverse=true },
+  Search = { bg="#00CCFF", fg="#1c1c1c", bold=true },
+  IncSearch = { bg="#FF00FF", fg="#1c1c1c", reverse=true, underline=true, bold=true },
+  -- hi Search guibg=#00CCFF guifg=#1c1c1c gui=bold
+  -- hi IncSearch cterm=reverse guifg=#1c1c1c guibg=#FF00FF gui=reverse,underline,bold
+  -- hi CurSearch gui=reverse
   -- termcolorcode_c_bold_g_bold {},
 -- WhichKeyDesc   cterm= gui= links to Identifier
 -- WhichKeyGroup  cterm= gui= links to Keyword
