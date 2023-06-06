@@ -511,6 +511,9 @@ return {
       require('terminal').setup()
     end
   },
+  {
+    'Exafunction/codeium.vim'
+  },
   -- {
   --   "Cassin01/wf.nvim",
   --   config = function()
