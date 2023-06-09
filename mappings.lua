@@ -13,7 +13,7 @@ return {
   n = {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
-    ["<leader>qp"] = { "<cmd>QuartoPreview<cr>", desc = "Quarto Preview" },
+    ["<leader>\\"] = { "<cmd>QuartoPreview<cr>", desc = "Quarto Preview" },
     ["<leader>d"] = { [["_d]], desc = "Beginning of line"},
     ["0"] = { "^", desc = "Beginning of line"},
     ["<C-J>"] = { "J", desc="Join line" },
