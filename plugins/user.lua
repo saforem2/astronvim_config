@@ -125,8 +125,35 @@ return {
     'lervag/vimtex',
   },
   -- {
-  --   'norcalli/nvim-colorizer.lua',
+  --   'NvChad/nvim-colorizer.lua',
+  --   config = require('colorizer').setup({
+  --     user_default_options = {
+  --       RGB      = true;         -- #RGB hex codes
+  --       RRGGBB   = true;         -- #RRGGBB hex codes
+  --       names    = true;         -- "Name" codes like Blue
+  --       RRGGBBAA = true;        -- #RRGGBBAA hex codes
+  --       rgb_fn   = true;        -- CSS rgb() and rgba() functions
+  --       hsl_fn   = true;        -- CSS hsl() and hsla() functions
+  --       css      = true;        -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+  --       css_fn   = true;        -- Enable all CSS *functions*: rgb_fn, hsl_fn
+  --       -- Available modes: foreground, background
+  --       mode     = 'virtualtext'; -- Set the display mode.
+  --       tailwind = true,
+  --       sass = { enable = true, parsers = {"css"} },
+  --       virtualtext = "■",
+  --     },
+  --   })
   -- },
+  {
+    'brenoprata10/nvim-highlight-colors',
+    config = function()
+      require('nvim-highlight-colors').setup({
+        render = 'first_column',
+        enable_named_colors = true,
+        enable_tailwind = true,
+      })
+    end,
+  },
   {
     "rmagatti/goto-preview",
     config = function()
