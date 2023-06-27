@@ -1,7 +1,10 @@
 return function()
   vim.diagnostic.config({ virtual_text = false })
+  -- vim.opt.runtimepath:append("~/.local/share/nvim/runtime")
+  vim.opt.runtimepath:prepend("~/.local/share/nvim/runtime/colors,")
+  -- vim.cmd('set rtp+=~/.local/share/nvim/runtime/colors')
   local signs = {
-    Error = " ",
+    Error = " ",
     Warn = " ",
     Hint = " ",
     Info = " "
