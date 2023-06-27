@@ -34,6 +34,11 @@ return {
   --   end
   -- })
   -- Set colorscheme to use
+  -- colorscheme = "sam_molokai",
+  -- vim.api.nvim_set_option_value('set rtp+=~/.local/share/nvim/runtime/colors'),
+  -- vim.api.nvim_set_option_value('rtp+=~/.local/share/nvim/runtime'),
+  -- vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
+  -- vim.cmd('set rtp+=~/.local/share/nvim/runtime/colors'),
   colorscheme = "sam_molokai",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
@@ -81,6 +86,8 @@ return {
     },
   },
 
+
+
   vim.api.nvim_create_autocmd({ "BufEnter" }, {
     pattern = { "*.md" },
     callback = function()
@@ -95,6 +102,10 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    -- vim.opt.runtimepath:append(',~/.local/share/nvim/runtime')
+    vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime')
+    vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
