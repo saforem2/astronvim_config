@@ -19,7 +19,7 @@ return {
   ['@method.call'] = { fg = "#36ce5e" },
   ['@text.literal'] = { fg = "#AE81FF" },
   ['@string.documentation'] = { fg = "#697077", italic=true },
-  --  ------------------------------------------------
+  NotifyBackground = { bg="#222222" },
   Keyword =  { fg="#FF79FF" },
   DiagnosticWarn = { fg = "#FFB53D" },
   TerminalCSIColorCode = { fg = "#00CCFF" },
@@ -43,6 +43,69 @@ return {
   CurSearch = { reverse=true },
   Search = { bg="#00CCFF", fg="#1c1c1c", bold=true },
   IncSearch = { bg="#FF00FF", fg="#1c1c1c", reverse=true, underline=true, bold=true },
+  NeoTreeGitUnstaged = { fg="#939393", italic=false, bold=false },
+  NeoTreeGitUntracked = { fg="#666666", italic=false, bold=false },
+  NeoTreeGitConflict = { fg="#FFFF00", italic=false, bold=true },
+  NeoTreeModified = { fg="#AE81FF", italic=false },
+  BufferLineBufferSelected = { fg="#9e9e9e", bg="#282828", italic=false, bold=true },
+  --   BufferLineDiagnostic xxx guifg=#303030 guibg=#1d1d1d
+  -- BufferLineDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#bfbfbf guibg=#1c1c1c
+  -- BufferLineDiagnosticVisible xxx guifg=#303030 guibg=#191919
+  -- BufferLineErrorDiagnostic xxx guifg=#303030 guibg=#1d1d1d guisp=#bf0000
+  -- BufferLineErrorDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#bf0000 guibg=#1c1c1c guisp=#bf0000
+  -- BufferLineErrorDiagnosticVisible xxx guifg=#303030 guibg=#191919
+  -- BufferLineHintDiagnostic xxx guifg=#303030 guibg=#1d1d1d guisp=#bfbf00
+  -- BufferLineHintDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#bfbf00 guibg=#1c1c1c guisp=#bfbf00
+  -- BufferLineHintDiagnosticVisible xxx guifg=#303030 guibg=#191919
+  -- BufferLineInfoDiagnostic xxx guifg=#303030 guibg=#1d1d1d guisp=#81a2ac
+  -- BufferLineInfoDiagnosticVisible xxx guifg=#303030 guibg=#191919
+  -- BufferLineModified xxx guifg=#ffff00 guibg=#1d1d1d
+  -- BufferLineModifiedSelected xxx guifg=#ffff00 guibg=#1c1c1c
+  -- BufferLineModifiedVisible xxx guifg=#ffff00 guibg=#191919
+  -- BufferLineNumbers xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineNumbersSelected xxx cterm=bold,italic gui=bold,italic guifg=#ffffff guibg=#1c1c1c
+  -- BufferLineNumbersVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineWarningDiagnostic xxx guifg=#303030 guibg=#1d1d1d guisp=#bf7b00
+  -- BufferLineWarningDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#bf7b00 guibg=#1c1c1c guisp=#bf7b00
+  -- BufferLineWarningDiagnosticVisible xxx guifg=#303030 guibg=#191919
+  --
+  --     BufferLineDevIconSh xxx guifg=#666666 guibg=#1d1d1d
+  -- BufferLineDevIconVim xxx guibg=#1d1d1d
+  -- BufferLineDevIconVimInactive xxx guifg=#248546 guibg=#1d1d1d
+  -- BufferLineBufferSelected xxx cterm=bold,italic gui=bold,italic guifg=#ffffff guibg=#1c1c1c
+  -- BufferLineHintSelected xxx cterm=bold,italic gui=bold,italic guifg=#ffff00 guibg=#1c1c1c guisp=#ffff00
+  -- BufferLineBuffer xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineCloseButtonSelected xxx guifg=#ffffff guibg=#1c1c1c
+  -- BufferLineError xxx guifg=#404040 guibg=#1d1d1d guisp=#ff0000
+  -- BufferLineHint xxx guifg=#404040 guibg=#1d1d1d guisp=#ffff00
+  -- BufferLineOffsetSeparator xxx guifg=#303030 guibg=#0f0f0f
+  -- BufferLinePickVisible xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#191919
+  -- BufferLinePickSelected xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#1c1c1c
+  -- BufferLineTabSeparatorSelected xxx guifg=#0f0f0f guibg=#1c1c1c
+  -- BufferLineTabSeparator xxx guifg=#0f0f0f guibg=#1d1d1d
+  -- BufferLineSeparatorVisible xxx guifg=#0f0f0f guibg=#191919
+  -- BufferLineSeparatorSelected xxx guifg=#0f0f0f guibg=#1c1c1c
+  -- BufferLineDuplicate xxx cterm=italic gui=italic guifg=#3c3c3c guibg=#1d1d1d
+  -- BufferLineDuplicateVisible xxx cterm=italic gui=italic guifg=#3c3c3c guibg=#191919
+  -- BufferLineDuplicateSelected xxx cterm=italic gui=italic guifg=#3c3c3c guibg=#1c1c1c
+  -- BufferLineTab  xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineErrorSelected xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#1c1c1c guisp=#ff0000
+  -- BufferLineErrorVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineWarningSelected xxx cterm=bold,italic gui=bold,italic guifg=#ffa500 guibg=#1c1c1c guisp=#ffa500
+  -- BufferLineWarningVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineInfoSelected xxx cterm=bold,italic gui=bold,italic guifg=#add8e6 guibg=#1c1c1c guisp=#add8e6
+  -- BufferLineInfoVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLinePick xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#1d1d1d
+  -- BufferLineInfo xxx guifg=#404040 guibg=#1d1d1d guisp=#add8e6
+  -- BufferLineHintVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineBufferVisible xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineCloseButtonVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineWarning xxx guifg=#404040 guibg=#1d1d1d guisp=#ffa500
+  -- BufferLineTabClose xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineTabSelected xxx guifg=#66d9ef guibg=#1c1c1c
+  -- BufferLineGroupLabel xxx guifg=#0f0f0f guibg=#404040
+  -- BufferLineGroupSeparator xxx guifg=#404040 guibg=#0f0f0f
+  -- BufferLineIndicatorVisible xxx guifg=#191919 guibg=#191919
   -- hi Search guibg=#00CCFF guifg=#1c1c1c gui=bold
   -- hi IncSearch cterm=reverse guifg=#1c1c1c guibg=#FF00FF gui=reverse,underline,bold
   -- hi CurSearch gui=reverse
