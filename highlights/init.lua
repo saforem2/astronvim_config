@@ -19,7 +19,6 @@ return {
   ['@method.call'] = { fg = "#36ce5e" },
   ['@text.literal'] = { fg = "#AE81FF" },
   ['@string.documentation'] = { fg = "#697077", italic=true },
-  NotifyBackground = { bg="#222222" },
   Keyword =  { fg="#FF79FF" },
   DiagnosticWarn = { fg = "#FFB53D" },
   TerminalCSIColorCode = { fg = "#00CCFF" },
@@ -48,6 +47,8 @@ return {
   NeoTreeGitConflict = { fg="#FFFF00", italic=false, bold=true },
   NeoTreeModified = { fg="#AE81FF", italic=false },
   BufferLineBufferSelected = { fg="#9e9e9e", bg="#282828", italic=false, bold=true },
+  NotifyBackground = { bg="#222222", fg="#939393" },
+  -- NotifyBackground = { bg="#222222" },
   --   BufferLineDiagnostic xxx guifg=#303030 guibg=#1d1d1d
   -- BufferLineDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#bfbfbf guibg=#1c1c1c
   -- BufferLineDiagnosticVisible xxx guifg=#303030 guibg=#191919

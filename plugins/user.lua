@@ -585,7 +585,13 @@ return {
         ft_ignore = { 'neorg' },
       })
     end
-  }
+  },
+  { "unblevable/quick-scope" },
+  {
+    require('notify').setup({
+      background_color="#222222",
+    })
+  },
   -- {
   --   "Cassin01/wf.nvim",
   --   config = function()
