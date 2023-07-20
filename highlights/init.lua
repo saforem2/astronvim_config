@@ -48,6 +48,10 @@ return {
   NeoTreeModified = { fg="#AE81FF", italic=false },
   BufferLineBufferSelected = { fg="#9e9e9e", bg="#282828", italic=false, bold=true },
   NotifyBackground = { bg="#222222", fg="#939393" },
+  QuickScopePrimary = { bg="#222222", sp="#ff2052", fg="none", underline=true, bold=true},
+  Normal = { fg="#bdbdbd", bold=false, italic=false },
+  jukit_textcell_bg_colors = { bg="#333333" },
+  -- require("notify").setup({background_colour="#1f1f1f"}),
   -- NotifyBackground = { bg="#222222" },
   --   BufferLineDiagnostic xxx guifg=#303030 guibg=#1d1d1d
   -- BufferLineDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#bfbfbf guibg=#1c1c1c
