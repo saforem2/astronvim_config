@@ -103,7 +103,24 @@ return {
     -- vim.opt.runtimepath:append(',~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
-
+    require("notify").setup({
+        background_colour = "#1f1f1f",
+    })
+    vim.api.nvim_eval('let g:qs_highlight_on_keys = ["f", "F", "t", "T"]')
+    vim.api.nvim_eval('let g:jukit_mappings_ext_enabled = ["py", "ipynb"]')
+    -- vim.api.nvim_eval([[
+    --     let g:jukit_layout = {
+    --         \'split': 'horizontal',
+    --         \'p1': 0.6,
+    --         \'val': [
+    --             \'file_content',
+    --             \{
+    --                 \'split': 'vertical',
+    --                 \'p1': 0.6, \'val': ['output', 'output_history']
+    --             \}
+    --         \]
+    --     \}
+    -- ]])
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
