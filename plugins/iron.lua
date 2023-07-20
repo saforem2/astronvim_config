@@ -14,12 +14,18 @@ return {
       sh = {
         command = { "zsh" }
       },
+      -- python = {
+      --   require("iron.fts.python").ptipython(require('iron.fts.common').bracketed_paste)
+      -- },
       python = {
+        -- command = { "ptipython || ipython " },
         command = { "ipython" },
+        -- command = require("iron.fts.python").ptipython,
         format = require('iron.fts.common').bracketed_paste,
       },
       quarto = {
         command = { "ipython" },
+        -- command = require('iron.fts.python').ptipython,
         format = require('iron.fts.common').bracketed_paste
       }
     },

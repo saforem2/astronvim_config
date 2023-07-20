@@ -437,17 +437,17 @@ return {
   { 'cpea2506/one_monokai.nvim' },
   { 'jghauser/mkdir.nvim' },
   { 'navarasu/onedark.nvim', },
-  { 'hkupty/iron.nvim' }, -- { 
+  { 'hkupty/iron.nvim' }, -- {
   --   'hkupty/iron.nvim',
   --   config = function()
   --     require('user.plugins.iron')
   --   end
   -- },
   { 'bfredl/nvim-ipy' },
-  { 
+  {
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make',
-    lazy = false 
+    lazy = false
   },
   {
     'quarto-dev/quarto-nvim',
@@ -456,7 +456,17 @@ return {
       'jmbuhr/otter.nvim'
     },
   },
-  { 'jmbuhr/otter.nvim' },
+  {
+    'jmbuhr/otter.nvim',
+        dev = false,
+        opts = {
+          lsp = {
+            hover = {
+              require("user.style").border
+            }
+          }
+        },
+  },
   { 'Bekaboo/deadcolumn.nvim' },
   {
     "projekt0n/circles.nvim",
@@ -586,11 +596,16 @@ return {
       })
     end
   },
-  { "unblevable/quick-scope" },
+  {
+    "unblevable/quick-scope",
+  },
   {
     require('notify').setup({
       background_color="#222222",
     })
+  },
+  {
+    'luk400/vim-jukit'
   },
   -- {
   --   "Cassin01/wf.nvim",
