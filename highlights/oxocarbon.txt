@@ -1,0 +1,5292 @@
+SpecialKey     guifg=#525252
+EndOfBuffer    guifg=#262626
+TermCursor     guifg=#161616 guibg=#d0d0d0
+TermCursorNC   guifg=#161616 guibg=#d0d0d0
+NonText        guifg=#393939
+Directory      guifg=#3ddbd9
+ErrorMsg       guifg=#ee5396
+IncSearch      cterm=bold,underline,reverse gui=bold,underline,reverse guifg=#1c1c1c guibg=#ff00ff
+Search         cterm=bold gui=bold guifg=#1c1c1c guibg=#00ccff
+CurSearch      cterm=reverse gui=reverse
+MoreMsg        guifg=#3ddbd9
+ModeMsg        guifg=#d0d0d0
+LineNr         guifg=#525252 guibg=#161616
+LineNrAbove    links to LineNr
+LineNrBelow    links to LineNr
+CursorLineNr   guifg=#d0d0d0
+CursorLineSign links to SignColumn
+CursorLineFold links to FoldColumn
+Question       guifg=#d0d0d0
+StatusLine     guifg=#d0d0d0 guibg=#161616
+StatusLineNC   guifg=#d0d0d0 guibg=#262626
+WinSeparator   links to VertSplit
+VertSplit      guifg=#262626 guibg=#161616
+Title          guifg=#d0d0d0
+Visual         guibg=#393939
+VisualNC       cleared
+WarningMsg     guifg=#be95ff
+WildMenu       guifg=#3ddbd9 guibg=#262626
+Folded         guifg=#393939 guibg=#262626
+FoldColumn     guifg=#262626 guibg=#161616
+DiffAdd        guibg=#122f2f
+DiffChange     guibg=#222a39
+DiffDelete     guibg=#361c28
+DiffText       guibg=#2f3f5c
+SignColumn     guifg=#262626 guibg=#161616
+Conceal        cleared
+SpellBad       ctermbg=9 gui=undercurl guisp=Red
+SpellCap       ctermbg=12 gui=undercurl guisp=Blue
+SpellRare      ctermbg=13 gui=undercurl guisp=Magenta
+SpellLocal     ctermbg=14 gui=undercurl guisp=Cyan
+Pmenu          guifg=#d0d0d0 guibg=#262626
+PmenuSel       guifg=#3ddbd9 guibg=#393939
+PmenuKind      links to Pmenu
+PmenuKindSel   links to PmenuSel
+PmenuExtra     links to Pmenu
+PmenuExtraSel  links to PmenuSel
+PmenuSbar      guifg=#d0d0d0 guibg=#262626
+PmenuThumb     guifg=#3ddbd9 guibg=#393939
+TabLine        links to StatusLineNC
+TabLineSel     links to StatusLine
+TabLineFill    links to TabLine
+CursorColumn   guibg=#262626
+CursorLine     guibg=#262626
+ColorColumn    guibg=#262626
+QuickFixLine   guibg=#262626
+Whitespace     links to NonText
+NormalNC       guifg=#f2f2f2 guibg=#161616
+MsgSeparator   links to StatusLine
+NormalFloat    guifg=#f2f2f2 guibg=#131313
+MsgArea        cleared
+FloatBorder    guifg=#131313 guibg=#131313
+WinBar         cterm=bold gui=bold
+WinBarNC       links to WinBar
+Cursor         guifg=#161616 guibg=#d0d0d0
+FloatTitle     links to Title
+lCursor        guifg=bg guibg=fg
+Normal         guifg=#d0d0d0 guibg=#161616
+Substitute     guifg=#262626 guibg=#3ddbd9
+FloatShadow    guibg=Black blend=80
+FloatShadowThrough guibg=Black blend=100
+RedrawDebugNormal cterm=reverse gui=reverse
+RedrawDebugClear ctermbg=11 guibg=Yellow
+RedrawDebugComposed ctermbg=10 guibg=Green
+RedrawDebugRecompose ctermbg=9 guibg=Red
+Error          guifg=#ee5396 guibg=#262626
+Todo           guifg=#42be65
+String         guifg=#be95ff
+Constant       guifg=#d0d0d0
+Character      guifg=#be95ff
+Number         guifg=#82cfff
+Boolean        guifg=#78a9ff
+Float          links to Number
+Function       guifg=#3ddbd9
+Identifier     guifg=#d0d0d0
+Conditional    guifg=#78a9ff
+Statement      guifg=#78a9ff
+Repeat         guifg=#78a9ff
+Label          guifg=#78a9ff
+Operator       guifg=#78a9ff
+Keyword        guifg=#ff79ff
+Exception      guifg=#78a9ff
+Include        guifg=#78a9ff
+PreProc        guifg=#78a9ff
+Define         guifg=#78a9ff
+Macro          guifg=#08bdba
+PreCondit      links to PreProc
+StorageClass   guifg=#78a9ff
+Type           guifg=#78a9ff
+Structure      guifg=#78a9ff
+Typedef        guifg=#78a9ff
+Tag            guifg=#d0d0d0
+Special        guifg=#d0d0d0
+SpecialChar    guifg=#d0d0d0
+Delimiter      links to Special
+SpecialComment guifg=#3ddbd9
+Debug          guifg=#42be65
+DiagnosticError guifg=#ee5396
+DiagnosticWarn guifg=#ffb53d
+DiagnosticInfo guifg=#78a9ff
+DiagnosticHint guifg=#d0d0d0
+DiagnosticOk   ctermfg=10 guifg=LightGreen
+DiagnosticUnderlineError cterm=undercurl gui=undercurl guifg=#ee5396
+DiagnosticUnderlineWarn cterm=undercurl gui=undercurl guifg=#be95ff
+DiagnosticUnderlineInfo cterm=undercurl gui=undercurl guifg=#d0d0d0
+DiagnosticUnderlineHint cterm=undercurl gui=undercurl guifg=#d0d0d0
+DiagnosticUnderlineOk cterm=underline gui=underline guisp=LightGreen
+DiagnosticVirtualTextError links to DiagnosticError
+DiagnosticVirtualTextWarn links to DiagnosticWarn
+DiagnosticVirtualTextInfo links to DiagnosticInfo
+DiagnosticVirtualTextHint links to DiagnosticHint
+DiagnosticVirtualTextOk links to DiagnosticOk
+DiagnosticFloatingError links to DiagnosticError
+DiagnosticFloatingWarn links to DiagnosticWarn
+DiagnosticFloatingInfo links to DiagnosticInfo
+DiagnosticFloatingHint links to DiagnosticHint
+DiagnosticFloatingOk links to DiagnosticOk
+DiagnosticSignError links to DiagnosticError
+DiagnosticSignWarn links to DiagnosticWarn
+DiagnosticSignInfo links to DiagnosticInfo
+DiagnosticSignHint links to DiagnosticHint
+DiagnosticSignOk links to DiagnosticOk
+DiagnosticDeprecated cterm=strikethrough gui=strikethrough guisp=Red
+DiagnosticUnnecessary links to Comment
+Comment        cterm=italic gui=italic guifg=#525252
+@text          guifg=#d0d0d0
+@text.literal  guifg=#ae81ff
+@text.title    guifg=#ee5396
+@text.uri      cterm=underline gui=underline guifg=#be95ff
+Underlined     cterm=underline gui=underline
+@text.underline cterm=underline gui=underline guifg=#ee5396
+@comment       links to Comment
+@punctuation   links to Delimiter
+@constant      guifg=#be95ff
+@constant.builtin guifg=#08bdba
+@constant.macro guifg=#08bdba
+@define        links to Define
+@macro         links to Macro
+@string        links to String
+@string.escape guifg=#82cfff
+@character     links to Character
+@number        links to Number
+@boolean       links to Boolean
+@float         links to Float
+@function      cterm=bold gui=bold guifg=#ff7eb6
+@function.builtin guifg=#ff7eb6
+@function.macro guifg=#08bdba
+@parameter     guifg=#ffb53d
+@method        guifg=#08bdba
+@field         guifg=#d0d0d0
+@property      guifg=#ee5396
+@constructor   guifg=#78a9ff
+@conditional   guifg=#78a9ff
+@repeat        guifg=#78a9ff
+@label         guifg=#82cfff
+@operator      links to Operator
+@keyword       guifg=#78a9ff
+@exception     guifg=#82cfff
+@variable      guifg=#d0d0d0
+@type          links to Type
+@storageclass  links to StorageClass
+@namespace     guifg=#08bdba
+@include       guifg=#78a9ff
+@preproc       links to PreProc
+@debug         links to Debug
+@tag           guifg=#78a9ff
+@lsp           cleared
+@lsp.type.class links to Structure
+@lsp.type.comment links to @comment
+@lsp.type.decorator links to Decorator
+@lsp.type.enum links to @type
+@lsp.type.enumMember links to @constant
+@lsp.type.function links to @function
+@lsp.type.interface links to Structure
+@lsp.type.macro links to Macro
+@lsp.type.method links to @function
+@lsp.type.namespace links to @namespace
+@lsp.type.parameter links to @parameter
+@lsp.type.property links to @property
+@lsp.type.struct links to Structure
+@lsp.type.type links to Type
+@lsp.type.typeParameter links to Typedef
+@lsp.type.variable links to @variable
+MatchParen     cterm=underline gui=underline guibg=#393939
+Ignore         ctermfg=0 guifg=bg
+NvimInternalError guifg=#161616 guibg=#3ddbd9
+NvimAssignment links to Operator
+NvimPlainAssignment links to NvimAssignment
+NvimAugmentedAssignment links to NvimAssignment
+NvimAssignmentWithAddition links to NvimAugmentedAssignment
+NvimAssignmentWithSubtraction links to NvimAugmentedAssignment
+NvimAssignmentWithConcatenation links to NvimAugmentedAssignment
+NvimOperator   links to Operator
+NvimUnaryOperator links to NvimOperator
+NvimUnaryPlus  links to NvimUnaryOperator
+NvimUnaryMinus links to NvimUnaryOperator
+NvimNot        links to NvimUnaryOperator
+NvimBinaryOperator links to NvimOperator
+NvimComparison links to NvimBinaryOperator
+NvimComparisonModifier links to NvimComparison
+NvimBinaryPlus links to NvimBinaryOperator
+NvimBinaryMinus links to NvimBinaryOperator
+NvimConcat     links to NvimBinaryOperator
+NvimConcatOrSubscript links to NvimConcat
+NvimOr         links to NvimBinaryOperator
+NvimAnd        links to NvimBinaryOperator
+NvimMultiplication links to NvimBinaryOperator
+NvimDivision   links to NvimBinaryOperator
+NvimMod        links to NvimBinaryOperator
+NvimTernary    links to NvimOperator
+NvimTernaryColon links to NvimTernary
+NvimParenthesis links to Delimiter
+NvimLambda     links to NvimParenthesis
+NvimNestingParenthesis links to NvimParenthesis
+NvimCallingParenthesis links to NvimParenthesis
+NvimSubscript  links to NvimParenthesis
+NvimSubscriptBracket links to NvimSubscript
+NvimSubscriptColon links to NvimSubscript
+NvimCurly      links to NvimSubscript
+NvimContainer  links to NvimParenthesis
+NvimDict       links to NvimContainer
+NvimList       links to NvimContainer
+NvimIdentifier links to Identifier
+NvimIdentifierScope links to NvimIdentifier
+NvimIdentifierScopeDelimiter links to NvimIdentifier
+NvimIdentifierName links to NvimIdentifier
+NvimIdentifierKey links to NvimIdentifier
+NvimColon      links to Delimiter
+NvimComma      links to Delimiter
+NvimArrow      links to Delimiter
+NvimRegister   links to SpecialChar
+NvimNumber     links to Number
+NvimFloat      links to NvimNumber
+NvimNumberPrefix links to Type
+NvimOptionSigil links to Type
+NvimOptionName links to NvimIdentifier
+NvimOptionScope links to NvimIdentifierScope
+NvimOptionScopeDelimiter links to NvimIdentifierScopeDelimiter
+NvimEnvironmentSigil links to NvimOptionSigil
+NvimEnvironmentName links to NvimIdentifier
+NvimString     links to String
+NvimStringBody links to NvimString
+NvimStringQuote links to NvimString
+NvimStringSpecial links to SpecialChar
+NvimSingleQuote links to NvimStringQuote
+NvimSingleQuotedBody links to NvimStringBody
+NvimSingleQuotedQuote links to NvimStringSpecial
+NvimDoubleQuote links to NvimStringQuote
+NvimDoubleQuotedBody links to NvimStringBody
+NvimDoubleQuotedEscape links to NvimStringSpecial
+NvimFigureBrace links to NvimInternalError
+NvimSingleQuotedUnknownEscape links to NvimInternalError
+NvimSpacing    links to Normal
+NvimInvalidSingleQuotedUnknownEscape links to NvimInternalError
+NvimInvalid    links to Error
+NvimInvalidAssignment links to NvimInvalid
+NvimInvalidPlainAssignment links to NvimInvalidAssignment
+NvimInvalidAugmentedAssignment links to NvimInvalidAssignment
+NvimInvalidAssignmentWithAddition links to NvimInvalidAugmentedAssignment
+NvimInvalidAssignmentWithSubtraction links to NvimInvalidAugmentedAssignment
+NvimInvalidAssignmentWithConcatenation links to NvimInvalidAugmentedAssignment
+NvimInvalidOperator links to NvimInvalid
+NvimInvalidUnaryOperator links to NvimInvalidOperator
+NvimInvalidUnaryPlus links to NvimInvalidUnaryOperator
+NvimInvalidUnaryMinus links to NvimInvalidUnaryOperator
+NvimInvalidNot links to NvimInvalidUnaryOperator
+NvimInvalidBinaryOperator links to NvimInvalidOperator
+NvimInvalidComparison links to NvimInvalidBinaryOperator
+NvimInvalidComparisonModifier links to NvimInvalidComparison
+NvimInvalidBinaryPlus links to NvimInvalidBinaryOperator
+NvimInvalidBinaryMinus links to NvimInvalidBinaryOperator
+NvimInvalidConcat links to NvimInvalidBinaryOperator
+NvimInvalidConcatOrSubscript links to NvimInvalidConcat
+NvimInvalidOr  links to NvimInvalidBinaryOperator
+NvimInvalidAnd links to NvimInvalidBinaryOperator
+NvimInvalidMultiplication links to NvimInvalidBinaryOperator
+NvimInvalidDivision links to NvimInvalidBinaryOperator
+NvimInvalidMod links to NvimInvalidBinaryOperator
+NvimInvalidTernary links to NvimInvalidOperator
+NvimInvalidTernaryColon links to NvimInvalidTernary
+NvimInvalidDelimiter links to NvimInvalid
+NvimInvalidParenthesis links to NvimInvalidDelimiter
+NvimInvalidLambda links to NvimInvalidParenthesis
+NvimInvalidNestingParenthesis links to NvimInvalidParenthesis
+NvimInvalidCallingParenthesis links to NvimInvalidParenthesis
+NvimInvalidSubscript links to NvimInvalidParenthesis
+NvimInvalidSubscriptBracket links to NvimInvalidSubscript
+NvimInvalidSubscriptColon links to NvimInvalidSubscript
+NvimInvalidCurly links to NvimInvalidSubscript
+NvimInvalidContainer links to NvimInvalidParenthesis
+NvimInvalidDict links to NvimInvalidContainer
+NvimInvalidList links to NvimInvalidContainer
+NvimInvalidValue links to NvimInvalid
+NvimInvalidIdentifier links to NvimInvalidValue
+NvimInvalidIdentifierScope links to NvimInvalidIdentifier
+NvimInvalidIdentifierScopeDelimiter links to NvimInvalidIdentifier
+NvimInvalidIdentifierName links to NvimInvalidIdentifier
+NvimInvalidIdentifierKey links to NvimInvalidIdentifier
+NvimInvalidColon links to NvimInvalidDelimiter
+NvimInvalidComma links to NvimInvalidDelimiter
+NvimInvalidArrow links to NvimInvalidDelimiter
+NvimInvalidRegister links to NvimInvalidValue
+NvimInvalidNumber links to NvimInvalidValue
+NvimInvalidFloat links to NvimInvalidNumber
+NvimInvalidNumberPrefix links to NvimInvalidNumber
+NvimInvalidOptionSigil links to NvimInvalidIdentifier
+NvimInvalidOptionName links to NvimInvalidIdentifier
+NvimInvalidOptionScope links to NvimInvalidIdentifierScope
+NvimInvalidOptionScopeDelimiter links to NvimInvalidIdentifierScopeDelimiter
+NvimInvalidEnvironmentSigil links to NvimInvalidOptionSigil
+NvimInvalidEnvironmentName links to NvimInvalidIdentifier
+NvimInvalidString links to NvimInvalidValue
+NvimInvalidStringBody links to NvimStringBody
+NvimInvalidStringQuote links to NvimInvalidString
+NvimInvalidStringSpecial links to NvimStringSpecial
+NvimInvalidSingleQuote links to NvimInvalidStringQuote
+NvimInvalidSingleQuotedBody links to NvimInvalidStringBody
+NvimInvalidSingleQuotedQuote links to NvimInvalidStringSpecial
+NvimInvalidDoubleQuote links to NvimInvalidStringQuote
+NvimInvalidDoubleQuotedBody links to NvimInvalidStringBody
+NvimInvalidDoubleQuotedEscape links to NvimInvalidStringSpecial
+NvimInvalidDoubleQuotedUnknownEscape links to NvimInvalidValue
+NvimInvalidFigureBrace links to NvimInvalidDelimiter
+NvimInvalidSpacing links to ErrorMsg
+NvimDoubleQuotedUnknownEscape links to NvimInvalidValue
+IlluminatedWordText guifg=#ff5252 guibg=#333333
+IlluminatedWordRead guifg=#ffffff guibg=#333333
+IlluminatedWordWrite guifg=#bdbdbd guibg=#252525
+LspInfoFiletype links to Type
+LspInfoTitle   links to Title
+LspInfoTip     links to Comment
+LspInfoList    links to Function
+LspInfoBorder  links to Label
+NullLsInfoTitle links to Type
+NullLsInfoHeader links to Label
+NullLsInfoSources links to Title
+NullLsInfoBorder links to NormalFloat
+debugPC        cleared
+DapUINormal    links to Normal
+DapUIVariable  links to Normal
+DapUIScope     guifg=#00f1f5
+DapUIType      guifg=#d484ff
+DapUIValue     links to Normal
+DapUIModifiedValue gui=bold guifg=#00f1f5
+DapUIDecoration guifg=#00f1f5
+DapUIThread    guifg=#a9ff68
+DapUIStoppedThread guifg=#00f1f5
+DapUIFrameName links to Normal
+DapUISource    guifg=#d484ff
+DapUILineNumber guifg=#00f1f5
+DapUIFloatNormal links to NormalFloat
+DapUIFloatBorder guifg=#00f1f5
+DapUIWatchesEmpty guifg=#f70067
+DapUIWatchesValue guifg=#a9ff68
+DapUIWatchesError guifg=#f70067
+DapUIBreakpointsPath guifg=#00f1f5
+DapUIBreakpointsInfo guifg=#a9ff68
+DapUIBreakpointsCurrentLine gui=bold guifg=#a9ff68
+DapUIBreakpointsLine links to DapUILineNumber
+DapUIBreakpointsDisabledLine guifg=#424242
+DapUICurrentFrameName links to DapUIBreakpointsCurrentLine
+DapUIStepOver  guifg=#00f1f5
+DapUIStepInto  guifg=#00f1f5
+DapUIStepBack  guifg=#00f1f5
+DapUIStepOut   guifg=#00f1f5
+DapUIStop      guifg=#f70067
+DapUIPlayPause guifg=#a9ff68
+DapUIRestart   guifg=#a9ff68
+DapUIUnavailable guifg=#424242
+DapUIWinSelect ctermfg=14 gui=bold guifg=#00f1f5
+DapUIEndofBuffer links to EndOfBuffer
+DapUINormalNC  cterm= gui=
+                   links to Normal
+DapUIPlayPauseNC cterm= gui= guifg=#a9ff68
+DapUIRestartNC cterm= gui= guifg=#a9ff68
+DapUIStopNC    cterm= gui= guifg=#f70067
+DapUIUnavailableNC cterm= gui= guifg=#424242
+DapUIStepOverNC cterm= gui= guifg=#00f1f5
+DapUIStepIntoNC cterm= gui= guifg=#00f1f5
+DapUIStepBackNC cterm= gui= guifg=#00f1f5
+DapUIStepOutNC cterm= gui= guifg=#00f1f5
+CmpItemAbbr    guifg=#adadad
+CmpItemAbbrDefault guifg=#d0d0d0
+CmpItemAbbrDeprecated links to CmpItemAbbrDeprecatedDefault
+CmpItemAbbrDeprecatedDefault guifg=#525252
+CmpItemAbbrMatch cterm=bold gui=bold guifg=#f2f2f2
+CmpItemAbbrMatchDefault guifg=#d0d0d0
+CmpItemAbbrMatchFuzzy cterm=bold gui=bold guifg=#d0d0d0
+CmpItemAbbrMatchFuzzyDefault guifg=#d0d0d0
+CmpItemKind    links to CmpItemKindDefault
+CmpItemKindDefault guifg=#d0d0d0
+CmpItemMenu    cterm=italic gui=italic guifg=#d0d0d0
+CmpItemMenuDefault guifg=#d0d0d0
+CmpItemKindColor guifg=#262626 guibg=#3ddbd9
+CmpItemKindColorDefault links to CmpItemKind
+CmpItemKindValue guifg=#262626 guibg=#82cfff
+CmpItemKindValueDefault links to CmpItemKind
+CmpItemKindFolder guifg=#262626 guibg=#42be65
+CmpItemKindFolderDefault links to CmpItemKind
+CmpItemKindClass guifg=#262626 guibg=#33b1ff
+CmpItemKindClassDefault links to CmpItemKind
+CmpItemKindFunction guifg=#262626 guibg=#33b1ff
+CmpItemKindFunctionDefault links to CmpItemKind
+CmpItemKindReference guifg=#262626 guibg=#ee5396
+CmpItemKindReferenceDefault links to CmpItemKind
+CmpItemKindConstructor guifg=#262626 guibg=#ee5396
+CmpItemKindConstructorDefault links to CmpItemKind
+CmpItemKindUnit guifg=#262626 guibg=#42be65
+CmpItemKindUnitDefault links to CmpItemKind
+CmpItemKindTypeParameter guifg=#262626 guibg=#3ddbd9
+CmpItemKindTypeParameterDefault links to CmpItemKind
+CmpItemKindVariable guifg=#262626 guibg=#be95ff
+CmpItemKindVariableDefault links to CmpItemKind
+CmpItemKindModule guifg=#262626 guibg=#33b1ff
+CmpItemKindModuleDefault links to CmpItemKind
+CmpItemKindInterface guifg=#262626 guibg=#3ddbd9
+CmpItemKindInterfaceDefault links to CmpItemKind
+CmpItemKindField guifg=#262626 guibg=#ff7eb6
+CmpItemKindFieldDefault links to CmpItemKind
+CmpItemKindMethod guifg=#262626 guibg=#82cfff
+CmpItemKindMethodDefault links to CmpItemKind
+CmpItemKindEnumMember guifg=#262626 guibg=#82cfff
+CmpItemKindEnumMemberDefault links to CmpItemKind
+CmpItemKindEvent guifg=#262626 guibg=#ff7eb6
+CmpItemKindEventDefault links to CmpItemKind
+CmpItemKindConstant guifg=#262626 guibg=#ee5396
+CmpItemKindConstantDefault links to CmpItemKind
+CmpItemKindOperator guifg=#262626 guibg=#33b1ff
+CmpItemKindOperatorDefault links to CmpItemKind
+CmpItemKindEnum guifg=#262626 guibg=#78a9ff
+CmpItemKindEnumDefault links to CmpItemKind
+CmpItemKindFile guifg=#262626 guibg=#be95ff
+CmpItemKindFileDefault links to CmpItemKind
+CmpItemKindStruct guifg=#262626 guibg=#33b1ff
+CmpItemKindStructDefault links to CmpItemKind
+CmpItemKindProperty guifg=#262626 guibg=#ff7eb6
+CmpItemKindPropertyDefault links to CmpItemKind
+CmpItemKindSnippet guifg=#262626 guibg=#42be65
+CmpItemKindSnippetDefault links to CmpItemKind
+CmpItemKindText guifg=#262626 guibg=#78a9ff
+CmpItemKindTextDefault links to CmpItemKind
+CmpItemKindKeyword guifg=#262626 guibg=#78a9ff
+CmpItemKindKeywordDefault links to CmpItemKind
+NotifyBackground guibg=#222222
+NotifyERRORBorder guifg=#3ddbd9
+NotifyWARNBorder guifg=#be95ff
+NotifyINFOBorder guifg=#f2f2f2
+NotifyDEBUGBorder guifg=#42be65
+NotifyTRACEBorder guifg=#42be65
+NotifyERRORIcon guifg=#3ddbd9
+NotifyWARNIcon guifg=#be95ff
+NotifyINFOIcon guifg=#f2f2f2
+NotifyDEBUGIcon guifg=#42be65
+NotifyTRACEIcon guifg=#42be65
+NotifyERRORTitle guifg=#3ddbd9
+NotifyWARNTitle guifg=#be95ff
+NotifyINFOTitle guifg=#f2f2f2
+NotifyDEBUGTitle guifg=#42be65
+NotifyTRACETitle guifg=#42be65
+NotifyERRORBody links to Normal
+NotifyWARNBody links to Normal
+NotifyINFOBody links to Normal
+NotifyDEBUGBody links to Normal
+NotifyTRACEBody links to Normal
+NotifyLogTime  links to Comment
+NotifyLogTitle links to Special
+DevIconMixLock ctermfg=140 guifg=#a074c4
+DevIconSwift   ctermfg=166 guifg=#e37933
+DevIconRakefile ctermfg=52 guifg=#701516
+DevIconScheme  ctermfg=16 guifg=#000000
+DevIconHs      ctermfg=140 guifg=#a074c4
+DevIconBzl     ctermfg=113 guifg=#89e051
+DevIconEnv     ctermfg=227 guifg=#faf743
+DevIconMakefile ctermfg=66 guifg=#6d8086
+DevIconFavicon ctermfg=185 guifg=#cbcb41
+DevIconRake    ctermfg=52 guifg=#701516
+DevIconGemspec ctermfg=52 guifg=#701516
+DevIconCobol   ctermfg=25 guifg=#005ca5
+DevIconPackageLockJson guifg=#7a0d21
+DevIconClojureJS ctermfg=74 guifg=#519aba
+DevIconClojureC ctermfg=113 guifg=#8dc149
+DevIconClojure ctermfg=113 guifg=#8dc149
+DevIconVimrc   ctermfg=28 guifg=#019833
+DevIconGvimrc  ctermfg=28 guifg=#019833
+DevIconBazelWorkspace ctermfg=113 guifg=#89e051
+DevIconEx      ctermfg=140 guifg=#a074c4
+DevIconDockerfile ctermfg=68 guifg=#458ee6
+DevIconDesktopEntry ctermfg=54 guifg=#563d7c
+DevIconCMakeLists ctermfg=66 guifg=#6d8086
+DevIconScala   ctermfg=167 guifg=#cc3e44
+DevIconMd      ctermfg=231 guifg=#ffffff
+DevIconPackageJson guifg=#e8274b
+DevIconSettingsJson ctermfg=98 guifg=#854cc7
+DevIconBazel   ctermfg=113 guifg=#89e051
+DevIconNPMrc   ctermfg=197 guifg=#e8274b
+DevIconReScriptInterface ctermfg=204 guifg=#f55385
+DevIconJavaScriptReactSpec ctermfg=45 guifg=#20c2e3
+DevIconBazelBuild ctermfg=113 guifg=#89e051
+DevIconQuery   ctermfg=107 guifg=#90a850
+DevIconSpecJs  ctermfg=185 guifg=#cbcb41
+DevIconTestJs  ctermfg=185 guifg=#cbcb41
+DevIconGitLogo ctermfg=196 guifg=#f14c28
+DevIconRss     ctermfg=215 guifg=#fb9d3b
+DevIconMint    ctermfg=108 guifg=#87c095
+DevIconPy      ctermfg=214 guifg=#ffbc03
+DevIconNPMIgnore ctermfg=197 guifg=#e8274b
+DevIconNim     ctermfg=220 guifg=#f3d400
+DevIconTcl     ctermfg=25 guifg=#1e5cb3
+DevIconSass    ctermfg=204 guifg=#f55385
+DevIconPsScriptModulefile ctermfg=68 guifg=#6975c4
+DevIconCss     ctermfg=75 guifg=#42a5f5
+DevIconHh      ctermfg=140 guifg=#a074c4
+DevIconDsStore ctermfg=239 guifg=#41535b
+DevIconBashProfile ctermfg=113 guifg=#89e051
+DevIconHpp     ctermfg=140 guifg=#a074c4
+DevIconZshprofile ctermfg=113 guifg=#89e051
+DevIconZshenv  ctermfg=113 guifg=#89e051
+DevIconEslintrc ctermfg=56 guifg=#4b32c3
+DevIconBabelrc ctermfg=185 guifg=#cbcb41
+DevIconHaml    ctermfg=255 guifg=#eaeae1
+DevIconOrgMode ctermfg=73 guifg=#77aa99
+DevIconPdf     ctermfg=124 guifg=#b30b00
+DevIconZshrc   ctermfg=113 guifg=#89e051
+DevIconGraphQL ctermfg=199 guifg=#e535ab
+DevIconH       ctermfg=140 guifg=#a074c4
+DevIconNix     ctermfg=110 guifg=#7ebae4
+DevIconReScript ctermfg=167 guifg=#cc3e44
+DevIconTextResource ctermfg=185 guifg=#cbcb41
+DevIconTextScene ctermfg=140 guifg=#a074c4
+DevIconMotoko  ctermfg=135 guifg=#9772fb
+DevIconFsx     ctermfg=74 guifg=#519aba
+DevIconFsi     ctermfg=74 guifg=#519aba
+DevIconLicense ctermfg=185 guifg=#cbcb41
+DevIconGitIgnore ctermfg=239 guifg=#41535b
+DevIconGitAttributes ctermfg=239 guifg=#41535b
+DevIconGitModules ctermfg=239 guifg=#41535b
+DevIconGitConfig ctermfg=239 guifg=#41535b
+DevIconEjs     ctermfg=185 guifg=#cbcb41
+DevIconLuau    ctermfg=74 guifg=#51a0cf
+DevIconFortran ctermfg=97 guifg=#734f96
+DevIconProlog  ctermfg=179 guifg=#e4b854
+DevIconHtm     ctermfg=196 guifg=#e34c26
+DevIconFennel  ctermfg=230 guifg=#fff3d7
+DevIconConfigRu ctermfg=52 guifg=#701516
+DevIconClojureDart ctermfg=74 guifg=#519aba
+DevIconMarkdown ctermfg=74 guifg=#519aba
+DevIconVerilog ctermfg=28 guifg=#019833
+DevIconVHDL    ctermfg=28 guifg=#019833
+DevIconErb     ctermfg=214 guifg=#701516
+DevIconHrl     ctermfg=163 guifg=#b83998
+DevIconTypeScriptReactSpec ctermfg=26 guifg=#1354bf
+DevIconErl     ctermfg=163 guifg=#b83998
+DevIconEpp     guifg=#ffa61a
+DevIconTypeScriptReactTest ctermfg=26 guifg=#1354bf
+DevIconExs     ctermfg=140 guifg=#a074c4
+DevIconSpecTs  ctermfg=74 guifg=#519aba
+DevIconTestTs  ctermfg=74 guifg=#519aba
+DevIconCPlusPlus ctermfg=204 guifg=#f34b7d
+DevIconZig     ctermfg=172 guifg=#f69a1b
+DevIconR       ctermfg=29 guifg=#358a5b
+DevIconGDScript ctermfg=66 guifg=#6d8086
+DevIconYaml    ctermfg=66 guifg=#6d8086
+DevIconDump    ctermfg=188 guifg=#dad8d8
+DevIconAi      ctermfg=185 guifg=#cbcb41
+DevIconBat     ctermfg=191 guifg=#c1f12e
+DevIconSvelte  ctermfg=196 guifg=#ff3e00
+DevIconIni     ctermfg=66 guifg=#6d8086
+DevIconHbs     ctermfg=202 guifg=#f0772b
+DevIconJava    ctermfg=167 guifg=#cc3e44
+DevIconLog     ctermfg=231 guifg=#ffffff
+DevIconHeex    ctermfg=140 guifg=#a074c4
+DevIconHtml    ctermfg=196 guifg=#e44d26
+DevIconPhp     ctermfg=140 guifg=#a074c4
+DevIconXml     ctermfg=166 guifg=#e37933
+DevIconConf    ctermfg=66 guifg=#6d8086
+DevIconJpeg    ctermfg=140 guifg=#a074c4
+DevIconIco     ctermfg=185 guifg=#cbcb41
+DevIconProcfile ctermfg=140 guifg=#a074c4
+DevIconDocx    ctermfg=26 guifg=#185abd
+DevIconGodotProject ctermfg=66 guifg=#6d8086
+DevIconVagrantfile ctermfg=27 guifg=#1563ff
+DevIconFsscript ctermfg=74 guifg=#519aba
+DevIconPpt     ctermfg=214 guifg=#cb4a32
+DevIconGemfile ctermfg=52 guifg=#701516
+DevIconBinaryGLTF ctermfg=214 guifg=#ffb13b
+DevIconDrools  ctermfg=217 guifg=#ffafaf
+DevIconSh      ctermfg=240 guifg=#4d5a5e
+DevIconWasm    ctermfg=62 guifg=#5c4cdb
+DevIconSlim    ctermfg=196 guifg=#e34c26
+DevIconSql     ctermfg=188 guifg=#dad8d8
+DevIconFsharp  ctermfg=74 guifg=#519aba
+DevIconPyo     ctermfg=222 guifg=#ffe291
+DevIconPyd     ctermfg=222 guifg=#ffe291
+DevIconPyc     ctermfg=222 guifg=#ffe291
+DevIconGitCommit ctermfg=239 guifg=#41535b
+DevIconPsd     ctermfg=74 guifg=#519aba
+DevIconPsb     ctermfg=74 guifg=#519aba
+DevIconXlsx    ctermfg=29 guifg=#207245
+DevIconXls     ctermfg=29 guifg=#207245
+DevIconWebp    ctermfg=140 guifg=#a074c4
+DevIconPng     ctermfg=140 guifg=#a074c4
+DevIconXcPlayground ctermfg=166 guifg=#e37933
+DevIconPackedResource ctermfg=66 guifg=#6d8086
+DevIconWebpack ctermfg=74 guifg=#519aba
+DevIconGulpfile ctermfg=167 guifg=#cc3e44
+DevIconOpenTypeFont ctermfg=255 guifg=#ececec
+DevIconGruntfile ctermfg=166 guifg=#e37933
+DevIconBrewfile ctermfg=52 guifg=#701516
+DevIconSuo     ctermfg=98 guifg=#854cc7
+DevIconStyl    ctermfg=113 guifg=#8dc149
+DevIconMustache ctermfg=166 guifg=#e37933
+DevIconMdx     ctermfg=74 guifg=#519aba
+DevIconRproj   ctermfg=29 guifg=#358a5b
+DevIconRlib    ctermfg=216 guifg=#dea584
+DevIconJpg     ctermfg=140 guifg=#a074c4
+DevIconCsv     ctermfg=113 guifg=#89e051
+DevIconLua     ctermfg=74 guifg=#51a0cf
+DevIconTerminal ctermfg=34 guifg=#31b53e
+DevIconKsh     ctermfg=240 guifg=#4d5a5e
+DevIconSig     ctermfg=166 guifg=#e37933
+DevIconPp      guifg=#ffa61a
+DevIconFs      ctermfg=74 guifg=#519aba
+DevIconTerraform ctermfg=93 guifg=#5f43e9
+DevIconFish    ctermfg=240 guifg=#4d5a5e
+DevIconTor     ctermfg=74 guifg=#519aba
+DevIconPm      ctermfg=74 guifg=#519aba
+DevIconBash    ctermfg=113 guifg=#89e051
+DevIconElm     ctermfg=74 guifg=#519aba
+DevIconEex     ctermfg=140 guifg=#a074c4
+DevIconCxx     ctermfg=74 guifg=#519aba
+DevIconLess    ctermfg=54 guifg=#563d7c
+DevIconXul     ctermfg=166 guifg=#e37933
+DevIconDart    ctermfg=25 guifg=#03589c
+DevIconD       ctermfg=28 guifg=#427819
+DevIconCpp     ctermfg=74 guifg=#519aba
+DevIconNodeModules ctermfg=197 guifg=#e8274b
+DevIconDoc     ctermfg=26 guifg=#185abd
+DevIconCson    ctermfg=185 guifg=#cbcb41
+DevIconBmp     ctermfg=140 guifg=#a074c4
+DevIconYml     ctermfg=66 guifg=#6d8086
+DevIconPl      ctermfg=74 guifg=#519aba
+DevIconConfiguration ctermfg=255 guifg=#ececec
+DevIconJson5   ctermfg=185 guifg=#cbcb41
+DevIconVue     ctermfg=113 guifg=#8dc149
+DevIconMaterial ctermfg=163 guifg=#b83998
+DevIconCoffee  ctermfg=185 guifg=#cbcb41
+DevIconDropbox ctermfg=27 guifg=#0061fe
+DevIconJsx     ctermfg=45 guifg=#20c2e3
+DevIconTFVars  ctermfg=93 guifg=#5f43e9
+DevIconCMake   ctermfg=66 guifg=#6d8086
+DevIconLeex    ctermfg=140 guifg=#a074c4
+DevIconCrystal ctermfg=251 guifg=#c8c8c8
+DevIconOPUS    ctermfg=208 guifg=#f88a02
+DevIconVala    ctermfg=91 guifg=#7239b3
+DevIconScss    ctermfg=204 guifg=#f55385
+DevIconCsh     ctermfg=240 guifg=#4d5a5e
+DevIconCs      ctermfg=58 guifg=#596706
+DevIconKotlin  ctermfg=99 guifg=#7f52ff
+DevIconKotlinScript ctermfg=99 guifg=#7f52ff
+DevIconLhs     ctermfg=140 guifg=#a074c4
+DevIconJl      ctermfg=133 guifg=#a270ba
+DevIconBashrc  ctermfg=113 guifg=#89e051
+DevIconVim     ctermfg=28 guifg=#019833
+DevIconEdn     ctermfg=74 guifg=#519aba
+DevIconWebmanifest ctermfg=185 guifg=#f1e05a
+DevIconPsScriptfile ctermfg=68 guifg=#4273ca
+DevIconC       ctermfg=111 guifg=#599eff
+DevIconSystemVerilog ctermfg=28 guifg=#019833
+DevIconSvg     ctermfg=214 guifg=#ffb13b
+DevIconSln     ctermfg=98 guifg=#854cc7
+DevIconGif     ctermfg=140 guifg=#a074c4
+DevIconHxx     ctermfg=140 guifg=#a074c4
+DevIconTwig    ctermfg=113 guifg=#8dc149
+DevIconAwk     ctermfg=240 guifg=#4d5a5e
+DevIconCjs     ctermfg=185 guifg=#cbcb41
+DevIconSml     ctermfg=166 guifg=#e37933
+DevIconMjs     ctermfg=185 guifg=#f1e05a
+DevIconToml    ctermfg=66 guifg=#6d8086
+DevIconJson    ctermfg=185 guifg=#cbcb41
+DevIconTxt     ctermfg=113 guifg=#89e051
+DevIconJavaScriptReactTest ctermfg=45 guifg=#20c2e3
+DevIconCp      ctermfg=74 guifg=#519aba
+DevIconSolidity ctermfg=74 guifg=#519aba
+DevIconRs      ctermfg=216 guifg=#dea584
+DevIconGitlabCI ctermfg=196 guifg=#e24329
+DevIconTex     ctermfg=22 guifg=#3d6117
+DevIconRmd     ctermfg=74 guifg=#519aba
+DevIconPsManifestfile ctermfg=68 guifg=#6975c4
+DevIconZsh     ctermfg=113 guifg=#89e051
+DevIconImportConfiguration ctermfg=255 guifg=#ececec
+DevIconTs      ctermfg=74 guifg=#519aba
+DevIconPrisma  ctermfg=231 guifg=#ffffff
+DevIconLiquid  ctermfg=106 guifg=#95bf47
+DevIconMl      ctermfg=166 guifg=#e37933
+DevIconMli     ctermfg=166 guifg=#e37933
+DevIconsbt     ctermfg=167 guifg=#cc3e44
+DevIconJs      ctermfg=185 guifg=#cbcb41
+DevIconDb      ctermfg=188 guifg=#dad8d8
+DevIconRb      ctermfg=52 guifg=#701516
+DevIconGo      ctermfg=74 guifg=#519aba
+DevIconDiff    ctermfg=239 guifg=#41535b
+DevIconTsx     ctermfg=26 guifg=#1354bf
+CodeiumSuggestion ctermfg=244 guifg=#808080
+CodeiumAnnotation links to Normal
+IPyIn          cleared
+IPyOut         cleared
+IPyBold        cleared
+IPyFg0         cleared
+IPyFg1         cleared
+IPyFg2         cleared
+IPyFg3         cleared
+IPyFg4         cleared
+IPyFg5         cleared
+IPyFg6         cleared
+IPyFg7         cleared
+IPyFg8         cleared
+IPyFg9         cleared
+IPyFg10        cleared
+IPyFg11        cleared
+IPyFg12        cleared
+IPyFg13        cleared
+IPyFg14        cleared
+IPyFg15        cleared
+MarkSignHL     links to Identifier
+MarkSignNumHL  links to CursorLineNr
+MarkVirtTextHL links to Comment
+TSRainbowRed   ctermfg=9 guifg=#cc241d
+TSRainbowOrange ctermfg=15 guifg=#d65d0e
+TSRainbowYellow ctermfg=11 guifg=#d79921
+TSRainbowGreen ctermfg=10 guifg=#689d6a
+TSRainbowCyan  ctermfg=14 guifg=#a89984
+TSRainbowBlue  ctermfg=12 guifg=#458588
+TSRainbowViolet ctermfg=13 guifg=#b16286
+@variable.builtin guifg=#d0d0d0
+@type.builtin  guifg=#26c99e
+@todo          cleared
+@text.strong   cleared
+@text.strike   cterm=strikethrough gui=strikethrough guifg=#ee5396
+@text.emphasis cterm=bold gui=bold guifg=#ee5396
+@tag.delimiter guifg=#82cfff
+@tag.attribute guifg=#82cfff
+@symbol        cterm=bold gui=bold guifg=#82cfff
+@string.regex  guifg=#08bdba
+@punctuation.special guifg=#3ddbd9
+@punctuation.delimiter guifg=#3ddbd9
+@punctuation.bracket guifg=#3ddbd9
+@none          cleared
+@method.call   guifg=#36ce5e
+@keyword.operator guifg=#3ddbd9
+@keyword.function guifg=#3ddbd9
+@error         guifg=#33b1ff
+@attribute     guifg=#82cfff
+@annotation    cleared
+helpSectionDelim cleared
+helpHeader     guifg=#82cfff
+helpHyperTextJump guifg=#3ddbd9
+helpCommand    cleared
+healthWarning  guifg=#be95ff
+healthSuccess  guifg=#42be65
+NvimTreeFolderIcon guifg=#ff7eb6
+@lsp.type.number links to @number
+DashboardHeader cleared
+WhichKey       links to Function
+BufferLineWarningDiagnosticVisible cleared
+BufferLineWarningDiagnosticSelected cleared
+LazyH2         cleared
+BufferLineWarningDiagnostic cleared
+NavicIconsNumber cleared
+NavicIconsNull cleared
+NavicIconsNamespace cleared
+NavicIconsModule cleared
+NavicIconsMethod cleared
+NavicIconsKey  cleared
+diffSubname    cleared
+NavicIconsInterface cleared
+NavicIconsFunction cleared
+NavicIconsFile cleared
+NavicIconsField cleared
+NavicIconsEvent cleared
+NavicIconsEnumMember cleared
+NavicIconsEnum cleared
+DashboardFooter cleared
+NavicIconsConstructor cleared
+NavicIconsConstant cleared
+NavicIconsClass cleared
+NavicIconsBoolean cleared
+NavicIconsArray cleared
+LazyValue      cleared
+LazyUrl        cleared
+LazyTaskOutput cleared
+LazyTaskError  cleared
+LazySpecial    cleared
+MasonHighlightBlockBoldSecondary cleared
+LazyReasonStart cleared
+LazyReasonSource cleared
+DashboardCenter cleared
+LazyReasonRuntime cleared
+LazyReasonPlugin cleared
+LazyReasonKeys cleared
+LazyReasonImport cleared
+NvimTreeBookmark cleared
+NvimTreeEmptyFolderName guifg=#82cfff
+LazyReasonFt   cleared
+LazyReasonEvent cleared
+LazyReasonCmd  cleared
+LazyProp       cleared
+LazyProgressTodo cleared
+LazyProgressDone cleared
+LazyNormal     cleared
+LazyNoCond     cleared
+LazyH1         cleared
+LazyDir        cleared
+LazyCommitType cleared
+LazyCommitScope cleared
+CratesNvimUpgrade cleared
+CratesNvimPreRelease cleared
+CratesNvimPopupYanked cleared
+CratesNvimPopupVersion cleared
+CratesNvimPopupUrl cleared
+CratesNvimPopupTransitive cleared
+CratesNvimPopupTitle cleared
+CratesNvimPopupPreRelease cleared
+CratesNvimPopupFeature cleared
+CratesNvimPopupEnabled cleared
+CratesNvimNoMatch cleared
+CratesNvimLoading cleared
+CratesNvimError cleared
+IndentBlanklineIndent6 cleared
+LazyCommitIssue cleared
+IndentBlanklineIndent5 cleared
+IndentBlanklineIndent4 cleared
+IndentBlanklineIndent3 cleared
+IndentBlanklineIndent2 cleared
+IndentBlanklineIndent1 cleared
+NavicText      cleared
+LazyDimmed     cleared
+LazyCommit     cleared
+LazyComment    cleared
+NvimTreeSpecialFile cleared
+NvimTreeSymlink cleared
+NvimTreeWindowPicker cleared
+BufferLineDiagnostic cterm=bold gui=bold guifg=#ee5396
+BufferLineDiagnosticSelected cleared
+BufferLineDiagnosticVisible cterm=bold gui=bold guifg=#ee5396
+BufferLineErrorDiagnostic cleared
+BufferLineErrorDiagnosticSelected cleared
+BufferLineErrorDiagnosticVisible cleared
+BufferLineHintDiagnostic cleared
+BufferLineHintDiagnosticSelected cleared
+BufferLineHintDiagnosticVisible cleared
+BufferLineIndicatorSelected cleared
+BufferLineInfoDiagnostic cleared
+BufferLineInfoDiagnosticSelected cleared
+BufferLineInfoDiagnosticVisible cleared
+BufferLineModified cleared
+BufferLineModifiedSelected cleared
+BufferLineModifiedVisible cleared
+BufferLineNumbers cleared
+BufferLineNumbersSelected cleared
+BufferLineNumbersVisible cleared
+LspReferenceText guibg=#525252
+LspReferenceRead guibg=#525252
+LspReferenceWrite guibg=#525252
+WhichKeySeparator links to Comment
+LazyButtonActive cleared
+GitConflictCurrent cleared
+GitConflictIncoming cleared
+GitConflictIncomingLabel cleared
+NavicIconsVariable cleared
+NavicIconsTypeParameter cleared
+LazyButton     cleared
+NavicIconsStruct cleared
+NavicIconsString cleared
+NavicIconsProperty cleared
+NavicIconsPackage cleared
+NavicIconsOperator cleared
+NavicIconsObject cleared
+cssValueLength cleared
+cssURL         cleared
+cssUIAttr      cleared
+cssPseudoClassId cleared
+cssProp        cleared
+cssFunctionName cleared
+cssCommonAttr  cleared
+cssColor       cleared
+cssClassNameDot cleared
+cssClassName   cleared
+cssBraces      cleared
+xmlTagName     cleared
+xmlTag         cleared
+xmlEndTag      cleared
+xmlAttrib      cleared
+htmlTagName    cleared
+htmlTag        cleared
+htmlSpecialChar cleared
+htmlEndTag     cleared
+htmlArg        cleared
+rustType       cleared
+rustSigil      cleared
+rustSelf       cleared
+rustParamName  cleared
+rustModPath    cleared
+rustLifetime   cleared
+rustLet        cleared
+rustKeyword    cleared
+rustIdentifier cleared
+tsxTagName     cleared
+tsxAttrib      cleared
+typescriptVariableDeclaration cleared
+typescriptVariable cleared
+typescriptTypeReference cleared
+typescriptProp cleared
+typescriptPromiseMethod cleared
+typescriptPredefinedType cleared
+typescriptOperator cleared
+typescriptObjectLabel cleared
+typescriptNull cleared
+typescriptModule cleared
+typescriptMember cleared
+typescriptImport cleared
+typescriptGlobalMethod cleared
+typescriptGlobal cleared
+typescriptFuncTypeArrow cleared
+typescriptFuncType cleared
+typescriptExport cleared
+typescriptEndColons cleared
+typescriptDestructureVariable cleared
+typescriptDOMEventProp cleared
+typescriptCastKeyword cleared
+typescriptCall cleared
+typescriptBinaryOp cleared
+typescriptAsyncFuncKeyword cleared
+typescriptArrowFuncArg cleared
+typescriptArrayStaticMethod cleared
+typescriptArrayMethod cleared
+typescriptAmbientDeclaration cleared
+jsThis         cleared
+jsSuper        cleared
+GitConflictCurrentLabel cleared
+jsStatic       cleared
+jsPrototype    cleared
+jsFutureKeys   cleared
+jsFunctionKey  cleared
+jsFuncName     cleared
+jsFuncArgs     cleared
+jsFuncArgRest  cleared
+jsExceptions   cleared
+jsDocTags      cleared
+jsBuiltins     cleared
+jsArgsObj      cleared
+vimCommand     cleared
+jpropertiesIdentifier cleared
+CratesNvimYanked cleared
+CratesNvimVersion cleared
+NvimTreeRootFolder cleared
+NvimTreeOpenedFolderName guifg=#82cfff
+NvimTreeOpenedFile cleared
+NvimTreeLiveFilterValue cleared
+NvimTreeLiveFilterPrefix cleared
+NvimTreeIndentMarker guifg=#393939
+NvimTreeImageFile guifg=#ff7eb6
+NvimTreeGitStaged cleared
+NvimTreeGitRenamed cleared
+NvimTreeGitNew cleared
+NvimTreeGitMerge cleared
+NvimTreeGitIgnored cleared
+NvimTreeGitDirty cleared
+NvimTreeGitDeleted cleared
+NvimTreeFolderName guifg=#78a9ff
+NvimTreeExecFile cleared
+MasonMutedBlockBold cleared
+MasonMutedBlock cleared
+MasonMuted     cleared
+MasonLink      cleared
+MasonHighlightSecondary cleared
+MasonHighlightBlockSecondary cleared
+MasonHighlightBlockBold cleared
+MasonHighlightBlock cleared
+MasonHighlight cleared
+MasonHeading   cleared
+MasonHeaderSecondary cleared
+MasonHeader    cleared
+MasonError     cleared
+SjWarning      cleared
+SjSearch       cleared
+SjOverlay      cleared
+SjLimit        cleared
+SjLabel        cleared
+LeapMatch      cleared
+LeapLabelSecondary cleared
+LeapLabelPrimary cleared
+LeapBackdrop   cleared
+TelescopeTitle links to TelescopeBorder
+TelescopePromptCounter links to NonText
+TelescopeNormal guibg=#131313
+TelescopeBorder guifg=#131313 guibg=#131313
+diffRemoved    guifg=#ee5396
+diffLine       cleared
+diffIndexLine  cleared
+diffFile       cleared
+diffChanged    guifg=#78a9ff
+diffAdded      guifg=#08bdba
+@lsp.type.operator links to @operator
+jsStorageClass cleared
+NavicSeparator cleared
+@lsp.type.keyword links to @keyword
+TreesitterContext links to NormalFloat
+TreesitterContextLineNumber links to LineNr
+TreesitterContextBottom links to NONE
+NONE           cleared
+IronLastSent   cleared
+ZenBg          guifg=#141414 guibg=#141414
+TablineCurrent links to TabLineSel
+TablineActive  links to PmenuSel
+TablineHidden  links to TabLine
+tabline_a_normal links to lualine_a_normal
+lualine_a_normal cleared
+tabline_b_normal links to lualine_b_normal
+lualine_b_normal cleared
+tabline_c_normal links to lualine_c_normal
+lualine_c_normal cleared
+VisualNOS      guibg=#393939
+TooLong        guibg=#393939
+Bold           cterm=bold gui=bold
+Italic         cterm=italic gui=italic
+HealthError    guifg=#ee5396
+@text.literal.commodity guifg=#42be65
+@number.date   guifg=#3ddbd9
+@number.date.effective guifg=#42be65
+@number.interval guifg=#78a9ff
+@number.status guifg=#ff7eb6
+@number.quantity guifg=#33b1ff
+@number.quantity.negative guifg=#ee5396
+LspSignatureActiveParameter guifg=#3ddbd9
+Decorator      guifg=#ff7eb6
+@lsp.type.selfParameter links to @variable.builtin
+@lsp.type.builtinConstant links to @constant.builtin
+@lsp.type.magicFunction links to @function.builtin
+@lsp.type.boolean links to @boolean
+@lsp.type.builtinType links to @type.builtin
+@lsp.type.escapeSequence links to @string.escape
+@lsp.type.formatSpecifier links to @punctuation.special
+@lsp.type.selfKeyword links to @variable.builtin
+@lsp.type.string.rust links to @string
+@lsp.type.typeAlias links to @type.definition
+@lsp.type.unresolvedReference links to Error
+@lsp.mod.readonly links to @constant
+@lsp.mod.typeHint links to Type
+@lsp.mod.builtin links to Special
+@lsp.typemod.class.defaultLibrary links to @type.builtin
+@lsp.typemod.enum.defaultLibrary links to @type.builtin
+@lsp.typemod.enumMember.defaultLibrary links to @constant.builtin
+@lsp.typemod.function.defaultLibrary links to @function.builtin
+@lsp.typemod.keyword.async links to @keyword.coroutine
+@lsp.typemod.macro.defaultLibrary links to @function.builtin
+@lsp.typemod.method.defaultLibrary links to @function.builtin
+@lsp.typemod.operator.injected links to @operator
+@lsp.typemod.string.injected links to @string
+@lsp.typemod.operator.controlFlow links to @exception
+@lsp.typemod.keyword.documentation links to Special
+@lsp.typemod.variable.global links to @constant
+@lsp.typemod.variable.static links to @constant
+@lsp.typemod.variable.defaultLibrary links to @variable.builtin
+@lsp.typemod.function.builtin links to @function.builtin
+@lsp.typemod.function.readonly links to @method
+@lsp.typemod.variable.injected links to @variable
+helpSpecial    guifg=#78a9ff
+helpHeadline   guifg=#ee5396
+Delimeter      guifg=#ffffff
+markdownBlockquote guifg=#3ddbd9
+markdownBold   links to Bold
+markdownItalic links to Italic
+markdownBoldItalic cterm=bold,italic gui=bold,italic
+markdownRule   links to Comment
+markdownH1     guifg=#ee5396
+markdownH2     links to markdownH1
+markdownH3     links to markdownH1
+markdownH4     links to markdownH1
+markdownH5     links to markdownH1
+markdownH6     links to markdownH1
+markdownHeadingDelimiter links to markdownH1
+markdownHeadingRule links to markdownH1
+markdownUrl    links to String
+markdownCode   links to String
+markdownCodeBlock links to markdownCode
+markdownCodeDelimiter links to markdownCode
+markdownListMarker guifg=#3ddbd9
+markdownOrderedListMarker guifg=#3ddbd9
+asciidocAttributeEntry guifg=#82cfff
+asciidocAttributeList links to asciidocAttributeEntry
+asciidocAttributeRef links to asciidocAttributeEntry
+asciidocHLabel links to markdownH1
+asciidocOneLineTitle links to markdownH1
+asciidocQuotedMonospaced links to markdownBlockquote
+asciidocURL    links to markdownUrl
+@reference     guifg=#d0d0d0
+StatusReplace  guifg=#161616 guibg=#3ddbd9
+StatusInsert   guifg=#161616 guibg=#ff7eb6
+StatusVisual   guifg=#161616 guibg=#be95ff
+StatusTerminal guifg=#161616 guibg=#33b1ff
+StatusNormal   guifg=#161616 guibg=#82cfff
+StatusCommand  guifg=#161616 guibg=#42be65
+StatusLineDiagnosticWarn cterm=bold gui=bold guifg=#be95ff guibg=#161616
+StatusLineDiagnosticError cterm=bold gui=bold guifg=#ee5396 guibg=#161616
+TelescopePromptBorder guifg=#393939 guibg=#393939
+TelescopePromptNormal guifg=#f2f2f2 guibg=#393939
+TelescopePromptPrefix guifg=#3ddbd9 guibg=#393939
+TelescopePreviewTitle guifg=#393939 guibg=#ff7eb6
+TelescopePromptTitle guifg=#393939 guibg=#33b1ff
+TelescopeResultsTitle guifg=#131313 guibg=#131313
+TelescopeSelection guibg=#393939
+TelescopePreviewLine guibg=#262626
+TelescopeMatching cterm=bold,italic gui=bold,italic guifg=#3ddbd9
+NvimTreeWinSeparator guifg=#161616 guibg=#161616
+NvimTreeNormal guifg=#d0d0d0 guibg=#161616
+NeogitBranch   guifg=#ee5396
+NeogitRemote   guifg=#78a9ff
+NeogitHunkHeader guifg=#d0d0d0 guibg=#393939
+NeogitHunkHeaderHighlight guifg=#d0d0d0 guibg=#525252
+HydraRed       guifg=#ff7eb6
+HydraBlue      guifg=#78a9ff
+HydraAmaranth  guifg=#ee5396
+HydraTeal      guifg=#3ddbd9
+HydraHint      guibg=#131313
+alpha1         guifg=#525252
+alpha2         guifg=#d0d0d0
+alpha3         guifg=#525252
+CodeBlock      guibg=#262626
+htmlH1         links to markdownH1
+mkdRule        links to markdownRule
+mkdListItem    links to markdownListMarker
+mkdListItemCheckbox links to markdownListMarker
+VimwikiHeader1 links to markdownH1
+VimwikiHeader2 links to markdownH1
+VimwikiHeader3 links to markdownH1
+VimwikiHeader4 links to markdownH1
+VimwikiHeader5 links to markdownH1
+VimwikiHeader6 links to markdownH1
+VimwikiHeaderChar links to markdownH1
+VimwikiList    links to markdownListMarker
+VimwikiLink    links to markdownUrl
+VimwikiCode    links to markdownCode
+rainbowcol1    ctermfg=9 guifg=#cc241d
+rainbowcol2    ctermfg=10 guifg=#a89984
+rainbowcol3    ctermfg=11 guifg=#b16286
+rainbowcol4    ctermfg=12 guifg=#d79921
+rainbowcol5    ctermfg=13 guifg=#689d6a
+rainbowcol6    ctermfg=14 guifg=#d65d0e
+rainbowcol7    ctermfg=15 guifg=#458588
+termcolorcode_cfg_39_gfg_00AFFF guifg=#00afff
+termcolorcode_cfg_208_gfg_FF8700 guifg=#ff8700
+termcolorcode_cfg_246_gfg_949494 guifg=#838383
+TerminalCSIColorCode guifg=#00ccff
+@string.documentation cterm=italic gui=italic guifg=#697077
+BufferLineBufferSelected cterm=bold gui=bold guifg=#9e9e9e guibg=#282828
+NeoTreeModified guifg=#ae81ff
+NeoTreeGitUntracked guifg=#666666
+NeoTreeGitUnstaged guifg=#939393
+termcolorcode_cfg_13_gfg_FF55FF guifg=#ff55ff
+termcolorcode_cfg_37_gfg_00AFAF guifg=#46d9ff
+termcolorcode_cfg_10_gfg_55FF55 guifg=#55ff55
+NeoTreeGitConflict cterm=bold gui=bold guifg=#ffff00
+termcolorcode_cfg_3_gfg_AA5500 guifg=#ffff00
+termcolorcode_c_bold_cfg_5_g_bold_gfg_AA00AA guifg=#d4bbff
+termcolorcode_cfg_2_gfg_00AA00 guifg=#00aa00
+termcolorcode_cfg_5_gfg_AA00AA guifg=#ff79ff
+HopNextKey     cterm=bold ctermfg=198 gui=bold guifg=#ff007c
+HopNextKey1    cterm=bold ctermfg=45 gui=bold guifg=#00dfff
+HopNextKey2    ctermfg=33 guifg=#2b8db3
+HopUnmatched   ctermfg=242 guifg=#666666 guibg=bg guisp=#666666
+HopCursor      links to Cursor
+HopPreview     links to IncSearch
+HighlightURL   cleared
+WhichKeyDesc   links to Identifier
+WhichKeyGroup  links to Keyword
+WhichKeyFloat  links to NormalFloat
+WhichKeyBorder links to FloatBorder
+WhichKeyValue  links to Comment
+MatchParenCur  links to MatchParen
+MatchWord      links to MatchParen
+MatchBackground links to ColorColumn
+Stl51a0cf_161616_bolditalic_ cterm=bold,italic gui=bold,italic guifg=#51a0cf guibg=#161616
+StlNONE_161616_bolditalic_ cterm=bold,italic gui=bold,italic guibg=#161616
+Stld0d0d0_161616_bolditalic_ cterm=bold,italic gui=bold,italic guifg=#d0d0d0 guibg=#161616
+Stlee5396_161616_bolditalic_ cterm=bold,italic gui=bold,italic guifg=#ee5396 guibg=#161616
+Stl161616_262626__ guifg=#161616 guibg=#262626
+Stl_262626__   guibg=#262626
+@spell         cleared
+@nospell       cleared
+Stl161616_61afef__ cleared
+Stl61afef_161616__ cleared
+Stl51a0cf_161616__ guifg=#51a0cf guibg=#161616
+Stld0d0d0_161616__ guifg=#d0d0d0 guibg=#161616
+Stl161616_161616__ cleared
+Stlbe95ff_161616__ cleared
+Stl78a9ff_161616__ cleared
+TodoBgFIX      gui=bold guifg=#161616 guibg=#ee5396
+TodoFgFIX      guifg=#ee5396
+TodoSignFIX    guifg=#ee5396 guibg=#161616
+TodoBgWARN     gui=bold guifg=#161616 guibg=#ffb53d
+TodoFgWARN     guifg=#ffb53d
+TodoSignWARN   guifg=#ffb53d guibg=#161616
+TodoBgNOTE     gui=bold guifg=#161616 guibg=#d0d0d0
+TodoFgNOTE     guifg=#d0d0d0
+TodoSignNOTE   guifg=#d0d0d0 guibg=#161616
+TodoBgHACK     gui=bold guifg=#161616 guibg=#ffb53d
+TodoFgHACK     guifg=#ffb53d
+TodoSignHACK   guifg=#ffb53d guibg=#161616
+TodoBgTEST     gui=bold guifg=#161616 guibg=#d0d0d0
+TodoFgTEST     guifg=#d0d0d0
+TodoSignTEST   guifg=#d0d0d0 guibg=#161616
+TodoBgTODO     gui=bold guifg=#161616 guibg=#78a9ff
+TodoFgTODO     guifg=#78a9ff
+TodoSignTODO   guifg=#78a9ff guibg=#161616
+TodoBgPERF     gui=bold guifg=#161616 guibg=#d0d0d0
+TodoFgPERF     guifg=#d0d0d0
+TodoSignPERF   guifg=#d0d0d0 guibg=#161616
+IndentBlanklineContextChar cterm=nocombine gui=nocombine guifg=#78a9ff
+IndentBlanklineSpaceCharBlankline cterm=nocombine gui=nocombine guifg=#393939
+IndentBlanklineSpaceChar cterm=nocombine gui=nocombine guifg=#393939
+IndentBlanklineChar cterm=nocombine gui=nocombine guifg=#393939
+IndentBlanklineContextStart cterm=underline gui=underline guisp=#78a9ff
+UfoFoldedBg    guibg=#262626
+UfoFoldedFg    guifg=#d0d0d0
+UfoPreviewSbar links to PmenuSbar
+UfoPreviewThumb links to PmenuThumb
+UfoPreviewWinBar links to UfoFoldedBg
+UfoPreviewCursorLine links to Visual
+UfoFoldedEllipsis links to Comment
+UfoCursorFoldedLine links to CursorLine
+TroubleNormal  links to Normal
+TroubleIndent  links to LineNr
+TroubleText    links to Normal
+TroubleCount   links to TabLineSel
+TroubleLocation links to LineNr
+TroubleFoldIcon links to CursorLineNr
+TroubleFile    links to Directory
+TroubleSignOther links to TroubleSignInformation
+TroubleSignInformation links to DiagnosticSignInfo
+TroublePreview links to Search
+TroubleTextHint links to TroubleText
+TroubleCode    links to Comment
+TroubleTextInformation links to TroubleText
+TroubleTextWarning links to TroubleText
+TroubleTextError links to TroubleText
+TroubleSource  links to Comment
+TroubleOther   links to DiagnosticOther
+DiagnosticOther cleared
+DiagnosticSignOther cleared
+TroubleError   links to DiagnosticError
+TroubleSignError links to DiagnosticSignError
+TroubleWarning links to DiagnosticWarn
+TroubleSignWarning links to DiagnosticSignWarn
+TroubleInformation links to DiagnosticInfo
+TroubleHint    links to DiagnosticHint
+TroubleSignHint links to DiagnosticSignHint
+GitSignsTopdelete links to GitSignsDelete
+GitSignsDelete links to DiffDelete
+GitSignsChange links to DiffChange
+GitSignsAdd    links to DiffAdd
+GitSignsUntracked links to GitSignsAdd
+GitSignsChangedelete links to GitSignsChange
+GitSignsAddNr  links to GitSignsAdd
+GitSignsChangeNr links to GitSignsChange
+GitSignsDeleteNr links to GitSignsDelete
+GitSignsChangedeleteNr links to GitSignsChangeNr
+GitSignsTopdeleteNr links to GitSignsDeleteNr
+GitSignsUntrackedNr links to GitSignsAddNr
+GitSignsAddLn  links to DiffAdd
+GitSignsChangeLn links to DiffChange
+GitSignsChangedeleteLn links to GitSignsChangeLn
+GitSignsUntrackedLn links to GitSignsAddLn
+GitSignsStagedAdd cterm= gui= guibg=#122f2f
+GitSignsStagedChange cterm= gui= guibg=#222a39
+GitSignsStagedDelete cterm= gui= guibg=#361c28
+GitSignsStagedChangedelete cterm= gui= guibg=#222a39
+GitSignsStagedTopdelete cterm= gui= guibg=#361c28
+GitSignsStagedAddNr cterm= gui= guibg=#122f2f
+GitSignsStagedChangeNr cterm= gui= guibg=#222a39
+GitSignsStagedDeleteNr cterm= gui= guibg=#361c28
+GitSignsStagedChangedeleteNr cterm= gui= guibg=#222a39
+GitSignsStagedTopdeleteNr cterm= gui= guibg=#361c28
+GitSignsStagedAddLn cterm= gui= guibg=#122f2f
+GitSignsStagedChangeLn cterm= gui= guibg=#222a39
+GitSignsStagedChangedeleteLn cterm= gui= guibg=#222a39
+GitSignsAddPreview links to DiffAdd
+GitSignsDeletePreview links to DiffDelete
+GitSignsCurrentLineBlame links to NonText
+GitSignsAddInline links to TermCursor
+GitSignsDeleteInline links to TermCursor
+GitSignsChangeInline links to TermCursor
+GitSignsAddLnInline links to GitSignsAddInline
+GitSignsChangeLnInline links to GitSignsChangeInline
+GitSignsDeleteLnInline links to GitSignsDeleteInline
+GitSignsDeleteVirtLn links to DiffDelete
+GitSignsDeleteVirtLnInLine links to GitSignsDeleteLnInline
+GitSignsVirtLnum links to GitSignsDeleteVirtLn
+v2hexokinaseHighlightffff00 guifg=#ffff00
+v2hexokinaseHighlight000000 guifg=#000000
+AerialLine     links to QuickFixLine
+AerialLineNC   links to AerialLine
+AerialPrivate  links to Comment
+AerialProtected links to Comment
+AerialGuide    cleared
+AerialGuide1   links to AerialGuide
+AerialGuide2   links to AerialGuide
+AerialGuide3   links to AerialGuide
+AerialGuide4   links to AerialGuide
+AerialGuide5   links to AerialGuide
+AerialGuide6   links to AerialGuide
+AerialGuide7   links to AerialGuide
+AerialGuide8   links to AerialGuide
+AerialGuide9   links to AerialGuide
+AerialArray    links to NONE
+AerialBoolean  links to NONE
+AerialClass    links to NONE
+AerialConstant links to NONE
+AerialConstructor links to NONE
+AerialEnum     links to NONE
+AerialEnumMember links to NONE
+AerialEvent    links to NONE
+AerialField    links to NONE
+AerialFile     links to NONE
+AerialFunction links to NONE
+AerialInterface links to NONE
+AerialKey      links to NONE
+AerialMethod   links to NONE
+AerialModule   links to NONE
+AerialNamespace links to NONE
+AerialNull     links to NONE
+AerialNumber   links to NONE
+AerialObject   links to NONE
+AerialOperator links to NONE
+AerialPackage  links to NONE
+AerialProperty links to NONE
+AerialString   links to NONE
+AerialStruct   links to NONE
+AerialTypeParameter links to NONE
+AerialVariable links to NONE
+AerialArrayIcon links to Identifier
+AerialBooleanIcon links to Identifier
+AerialClassIcon links to Type
+AerialConstantIcon links to Constant
+AerialConstructorIcon links to Special
+AerialEnumIcon links to Type
+AerialEnumMemberIcon links to Identifier
+AerialEventIcon links to Identifier
+AerialFieldIcon links to Identifier
+AerialFileIcon links to Identifier
+AerialFunctionIcon links to Function
+AerialInterfaceIcon links to Type
+AerialKeyIcon  links to Identifier
+AerialMethodIcon links to Function
+AerialModuleIcon links to Include
+AerialNamespaceIcon links to Include
+AerialNullIcon links to Identifier
+AerialNumberIcon links to Identifier
+AerialObjectIcon links to Identifier
+AerialOperatorIcon links to Identifier
+AerialPackageIcon links to Include
+AerialPropertyIcon links to Identifier
+AerialStringIcon links to Identifier
+AerialStructIcon links to Type
+AerialTypeParameterIcon links to Identifier
+AerialVariableIcon links to Identifier
+StlNONE_NONE__ cleared
+Stl78a9ff_161616_bold_ cleared
+Stl98c379_161616_bold_ cleared
+Stlff9640_161616_bold_ cleared
+Stlec5f67_161616_bold_ cleared
+Stl161616_ebae34__ cleared
+Stlebae34_161616__ cleared
+iCursor        cleared
+IndentGuidesOdd cleared
+IndentGuidesEven cleared
+pythonTripleQuotes cleared
+qfLineNr       cleared
+pythonMethod   cleared
+ALEWarningSign cleared
+ALEErrorSign   cleared
+GitGutterAdd   cleared
+GitGutterAddLine cleared
+GitGutterChange cleared
+GitGutterDelete cleared
+GitGutterChangeDelete cleared
+ActiveWindow   cleared
+InactiveWindow cleared
+NERDTreeExecFile cleared
+NERDTreeDirSlash cleared
+NERDTreeCWD    cleared
+pythonFunction cleared
+pythonParam    cleared
+pythonComment  cleared
+GalaxyDiagnosticError cleared
+LspDiagnosticsDefaultError cleared
+GalaxyDiagnsticInfo cleared
+LspDiagnosticsDefaultInformation cleared
+GalaxyDiagnosticWarn cleared
+LspDiagnosticsDefaultWarning cleared
+GalaxyBufferIcon cleared
+GalaxyGitIcon  cleared
+pythonDocstring cleared
+texCmdEnv      cleared
+texEnvArgName  cleared
+Warning        cleared
+TSWarning      cleared
+TSRepeat       cleared
+TSMethod       cleared
+TSConstant     cleared
+TSKeywordSelf  cleared
+TSParameter    cleared
+TSBoolean      cleared
+TSConstructor  cleared
+TSFloat        cleared
+TSType         cleared
+TSInclude      cleared
+TSOperator     cleared
+TSKeywordReturn cleared
+TSPunctBracket cleared
+TSConditional  cleared
+TSString       cleared
+TSNote         cleared
+pythonBuiltinObj cleared
+pythonBoolean  cleared
+pythonImport   cleared
+pythonExceptions cleared
+pythonBracketsi cleared
+pythonDef      cleared
+pythonSpecial  cleared
+pythonDecorator cleared
+pythonAs       cleared
+pythonConstant cleared
+pythonFString  cleared
+pythonRawFString cleared
+pythonMagic    cleared
+pythonRepeat   cleared
+pythonWordOperator cleared
+pythonOperator links to Operator
+pythonNone     cleared
+pythonExtraOperatori cleared
+pythonExtraPseudoOperator cleared
+pythonParameters cleared
+pythonClassParameters cleared
+pythonArg      cleared
+pythonLibraries cleared
+pythonVars     cleared
+pythonClassVars cleared
+pythonNote     cleared
+pythonArgs     cleared
+pythonKwargs   cleared
+pythonReturns  cleared
+pythonBrackets cleared
+pythonBracket  cleared
+pythonDottedName cleared
+BufferCurrent  cleared
+BufferCurrentIndex cleared
+BufferCurrentMod cleared
+BufferCurrentSign cleared
+BufferVisible  cleared
+BufferVisibleSign cleared
+BufferVisibleIndex cleared
+BufferVisibleMod cleared
+BufferInactive cleared
+BufferInactiveSign cleared
+BufferInactiveIndex cleared
+BufferInactiveMod cleared
+pythonfDocstring cleared
+pythonStringModifier cleared
+TSField        cleared
+TSKeyword      cleared
+TSKeywordFunction cleared
+pythonTSField  cleared
+pythonTSConstructor cleared
+pythonTSType   cleared
+pythonTSVariableBuiltin cleared
+pythonTSVariable cleared
+pythonTSBoolean cleared
+semshiGlobal   cleared
+semshiLocal    cleared
+semshiImported cleared
+semshiParameter cleared
+semshiParameterUnused cleared
+semshiFree     cleared
+semshiBuiltin  cleared
+semshiAttribute cleared
+semshiSelf     cleared
+semshiUnresolved cleared
+semshiSelected cleared
+semshiErrorSign cleared
+semshiErrorChar cleared
+lualine_x_visual cleared
+lualine_x_terminal cleared
+lualine_c_insert cleared
+lualine_c_visual cleared
+lualine_c_replace cleared
+lualine_c_command cleared
+lualine_c_terminal cleared
+lualine_x_inactive cleared
+lualine_x_command cleared
+lualine_x_replace cleared
+lualine_x_insert cleared
+lualine_x_normal cleared
+lualine_c_16_normal cleared
+lualine_c_16_insert cleared
+lualine_c_16_visual cleared
+lualine_c_16_replace cleared
+lualine_c_16_command cleared
+lualine_c_16_terminal cleared
+lualine_c_16_inactive cleared
+lualine_c_17_normal cleared
+lualine_c_17_insert cleared
+lualine_c_17_visual cleared
+lualine_c_17_replace cleared
+lualine_c_17_command cleared
+lualine_c_17_terminal cleared
+lualine_c_17_inactive cleared
+lualine_c_24_normal cleared
+lualine_c_24_insert cleared
+lualine_c_24_visual cleared
+lualine_c_24_replace cleared
+lualine_c_24_command cleared
+lualine_c_24_terminal cleared
+lualine_c_24_inactive cleared
+lualine_x_25_normal cleared
+lualine_x_25_insert cleared
+lualine_x_25_visual cleared
+lualine_x_25_replace cleared
+lualine_x_25_command cleared
+lualine_x_25_terminal cleared
+lualine_x_25_inactive cleared
+lualine_x_29_normal cleared
+lualine_x_29_insert cleared
+lualine_x_29_visual cleared
+lualine_x_29_replace cleared
+lualine_x_29_command cleared
+lualine_x_29_terminal cleared
+lualine_x_29_inactive cleared
+lualine_c_diff_added_normal cleared
+lualine_c_diff_added_insert cleared
+lualine_c_diff_added_visual cleared
+lualine_c_diff_added_replace cleared
+lualine_c_diff_added_command cleared
+lualine_c_diff_added_terminal cleared
+lualine_c_diff_added_inactive cleared
+lualine_c_diff_modified_normal cleared
+lualine_c_diff_modified_insert cleared
+lualine_c_diff_modified_visual cleared
+lualine_c_diff_modified_replace cleared
+lualine_c_diff_modified_command cleared
+lualine_c_diff_modified_terminal cleared
+lualine_c_diff_modified_inactive cleared
+lualine_c_diff_removed_normal cleared
+lualine_c_diff_removed_insert cleared
+lualine_c_diff_removed_visual cleared
+lualine_c_diff_removed_replace cleared
+lualine_c_diff_removed_command cleared
+lualine_c_diff_removed_terminal cleared
+lualine_c_diff_removed_inactive cleared
+lualine_c_31_normal cleared
+lualine_c_31_insert cleared
+lualine_c_31_visual cleared
+lualine_c_31_replace cleared
+lualine_c_31_command cleared
+lualine_c_31_terminal cleared
+lualine_c_31_inactive cleared
+lualine_x_diagnostics_error_normal cleared
+lualine_x_diagnostics_error_insert cleared
+lualine_x_diagnostics_error_visual cleared
+lualine_x_diagnostics_error_replace cleared
+lualine_x_diagnostics_error_command cleared
+lualine_x_diagnostics_error_terminal cleared
+lualine_x_diagnostics_error_inactive cleared
+lualine_x_diagnostics_warn_normal cleared
+lualine_x_diagnostics_warn_insert cleared
+lualine_x_diagnostics_warn_visual cleared
+lualine_x_diagnostics_warn_replace cleared
+lualine_x_diagnostics_warn_command cleared
+lualine_x_diagnostics_warn_terminal cleared
+lualine_x_diagnostics_warn_inactive cleared
+lualine_x_diagnostics_info_normal cleared
+lualine_x_diagnostics_info_insert cleared
+lualine_x_diagnostics_info_visual cleared
+lualine_x_diagnostics_info_replace cleared
+lualine_x_diagnostics_info_command cleared
+lualine_x_diagnostics_info_terminal cleared
+lualine_x_diagnostics_info_inactive cleared
+lualine_x_diagnostics_hint_normal cleared
+lualine_x_diagnostics_hint_insert cleared
+lualine_x_diagnostics_hint_visual cleared
+lualine_x_diagnostics_hint_replace cleared
+lualine_x_diagnostics_hint_command cleared
+lualine_x_diagnostics_hint_terminal cleared
+lualine_x_diagnostics_hint_inactive cleared
+lualine_x_33_normal cleared
+lualine_x_33_insert cleared
+lualine_x_33_visual cleared
+lualine_x_33_replace cleared
+lualine_x_33_command cleared
+lualine_x_33_terminal cleared
+lualine_x_33_inactive cleared
+lualine_x_34_normal cleared
+lualine_x_34_insert cleared
+lualine_x_34_visual cleared
+lualine_x_34_replace cleared
+lualine_x_34_command cleared
+lualine_x_34_terminal cleared
+lualine_x_34_inactive cleared
+lualine_a_replace cleared
+lualine_b_replace cleared
+lualine_a_visual cleared
+lualine_b_visual cleared
+lualine_a_insert cleared
+lualine_b_insert cleared
+lualine_c_inactive cleared
+lualine_a_inactive cleared
+lualine_b_inactive cleared
+lualine_a_terminal cleared
+lualine_b_terminal cleared
+lualine_a_command cleared
+lualine_b_command cleared
+rainbowcol8    cleared
+markdownTSTitle cleared
+markdownTSLiteral cleared
+BufferLineBackground cleared
+BufferLineCloseButton cleared
+BufferLineSeparator cleared
+BufferLineFill cleared
+BufferLineDevIconSh cleared
+BufferLineDevIconVim cleared
+BufferLineDevIconVimInactive cleared
+BufferLineHintSelected cleared
+BufferLineBuffer cleared
+BufferLineCloseButtonSelected cleared
+BufferLineError cleared
+BufferLineHint cleared
+BufferLineOffsetSeparator cleared
+BufferLinePickVisible cleared
+BufferLinePickSelected cleared
+BufferLineTabSeparatorSelected cleared
+BufferLineTabSeparator cleared
+BufferLineSeparatorVisible cleared
+BufferLineSeparatorSelected cleared
+BufferLineDuplicate cleared
+BufferLineDuplicateVisible cleared
+BufferLineDuplicateSelected cleared
+BufferLineTab  cleared
+BufferLineErrorSelected cleared
+BufferLineErrorVisible cleared
+BufferLineWarningSelected cleared
+BufferLineWarningVisible cleared
+BufferLineInfoSelected cleared
+BufferLineInfoVisible cleared
+BufferLinePick cleared
+BufferLineInfo cleared
+BufferLineHintVisible cleared
+BufferLineBufferVisible cleared
+BufferLineCloseButtonVisible cleared
+BufferLineWarning cleared
+BufferLineTabClose cleared
+BufferLineTabSelected cleared
+BufferLineGroupLabel cleared
+BufferLineGroupSeparator cleared
+BufferLineIndicatorVisible cleared
+DevIconLock    ctermfg=250 guifg=#bbbbbb
+Stl51a0cf_1c1c1c_bolditalic_ cleared
+StlNONE_1c1c1c_bolditalic_ cleared
+Stlffffff_1c1c1c_bolditalic_ cleared
+Stlf20052_1c1c1c_bolditalic_ cleared
+Stl1c1c1c_202020__ cleared
+Stl_202020__   cleared
+StlNONE_61afef__ cleared
+Stl61afef_NONE__ cleared
+Stlf92672_NONE_bold_ cleared
+Stl51a0cf_NONE__ cleared
+Stl00ccff_NONE_bold_ cleared
+Stlf553bf_NONE_bold_ cleared
+Stlff2600_NONE_bold_ cleared
+Stlffff00_NONE__ cleared
+Stl007dff_NONE__ cleared
+StlNONE_98c379__ cleared
+Stl98c379_NONE__ cleared
+IndentBlanklineContextSpaceChar cleared
+StlNONE_ebae34__ cleared
+Stlebae34_NONE__ cleared
+TelescopeResultsOperator links to Operator
+TelescopeResultsMethod links to Method
+Method         cleared
+TelescopeResultsFunction links to Function
+TelescopeResultsField links to Function
+TelescopeResultsConstant links to Constant
+TelescopeResultsClass links to Function
+TelescopePreviewMessageFillchar links to TelescopePreviewMessage
+TelescopePreviewMessage links to TelescopePreviewNormal
+TelescopePreviewNormal links to TelescopeNormal
+TelescopePreviewDate links to Directory
+TelescopePreviewGroup links to Constant
+TelescopePreviewUser links to Constant
+TelescopePreviewSize links to String
+TelescopePreviewSticky links to Keyword
+TelescopePreviewHyphen links to NonText
+TelescopePreviewExecute links to String
+TelescopePreviewWrite links to Statement
+TelescopePreviewRead links to Constant
+TelescopePreviewSocket links to Statement
+TelescopePreviewLink links to Special
+TelescopePreviewBlock links to Constant
+TelescopePreviewDirectory links to Directory
+TelescopePreviewCharDev links to Constant
+TelescopePreviewPipe links to Constant
+TelescopePreviewMatch links to Search
+TelescopePreviewBorder links to TelescopeBorder
+TelescopeResultsBorder links to TelescopeBorder
+TelescopeResultsSpecialComment links to SpecialComment
+TelescopeResultsComment links to Comment
+TelescopeResultsNumber links to Number
+TelescopeResultsIdentifier links to Identifier
+TelescopeResultsLineNr links to LineNr
+TelescopeResultsVariable links to SpecialChar
+TelescopeResultsStruct links to Struct
+Struct         cleared
+TelescopeResultsDiffUntracked links to NonText
+TelescopeResultsDiffDelete links to DiffDelete
+TelescopeResultsDiffAdd links to DiffAdd
+TelescopeResultsDiffChange links to DiffChange
+TelescopeResultsNormal links to TelescopeNormal
+TelescopeMultiIcon links to Identifier
+TelescopeMultiSelection links to Type
+TelescopeSelectionCaret links to TelescopeSelection
+Stl51a0cf_1c1c1c__ cleared
+StlNONE_1c1c1c__ cleared
+Stlffffff_1c1c1c__ cleared
+Stlf20052_1c1c1c__ cleared
+LightspeedUniqueChar cterm= gui=
+                   links to LightspeedUnlabeledMatch
+LightspeedUnlabeledMatch cterm=bold ctermfg=15 gui=bold guifg=#f3ecec
+LightspeedOneCharMatch cterm= gui=
+                   links to LightspeedShortcut
+LightspeedShortcut cterm=bold ctermfg=15 ctermbg=9 gui=bold guifg=#ffffff guibg=#f00077
+LightspeedLabel cterm=bold,underline ctermfg=9 gui=bold,underline guifg=#ff2f87
+LightspeedMaskedChar cterm= ctermfg=242 gui= guifg=#b38080
+LightspeedLabelDistant cterm=bold,underline ctermfg=14 gui=bold,underline guifg=#99ddff
+LightspeedGreyWash cterm= ctermfg=248 gui= guifg=#777777
+LightspeedCursor cterm= gui=
+                   links to Cursor
+LightspeedPendingOpArea cterm= gui=
+                   links to IncSearch
+colorizer_mf_000000 cleared
+colorizer_mf_0000ee cleared
+Stl51a0cf_1f1f1f__ cleared
+StlNONE_1f1f1f__ cleared
+Stlaaaaaa_1f1f1f__ cleared
+Stlffffff_1f1f1f__ cleared
+Stl1f1f1f_NONE__ cleared
+Stl_NONE__     cleared
+Stl000000_98c379__ cleared
+Stl98c379_000000__ cleared
+Stl999999_000000__ cleared
+Stl000000_000000__ cleared
+Stlbdb76b_000000__ cleared
+rubyClass      cleared
+rubyFunction   cleared
+rubyInterpolationDelimiter cleared
+rubySymbol     cleared
+rubyConstant   cleared
+rubyStringDelimiter cleared
+rubyBlockParameter cleared
+rubyBlock      cleared
+rubyInstanceVariable cleared
+rubyInclude    cleared
+rubyGlobalVariable cleared
+rubyRegexp     cleared
+rubyRegexpDelimiter cleared
+rubyEscape     cleared
+rubyControl    cleared
+rubyRepeat     cleared
+rubyConditional cleared
+rubyClassVariable cleared
+rubyOperator   cleared
+rubyException  cleared
+rubyPseudoVariable cleared
+rubyRailsUserClass cleared
+rubyRailsARAssociationMethod cleared
+rubyRailsARMethod cleared
+rubyRailsRenderMethod cleared
+rubyRailsMethod cleared
+rubyArrayDelimiter cleared
+rubyInterpolation cleared
+erubyDelimiter cleared
+erubyRailsMethod cleared
+javaScriptFunction cleared
+javaScriptRailsFunction cleared
+javaScriptBraces cleared
+yamlKey        cleared
+yamlAnchor     cleared
+yamlAlias      cleared
+yamlDocumentHeader cleared
+yamlPlainScalar cleared
+yamlBlockCollectionItemStart cleared
+jsBraces       cleared
+jsGlobalObjects cleared
+coffeeCurly    cleared
+coffeeObjAssign cleared
+cjsxAttribProperty cleared
+SyntasticError cleared
+SyntasticWarning cleared
+Stl51a0cf_303030__ cleared
+StlNONE_303030__ cleared
+Stlffffff_303030__ cleared
+Stl303030_303030__ cleared
+Stl_303030__   cleared
+Stl878787_98c379__ cleared
+Stl98c379_878787__ cleared
+Stlffffff_878787__ cleared
+Stl878787_878787__ cleared
+Stlafffd7_878787__ cleared
+Underline      cleared
+diffCommon     cleared
+rstEmphasis    cleared
+Stl51a0cf_000000__ cleared
+StlNONE_000000__ cleared
+Stlbcbcbc_000000__ cleared
+Stleeeeee_000000__ cleared
+Stl000000_NONE__ cleared
+Stl8a8a8a_000000__ cleared
+Stlff79ff_000000__ cleared
+Tooltip        cleared
+Stl51a0cf_00222b__ cleared
+StlNONE_00222b__ cleared
+Stl80e5ff_00222b__ cleared
+Stlff5555_00222b__ cleared
+Stl00222b_NONE__ cleared
+Stl00ccff_98c379__ cleared
+Stl98c379_00ccff__ cleared
+Stl004455_00ccff__ cleared
+Stl00ccff_00ccff__ cleared
+Stl80e5ff_00ccff__ cleared
+Noise          cleared
+cOperator      cleared
+cPreCondit     cleared
+csClass        cleared
+csAttribute    cleared
+csModifier     cleared
+csType         cleared
+csUnspecifiedStatement cleared
+csContextualStatement cleared
+csNewDecleration cleared
+DiffNewFile    cleared
+gitCommitOverflow cleared
+gitCommitSummary cleared
+htmlBold       cleared
+htmlItalic     cleared
+javaScript     cleared
+javaScriptNumber cleared
+jsOperator     cleared
+jsStatement    cleared
+jsReturn       cleared
+jsClassDefinition cleared
+jsFunction     cleared
+jsFuncCall     cleared
+jsClassFuncName cleared
+jsClassMethodType cleared
+jsRegexpString cleared
+jsGlobalNodeObjects cleared
+mailQuoted1    cleared
+mailQuoted2    cleared
+mailQuoted3    cleared
+mailQuoted4    cleared
+mailQuoted5    cleared
+mailQuoted6    cleared
+mailURL        cleared
+mailEmail      cleared
+markdownError  cleared
+phpMemberSelector cleared
+phpComparison  cleared
+phpParent      cleared
+rubyAttribute  cleared
+sassidChar     cleared
+sassClassChar  cleared
+sassInclude    cleared
+sassMixing     cleared
+sassMixinName  cleared
+SignifySignAdd cleared
+SignifySignChange cleared
+SignifySignDelete cleared
+Stl51a0cf_19171c__ cleared
+StlNONE_19171c__ cleared
+Stl8b8792_19171c__ cleared
+Stl19171c_19171c__ cleared
+Stl19171c_26232a__ cleared
+Stl_26232a__   cleared
+Stl585260_98c379__ cleared
+Stl98c379_585260__ cleared
+Stl7e7887_585260__ cleared
+Stl585260_585260__ cleared
+Stla06e3b_585260__ cleared
+Stl51a0cf_20201d__ cleared
+StlNONE_20201d__ cleared
+Stla6a28c_20201d__ cleared
+Stl20201d_20201d__ cleared
+Stl20201d_292824__ cleared
+Stl_292824__   cleared
+Stl6e6b5e_98c379__ cleared
+Stl98c379_6e6b5e__ cleared
+Stl999580_6e6b5e__ cleared
+Stl6e6b5e_6e6b5e__ cleared
+Stlae9513_6e6b5e__ cleared
+Stl51a0cf_22221b__ cleared
+StlNONE_22221b__ cleared
+Stl929181_22221b__ cleared
+Stl22221b_22221b__ cleared
+Stl22221b_302f27__ cleared
+Stl_302f27__   cleared
+Stl5f5e4e_98c379__ cleared
+Stl98c379_5f5e4e__ cleared
+Stl878573_5f5e4e__ cleared
+Stl5f5e4e_5f5e4e__ cleared
+Stla5980d_5f5e4e__ cleared
+Stl51a0cf_1b1918__ cleared
+StlNONE_1b1918__ cleared
+Stla8a19f_1b1918__ cleared
+Stl1b1918_1b1918__ cleared
+Stl1b1918_2c2421__ cleared
+Stl_2c2421__   cleared
+Stl68615e_98c379__ cleared
+Stl98c379_68615e__ cleared
+Stl9c9491_68615e__ cleared
+Stl68615e_68615e__ cleared
+Stlc38418_68615e__ cleared
+Stl51a0cf_1b181b__ cleared
+StlNONE_1b181b__ cleared
+Stlab9bab_1b181b__ cleared
+Stl1b181b_1b181b__ cleared
+Stl1b181b_292329__ cleared
+Stl_292329__   cleared
+Stl695d69_98c379__ cleared
+Stl98c379_695d69__ cleared
+Stl9e8f9e_695d69__ cleared
+Stl695d69_695d69__ cleared
+Stlbb8a35_695d69__ cleared
+Stl51a0cf_161b1d__ cleared
+StlNONE_161b1d__ cleared
+Stl7ea2b4_161b1d__ cleared
+Stl161b1d_161b1d__ cleared
+Stl161b1d_1f292e__ cleared
+Stl_1f292e__   cleared
+Stl516d7b_98c379__ cleared
+Stl98c379_516d7b__ cleared
+Stl7195a8_516d7b__ cleared
+Stl516d7b_516d7b__ cleared
+Stl8a8a0f_516d7b__ cleared
+Stl51a0cf_171c19__ cleared
+StlNONE_171c19__ cleared
+Stl87928a_171c19__ cleared
+Stl171c19_171c19__ cleared
+Stl171c19_232a25__ cleared
+Stl_232a25__   cleared
+Stl526057_98c379__ cleared
+Stl98c379_526057__ cleared
+Stl78877d_526057__ cleared
+Stl526057_526057__ cleared
+Stla07e3b_526057__ cleared
+Stl51a0cf_131513__ cleared
+StlNONE_131513__ cleared
+Stl8ca68c_131513__ cleared
+Stl131513_131513__ cleared
+Stl131513_242924__ cleared
+Stl_242924__   cleared
+Stl5e6e5e_98c379__ cleared
+Stl98c379_5e6e5e__ cleared
+Stl809980_5e6e5e__ cleared
+Stl5e6e5e_5e6e5e__ cleared
+Stl98981b_5e6e5e__ cleared
+Stl51a0cf_202746__ cleared
+StlNONE_202746__ cleared
+Stl979db4_202746__ cleared
+Stl202746_202746__ cleared
+Stl202746_293256__ cleared
+Stl_293256__   cleared
+Stl5e6687_98c379__ cleared
+Stl98c379_5e6687__ cleared
+Stl898ea4_5e6687__ cleared
+Stl5e6687_5e6687__ cleared
+Stlc08b30_5e6687__ cleared
+erubyComment   cleared
+htmlH2         cleared
+htmlH3         cleared
+htmlH4         cleared
+htmlH5         cleared
+htmlH6         cleared
+Stl51a0cf_272822__ cleared
+StlNONE_272822__ cleared
+Stlf8f8f2_272822__ cleared
+Stlffffff_272822__ cleared
+Stl272822_NONE__ cleared
+Stl64645e_98c379__ cleared
+Stl98c379_64645e__ cleared
+Stlf8f8f2_64645e__ cleared
+Stl64645e_64645e__ cleared
+StlNONE_64645e__ cleared
+Stlf8f8ff_000000__ cleared
+Stlffffff_000000__ cleared
+Stlffbbff_NONE__ cleared
+Stlfff5ee_000000__ cleared
+Stl1f001f_98c379__ cleared
+Stl98c379_1f001f__ cleared
+Stl8fbc8f_1f001f__ cleared
+Stl1f001f_1f001f__ cleared
+Stl60ff60_1f001f__ cleared
+Stl51a0cf_000050__ cleared
+StlNONE_000050__ cleared
+Stlf8f8ff_000050__ cleared
+Stlffffff_000050__ cleared
+Stl000050_NONE__ cleared
+StringDelimiter cleared
+Stl51a0cf_4242c6__ cleared
+StlNONE_4242c6__ cleared
+Stlcecece_4242c6__ cleared
+Stl000000_4242c6__ cleared
+Stl4242c6_9c9cf7__ cleared
+Stl_9c9cf7__   cleared
+Stl9c9cf7_98c379__ cleared
+Stl98c379_9c9cf7__ cleared
+Stlffffff_9c9cf7__ cleared
+Stl9c9cf7_9c9cf7__ cleared
+javaOperator   cleared
+javaCommentTitle cleared
+javaDocTags    cleared
+javaDocParam   cleared
+javaConstant   cleared
+javaAnnotation cleared
+pythonDecoratorName cleared
+vimOption      cleared
+vimParenSep    cleared
+xmlEntity      cleared
+Stl51a0cf_262626__ cleared
+StlNONE_262626__ cleared
+Stla3bfa3_262626__ cleared
+Stlbf4d4d_262626__ cleared
+Stl262626_NONE__ cleared
+Stla3bfa3_98c379__ cleared
+Stl98c379_a3bfa3__ cleared
+Stl262626_a3bfa3__ cleared
+Stla3bfa3_a3bfa3__ cleared
+Stl69bf69_a3bfa3__ cleared
+CTagsMember    cleared
+CTagsGlobalConstant cleared
+CTagsImport    cleared
+CTagsGlobalVariable cleared
+EnumerationValue cleared
+Union          cleared
+EnumerationName cleared
+DefinedName    cleared
+LocalVariable  cleared
+CTagsClass     cleared
+cursorim       cleared
+pythonbuiltin  cleared
+phpstringdouble cleared
+javascriptstrings cleared
+htmlstring     cleared
+phpstringsingle cleared
+Stldc322f_303030__ cleared
+Stl303030_073642__ cleared
+Stl_073642__   cleared
+Stlc7c7c7_98c379__ cleared
+Stl98c379_c7c7c7__ cleared
+Stl2b2b2b_c7c7c7__ cleared
+Stlc7c7c7_c7c7c7__ cleared
+Stlb58900_c7c7c7__ cleared
+Stl51a0cf_3f1f1f__ cleared
+StlNONE_3f1f1f__ cleared
+Stlffefd5_3f1f1f__ cleared
+Stlffffff_3f1f1f__ cleared
+Stl3f1f1f_NONE__ cleared
+Stlffffff_98c379__ cleared
+Stl98c379_ffffff__ cleared
+Stl8b4726_ffffff__ cleared
+Stlffffff_ffffff__ cleared
+Stlb4eeb4_ffffff__ cleared
+Stl51a0cf_4a4a4a__ cleared
+StlNONE_4a4a4a__ cleared
+Stldedede_4a4a4a__ cleared
+Stlffffff_4a4a4a__ cleared
+Stl4a4a4a_505050__ cleared
+Stl_505050__   cleared
+Stlebaf12_000000__ cleared
+Stl93bf3d_000000__ cleared
+Stl51a0cf_333333__ cleared
+StlNONE_333333__ cleared
+Stlf8f8ff_333333__ cleared
+Stlffffff_333333__ cleared
+Stl333333_NONE__ cleared
+Stl51a0cf_404040__ cleared
+StlNONE_404040__ cleared
+Stlf8f8ff_404040__ cleared
+Stlffffff_404040__ cleared
+Stl404040_NONE__ cleared
+Stl60ff60_NONE__ cleared
+Gutter         cleared
+Stl366b8a_404040__ cleared
+Stl366b8a_NONE__ cleared
+Stlffffff_NONE__ cleared
+Stl00008b_NONE__ cleared
+Stl51a0cf_fff8dc__ cleared
+StlNONE_fff8dc__ cleared
+Stlffffff_fff8dc__ cleared
+Stlfff8dc_NONE__ cleared
+Stlbfbfbf_000000__ cleared
+Stlbd7550_NONE__ cleared
+Stl559955_NONE__ cleared
+Stl51a0cf_000033__ cleared
+StlNONE_000033__ cleared
+Stlbfbfbf_000033__ cleared
+Stlffffff_000033__ cleared
+Stl000033_NONE__ cleared
+Stl51a0cf_001800__ cleared
+StlNONE_001800__ cleared
+Stlbfbfbf_001800__ cleared
+Stlffffff_001800__ cleared
+Stl001800_NONE__ cleared
+Stl448844_000000__ cleared
+Stl9d7530_NONE__ cleared
+colorizer_mf_696969 cleared
+Stlbfbfbf_262626__ cleared
+Stlffffff_262626__ cleared
+Stl51a0cf_180000__ cleared
+StlNONE_180000__ cleared
+Stlbfbfbf_180000__ cleared
+Stlffffff_180000__ cleared
+Stl180000_NONE__ cleared
+Stl51a0cf_002020__ cleared
+StlNONE_002020__ cleared
+Stlbfbfbf_002020__ cleared
+Stlffffff_002020__ cleared
+Stl002020_NONE__ cleared
+colorizer_mf_008000 cleared
+Stl51a0cf_002800__ cleared
+StlNONE_002800__ cleared
+Stlf8f8ff_002800__ cleared
+Stlffffff_002800__ cleared
+Stl002800_NONE__ cleared
+Stl366b8a_002800__ cleared
+Stl366b8a_c7c7c7__ cleared
+StlNONE_c7c7c7__ cleared
+Stl000000_c7c7c7__ cleared
+Stlffffff_c7c7c7__ cleared
+Stlc7c7c7_NONE__ cleared
+Stl6d16bd_NONE__ cleared
+Stl366b8a_cdcdc1__ cleared
+StlNONE_cdcdc1__ cleared
+Stl000000_cdcdc1__ cleared
+Stlffffff_cdcdc1__ cleared
+Stlcdcdc1_NONE__ cleared
+Stl2e8b57_NONE__ cleared
+Stl366b8a_cccccc__ cleared
+StlNONE_cccccc__ cleared
+Stl000000_cccccc__ cleared
+Stlffffff_cccccc__ cleared
+Stlcccccc_NONE__ cleared
+Stl366b8a_cdcabd__ cleared
+StlNONE_cdcabd__ cleared
+Stl000000_cdcabd__ cleared
+Stlffffff_cdcabd__ cleared
+Stlcdcabd_NONE__ cleared
+colorizer_mf_ffffe0 cleared
+Stl366b8a_ddddaa__ cleared
+StlNONE_ddddaa__ cleared
+Stl000000_ddddaa__ cleared
+Stlffffff_ddddaa__ cleared
+Stlddddaa_NONE__ cleared
+debugBreakpoint cleared
+Terminal       cleared
+PmenuSelBold   cleared
+vCursor        cleared
+@conceal       cleared
+@definition    cleared
+@math          cleared
+@strike        cleared
+CursorWord1    cleared
+CmpDocumentationBorder cleared
+CmpDocumentation cleared
+CursorWord0    cleared
+@scope         cleared
+dbui_tables    cleared
+@uri           cleared
+Stl51a0cf_ddddaa__ cleared
+Stl51a0cf_222426__ cleared
+StlNONE_222426__ cleared
+Stle3e3e1_222426__ cleared
+Stle95678_222426__ cleared
+Stl222426_NONE__ cleared
+Stl2e323c_98c379__ cleared
+Stl98c379_2e323c__ cleared
+Stlb1b1b1_2e323c__ cleared
+Stl2e323c_2e323c__ cleared
+Stl66d9ef_2e323c__ cleared
+cleared        cleared
+Stl51a0cf_203d29__ cleared
+StlNONE_203d29__ cleared
+Stlffffff_203d29__ cleared
+Stlffff00_203d29__ cleared
+Stl203d29_017550__ cleared
+Stl_017550__   cleared
+Stle12e2a_98c379__ cleared
+Stl98c379_e12e2a__ cleared
+Stlffff00_e12e2a__ cleared
+Stle12e2a_e12e2a__ cleared
+helpExample    cleared
+jsonKeyword    cleared
+jsonQuote      cleared
+typescriptParens cleared
+NeomakeErrorSign cleared
+NeomakeWarningSign cleared
+NeomakeInfoSign cleared
+NeomakeError   cleared
+NeomakeWarning cleared
+ALEInfoSign    cleared
+NERDTreeOpenable cleared
+NERDTreeFile   cleared
+NERDTreeFlags  cleared
+YanilTreeFile  cleared
+vimfilerLeaf   cleared
+vimfilerNormalFile cleared
+vimfilerOpenedFile cleared
+vimfilerClosedFile cleared
+SignifySignChangeDelete cleared
+SignifySignDeleteFirstLine cleared
+Defx_filename_directory cleared
+CocErrorSign   cleared
+CocWarningSign cleared
+CocInfoSign    cleared
+CocHintSign    cleared
+CocErrorFloat  cleared
+CocWarningFloat cleared
+CocInfoFloat   cleared
+CocHintFloat   cleared
+CocDiagnosticsError cleared
+CocDiagnosticsWarning cleared
+CocDiagnosticsInfo cleared
+CocDiagnosticsHint cleared
+CocSelectedText cleared
+CocCodeLens    cleared
+DiagnosticSignInformation cleared
+DiagnosticUnderlineInformation cleared
+DiagnosticFloatingInformation cleared
+Stl51a0cf_1b2b34__ cleared
+StlNONE_1b2b34__ cleared
+Stld8dee9_1b2b34__ cleared
+Stlffffff_1b2b34__ cleared
+Stl1b2b34_343d46__ cleared
+Stl_343d46__   cleared
+Stl65737e_98c379__ cleared
+Stl98c379_65737e__ cleared
+Stl343d46_65737e__ cleared
+Stl65737e_65737e__ cleared
+Stlc594c5_65737e__ cleared
+Stl366b8a_1b2b34__ cleared
+Stl366b8a_f5f7fa__ cleared
+StlNONE_f5f7fa__ cleared
+Stl1b2b34_f5f7fa__ cleared
+Stlffffff_f5f7fa__ cleared
+Stlf5f7fa_d4d8dc__ cleared
+Stl_d4d8dc__   cleared
+Stla7adba_98c379__ cleared
+Stl98c379_a7adba__ cleared
+Stld4d8dc_a7adba__ cleared
+Stla7adba_a7adba__ cleared
+Stlad82ad_a7adba__ cleared
+Stl51a0cf_f5f7fa__ cleared
+colorizer_mf_ffefd5 cleared
+Stl366b8a_ffefd5__ cleared
+StlNONE_ffefd5__ cleared
+Stl3f1f1f_ffefd5__ cleared
+Stlffffff_ffefd5__ cleared
+Stlffefd5_NONE__ cleared
+Stl5f3705_ffffff__ cleared
+Stl2e8b57_ffffff__ cleared
+StatusLineTerm cleared
+StatusLineTermNC cleared
+BufTabLineCurrent cleared
+BufTabLineActive cleared
+BufTabLineHidden cleared
+BufTabLineFill cleared
+Global         cleared
+LspDiagnosticsDefaultHint cleared
+LspDiagnosticsUnderlineError cleared
+LspDiagnosticsUnderlineWarning cleared
+LspDiagnosticsUnderlineInformation cleared
+LspDiagnosticsUnderlineHint cleared
+vimVar         cleared
+vimFuncKey     cleared
+vimFunction    cleared
+vimNotFunc     cleared
+vimMap         cleared
+vimAutoEvent   cleared
+vimMapModKey   cleared
+vimFuncName    cleared
+vimIsCommand   cleared
+vimFuncVar     cleared
+vimLet         cleared
+vimContinue    cleared
+vimMapRhsExtend cleared
+vimCommentTitle cleared
+vimBracket     cleared
+vimNotation    cleared
+vimOper        cleared
+vimOperParen   cleared
+vimSynType     cleared
+vimSynReg      cleared
+vimSynRegion   cleared
+vimSynMtchGrp  cleared
+vimSynNextgroup cleared
+vimSynKeyRegion cleared
+vimSynRegOpt   cleared
+vimSynMtchOpt  cleared
+vimSynContains cleared
+vimGroupName   cleared
+vimGroupList   cleared
+vimHiGroup     cleared
+vimGroup       cleared
+vimOnlyOption  cleared
+makeIdent      cleared
+makeSpecTarget cleared
+makeTarget     cleared
+makeStatement  cleared
+makeCommands   cleared
+makeSpecial    cleared
+cmakeStatement cleared
+cmakeArguments cleared
+cmakeVariableValue cleared
+cmakeCommand   cleared
+cmakeCommandConditional cleared
+cmakeKWset     cleared
+cmakeKWvariable_watch cleared
+cmakeKWif      cleared
+cmakeKWproject cleared
+cmakeGeneratorExpressions cleared
+cmakeGeneratorExpression cleared
+cmakeVariable  cleared
+cmakeProperty  cleared
+cmakeKWforeach cleared
+cmakeKWunset   cleared
+cmakeKWmacro   cleared
+cmakeKWget_property cleared
+cmakeKWset_tests_properties cleared
+cmakeKWmessage cleared
+cmakeKWinstall_targets cleared
+cmakeKWsource_group cleared
+cmakeKWfind_package cleared
+cmakeKWstring  cleared
+cmakeKWinstall cleared
+cmakeKWtarget_sources cleared
+cType          cleared
+cFormat        cleared
+cStorageClass  cleared
+cBoolean       cleared
+cCharacter     cleared
+cConstant      cleared
+cConditional   cleared
+cSpecial       cleared
+cDefine        cleared
+cNumber        cleared
+cRepeat        cleared
+cLabel         cleared
+cDelimiter     cleared
+cCustomParen   cleared
+cOctalZero     cleared
+cFunction      cleared
+cppBoolean     cleared
+cppSTLnamespace cleared
+cppSTLexception cleared
+cppSTLfunctional cleared
+cppSTLiterator cleared
+cppExceptions  cleared
+cppStatement   cleared
+cppStorageClass cleared
+cppAccess      cleared
+cppSTLconstant cleared
+cppSTLtype     cleared
+cppSTLfunction cleared
+cppSTLios      cleared
+rustModPathSep cleared
+rustStructure  cleared
+rustAttribute  cleared
+rustPanic      cleared
+rustTrait      cleared
+rustEnum       cleared
+rustEnumVariant cleared
+rustOperator   cleared
+rustMacro      cleared
+rustMacroVariable cleared
+rustAssert     cleared
+rustConditional cleared
+lexCFunctions  cleared
+lexAbbrv       cleared
+lexAbbrvRegExp cleared
+lexAbbrvComment cleared
+lexBrace       cleared
+lexPat         cleared
+lexPatComment  cleared
+lexPatTag      cleared
+lexSlashQuote  cleared
+lexSep         cleared
+lexStartState  cleared
+lexPatTagZone  cleared
+lexMorePat     cleared
+lexOptions     cleared
+lexPatString   cleared
+yaccNonterminal cleared
+yaccDelim      cleared
+yaccInitKey    cleared
+yaccInit       cleared
+yaccKey        cleared
+yaccVar        cleared
+nasmStdInstruction cleared
+nasmGen08Register cleared
+nasmGen16Register cleared
+nasmGen32Register cleared
+nasmGen64Register cleared
+nasmHexNumber  cleared
+nasmStorage    cleared
+nasmLabel      cleared
+nasmDirective  cleared
+nasmLocalLabel cleared
+gasSymbol      cleared
+gasDirective   cleared
+gasOpcode_386_Base cleared
+gasDecimalNumber cleared
+gasSymbolRef   cleared
+gasRegisterX86 cleared
+gasOpcode_P6_Base cleared
+gasDirectiveStore cleared
+mipsInstruction cleared
+mipsRegister   cleared
+mipsLabel      cleared
+mipsDirective  cleared
+bashStatement  cleared
+shDerefVar     cleared
+shDerefSimple  cleared
+shFunction     cleared
+shStatement    cleared
+shLoop         cleared
+shQuote        cleared
+shCaseEsac     cleared
+shSnglCase     cleared
+shFunctionOne  cleared
+shCase         cleared
+shSetList      cleared
+ps1Type        cleared
+ps1Variable    cleared
+ps1Boolean     cleared
+ps1FunctionInvocation cleared
+ps1FunctionDeclaration cleared
+ps1Keyword     cleared
+ps1Exception   cleared
+ps1Operator    cleared
+ps1CommentDoc  cleared
+ps1CDocParam   cleared
+htmlTitle      cleared
+htmlScriptTag  cleared
+htmlBoldItalic cleared
+htmlTagN       cleared
+htmlSpecialTagName cleared
+htmlComment    cleared
+htmlCommentPart cleared
+cssIdentifier  cleared
+cssPositioningProp cleared
+cssNoise       cleared
+cssBoxProp     cleared
+cssTableAttr   cleared
+cssPositioningAttr cleared
+cssUnitDecorators cleared
+cssBackgroundProp cleared
+cssTextProp    cleared
+cssDimensionProp cleared
+markdownLink   cleared
+markdownLinkText cleared
+markdownLinkTextDelimiter cleared
+markdownLinkDelimiter cleared
+mkdCode        cleared
+mkdLink        cleared
+mkdURL         cleared
+mkdString      cleared
+mkdBlockQuote  cleared
+mkdLinkTitle   cleared
+mkdDelimiter   cleared
+rstSections    cleared
+rstDelimiter   cleared
+rstExplicitMarkup cleared
+rstDirective   cleared
+rstHyperlinkTarget cleared
+rstExDirective cleared
+rstInlineLiteral cleared
+rstInterpretedTextOrHyperlinkReference cleared
+pythonException cleared
+pythonInclude  cleared
+pythonStatement cleared
+pythonConditional cleared
+pythonPreCondit cleared
+pythonExClass  cleared
+pythonString   cleared
+pythonEscape   cleared
+pythonStrFormatting cleared
+pythonBytesEscape cleared
+pythonStrFormat cleared
+pythonBuiltinFunc cleared
+javaExternal   cleared
+javaTypedef    cleared
+javaClassDecl  cleared
+javaScopeDecl  cleared
+javaStorageClass cleared
+javaBoolean    cleared
+javaDocComment cleared
+javaStatement  cleared
+javaScriptParens cleared
+javaScriptIdentifier cleared
+javaScriptConditional cleared
+javaScriptRepeat cleared
+javaScriptBoolean cleared
+javaScriptMember cleared
+javaScriptReserved cleared
+javascriptNull cleared
+javascriptGlobal cleared
+javascriptStatement cleared
+javaScriptMessage cleared
+typescriptDecorators cleared
+typescriptLabel cleared
+jsImport       cleared
+jsExport       cleared
+jsModuleAs     cleared
+jsFrom         cleared
+jsExportDefault cleared
+jsFuncParens   cleared
+jsFuncBraces   cleared
+jsParens       cleared
+jsNoise        cleared
+jsxTagName     cleared
+jsxComponentName cleared
+jsxAttrib      cleared
+jsxEqual       cleared
+jsxString      cleared
+jsxCloseTag    cleared
+jsxCloseString cleared
+jsxDot         cleared
+jsxNamespace   cleared
+jsxPunct       cleared
+jsonString     cleared
+jsonNoise      cleared
+jsonKeywordMatch cleared
+jsonBraces     cleared
+jsonNumber     cleared
+jsonNull       cleared
+jsonBoolean    cleared
+jsonCommentError cleared
+goDirective    cleared
+goDeclaration  cleared
+goStatement    cleared
+goConditional  cleared
+goConstants    cleared
+goFunction     cleared
+goDeclType     cleared
+goBuiltins     cleared
+stapComment    cleared
+stapProbe      cleared
+stapStat       cleared
+stapFunc       cleared
+stapString     cleared
+stapTarget     cleared
+stapStatement  cleared
+stapType       cleared
+stapSharpBang  cleared
+stapDeclaration cleared
+stapCMacro     cleared
+dtraceProbe    cleared
+dtracePredicate cleared
+dtraceComment  cleared
+dtraceFunction cleared
+dtraceAggregatingFunction cleared
+dtraceStatement cleared
+dtraceIdentifier cleared
+dtraceOption   cleared
+dtraceConstant cleared
+dtraceType     cleared
+plantumlPreProc cleared
+plantumlDirectedOrVerticalArrowRL cleared
+plantumlDirectedOrVerticalArrowLR cleared
+plantumlString cleared
+plantumlActivityThing cleared
+plantumlText   cleared
+plantumlClassPublic cleared
+plantumlClassPrivate cleared
+plantumlColonLine cleared
+plantumlClass  cleared
+plantumlHorizontalArrow cleared
+plantumlTypeKeyword cleared
+plantumlKeyword cleared
+plantumlType   cleared
+plantumlBlock  cleared
+plantumlPreposition cleared
+plantumlLayout cleared
+plantumlNote   cleared
+plantumlLifecycle cleared
+plantumlParticipant cleared
+haskellType    cleared
+haskellIdentifier cleared
+haskellOperators cleared
+haskellWhere   cleared
+haskellDelimiter cleared
+haskellImportKeywords cleared
+haskellStatement cleared
+sqlStatement   cleared
+sqlType        cleared
+sqlKeyword     cleared
+sqlOperator    cleared
+sqlSpecial     cleared
+mysqlVariable  cleared
+mysqlType      cleared
+mysqlKeyword   cleared
+mysqlOperator  cleared
+mysqlSpecial   cleared
+octaveVariable cleared
+octaveDelimiter cleared
+octaveQueryVar cleared
+octaveSemicolon cleared
+octaveFunction cleared
+octaveSetVar   cleared
+octaveUserVar  cleared
+octaveArithmeticOperator cleared
+octaveBeginKeyword cleared
+octaveElseKeyword cleared
+octaveEndKeyword cleared
+octaveStatement cleared
+rubyModule     cleared
+rubyKeyword    cleared
+rubyDefine     cleared
+rubyAccess     cleared
+rubyLocalVariableOrMethod cleared
+rubyCurlyBlock cleared
+rubyCurlyBlockDelimiter cleared
+rubyExceptional cleared
+rubyBoolean    cleared
+fortranUnitHeader cleared
+fortranIntrinsic cleared
+fortranType    cleared
+fortranTypeOb  cleared
+fortranStructure cleared
+fortranStorageClass cleared
+fortranStorageClassR cleared
+fortranKeyword cleared
+fortranReadWrite cleared
+fortranIO      cleared
+fortranOperator cleared
+fortranCall    cleared
+fortranContinueMark cleared
+algol68Statement cleared
+algol68Operator cleared
+algol68PreProc cleared
+algol68Function cleared
+rType          cleared
+rArrow         cleared
+rDollar        cleared
+xxdAddress     cleared
+xxdSep         cleared
+xxdAscii       cleared
+xxdDot         cleared
+phpIdentifier  cleared
+phpVarSelector cleared
+phpKeyword     cleared
+phpRepeat      cleared
+phpConditional cleared
+phpStatement   cleared
+phpAssignByRef cleared
+phpSpecialFunction cleared
+phpFunctions   cleared
+phpBackslashSequences cleared
+phpStorageClass cleared
+phpDefine      cleared
+phpIntVar      cleared
+perlFiledescRead cleared
+perlMatchStartEnd cleared
+perlStatementFlow cleared
+perlStatementStorage cleared
+perlFunction   cleared
+perlMethod     cleared
+perlStatementFiledesc cleared
+perlVarPlain   cleared
+perlSharpBang  cleared
+perlStatementInclude cleared
+perlStatementScalar cleared
+perlSubName    cleared
+perlSpecialString cleared
+pascalType     cleared
+pascalStatement cleared
+pascalPredefined cleared
+pascalFunction cleared
+pascalStruct   cleared
+pascalOperator cleared
+pascalPreProc  cleared
+pascalAcces    cleared
+luaFunc        cleared
+luaIn          cleared
+luaFunction    cleared
+luaStatement   cleared
+luaRepeat      cleared
+luaCondStart   cleared
+luaTable       cleared
+luaConstant    cleared
+luaElse        cleared
+luaCondElseif  cleared
+luaCond        cleared
+luaCondEnd     cleared
+clojureConstant cleared
+clojureBoolean cleared
+clojureCharacter cleared
+clojureKeyword cleared
+clojureNumber  cleared
+clojureString  cleared
+clojureRegexp  cleared
+clojureRegexpEscape cleared
+clojureParen   cleared
+clojureVariable cleared
+clojureCond    cleared
+clojureDefine  cleared
+clojureException cleared
+clojureFunc    cleared
+clojureMacro   cleared
+clojureRepeat  cleared
+clojureSpecial cleared
+clojureQuote   cleared
+clojureUnquote cleared
+clojureMeta    cleared
+clojureDeref   cleared
+clojureAnonArg cleared
+clojureDispatch cleared
+dockerfileKeyword cleared
+shOperator     cleared
+shOption       cleared
+shLine         cleared
+shWrapLineOperator cleared
+ngxDirectiveBlock cleared
+ngxDirective   cleared
+ngxDirectiveImportant cleared
+ngxString      cleared
+ngxVariableString cleared
+ngxVariable    cleared
+yamlBlockMappingKey cleared
+yamlKeyValueDelimiter cleared
+qmlObjectLiteralType cleared
+qmlReserved    cleared
+qmlBindingProperty cleared
+qmlType        cleared
+dosiniHeader   cleared
+dosiniLabel    cleared
+mailHeaderKey  cleared
+mailHeaderEmail cleared
+mailSubject    cleared
+mailHeader     cleared
+xmlProcessingDelim cleared
+xmlString      cleared
+xmlEqual       cleared
+xmlAttribPunct cleared
+xmlNamespace   cleared
+elixirAlias    cleared
+elixirAtom     cleared
+elixirVariable cleared
+elixirUnusedVariable cleared
+elixirInclude  cleared
+elixirStringDelimiter cleared
+elixirKeyword  cleared
+elixirFunctionDeclaration cleared
+elixirBlockDefinition cleared
+elixirDefine   cleared
+elixirStructDefine cleared
+elixirPrivateDefine cleared
+elixirModuleDefine cleared
+elixirProtocolDefine cleared
+elixirImplDefine cleared
+elixirModuleDeclaration cleared
+elixirDocString cleared
+elixirDocTest  cleared
+erlangBIF      cleared
+erlangBracket  cleared
+erlangLocalFuncCall cleared
+erlangVariable cleared
+erlangAtom     cleared
+erlangAttribute cleared
+erlangRecordDef cleared
+erlangRecord   cleared
+erlangRightArrow cleared
+erlangStringModifier cleared
+erlangInclude  cleared
+erlangKeyword  cleared
+erlangGlobalFuncCall cleared
+cucumberFeature cleared
+cucumberBackground cleared
+cucumberScenario cleared
+cucumberGiven  cleared
+cucumberGivenAnd cleared
+cucumberThen   cleared
+cucumberThenAnd cleared
+cucumberWhen   cleared
+cucumberScenarioOutline cleared
+cucumberExamples cleared
+cucumberTags   cleared
+cucumberPlaceholder cleared
+adaInc         cleared
+adaSpecial     cleared
+adaKeyword     cleared
+adaBegin       cleared
+adaEnd         cleared
+adaTypedef     cleared
+adaAssignment  cleared
+adaAttribute   cleared
+cobolMarker    cleared
+cobolLine      cleared
+cobolReserved  cleared
+cobolDivision  cleared
+cobolDivisionName cleared
+cobolSection   cleared
+cobolSectionName cleared
+cobolParagraph cleared
+cobolParagraphName cleared
+cobolDeclA     cleared
+cobolDecl      cleared
+cobolCALLs     cleared
+cobolEXECs     cleared
+sedST          cleared
+sedFlag        cleared
+sedRegexp47    cleared
+sedRegexpMeta  cleared
+sedReplacement47 cleared
+sedReplaceMeta cleared
+sedAddress     cleared
+sedFunction    cleared
+sedBranch      cleared
+sedLabel       cleared
+awkPatterns    cleared
+awkSearch      cleared
+awkRegExp      cleared
+awkCharClass   cleared
+awkFieldVars   cleared
+awkStatement   cleared
+awkFunction    cleared
+awkVariables   cleared
+awkArrayElement cleared
+awkOperator    cleared
+awkBoolLogic   cleared
+awkExpression  cleared
+awkSpecialPrintf cleared
+elmImport      cleared
+elmAlias       cleared
+elmType        cleared
+elmOperator    cleared
+elmBraces      cleared
+elmTypedef     cleared
+elmTopLevelDecl cleared
+purescriptModuleKeyword cleared
+purescriptImportKeyword cleared
+purescriptModuleName cleared
+purescriptOperator cleared
+purescriptType cleared
+purescriptTypeVar cleared
+purescriptStructure cleared
+purescriptLet  cleared
+purescriptFunction cleared
+purescriptDelimiter cleared
+purescriptStatement cleared
+purescriptConstructor cleared
+purescriptWhere cleared
+fsharpTypeName cleared
+fsharpCoreClass cleared
+fsharpType     cleared
+fsharpKeyword  cleared
+fsharpOperator cleared
+fsharpBoolean  cleared
+fsharpFormat   cleared
+fsharpLinq     cleared
+fsharpKeyChar  cleared
+fsharpOption   cleared
+fsharpCoreMethod cleared
+fsharpAttrib   cleared
+fsharpModifier cleared
+fsharpOpen     cleared
+asnExternal    cleared
+asnTagModifier cleared
+asnBraces      cleared
+asnDefinition  cleared
+asnStructure   cleared
+asnType        cleared
+asnTypeInfo    cleared
+asnFieldOption cleared
+netrwVersion   cleared
+netrwList      cleared
+netrwHidePat   cleared
+netrwQuickHelp cleared
+netrwHelpCmd   cleared
+netrwDir       cleared
+netrwClassify  cleared
+netrwExe       cleared
+netrwSuffixes  cleared
+netrwTreeBar   cleared
+NERDTreeUp     cleared
+NERDTreeHelpCommand cleared
+NERDTreeHelpTitle cleared
+NERDTreeHelpKey cleared
+NERDTreeHelp   cleared
+NERDTreeToggleOff cleared
+NERDTreeToggleOn cleared
+NERDTreeDir    cleared
+NERDTreeClosable cleared
+TagbarHelpTitle cleared
+TagbarHelp     cleared
+TagbarKind     cleared
+TagbarSignature cleared
+GitGutterChangeLine cleared
+GitGutterDeleteLine cleared
+agitHead       cleared
+agitHeader     cleared
+agitStatAdded  cleared
+agitStatRemoved cleared
+agitDiffAdd    cleared
+agitDiffRemove cleared
+agitDiffHeader cleared
+agitDiff       cleared
+agitDiffIndex  cleared
+agitDiffFileName cleared
+agitLog        cleared
+agitAuthorMark cleared
+agitDateMark   cleared
+agitHeaderLabel cleared
+agitDate       cleared
+agitTree       cleared
+agitRef        cleared
+agitRemote     cleared
+agitTag        cleared
+StartifyFile   cleared
+StartifyNumber cleared
+StartifyHeader cleared
+StartifySection cleared
+StartifyPath   cleared
+StartifySlash  cleared
+StartifyBracket cleared
+StartifySpecial cleared
+SignifyLineChange cleared
+SignifyLineAdd cleared
+SignifyLineDelete cleared
+gitcommitHeader cleared
+gitcommitSelectedType cleared
+gitcommitSelectedFile cleared
+gitcommitUntrackedFile cleared
+gitcommitBranch cleared
+gitcommitDiscardedType cleared
+gitcommitDiff  cleared
+diffBDiffer    cleared
+CocFloating    cleared
+CocErrorHighlight cleared
+CocWarningHighlight cleared
+CocInfoHighlight cleared
+CocHintHighlight cleared
+Stl366b8a_eeeeee__ cleared
+StlNONE_eeeeee__ cleared
+Stl444444_eeeeee__ cleared
+Stlaf0000_eeeeee__ cleared
+Stleeeeee_005f87__ cleared
+Stl_005f87__   cleared
+Stle4e4e4_98c379__ cleared
+Stl98c379_e4e4e4__ cleared
+Stl005f87_e4e4e4__ cleared
+Stle4e4e4_e4e4e4__ cleared
+Stld70087_e4e4e4__ cleared
+cTypeTag       cleared
+cPreProc       cleared
+Stl51a0cf_eeeeee__ cleared
+Stl51a0cf_222222__ cleared
+StlNONE_222222__ cleared
+Stlececec_222222__ cleared
+Stlffffff_222222__ cleared
+Stl222222_NONE__ cleared
+Stl8090a0_98c379__ cleared
+Stl98c379_8090a0__ cleared
+Stlffffff_8090a0__ cleared
+Stl8090a0_8090a0__ cleared
+Stl27b684_8090a0__ cleared
+colorizer_mf_ff0000 guifg=#ff0000
+Stl51a0cf_500000__ cleared
+StlNONE_500000__ cleared
+Stlffffd0_500000__ cleared
+Stlffffff_500000__ cleared
+Stl500000_NONE__ cleared
+ExtraWhitespace cleared
+Stl51a0cf_192224__ cleared
+StlNONE_192224__ cleared
+Stlbdae88_192224__ cleared
+Stla1a6a8_192224__ cleared
+Stl192224_4b4b4b__ cleared
+Stl_4b4b4b__   cleared
+Stl492224_98c379__ cleared
+Stl98c379_492224__ cleared
+Stlbdae88_492224__ cleared
+Stl492224_492224__ cleared
+Stl536991_492224__ cleared
+Stl51a0cf_152126__ cleared
+StlNONE_152126__ cleared
+Stlc0b1c2_152126__ cleared
+Stl41c7d1_152126__ cleared
+Stl152126_5f5e66__ cleared
+Stl_5f5e66__   cleared
+Stl050842_98c379__ cleared
+Stl98c379_050842__ cleared
+Stl0e7291_050842__ cleared
+Stl050842_050842__ cleared
+Stl556a92_050842__ cleared
+Stl51a0cf_2f4f4f__ cleared
+StlNONE_2f4f4f__ cleared
+Stlffefdb_2f4f4f__ cleared
+Stlffffff_2f4f4f__ cleared
+Stl2f4f4f_NONE__ cleared
+SpellErrors    cleared
+Stlc2bfa5_98c379__ cleared
+Stl98c379_c2bfa5__ cleared
+Stl000000_c2bfa5__ cleared
+Stlc2bfa5_c2bfa5__ cleared
+Stl6495ed_c2bfa5__ cleared
+MyTagListFileName cleared
+EasyMotionTarget cleared
+EasyMotionShade cleared
+EasyMotionTarget2First cleared
+EasyMotionTarget2Second cleared
+CtrlPMatch     cleared
+UniteLineHi    cleared
+SyntasticErrorSign cleared
+Bufferline     cleared
+Split          cleared
+HtmlHiLink     cleared
+htmlLinkText   cleared
+PHPprivate     cleared
+PHPfunction    cleared
+PHPtest        cleared
+PHPClass       cleared
+PHPConstant    cleared
+jsSpecial      cleared
+javascriptSpecial cleared
+jsString       cleared
+javascriptString cleared
+jsStringS      cleared
+jsStringD      cleared
+javascriptStringD cleared
+jsConditional  cleared
+javascriptFuncName cleared
+jsNumber       cleared
+jsFloat        cleared
+javascriptFloat cleared
+cssTagName     cleared
+cssAttrComma   cleared
+cssAttr        cleared
+cssMediaQuery  cleared
+cssMedia       cleared
+cssFontProp    cleared
+cssUIProp      cleared
+cssPageProp    cleared
+cssTransformProp cleared
+cssBackgroundPro cleared
+cssTransitionPro cleared
+cssListProp    cleared
+cssBorderProp  cleared
+cssTableProp   cleared
+cssColorProp   cleared
+cssAnimationProp cleared
+cssPositioningPr cleared
+cssMediaProp   cleared
+cssFlexibleBoxPr cleared
+cssFunctionNam cleared
+cssImportant   cleared
+cssStringQQ    cleared
+cssValueTime   cleared
+cssUnitDecorator cleared
+cssValueNumber cleared
+cssPseudoClass cleared
+sassProperty   cleared
+sassComment    cleared
+Stl51a0cf_141414__ cleared
+StlNONE_141414__ cleared
+Stlceb67f_141414__ cleared
+Stl141414_NONE__ cleared
+Stl9a7824_NONE__ cleared
+Stl536991_NONE__ cleared
+Stl51a0cf_252525__ cleared
+StlNONE_252525__ cleared
+Stlffffff_252525__ cleared
+Stl252525_181818__ cleared
+Stl_181818__   cleared
+Stl002525_98c379__ cleared
+Stl98c379_002525__ cleared
+Stl00ffff_002525__ cleared
+Stl002525_002525__ cleared
+Stldadada_002525__ cleared
+crystalSymbol  cleared
+crystalConstant cleared
+crystalAccess  cleared
+crystalAttribute cleared
+crystalInclude cleared
+crystalLocalVariableOrMethod cleared
+crystalCurlyBlock cleared
+crystalStringDelimiter cleared
+crystalInterpolationDelimiter cleared
+crystalConditional cleared
+crystalRepeat  cleared
+crystalControl cleared
+crystalException cleared
+coffeeRepeat   cleared
+coffeeConditional cleared
+coffeeKeyword  cleared
+coffeeObject   cleared
+ShowMarksHLl   cleared
+ShowMarksHLo   cleared
+ShowMarksHLu   cleared
+ShowMarksHLm   cleared
+goTodo         cleared
+goRepeat       cleared
+goLabel        cleared
+scalaKeyword   cleared
+scalaKeywordModifier cleared
+scalaOperator  cleared
+scalaPackage   cleared
+scalaFqn       cleared
+scalaFqnSet    cleared
+scalaImport    cleared
+scalaBoolean   cleared
+scalaDef       cleared
+scalaVal       cleared
+scalaVar       cleared
+scalaClass     cleared
+scalaObject    cleared
+scalaTrait     cleared
+scalaDefName   cleared
+scalaValName   cleared
+scalaVarName   cleared
+scalaClassName cleared
+scalaType      cleared
+scalaTypeSpecializer cleared
+scalaAnnotation cleared
+scalaNumber    cleared
+scalaDefSpecializer cleared
+scalaClassSpecializer cleared
+scalaBackTick  cleared
+scalaRoot      cleared
+scalaMethodCall cleared
+scalaCaseType  cleared
+scalaLineComment cleared
+scalaComment   cleared
+scalaDocComment cleared
+scalaDocTags   cleared
+scalaEmptyString cleared
+scalaMultiLineString cleared
+scalaUnicode   cleared
+scalaString    cleared
+scalaStringEscape cleared
+scalaSymbol    cleared
+scalaChar      cleared
+scalaXml       cleared
+scalaConstructorSpecializer cleared
+Stl366b8a_252525__ cleared
+Stl366b8a_ffffff__ cleared
+StlNONE_ffffff__ cleared
+Stl4d4d4c_ffffff__ cleared
+Stlffffff_4d4d4c__ cleared
+Stl_4d4d4c__   cleared
+Stleab700_98c379__ cleared
+Stl98c379_eab700__ cleared
+Stlefefef_eab700__ cleared
+Stleab700_eab700__ cleared
+Stl4271ae_eab700__ cleared
+Stl51a0cf_ffffff__ cleared
+Stlc5c8c6_303030__ cleared
+Stl303030_c5c8c6__ cleared
+Stl_c5c8c6__   cleared
+Stlf0c674_98c379__ cleared
+Stl98c379_f0c674__ cleared
+Stl5e5e5e_f0c674__ cleared
+Stlf0c674_f0c674__ cleared
+Stl81a2be_f0c674__ cleared
+Stl51a0cf_002451__ cleared
+StlNONE_002451__ cleared
+Stlffffff_002451__ cleared
+Stl002451_ffffff__ cleared
+Stl_ffffff__   cleared
+Stlffeead_98c379__ cleared
+Stl98c379_ffeead__ cleared
+Stl4d5057_ffeead__ cleared
+Stlffeead_ffeead__ cleared
+Stlbbdaff_ffeead__ cleared
+Stleaeaea_000000__ cleared
+Stl000000_eaeaea__ cleared
+Stl_eaeaea__   cleared
+Stle7c547_98c379__ cleared
+Stl98c379_e7c547__ cleared
+Stl4d5057_e7c547__ cleared
+Stle7c547_e7c547__ cleared
+Stl7aa6da_e7c547__ cleared
+Stl51a0cf_2d2d2d__ cleared
+StlNONE_2d2d2d__ cleared
+Stlcccccc_2d2d2d__ cleared
+Stlffffff_2d2d2d__ cleared
+Stl2d2d2d_cccccc__ cleared
+Stl_cccccc__   cleared
+Stlffcc66_98c379__ cleared
+Stl98c379_ffcc66__ cleared
+Stl4d5057_ffcc66__ cleared
+Stlffcc66_ffcc66__ cleared
+Stl6699cc_ffcc66__ cleared
+mbenormal      cleared
+doxygenspecial cleared
+mbechanged     cleared
+mbevisiblechanged cleared
+doxygenparam   cleared
+doxygensmallspecial cleared
+doxygenprev    cleared
+perlspecialmatch cleared
+doxygenspecialmultilinedesc cleared
+taglisttagname cleared
+doxygenbrief   cleared
+mbevisiblenormal cleared
+user2          cleared
+user1          cleared
+doxygenspecialonelinedesc cleared
+doxygencomment cleared
+cspecialcharacter cleared
+Stl51a0cf_201227__ cleared
+StlNONE_201227__ cleared
+Stlf2f5e9_201227__ cleared
+Stle5b1ff_201227__ cleared
+Stl201227_NONE__ cleared
+Stl49225e_98c379__ cleared
+Stl98c379_49225e__ cleared
+Stla780ba_49225e__ cleared
+Stl49225e_49225e__ cleared
+Stlff3c7d_49225e__ cleared
+Stl366b8a_201227__ cleared
+Stl000000_ffffff__ cleared
+BadWhitespace  cleared
+texStatement   cleared
+Stl51a0cf_1f1912__ cleared
+StlNONE_1f1912__ cleared
+Stld5fac8_1f1912__ cleared
+Stl1f1912_1f1912__ cleared
+Stl1f1912_d5fac8__ cleared
+Stl_d5fac8__   cleared
+Stl8ccdf0_98c379__ cleared
+Stl98c379_8ccdf0__ cleared
+Stl1f1912_8ccdf0__ cleared
+Stl8ccdf0_8ccdf0__ cleared
+Stl76bc20_8ccdf0__ cleared
+Stl51a0cf_1a252a__ cleared
+StlNONE_1a252a__ cleared
+Stlc4c8cc_1a252a__ cleared
+Stld39745_1a252a__ cleared
+Stl1a252a_24333a__ cleared
+Stl_24333a__   cleared
+Stl3c5975_98c379__ cleared
+Stl98c379_3c5975__ cleared
+Stlffffff_3c5975__ cleared
+Stl3c5975_3c5975__ cleared
+Stl678cb1_3c5975__ cleared
+FoldColmun     cleared
+elixirInterpolationDelimiter cleared
+vimHiCtermFgBg cleared
+vimHiGuiFgBg   cleared
+Stl51a0cf_2e2f31__ cleared
+StlNONE_2e2f31__ cleared
+Stlf8f8f2_2e2f31__ cleared
+Stlffffff_2e2f31__ cleared
+Stl2e2f31_2e2f31__ cleared
+Stl_2e2f31__   cleared
+Stl64666d_98c379__ cleared
+Stl98c379_64666d__ cleared
+Stlf8f8f2_64666d__ cleared
+Stl64666d_64666d__ cleared
+Stl5cf1ff_64666d__ cleared
+DoubleByteSpace cleared
+zshVariableDef cleared
+zshFunction    cleared
+ShotFGraph     cleared
+ShotFBlank     cleared
+EasyMotionIncSearch cleared
+EasyMotionMoveHL cleared
+EasyMotionIncCursor cleared
+deniteMatched  cleared
+agitStatMessage cleared
+agitStatFile   cleared
+agitAuthor     cleared
+Flashy         cleared
+Stl366b8a_2e2f31__ cleared
+Stldddddd_2e2f31__ cleared
+Stl2e2f31_NONE__ cleared
+Stl808080_98c379__ cleared
+Stl98c379_808080__ cleared
+Stl000000_808080__ cleared
+Stl808080_808080__ cleared
+Stl5fafff_808080__ cleared
+cIf0           cleared
+Stl366b8a_002244__ cleared
+StlNONE_002244__ cleared
+Stl008844_002244__ cleared
+Stlffffff_002244__ cleared
+Stl002244_NONE__ cleared
+Stl0000ff_98c379__ cleared
+Stl98c379_0000ff__ cleared
+Stl00ffff_0000ff__ cleared
+Stl0000ff_0000ff__ cleared
+Stl0033ff_0000ff__ cleared
+Stldddddd_002244__ cleared
+Stl51a0cf_002244__ cleared
+Stl51a0cf_00003f__ cleared
+StlNONE_00003f__ cleared
+Stlfffff0_00003f__ cleared
+Stlffffff_00003f__ cleared
+Stl00003f_NONE__ cleared
+Stla9a9a9_98c379__ cleared
+Stl98c379_a9a9a9__ cleared
+Stl0000ff_a9a9a9__ cleared
+Stla9a9a9_a9a9a9__ cleared
+Stladd8e6_a9a9a9__ cleared
+htmlBoldUnderline cleared
+htmlBoldUnderlineItalic cleared
+pythonCommentedCode cleared
+pythonKingComment cleared
+pythonSmartComment cleared
+pythonJavadoc  cleared
+pythonEpydoc   cleared
+pythonMajorSection cleared
+pythonMinorSection cleared
+pythonInfoComment cleared
+pythonDisabledComment cleared
+pythonEolComment cleared
+pythonTripleDirkString cleared
+pythonTripleTickString cleared
+PerlPOD        cleared
+perlIdentifier cleared
+perlPackageRef cleared
+perlFunctionName cleared
+perlVarMember  cleared
+moinHeader     cleared
+moinItalic     cleared
+moinBold       cleared
+moinBoldItalic cleared
+moinUnderline  cleared
+moinTypewriter cleared
+moinMacro      cleared
+moinPreformatted cleared
+moinWikiWord   cleared
+moinBracketLink cleared
+moinSubLink    cleared
+moinNormalURL  cleared
+moinEmail      cleared
+moinBulletList cleared
+moinNumberedList cleared
+moinAlphalist  cleared
+moinRomanlist  cleared
+moinBigromanlist cleared
+moinDescriptionlist cleared
+moinRule       cleared
+moinComment    cleared
+moinPragma     cleared
+moinInterLink  cleared
+Stl51a0cf_b0b087__ cleared
+StlNONE_b0b087__ cleared
+Stlffffff_b0b087__ cleared
+Stlb0b087_NONE__ cleared
+Stl626b3e_ffffff__ cleared
+Stl008000_000000__ cleared
+Stlffa500_a9a9a9__ cleared
+Stlffffff_a9a9a9__ cleared
+Stl51a0cf_050505__ cleared
+StlNONE_050505__ cleared
+Stl00cccc_050505__ cleared
+Stlffffff_050505__ cleared
+Stl050505_NONE__ cleared
+Stl067c7b_98c379__ cleared
+Stl98c379_067c7b__ cleared
+Stl00ffff_067c7b__ cleared
+Stl067c7b_067c7b__ cleared
+Stlffae66_067c7b__ cleared
+Stlf8f8f2_NONE__ cleared
+Stl404449_98c379__ cleared
+Stl98c379_404449__ cleared
+Stlf8f8f2_404449__ cleared
+Stl404449_404449__ cleared
+StlNONE_404449__ cleared
+User3          cleared
+User4          cleared
+User5          cleared
+Stldfdfdf_000000__ cleared
+commonOperator cleared
+pythonNumber   cleared
+pythonRawString cleared
+pythonDoctest  cleared
+pythonImportFunction cleared
+pythonImportModule cleared
+pythonImportObject cleared
+pythonImportedClassDef cleared
+pythonImportedFuncDef cleared
+pythonImportedModule cleared
+pythonImportedObject cleared
+javaScriptEndColons cleared
+javaScriptOpSymbols cleared
+javaScriptLogicSymbols cleared
+javaScriptComment cleared
+javaScriptLineComment cleared
+javaScriptDocComment cleared
+javaScriptCommentTodo cleared
+javaScriptRegexpString cleared
+javaScriptTemplateString cleared
+javaScriptCharacter cleared
+javaScriptPrototype cleared
+javaScriptBranch cleared
+javaScriptOperator cleared
+javaScriptLabel cleared
+javaScriptExceptions cleared
+javaScriptDeprecated cleared
+javaScriptError cleared
+texMath        cleared
+texMathMacher  cleared
+texRefLabel    cleared
+texRefZone     cleared
+texComment     cleared
+texDelimiter   cleared
+texMathZoneX   cleared
+gitFile        cleared
+GitGutterChangeLineDefault cleared
+Stl51a0cf_1a1a1a__ cleared
+StlNONE_1a1a1a__ cleared
+Stld6d6d6_1a1a1a__ cleared
+Stlffffff_1a1a1a__ cleared
+Stl1a1a1a_d6d6d6__ cleared
+Stl_d6d6d6__   cleared
+Stl51a0cf_600000__ cleared
+StlNONE_600000__ cleared
+Stlffbbbb_600000__ cleared
+Stlff0000_600000__ cleared
+Stl600000_NONE__ cleared
+Orange         cleared
+Soft_Orange    cleared
+Dark_Orange    cleared
+Dark_Orange_Reverse cleared
+Soft_Red       cleared
+Red            cleared
+Dark_Red       cleared
+Red_Reverse    cleared
+Dark_Red_Reverse cleared
+Cyan           cleared
+Dark_Cyan_Reverse cleared
+Grey           cleared
+Green          cleared
+Green_Reverse  cleared
+Dark_Green_Reverse cleared
+Soft_Yellow    cleared
+vimAutoCmdSfxList cleared
+vimCmdSep      cleared
+diffIsA        cleared
+diffDiffer     cleared
+diffIdentical  cleared
+diffNoEOL      cleared
+diffOnly       cleared
+vimUserFunc    cleared
+vimAutoEventList cleared
+htmlStatement  cleared
+Stldfdfaf_1c1c1c__ cleared
+Stlaf5f5f_1c1c1c__ cleared
+Stl1c1c1c_121212__ cleared
+Stl_121212__   cleared
+Stl366b8a_1c1c1c__ cleared
+helpLeadBlank  cleared
+helpNormal     cleared
+Stl51a0cf_363432__ cleared
+StlNONE_363432__ cleared
+Stlc5beba_363432__ cleared
+Stlbe503e_363432__ cleared
+Stl363432_363432__ cleared
+Stl_363432__   cleared
+Scrollbar      cleared
+qfSeparator    cleared
+StartifyFooter cleared
+StartifySelect cleared
+Stle5e5e5_262626__ cleared
+Stleeeeee_262626__ cleared
+Stl262626_303030__ cleared
+Stlaaaaaa_000000__ cleared
+cmakeOperators cleared
+cInclude       cleared
+phpType        cleared
+phpOperator    cleared
+phpStringDelimiter cleared
+phpStructure   cleared
+phpInclude     cleared
+phpMagicConstants cleared
+phpFCKeyword   cleared
+phpSCKeyword   cleared
+phpEnvVar      cleared
+phpCoreConstant cleared
+goException    cleared
+jsModules      cleared
+jsModuleWords  cleared
+jsClass        cleared
+jsOperatorWords cleared
+jsKeyword      cleared
+shConditional  cleared
+Stl51a0cf_151515__ cleared
+StlNONE_151515__ cleared
+Stlbbbbbb_151515__ cleared
+Stlffffff_151515__ cleared
+Stl151515_bbbbbb__ cleared
+Stl_bbbbbb__   cleared
+ToolbarLine    cleared
+ToolbarButton  cleared
+htmlLink       cleared
+asciidocQuotedEmphasized cleared
+Stlbcbcbc_262626__ cleared
+Stlaf5f5f_262626__ cleared
+Stl262626_444444__ cleared
+Stl_444444__   cleared
+Subtitle       cleared
+colorizer_mf_00ffff cleared
+Stl51a0cf_4682b4__ cleared
+StlNONE_4682b4__ cleared
+Stlfaf0e6_4682b4__ cleared
+Stlffffff_4682b4__ cleared
+Stl4682b4_NONE__ cleared
+colorizer_mf_7fffd4 cleared
+Stld3d3d3_000000__ cleared
+Stle4e4e4_303030__ cleared
+Stlaf005f_303030__ cleared
+Stl303030_262626__ cleared
+Menu           cleared
+CtrlPPrtText   cleared
+TagbarHelpKey  cleared
+TagbarNestedKind cleared
+TagbarScope    cleared
+TagbarType     cleared
+TagbarVisibilityPublic cleared
+TagbarVisibilityProtected cleared
+TagbarVisibilityPrivate cleared
+cssAttrRegion  cleared
+cssFontDescriptor cleared
+readlineVariable cleared
+jsObjectKey    cleared
+javascriptjQuery cleared
+javascriptQAttributes cleared
+javascriptQEvents cleared
+phpRegion      cleared
+pythonAttribute cleared
+pythonQuotes   cleared
+rubySharpBang  cleared
+perlStringStartEnd cleared
+perlStringUnexpanded cleared
+cIncluded      cleared
+cParen         cleared
+Stl51a0cf_25272c__ cleared
+StlNONE_25272c__ cleared
+Stl81a3cf_25272c__ cleared
+Stlc95f5f_25272c__ cleared
+Stl25272c_NONE__ cleared
+Stl51a0cf_0e111d__ cleared
+StlNONE_0e111d__ cleared
+Stlb2b2b2_0e111d__ cleared
+Stlffffff_0e111d__ cleared
+Stl0e111d_NONE__ cleared
+Stl366b8a_0e111d__ cleared
+Stl366b8a_e0e0e0__ cleared
+StlNONE_e0e0e0__ cleared
+Stl000000_e0e0e0__ cleared
+Stlffffff_e0e0e0__ cleared
+Stle0e0e0_NONE__ cleared
+Stl51a0cf_e0e0e0__ cleared
+Stl51a0cf_080404__ cleared
+StlNONE_080404__ cleared
+Stlb4b0b0_080404__ cleared
+Stlffffff_080404__ cleared
+Stl080404_NONE__ cleared
+Stl51a0cf_304050__ cleared
+StlNONE_304050__ cleared
+Stlffffff_304050__ cleared
+Stl304050_NONE__ cleared
+Prompt         cleared
+Stl51a0cf_501808__ cleared
+StlNONE_501808__ cleared
+Stlffffff_501808__ cleared
+Stl501808_NONE__ cleared
+@literal       cleared
+@typeParameter cleared
+@struct        cleared
+@regexp        cleared
+@modifier      cleared
+@interface     cleared
+@event         cleared
+@enumMember    cleared
+@enum          cleared
+@decorator     cleared
+@class         cleared
+LightspeedShortcutOverlapped cleared
+LightspeedLabelDistantOverlapped cleared
+LightspeedLabelOverlapped cleared
+NeoTreeSymbolicLinkTarget cleared
+NeoTreeNormalNC cleared
+NeoTreeNormal  cleared
+NeoTreeGitModified cleared
+NeoTreeGitAdded cleared
+NeoTreeIndentMarker cleared
+NeoTreeFileNameOpened cleared
+NeoTreeFileIcon cleared
+NeoTreeFileName cleared
+NeoTreeRootName cleared
+NeoTreeDirectoryIcon cleared
+DevIconXz      cleared
+DevIconWebOpenFontFormat2 cleared
+DevIconWebOpenFontFormat cleared
+DevIconTrueTypeFont cleared
+DevIconRpm     cleared
+DevIconRobots  cleared
+DevIconOut     cleared
+DevIconMp4     cleared
+DevIconMp3     cleared
+DevIconDeb     cleared
+HeirlineTerminal cleared
+HeirlineCommand cleared
+HeirlineReplace cleared
+HeirlineVisual cleared
+HeirlineInsert cleared
+HeirlineNormal cleared
+HeirlineInactive cleared
+StatusInactive cleared
+DiagnosticInformation cleared
+DashboardShortcut cleared
+DiffOldFile    cleared
+NotifyTRACERBorder cleared
+FocusedSymbol  cleared
+LspCodeLensSeparator cleared
+LspCodeLens    cleared
+ProviderTruncateLine cleared
+LspFloatWinNormal cleared
+LspFloatWinBorder cleared
+LspDiagnosticsFloatingWarn cleared
+LspDiagnosticsFloatingInfor cleared
+LspDiagnosticsFloatingHint cleared
+LspDiagnosticsFloatingError cleared
+DiagnosticTruncateLine cleared
+@title         cleared
+AerialTypeIcon cleared
+DevIconZip     cleared
+Stl51a0cf_1e222a__ cleared
+Stl4b5263_1e222a__ cleared
+Stlabb2bf_1e222a__ cleared
+Stle06c75_1e222a__ cleared
+Stl1e222a_282c34__ cleared
+Stl_282c34__   cleared
+Stl4b5263_181a1f__ cleared
+Stl51a0cf_fff2ec__ cleared
+Stlddacaf_fff2ec__ cleared
+Stla5787c_fff2ec__ cleared
+Stld50b15_fff2ec__ cleared
+Stlfff2ec_fbdada__ cleared
+Stl_fbdada__   cleared
+Blue           cleared
+Magenta        cleared
+Tags           cleared
+Unique         cleared
+AltUnique      cleared
+AltAltUnique   cleared
+White          cleared
+Yellow         cleared
+AltConstant    cleared
+AltFunction    cleared
+AltType        cleared
+Stl51a0cf_000080__ cleared
+StlNONE_000080__ cleared
+Stl008000_000080__ cleared
+Stlffffff_000080__ cleared
+Stl000080_0000ff__ cleared
+Stl_0000ff__   cleared
+Stl51a0cf_110022__ cleared
+StlNONE_110022__ cleared
+Stlffffff_110022__ cleared
+Stl110022_NONE__ cleared
+Stle8ecf0_304050__ cleared
+doxygenSpecialTypeOnelineDesc cleared
+doxygenParamName cleared
+doxygenParamDirection cleared
+Stl366b8a_304050__ cleared
+Stl366b8a_fafafa__ cleared
+StlNONE_fafafa__ cleared
+Stl404850_fafafa__ cleared
+Stlff0000_fafafa__ cleared
+Stlfafafa_NONE__ cleared
+Stl366b8a_f5f5f5__ cleared
+StlNONE_f5f5f5__ cleared
+Stl000000_f5f5f5__ cleared
+Stlffffff_f5f5f5__ cleared
+Stlf5f5f5_NONE__ cleared
+Stl51a0cf_fafafa__ cleared
+Stl366b8a_f0f2f0__ cleared
+StlNONE_f0f2f0__ cleared
+Stl000000_f0f2f0__ cleared
+Stlffffff_f0f2f0__ cleared
+Stlf0f2f0_NONE__ cleared
+Titled         cleared
+Stl366b8a_fffdfa__ cleared
+StlNONE_fffdfa__ cleared
+Stl000000_fffdfa__ cleared
+Stlffffff_fffdfa__ cleared
+Stlfffdfa_NONE__ cleared
+LongLineWarning cleared
+CursorLineConceal cleared
+Stl51a0cf_fffdfa__ cleared
+Stl51a0cf_0f1419__ cleared
+StlNONE_0f1419__ cleared
+Stle6e1cf_0f1419__ cleared
+Stl0f1419_NONE__ cleared
+Builtin        cleared
+pythonKeyword  cleared
+Stl51a0cf_222429__ cleared
+StlNONE_222429__ cleared
+Stle3e3e3_222429__ cleared
+Stl222429_NONE__ cleared
+CtrlPNoEntries cleared
+CtrlPLinePre   cleared
+CtrlPPrtBase   cleared
+CtrlPPrtCursor cleared
+CtrlPMode1     cleared
+CtrlPMode2     cleared
+CtrlPStats     cleared
+InterestingWord1 cleared
+InterestingWord2 cleared
+InterestingWord3 cleared
+InterestingWord4 cleared
+InterestingWord5 cleared
+InterestingWord6 cleared
+level16c       cleared
+level15c       cleared
+level14c       cleared
+level13c       cleared
+level12c       cleared
+level11c       cleared
+level10c       cleared
+level9c        cleared
+level8c        cleared
+level7c        cleared
+level6c        cleared
+level5c        cleared
+level4c        cleared
+level3c        cleared
+level2c        cleared
+level1c        cleared
+clojureDefn    cleared
+clojureDefMacro cleared
+clojureParen0  cleared
+cssRenderProp  cleared
+cssGeneratedContentProp cleared
+gitDiff        cleared
+djangoArgument cleared
+djangoTagBlock cleared
+djangoVarBlock cleared
+texMathZoneA   cleared
+texMathZoneB   cleared
+texMathZoneC   cleared
+texMathZoneD   cleared
+texMathZoneE   cleared
+texMathZoneV   cleared
+texMathMatcher cleared
+texZone        cleared
+lessVariable   cleared
+lispyscriptDefMacro cleared
+lispyscriptRepeat cleared
+mailSignature  cleared
+markdownIdDeclaration cleared
+markdownAutomaticLink cleared
+markdownUrldelimiter cleared
+pythonRun      cleared
+pythonCoding   cleared
+hlLevel0       cleared
+hlLevel1       cleared
+hlLevel2       cleared
+hlLevel3       cleared
+hlLevel4       cleared
+hlLevel5       cleared
+hlLevel6       cleared
+hlLevel7       cleared
+hlLevel8       cleared
+hlLevel9       cleared
+VimMapMod      cleared
+Stl51a0cf_1c1b1a__ cleared
+StlNONE_1c1b1a__ cleared
+Stlf8f6f2_1c1b1a__ cleared
+Stlffffff_1c1b1a__ cleared
+Stl1c1b1a_1c1b1a__ cleared
+Stl_1c1b1a__   cleared
+jsTypes        cleared
+jsContext      cleared
+SneakPluginTarget cleared
+SneakStreakMask cleared
+SneakStreakTarget cleared
+SneakStreakStatusLine cleared
+netrwMarkFile  cleared
+Stlffffff_20201d__ cleared
+Stlffffff_22221b__ cleared
+Stlffffff_1b1918__ cleared
+Stlffffff_1b181b__ cleared
+Stlffffff_161b1d__ cleared
+Stl51a0cf_1b1818__ cleared
+StlNONE_1b1818__ cleared
+Stl8a8585_1b1818__ cleared
+Stlffffff_1b1818__ cleared
+Stl1b1818_292424__ cleared
+Stl_292424__   cleared
+Stlffffff_171c19__ cleared
+Stlffffff_131513__ cleared
+phpDocTags     cleared
+phpDocParam    cleared
+phpClasses     cleared
+rubyIdentifier cleared
+pythonSelf     cleared
+pythonExtraOperator cleared
+pythonClass    cleared
+pythonBuiltinType cleared
+coffeeSpecialVar cleared
+coffeeSpecialIdent cleared
+coffeeArrow    cleared
+coffeeBoolean  cleared
+coffeeGlobal   cleared
+coffeeModuleKeyword cleared
+coffeeFuncCall cleared
+bladeDelimiter cleared
+bladeKeyword   cleared
+Stl366b8a_131513__ cleared
+Stl51a0cf_e8ebf0__ cleared
+StlNONE_e8ebf0__ cleared
+Stl003255_e8ebf0__ cleared
+Stlffffff_e8ebf0__ cleared
+Stle8ebf0_NONE__ cleared
+Stl366b8a_e8ebf0__ cleared
+Stl366b8a_f1efd8__ cleared
+StlNONE_f1efd8__ cleared
+Stl192b4e_f1efd8__ cleared
+Stlffffff_f1efd8__ cleared
+Stlf1efd8_NONE__ cleared
+helpNote       cleared
+htmlUnderline  cleared
+htmlUnderlineItalic cleared
+djangoStatement cleared
+docSpecial     cleared
+docTrans       cleared
+docCode        cleared
+mkdIndentCode  cleared
+mkdID          cleared
+mkdLinkDef     cleared
+mkdLinkDefTarget cleared
+Stlf8f8f8_141414__ cleared
+Stlffffff_141414__ cleared
+Stl366b8a_141414__ cleared
+Stl366b8a_d6d6d6__ cleared
+StlNONE_d6d6d6__ cleared
+Stl000000_d6d6d6__ cleared
+Stld6d6d6_d6d6d6__ cleared
+Stld6d6d6_NONE__ cleared
+Stl51a0cf_d6d6d6__ cleared
+Stl51a0cf_372725__ cleared
+StlNONE_372725__ cleared
+Stle6e1c4_372725__ cleared
+Stlffffff_372725__ cleared
+Stl372725_NONE__ cleared
+LongLines      cleared
+pythonSpaceError cleared
+cCommentStartError cleared
+cCommentError  cleared
+ifdefIfOut     cleared
+Stlcccccc_000000__ cleared
+Stlffff00_000000__ cleared
+CommentDoc     cleared
+Stl51a0cf_090b18__ cleared
+StlNONE_090b18__ cleared
+Stleeeeee_090b18__ cleared
+Stl990000_090b18__ cleared
+Stl090b18_NONE__ cleared
+Condtional     cleared
+Stl51a0cf_3f3f3f__ cleared
+StlNONE_3f3f3f__ cleared
+Stlcccccc_3f3f3f__ cleared
+Stl000000_3f3f3f__ cleared
+Stl3f3f3f_NONE__ cleared
+Stl00afff_262626__ cleared
+Conditonal     cleared
+colorizer_mf_808000 cleared
+colorizer_mf_ffa500 cleared
+Stl51a0cf_212121__ cleared
+StlNONE_212121__ cleared
+Stlc6c6c6_212121__ cleared
+Stlffffff_212121__ cleared
+Stl212121_303030__ cleared
+asciidocListingBlock cleared
+cPreConditMatch cleared
+cStructure     cleared
+cStatement     cleared
+cTODO          cleared
+cString        cleared
+cppType        cleared
+cppStructure   cleared
+cppModifier    cleared
+cppOperator    cleared
+cppConstant    cleared
+cCppString     cleared
+cucumberWhenAnd cleared
+cucumberUnparsed cleared
+cucumberDelimiter cleared
+cssAttributeSelector cleared
+cssDefinition  cleared
+cssFontAttr    cleared
+cssInclude     cleared
+cssIncludeKeyword cleared
+cssMediaType   cleared
+cssSelectorOp  cleared
+cssSelectorOp2 cleared
+cssStringQ     cleared
+sassAmpersand  cleared
+sassClass      cleared
+sassControl    cleared
+sassExtend     cleared
+sassFor        cleared
+sassFunction   cleared
+sassId         cleared
+sassMedia      cleared
+sassMediaOperators cleared
+sassMixin      cleared
+scssSelectorName cleared
+elixirOperator cleared
+gitcommitComment cleared
+gitcommitUnmerged cleared
+gitcommitDiscardedFile cleared
+gitcommitUnmergedFile cleared
+gitcommitNoBranch cleared
+gitcommitUntracked cleared
+gitcommitDiscarded cleared
+gitcommitSelected cleared
+gitcommitDiscardedArrow cleared
+gitcommitSelectedArrow cleared
+gitcommitUnmergedArrow cleared
+goField        cleared
+goMethod       cleared
+goType         cleared
+goUnsignedInts cleared
+haskellDeclKeyword cleared
+haskellKeyword cleared
+haskellNumber  cleared
+haskellString  cleared
+MatchTag       cleared
+coffeeString   cleared
+javaScriptRequire cleared
+jsArrowFunction cleared
+jsClassBraces  cleared
+jsClassKeywords cleared
+jsDocParam     cleared
+jsNull         cleared
+jsTemplateBraces cleared
+jsTemplateVar  cleared
+jsUndefined    cleared
+jsObjectValue  cleared
+javascriptArrowFunc cleared
+javascriptClassExtends cleared
+javascriptClassKeyword cleared
+javascriptDocNotation cleared
+javascriptDocParamName cleared
+javascriptDocTags cleared
+javascriptExport cleared
+javascriptFuncArg cleared
+javascriptFuncKeyword cleared
+javascriptImport cleared
+javascriptObjectLabel cleared
+javascriptOpSymbol cleared
+javascriptPropertyName cleared
+javascriptTemplateSB cleared
+javascriptVariable cleared
+jsonTrailingCommaError cleared
+jsonMissingCommaError cleared
+jsonNoQuotesError cleared
+jsonNumError   cleared
+jsonStringSQError cleared
+jsonSemicolonError cleared
+perlPackageConst cleared
+podCommand     cleared
+phpSuperGlobals cleared
+pugAttributesDelimiter cleared
+pugClass       cleared
+pugDocType     cleared
+pugTag         cleared
+purescriptKeyword cleared
+purescriptIdentifier cleared
+pythonModule   cleared
+pythonStringDelimiter cleared
+pythonSymbol   cleared
+rubyBlockParameterList cleared
+rubyCapitalizedMethod cleared
+rubyIncluderubyGlobalVariable cleared
+vimHighlight   cleared
+vimLineComment cleared
+vimSep         cleared
+zshCommands    cleared
+zshDeref       cleared
+zshShortDeref  cleared
+zshKeyword     cleared
+zshSubst       cleared
+zshSubstDelim  cleared
+zshTypes       cleared
+rustExternCrate cleared
+rustDeriveTrait cleared
+rustCommentLine cleared
+rustCommentLineDoc cleared
+rustCommentLineDocError cleared
+rustCommentBlock cleared
+rustCommentBlockDoc cleared
+rustCommentBlockDocError cleared
+manTitle       cleared
+manFooter      cleared
+Stl51a0cf_282c34__ cleared
+StlNONE_282c34__ cleared
+Stlabb2bf_282c34__ cleared
+Stle06c75_282c34__ cleared
+Stl282c34_3e4452__ cleared
+Stl_3e4452__   cleared
+fishKeyword    cleared
+fishConditional cleared
+goFunctionCall cleared
+goVarDefs      cleared
+goVarAssign    cleared
+goVar          cleared
+goConst        cleared
+goTypeName     cleared
+goTypeDecl     cleared
+jsClassKeyword cleared
+jsExtendsKeyword cleared
+jsGenerator    cleared
+javascriptMethodName cleared
+lessAmpersandChar cleared
+lessClass      cleared
+markdownId     cleared
+markdownIdDelimiter cleared
+phpUseClass    cleared
+phpUseAlias    cleared
+phpClassExtends cleared
+phpMethodsVar  cleared
+phpConstants   cleared
+sassVariable   cleared
+scssExtend     cleared
+scssImport     cleared
+scssInclude    cleared
+scssMixin      cleared
+scssVariable   cleared
+texSubscripts  cleared
+texSuperscripts cleared
+texTodo        cleared
+texBeginEnd    cleared
+texBeginEndName cleared
+texMathDelim   cleared
+texSpecialChar cleared
+texCite        cleared
+typescriptReserved cleared
+typescriptBraces cleared
+ALEError       cleared
+ALEWarning     cleared
+ALEInfo        cleared
+CocFadeOut     cleared
+CocMenuSel     cleared
+mkdHeading     cleared
+LspErrorText   cleared
+LspWarningText cleared
+LspInformationText cleared
+LspHintText    cleared
+LspErrorHighlight cleared
+LspWarningHighlight cleared
+LspInformationHighlight cleared
+LspHintHighlight cleared
+gitcommitOnBranch cleared
+gitcommitFile  cleared
+Stl282c34_NONE__ cleared
+NormalPopup    cleared
+NormalPopover  cleared
+NormalPopupPrompt cleared
+NormalPopupSubtle cleared
+VisualBold     cleared
+IndentGuide    cleared
+IndentGuideEven cleared
+IndentGuideOdd cleared
+TermNormal     cleared
+TermNormalNC   cleared
+Separator      cleared
+StatusLinePart cleared
+StatusLinePartNC cleared
+IncSearchCursor cleared
+Highlight      cleared
+HighlightSubtle cleared
+File           cleared
+Emphasis       cleared
+TextNormal     cleared
+TextNormalBold cleared
+TextMuted      cleared
+TextMutedBold  cleared
+TextInfo       cleared
+TextInfoBold   cleared
+TextWarning    cleared
+TextWarningBold cleared
+TextError      cleared
+TextErrorBold  cleared
+TextDebug      cleared
+TextDebugBold  cleared
+TextSuccess    cleared
+TextSuccessBold cleared
+TextSpecial    cleared
+TextSpecialBold cleared
+Msg            cleared
+Link           cleared
+URL            cleared
+CommentBold    cleared
+Variable       cleared
+VariableBuiltin cleared
+Enum           cleared
+SpecialBold    cleared
+Field          cleared
+Argument       cleared
+Attribute      cleared
+Property       cleared
+FunctionBuiltin cleared
+KeywordFunction cleared
+TypeBuiltin    cleared
+Class          cleared
+Regexp         cleared
+RegexpSpecial  cleared
+RegexpDelimiter cleared
+RegexpKey      cleared
+CommentURL     cleared
+CommentLabel   cleared
+CommentSection cleared
+DiffAddedGutter cleared
+DiffModifiedGutter cleared
+DiffRemovedGutter cleared
+DiffAddedGutterLineNr cleared
+DiffModifiedGutterLineNr cleared
+DiffRemovedGutterLineNr cleared
+ErrorMsgUnderline cleared
+WarningMsgUnderline cleared
+MoreMsgUnderline cleared
+MsgUnderline   cleared
+LspHighlight   cleared
+DiagnosticDefaultError cleared
+DiagnosticDefaultWarn cleared
+DiagnosticDefaultInfo cleared
+DiagnosticDefaultHint cleared
+DiagnosticSignWarning cleared
+@structure     cleared
+@strong        cleared
+@warning       cleared
+@danger        cleared
+@query         cleared
+netrwMakefile  cleared
+NeorgMarkupVerbatim cleared
+NeorgHeading1Title cleared
+NeorgHeading2Title cleared
+NeorgHeading3Title cleared
+NeorgHeading4Title cleared
+NeorgHeading5Title cleared
+NeorgHeading6Title cleared
+NeorgHeading1Prefix cleared
+NeorgHeading2Prefix cleared
+NeorgHeading3Prefix cleared
+NeorgHeading4Prefix cleared
+NeorgHeading5Prefix cleared
+NeorgHeading6Prefix cleared
+Brown          cleared
+Headline1      cleared
+Headline2      cleared
+Headline3      cleared
+Headline4      cleared
+Headline5      cleared
+Headline6      cleared
+illuminatedWord cleared
+NeogitDiffAdd  cleared
+NeogitDiffAddHighlight cleared
+NeogitDiffDelete cleared
+NeogitDiffDeleteHighlight cleared
+NeogitDiffContext cleared
+NeogitDiffContextHighlight cleared
+NeogitStagedChanges cleared
+NeogitStagedChangesRegion cleared
+NeogitStashes  cleared
+NeogitUnstagedChanges cleared
+NeogitUntrackedfiles cleared
+NvimTreeMarkdownFile cleared
+Stlbbc2cf_282c34__ cleared
+Stlff6c6b_282c34__ cleared
+Stl282c34_1c1e1e__ cleared
+Stl_1c1e1e__   cleared
+Stlffffff_282c34__ cleared
+Stlf75f5f_1c1c1c__ cleared
+Stl1c1c1c_NONE__ cleared
+Stldcdfe4_282c34__ cleared
+Stl282c34_313640__ cleared
+Stl_313640__   cleared
+Stl366b8a_282c34__ cleared
+Stl383a42_fafafa__ cleared
+Stle45649_fafafa__ cleared
+Stlfafafa_f0f0f0__ cleared
+Stl_f0f0f0__   cleared
+Stl366b8a_ffb469__ cleared
+StlNONE_ffb469__ cleared
+Stl000000_ffb469__ cleared
+Stlffffff_ffb469__ cleared
+Stlffb469_NONE__ cleared
+Stl51a0cf_ffb469__ cleared
+Stlc0c0c0_000000__ cleared
+Stl_000000__   cleared
+Stl51a0cf_2f343f__ cleared
+StlNONE_2f343f__ cleared
+Stlf0fdff_2f343f__ cleared
+Stlffffff_2f343f__ cleared
+Stl2f343f_333c47__ cleared
+Stl_333c47__   cleared
+Char           cleared
+Stla0a0c0_000000__ cleared
+Stlee1111_000000__ cleared
+Condition      cleared
+NameSpace      cleared
+PageMark       cleared
+SQL_Statement  cleared
+CICS_Statement cleared
+StatuslineBufNr cleared
+StatuslineFlag cleared
+StatuslinePosition cleared
+StatuslineCapsBuddy cleared
+Stl366b8a_000000__ cleared
+Stl366b8a_eeeeec__ cleared
+StlNONE_eeeeec__ cleared
+Stl2e3436_eeeeec__ cleared
+Stlffffff_eeeeec__ cleared
+Stleeeeec_0000ff__ cleared
+treePart       cleared
+treeDir        cleared
+rubyRailsARValidationMethod cleared
+rubyString     cleared
+Stl51a0cf_eeeeec__ cleared
+Stle0e0e0_151515__ cleared
+Stle37170_151515__ cleared
+Stl151515_41609e__ cleared
+Stl_41609e__   cleared
+Stl51a0cf_103040__ cleared
+StlNONE_103040__ cleared
+Stle0eee0_103040__ cleared
+Stlffffe0_103040__ cleared
+Stl103040_NONE__ cleared
+cssMediaKeyword cleared
+scssMixinName  cleared
+scssSelectorChar cleared
+scssMixinParams cleared
+scssFunctionName cleared
+Stl51a0cf_2a2734__ cleared
+StlNONE_2a2734__ cleared
+Stl9b87fd_2a2734__ cleared
+Stlffffff_2a2734__ cleared
+Stl2a2734_363442__ cleared
+Stl_363442__   cleared
+Stl51a0cf_1d262f__ cleared
+StlNONE_1d262f__ cleared
+Stl57718e_1d262f__ cleared
+Stlffffff_1d262f__ cleared
+Stl1d262f_27323f__ cleared
+Stl_27323f__   cleared
+PreConduit     cleared
+Stl366b8a_1d262f__ cleared
+Stl366b8a_f7f7f7__ cleared
+StlNONE_f7f7f7__ cleared
+Stl000000_f7f7f7__ cleared
+Stlaf0000_f7f7f7__ cleared
+Stlf7f7f7_NONE__ cleared
+Stl366b8a_ffebf2__ cleared
+StlNONE_ffebf2__ cleared
+Stl585153_ffebf2__ cleared
+Stlffffff_ffebf2__ cleared
+Stlffebf2_dbbdc7__ cleared
+Stl_dbbdc7__   cleared
+Stl366b8a_e1ebff__ cleared
+StlNONE_e1ebff__ cleared
+Stl3a4b6e_e1ebff__ cleared
+Stlffffff_e1ebff__ cleared
+Stle1ebff_a5c2fe__ cleared
+Stl_a5c2fe__   cleared
+Stl366b8a_f0fff0__ cleared
+StlNONE_f0fff0__ cleared
+Stl485148_f0fff0__ cleared
+Stlffffff_f0fff0__ cleared
+Stlf0fff0_b3d6b3__ cleared
+Stl_b3d6b3__   cleared
+Stl366b8a_e0feff__ cleared
+StlNONE_e0feff__ cleared
+Stl495e5f_e0feff__ cleared
+Stlffffff_e0feff__ cleared
+Stle0feff_83f3f6__ cleared
+Stl_83f3f6__   cleared
+Stl51a0cf_e0feff__ cleared
+markdownItalicDelimiter cleared
+markdownUrlTitleDelimiter cleared
+markdownBoldDelimiter cleared
+texOnlyMath    cleared
+texDefName     cleared
+texNewCmd      cleared
+texCmdName     cleared
+texDocType     cleared
+texDocTypeArgs cleared
+jsNan          cleared
+jsArrowFuncArgs cleared
+jsObjectProp   cleared
+jsVariableDef  cleared
+jsParen        cleared
+jsParenIfElse  cleared
+jsParenRepeat  cleared
+jsParenSwitch  cleared
+jsParenCatch   cleared
+jsBracket      cleared
+jsBlockLabel   cleared
+jsDot          cleared
+jsDestructuringBlock cleared
+jsSpreadExpression cleared
+jsSpreadOperator cleared
+jsModuleKeyword cleared
+jsTemplateExpression cleared
+javascriptIdentifierName cleared
+javascriptObjectLabelColon cleared
+javascriptPropertyNameString cleared
+javascriptTemplate cleared
+javascriptTemplateSubstitution cleared
+javascriptNodeGlobal cleared
+javascriptClassSuper cleared
+javascriptClassName cleared
+javascriptClassSuperName cleared
+javascriptBrackets cleared
+javascriptDotNotation cleared
+javascriptGlobalArrayDot cleared
+javascriptGlobalBigIntDot cleared
+javascriptGlobalDateDot cleared
+javascriptGlobalJSONDot cleared
+javascriptGlobalMathDot cleared
+javascriptGlobalNumberDot cleared
+javascriptGlobalObjectDot cleared
+javascriptGlobalPromiseDot cleared
+javascriptGlobalRegExpDot cleared
+javascriptGlobalStringDot cleared
+javascriptGlobalSymbolDot cleared
+javascriptGlobalURLDot cleared
+javascriptMethod cleared
+javascriptObjectMethodName cleared
+javascriptGlobalMethod cleared
+javascriptDOMStorageMethod cleared
+javascriptFileMethod cleared
+javascriptFileReaderMethod cleared
+javascriptFileListMethod cleared
+javascriptBlobMethod cleared
+javascriptURLStaticMethod cleared
+javascriptNumberStaticMethod cleared
+javascriptNumberMethod cleared
+javascriptDOMNodeMethod cleared
+javascriptES6BigIntStaticMethod cleared
+javascriptBOMWindowMethod cleared
+javascriptHeadersMethod cleared
+javascriptRequestMethod cleared
+javascriptResponseMethod cleared
+javascriptES6SetMethod cleared
+javascriptReflectMethod cleared
+javascriptPaymentMethod cleared
+javascriptPaymentResponseMethod cleared
+javascriptTypedArrayStaticMethod cleared
+javascriptGeolocationMethod cleared
+javascriptES6MapMethod cleared
+javascriptServiceWorkerMethod cleared
+javascriptCacheMethod cleared
+javascriptFunctionMethod cleared
+javascriptXHRMethod cleared
+javascriptBOMNavigatorMethod cleared
+javascriptDOMEventTargetMethod cleared
+javascriptDOMEventMethod cleared
+javascriptIntlMethod cleared
+javascriptDOMDocMethod cleared
+javascriptStringStaticMethod cleared
+javascriptStringMethod cleared
+javascriptSymbolStaticMethod cleared
+javascriptRegExpMethod cleared
+javascriptObjectStaticMethod cleared
+javascriptObjectMethod cleared
+javascriptBOMLocationMethod cleared
+javascriptJSONStaticMethod cleared
+javascriptGeneratorMethod cleared
+javascriptEncodingMethod cleared
+javascriptPromiseStaticMethod cleared
+javascriptPromiseMethod cleared
+javascriptBOMHistoryMethod cleared
+javascriptDOMFormMethod cleared
+javascriptClipboardMethod cleared
+javascriptBroadcastMethod cleared
+javascriptDateStaticMethod cleared
+javascriptDateMethod cleared
+javascriptConsoleMethod cleared
+javascriptArrayStaticMethod cleared
+javascriptArrayMethod cleared
+javascriptMathStaticMethod cleared
+javascriptSubtleCryptoMethod cleared
+javascriptCryptoMethod cleared
+javascriptProp cleared
+javascriptBOMWindowProp cleared
+javascriptDOMStorageProp cleared
+javascriptFileReaderProp cleared
+javascriptURLUtilsProp cleared
+javascriptNumberStaticProp cleared
+javascriptDOMNodeProp cleared
+javascriptRequestProp cleared
+javascriptResponseProp cleared
+javascriptES6SetProp cleared
+javascriptPaymentProp cleared
+javascriptPaymentResponseProp cleared
+javascriptPaymentAddressProp cleared
+javascriptPaymentShippingOptionProp cleared
+javascriptTypedArrayStaticProp cleared
+javascriptServiceWorkerProp cleared
+javascriptES6MapProp cleared
+javascriptRegExpStaticProp cleared
+javascriptRegExpProp cleared
+javascriptXHRProp cleared
+javascriptBOMNavigatorProp cleared
+javascriptDOMEventProp cleared
+javascriptBOMNetworkProp cleared
+javascriptDOMDocProp cleared
+javascriptSymbolStaticProp cleared
+javascriptSymbolProp cleared
+javascriptBOMLocationProp cleared
+javascriptEncodingProp cleared
+javascriptCryptoProp cleared
+javascriptBOMHistoryProp cleared
+javascriptDOMFormProp cleared
+javascriptDataViewProp cleared
+javascriptBroadcastProp cleared
+javascriptMathStaticProp cleared
+jsxTag         cleared
+jsxOpenPunct   cleared
+jsxClosePunct  cleared
+jsxEscapeJs    cleared
+typescriptSource cleared
+typescriptMessage cleared
+typescriptGlobalObjects cleared
+typescriptInterpolation cleared
+typescriptInterpolationDelimiter cleared
+typescriptMethodAccessor cleared
+typescriptBoolean cleared
+typescriptCase cleared
+typescriptRepeat cleared
+typescriptEnumKeyword cleared
+typescriptEnum cleared
+typescriptIdentifierName cleared
+typescriptConditional cleared
+typescriptInterfaceName cleared
+typescriptMemberOptionality cleared
+typescriptArrowFunc cleared
+typescriptAbstract cleared
+typescriptObjectColon cleared
+typescriptTypeAnnotation cleared
+typescriptAssign cleared
+typescriptUnaryOp cleared
+typescriptFuncComma cleared
+typescriptClassName cleared
+typescriptClassHeritage cleared
+typescriptInterfaceHeritage cleared
+typescriptIdentifier cleared
+typescriptNodeGlobal cleared
+typescriptDefaultParam cleared
+typescriptTypeParameter cleared
+typescriptReadonlyModifier cleared
+typescriptAccessibilityModifier cleared
+typescriptTemplateSubstitution cleared
+typescriptTemplateSB cleared
+typescriptExceptions cleared
+typescriptOptionalMark cleared
+typescriptMappedIn cleared
+typescriptTernaryOp cleared
+typescriptParenExp cleared
+typescriptIndexExpr cleared
+typescriptDotNotation cleared
+typescriptGlobalNumberDot cleared
+typescriptGlobalStringDot cleared
+typescriptGlobalArrayDot cleared
+typescriptGlobalObjectDot cleared
+typescriptGlobalSymbolDot cleared
+typescriptGlobalMathDot cleared
+typescriptGlobalDateDot cleared
+typescriptGlobalJSONDot cleared
+typescriptGlobalRegExpDot cleared
+typescriptGlobalPromiseDot cleared
+typescriptGlobalURLDot cleared
+typescriptDOMStorageMethod cleared
+typescriptFileMethod cleared
+typescriptFileReaderMethod cleared
+typescriptFileListMethod cleared
+typescriptBlobMethod cleared
+typescriptURLStaticMethod cleared
+typescriptNumberStaticMethod cleared
+typescriptNumberMethod cleared
+typescriptDOMNodeMethod cleared
+typescriptPaymentMethod cleared
+typescriptPaymentResponseMethod cleared
+typescriptHeadersMethod cleared
+typescriptRequestMethod cleared
+typescriptResponseMethod cleared
+typescriptES6SetMethod cleared
+typescriptReflectMethod cleared
+typescriptBOMWindowMethod cleared
+typescriptGeolocationMethod cleared
+typescriptServiceWorkerMethod cleared
+typescriptCacheMethod cleared
+typescriptES6MapMethod cleared
+typescriptFunctionMethod cleared
+typescriptFuncName cleared
+typescriptFuncKeyword cleared
+typescriptRegExpMethod cleared
+typescriptXHRMethod cleared
+typescriptBOMNavigatorMethod cleared
+typescriptIntlMethod cleared
+typescriptDOMEventTargetMethod cleared
+typescriptDOMEventMethod cleared
+typescriptDOMDocMethod cleared
+typescriptStringStaticMethod cleared
+typescriptStringMethod cleared
+typescriptSymbolStaticMethod cleared
+typescriptObjectStaticMethod cleared
+typescriptObjectMethod cleared
+typescriptJSONStaticMethod cleared
+typescriptEncodingMethod cleared
+typescriptBOMLocationMethod cleared
+typescriptPromiseStaticMethod cleared
+typescriptSubtleCryptoMethod cleared
+typescriptCryptoMethod cleared
+typescriptBOMHistoryMethod cleared
+typescriptDOMFormMethod cleared
+typescriptConsoleMethod cleared
+typescriptDateStaticMethod cleared
+typescriptDateMethod cleared
+typescriptMathStaticMethod cleared
+typescriptStringProperty cleared
+typescriptDOMStorageProp cleared
+typescriptFileReaderProp cleared
+typescriptURLUtilsProp cleared
+typescriptNumberStaticProp cleared
+typescriptDOMNodeProp cleared
+typescriptBOMWindowProp cleared
+typescriptRequestProp cleared
+typescriptResponseProp cleared
+typescriptPaymentProp cleared
+typescriptPaymentResponseProp cleared
+typescriptPaymentAddressProp cleared
+typescriptPaymentShippingOptionProp cleared
+typescriptES6SetProp cleared
+typescriptServiceWorkerProp cleared
+typescriptES6MapProp cleared
+typescriptRegExpStaticProp cleared
+typescriptRegExpProp cleared
+typescriptBOMNavigatorProp cleared
+typescriptXHRProp cleared
+typescriptDOMDocProp cleared
+typescriptBOMNetworkProp cleared
+typescriptSymbolStaticProp cleared
+typescriptEncodingProp cleared
+typescriptBOMLocationProp cleared
+typescriptCryptoProp cleared
+typescriptDOMFormProp cleared
+typescriptBOMHistoryProp cleared
+typescriptMathStaticProp cleared
+dartCoreClasses cleared
+dartTypeName   cleared
+dartInterpolation cleared
+dartTypeDef    cleared
+dartClassDecl  cleared
+dartLibrary    cleared
+dartMetadata   cleared
+coffeeExtendedOp cleared
+coffeeSpecialOp cleared
+coffeeDotAccess cleared
+coffeeParen    cleared
+coffeeBracket  cleared
+coffeeParens   cleared
+coffeeBrackets cleared
+coffeeCurlies  cleared
+coffeeOperator cleared
+coffeeStatement cleared
+LspCxxHlSkippedRegion cleared
+LspCxxHlSkippedRegionBeginEnd cleared
+LspCxxHlGroupEnumConstant cleared
+LspCxxHlGroupNamespace cleared
+LspCxxHlGroupMemberVariable cleared
+objcModuleImport cleared
+objcException  cleared
+objcProtocolList cleared
+objcObjDef     cleared
+objcDirective  cleared
+objcPropertyAttribute cleared
+objcHiddenArgument cleared
+pythonDot      cleared
+CocHighlightText cleared
+ktSimpleInterpolation cleared
+ktComplexInterpolation cleared
+ktComplexInterpolationBrace cleared
+ktStructure    cleared
+ktKeyword      cleared
+scalaNameDefinition cleared
+scalaInterpolationBoundary cleared
+scalaInterpolation cleared
+scalaTypeOperator cleared
+goSpaceError   cleared
+goVarArgs      cleared
+goPredefinedIdentifiers cleared
+goParamName    cleared
+rustSuper      cleared
+rustPubScopeCrate cleared
+swiftInterpolatedWrapper cleared
+swiftInterpolatedString cleared
+swiftProperty  cleared
+swiftTypeDeclaration cleared
+swiftClosureArgument cleared
+phpNowDoc      cleared
+phpMethod      cleared
+rubyKeywordAsMethod cleared
+rubyModuleName cleared
+rubyMacro      cleared
+haskellBrackets cleared
+haskellAssocType cleared
+haskellQuotedType cleared
+haskellDeriving cleared
+haskellForeignKeywords cleared
+perlStatementPackage cleared
+perlStatementList cleared
+perlVarSimpleMemberName cleared
+perlVarSimpleMember cleared
+podVerbatimLine cleared
+podCmdText     cleared
+ocamlArrow     cleared
+ocamlEqual     cleared
+ocamlOperator  cleared
+ocamlKeyChar   cleared
+ocamlModPath   cleared
+ocamlFullMod   cleared
+ocamlModule    cleared
+ocamlConstructor cleared
+ocamlFuncWith  cleared
+ocamlWith      cleared
+ocamlModParam  cleared
+ocamlModParam1 cleared
+ocamlAnyVar    cleared
+ocamlPpxEncl   cleared
+ocamlPpxIdentifier cleared
+ocamlSigEncl   cleared
+ocamlStructEncl cleared
+erlangLocalFuncRef cleared
+erlangGlobalFuncRef cleared
+erlangPipe     cleared
+elixirInterpolation cleared
+elixirSelf     cleared
+elixirPseudoVariable cleared
+elixirGuard    cleared
+elixirPrivateGuard cleared
+elixirRecordDefine cleared
+elixirPrivateRecordDefine cleared
+elixirMacroDefine cleared
+elixirPrivateMacroDefine cleared
+elixirDelegateDefine cleared
+elixirOverridableDefine cleared
+elixirExceptionDefine cleared
+elixirCallbackDefine cleared
+elixirExUnitMacro cleared
+matlabSemicolon cleared
+matlabFunction cleared
+matlabImplicit cleared
+matlabDelimiter cleared
+matlabOperator cleared
+matlabArithmeticOperator cleared
+matlabRelationalOperator cleared
+matlabLogicalOperator cleared
+yamlConstant   cleared
+tomlTable      cleared
+tomlKey        cleared
+tomlBoolean    cleared
+tomlTableArray cleared
+gitcommitArrow cleared
+CocHoverRange  cleared
+CocWarningVirtualText cleared
+CocErrorVirtualText cleared
+CocInfoVirtualText cleared
+CocHintVirtualText cleared
+HighlightedyankRegion cleared
+CocGitAddedSign cleared
+CocGitChangeRemovedSign cleared
+CocGitChangedSign cleared
+CocGitRemovedSign cleared
+CocGitTopRemovedSign cleared
+CocExplorerBufferRoot cleared
+CocExplorerBufferExpandIcon cleared
+CocExplorerBufferBufnr cleared
+CocExplorerBufferModified cleared
+CocExplorerBufferBufname cleared
+CocExplorerBufferFullpath cleared
+CocExplorerFileRoot cleared
+CocExplorerFileExpandIcon cleared
+CocExplorerFileFullpath cleared
+CocExplorerFileDirectory cleared
+CocExplorerFileGitStage cleared
+CocExplorerFileGitUnstage cleared
+CocExplorerFileSize cleared
+CocExplorerTimeAccessed cleared
+CocExplorerTimeCreated cleared
+CocExplorerTimeModified cleared
+ALEVirtualTextError cleared
+ALEVirtualTextWarning cleared
+ALEVirtualTextInfo cleared
+ALEVirtualTextStyleError cleared
+ALEVirtualTextStyleWarning cleared
+NeomakeInfo    cleared
+NeomakeMessage cleared
+NeomakeMessageSign cleared
+NeomakeVirtualtextError cleared
+NeomakeVirtualtextWarning cleared
+NeomakeVirtualtextInfo cleared
+NeomakeVirtualtextMessag cleared
+deniteMatchedChar cleared
+deniteMatchedRange cleared
+deniteInput    cleared
+deniteStatusLineNumber cleared
+deniteStatusLinePath cleared
+deniteSelectedLin cleared
+VistaBracket   cleared
+VistaChildrenNr cleared
+VistaKind      cleared
+VistaScope     cleared
+VistaScopeKind cleared
+VistaTag       cleared
+VistaPrefix    cleared
+VistaColon     cleared
+VistaIcon      cleared
+VistaLineNr    cleared
+NERDTreeLinkFile cleared
+NERDTreeLinkTarget cleared
+WhichKeySeperator cleared
+DefxIconsParentDirectory cleared
+Defx_filename_root cleared
+Floaterm       cleared
+FloatermBorder cleared
+pythonBuiltinFunction cleared
+Stld4be98_1b2b34__ cleared
+Stlec5f67_1b2b34__ cleared
+Stl1b2b34_NONE__ cleared
+Stl51a0cf_202020__ cleared
+StlNONE_202020__ cleared
+Stle2e2e5_202020__ cleared
+Stlffffff_202020__ cleared
+Stl202020_NONE__ cleared
+htmlLinke      cleared
+htmlValue      cleared
+rubyPredefinedConstant cleared
+rubyPredefinedVariable cleared
+erubyRailsHelperMethod cleared
+Stl366b8a_202020__ cleared
+Stl366b8a_ffffcc__ cleared
+StlNONE_ffffcc__ cleared
+Stl000000_ffffcc__ cleared
+Stlffffff_ffffcc__ cleared
+Stlffffcc_NONE__ cleared
+Stl51a0cf_ffffcc__ cleared
+Stl51a0cf_111111__ cleared
+StlNONE_111111__ cleared
+Stleeeeee_111111__ cleared
+Stl000000_111111__ cleared
+Stl111111_6c6c6c__ cleared
+Stl_6c6c6c__   cleared
+Stl51a0cf_2b2b2b__ cleared
+StlNONE_2b2b2b__ cleared
+Stlb5b5aa_2b2b2b__ cleared
+Stlbf5858_2b2b2b__ cleared
+Stl2b2b2b_3b3b37__ cleared
+Stl_3b3b37__   cleared
+Stl366b8a_2b2b2b__ cleared
+Stl366b8a_fffff0__ cleared
+StlNONE_fffff0__ cleared
+Stl75756e_fffff0__ cleared
+Stlf55050_fffff0__ cleared
+Stlfffff0_f0f0e1__ cleared
+Stl_f0f0e1__   cleared
+OverLength     cleared
+perlNumber     cleared
+perlOperator   cleared
+shDeref        cleared
+shDerefDelim   cleared
+shDerefOp      cleared
+shHereDoc      cleared
+shShellVariables cleared
+shTestOpr      cleared
+shVariable     cleared
+Stl8787ff_1c1c1c__ cleared
+Stlff0000_1c1c1c__ cleared
+Stl1c1c1c_303030__ cleared
+Stl55af66_000000__ cleared
+Stl51a0cf_121212__ cleared
+StlNONE_121212__ cleared
+Stlf5f5f5_121212__ cleared
+Stlff0000_121212__ cleared
+Stl121212_1c1c1c__ cleared
+Stl_1c1c1c__   cleared
+colorizer_mf_0000ff cleared
+Stl366b8a_f8f8f8__ cleared
+StlNONE_f8f8f8__ cleared
+Stl404048_f8f8f8__ cleared
+Stlffffff_f8f8f8__ cleared
+Stlf8f8f8_NONE__ cleared
+Fg             cleared
+RedItalic      cleared
+OrangeItalic   cleared
+PurpleItalic   cleared
+Purple         cleared
+RedSign        cleared
+OrangeSign     cleared
+YellowSign     cleared
+GreenSign      cleared
+CyanSign       cleared
+BlueSign       cleared
+PurpleSign     cleared
+mkdInlineURL   cleared
+mkdItalic      cleared
+mkdCodeDelimiter cleared
+mkdBold        cleared
+rstStandaloneHyperlink cleared
+rstSubstitutionReference cleared
+rstTableLines  cleared
+xmlEntityPunct cleared
+xmlDocTypeDecl cleared
+xmlDocTypeKeyword cleared
+xmlCdataStart  cleared
+xmlCdataCdata  cleared
+cssPseudoClassFn cleared
+cssValueInteger cleared
+cssValueAngle  cleared
+cssValueFrequency cleared
+cssVendor      cleared
+sassCssAttribute cleared
+sassInterpolationDelimiter cleared
+sassFunctionName cleared
+scssInterpolationDelimiter cleared
+scssVariableValue cleared
+scssNull       cleared
+scssBoolean    cleared
+scssVariableAssignment cleared
+scssForKeyword cleared
+scssAttribute  cleared
+lessMixinChar  cleared
+lessFunction   cleared
+LightGray      cleared
+purescriptModule cleared
+purescriptModuleParams cleared
+purescriptAsKeyword cleared
+purescriptHidingKeyword cleared
+cppSTLVariable cleared
+csStorage      cleared
+csNewType      cleared
+csInterpolationDelimiter cleared
+csInterpolation cleared
+csEndColon     cleared
+luaFuncCall    cleared
+luaLocal       cleared
+luaSpecialValue cleared
+luaBraces      cleared
+luaBuiltIn     cleared
+luaNoise       cleared
+luaLabel       cleared
+luaFuncTable   cleared
+luaFuncArgName cleared
+luaEllipsis    cleared
+luaDocTag      cleared
+moonInterpDelim cleared
+moonInterp     cleared
+moonFunction   cleared
+moonLuaFunc    cleared
+moonSpecialVar cleared
+moonObject     cleared
+moonDotAccess  cleared
+javaMethodDecl cleared
+javaVarArg     cleared
+javaUserLabel  cleared
+javaParen      cleared
+javaParen1     cleared
+javaParen2     cleared
+javaParen3     cleared
+javaParen4     cleared
+javaParen5     cleared
+goPackage      cleared
+goImport       cleared
+phpInterpSimpleCurly cleared
+lispAtomMark   cleared
+lispKey        cleared
+lispFunc       cleared
+shRange        cleared
+shSet          cleared
+shVarAssign    cleared
+shCmdSubRegion cleared
+shCommandSub   cleared
+shFunctionKey  cleared
+zshOptStart    cleared
+zshOption      cleared
+fishStatement  cleared
+fishLabel      cleared
+fishCommandSub cleared
+ps1InterpolationDelimiter cleared
+ps1BuiltIn     cleared
+vimMapLhs      cleared
+vimMapRhs      cleared
+vimSetEqual    cleared
+vimSetSep      cleared
+vimUserAttrbKey cleared
+vimUserAttrb   cleared
+vimHiBang      cleared
+vimSet         cleared
+cmakeKWconfigure_package_config_file cleared
+cmakeKWwrite_basic_package_version_file cleared
+cmakeKWExternalProject cleared
+cmakeKWadd_compile_definitions cleared
+cmakeKWadd_compile_options cleared
+cmakeKWadd_custom_command cleared
+cmakeKWadd_custom_target cleared
+cmakeKWadd_definitions cleared
+cmakeKWadd_dependencies cleared
+cmakeKWadd_executable cleared
+cmakeKWadd_library cleared
+cmakeKWadd_link_options cleared
+cmakeKWadd_subdirectory cleared
+cmakeKWadd_test cleared
+cmakeKWbuild_command cleared
+cmakeKWcmake_host_system_information cleared
+cmakeKWcmake_minimum_required cleared
+cmakeKWcmake_parse_arguments cleared
+cmakeKWcmake_policy cleared
+cmakeKWconfigure_file cleared
+cmakeKWcreate_test_sourcelist cleared
+cmakeKWctest_build cleared
+cmakeKWctest_configure cleared
+cmakeKWctest_coverage cleared
+cmakeKWctest_memcheck cleared
+cmakeKWctest_run_script cleared
+cmakeKWctest_start cleared
+cmakeKWctest_submit cleared
+cmakeKWctest_test cleared
+cmakeKWctest_update cleared
+cmakeKWctest_upload cleared
+cmakeKWdefine_property cleared
+cmakeKWdoxygen_add_docs cleared
+cmakeKWenable_language cleared
+cmakeKWenable_testing cleared
+cmakeKWexec_program cleared
+cmakeKWexecute_process cleared
+cmakeKWexport  cleared
+cmakeKWexport_library_dependencies cleared
+cmakeKWfile    cleared
+cmakeKWfind_file cleared
+cmakeKWfind_library cleared
+cmakeKWfind_path cleared
+cmakeKWfind_program cleared
+cmakeKWfltk_wrap_ui cleared
+cmakeKWfunction cleared
+cmakeKWget_cmake_property cleared
+cmakeKWget_directory_property cleared
+cmakeKWget_filename_component cleared
+cmakeKWget_source_file_property cleared
+cmakeKWget_target_property cleared
+cmakeKWget_test_property cleared
+cmakeKWinclude cleared
+cmakeKWinclude_directories cleared
+cmakeKWinclude_external_msproject cleared
+cmakeKWinclude_guard cleared
+cmakeKWinstall_files cleared
+cmakeKWinstall_programs cleared
+cmakeKWlink_directories cleared
+cmakeKWlist    cleared
+cmakeKWload_cache cleared
+cmakeKWload_command cleared
+cmakeKWmark_as_advanced cleared
+cmakeKWmath    cleared
+cmakeKWoption  cleared
+cmakeKWqt_wrap_cpp cleared
+cmakeKWqt_wrap_ui cleared
+cmakeKWremove  cleared
+cmakeKWseparate_arguments cleared
+cmakeKWset_directory_properties cleared
+cmakeKWset_property cleared
+cmakeKWset_source_files_properties cleared
+cmakeKWset_target_properties cleared
+cmakeKWsubdirs cleared
+cmakeKWtarget_compile_definitions cleared
+cmakeKWtarget_compile_features cleared
+cmakeKWtarget_compile_options cleared
+cmakeKWtarget_include_directories cleared
+cmakeKWtarget_link_directories cleared
+cmakeKWtarget_link_libraries cleared
+cmakeKWtarget_link_options cleared
+cmakeKWtarget_precompile_headers cleared
+cmakeKWtry_compile cleared
+cmakeKWtry_run cleared
+cmakeKWuse_mangled_mesa cleared
+cmakeKWvariable_requires cleared
+cmakeKWwrite_file cleared
+helpURL        cleared
+helpHyperTextEntry cleared
+plug1          cleared
+plugNumber     cleared
+plug2          cleared
+plugBracket    cleared
+plugName       cleared
+plugDash       cleared
+plugError      cleared
+plugNotLoaded  cleared
+plugRelDate    cleared
+plugH2         cleared
+plugMessage    cleared
+plugStar       cleared
+plugUpdate     cleared
+plugDeleted    cleared
+plugEdge       cleared
+plugSha        cleared
+SyntasticWarningSign cleared
+Lf_hl_match    cleared
+Lf_hl_match0   cleared
+Lf_hl_match1   cleared
+Lf_hl_match2   cleared
+Lf_hl_match3   cleared
+Lf_hl_match4   cleared
+Lf_hl_matchRefine cleared
+Lf_hl_cursorline cleared
+Lf_hl_selection cleared
+Lf_hl_rgHighlight cleared
+Lf_hl_gtagsHighlight cleared
+TagbarFoldIcon cleared
+LightGrey      cleared
+DirvishPathTail cleared
+DirvishArg     cleared
+netrwLink      cleared
+netrwSymLink   cleared
+netrwComment   cleared
+netrwCmdSep    cleared
+MatchWordCur   cleared
+Sneak          cleared
+SneakLabel     cleared
+SneakScope     cleared
+multiple_cursors_cursor cleared
+multiple_cursors_visual cleared
+CurrentWord    cleared
+CurrentWordTwins cleared
+SignatureMarkText cleared
+SignatureMarkerText cleared
+WhichKeyFloating cleared
+QuickmenuOption cleared
+QuickmenuNumber cleared
+QuickmenuBracket cleared
+QuickmenuHelp  cleared
+QuickmenuSpecial cleared
+QuickmenuHeader cleared
+UndotreeSavedBig cleared
+UndotreeNode   cleared
+UndotreeNodeCurrent cleared
+UndotreeSeq    cleared
+UndotreeNext   cleared
+UndotreeTimeStamp cleared
+UndotreeHead   cleared
+UndotreeBranch cleared
+UndotreeCurrent cleared
+UndotreeSavedSmall cleared
+QuickScopePrimary cleared
+QuickScopeSecondary cleared
+Blamer         cleared
+Stlf0f0f0_050505__ cleared
+Stlac8a8c_050505__ cleared
+Stl050505_0f0f0f__ cleared
+Stl_0f0f0f__   cleared
+Stl51a0cf_191919__ cleared
+StlNONE_191919__ cleared
+Stlf0f0f0_191919__ cleared
+Stlac8a8c_191919__ cleared
+Stl191919_222222__ cleared
+Stl_222222__   cleared
+Stl51a0cf_f0f0f0__ cleared
+StlNONE_f0f0f0__ cleared
+Stl2c2c2c_f0f0f0__ cleared
+Stl735b60_f0f0f0__ cleared
+Stlf0f0f0_d3d3d3__ cleared
+Stl_d3d3d3__   cleared
+rubyStringEscape cleared
+rubyRegexpEscape cleared
+rubyRegexpAnchor cleared
+rubyRegexpSpecial cleared
+perlStringEscape cleared
+elixirDelimiter cleared
+vimHiClear     cleared
+vimHiAttrib    cleared
+vimHiGui       cleared
+vimHiCTerm     cleared
+contrastneedWhite cleared
+contrastneedRed cleared
+contrastneedGreen cleared
+contrastneedYellow cleared
+contrastneedBlue cleared
+contrastneedMagenta cleared
+contrastneedCyan cleared
+contrastneedRedbold cleared
+contrastneedGreenbold cleared
+contrastneedYellowbold cleared
+contrastneedBluebold cleared
+contrastneedMagentabold cleared
+contrastneedCyanbold cleared
+contrastneedBrightRed cleared
+contrastneedBrightGreen cleared
+contrastneedBrightYellow cleared
+contrastneedBrightBlue cleared
+contrastneedBrightMagenta cleared
+contrastneedBrightCyan cleared
+contrastneedOrange cleared
+contrastneedOrangeBold cleared
+contrastneedGrayAlt cleared
+contrastneedHardBlack cleared
+contrastneedFg1 cleared
+docbkKeyword   cleared
+contrastneedGray cleared
+dtdFunction    cleared
+dtdTagName     cleared
+dtdParamEntityPunct cleared
+dtdParamEntityDPunct cleared
+vimFuncSID     cleared
+clojureStringEscape cleared
+clojureRegexpCharClass cleared
+clojureRegexpMod cleared
+clojureRegexpQuantifier cleared
+contrastneedFg3 cleared
+cssTransitionProp cleared
+cssPrintProp   cleared
+cssFontDescriptorProp cleared
+cssFlexibleBoxProp cleared
+cssBorderOutlineProp cleared
+cssMarginProp  cleared
+cssPaddingProp cleared
+javascriptDefault cleared
+javascriptAsyncFunc cleared
+javascriptClassStatic cleared
+javascriptForOperator cleared
+javascriptYield cleared
+contrastneedFg4 cleared
+javascriptDocParamType cleared
+javascriptDocNamedParamType cleared
+objcTypeModifier cleared
+moonSpecialOp  cleared
+moonExtendedOp cleared
+scalaCaseFollowing cleared
+scalaCapitalWord cleared
+scalaTypeExtension cleared
+scalaSpecial   cleared
+scalaTypeDeclaration cleared
+scalaTypeTypePostDeclaration cleared
+scalaInstanceDeclaration cleared
+haskellSeparator cleared
+haskellBacktick cleared
+haskellConditional cleared
+haskellLet     cleared
+haskellDefault cleared
+haskellBottom  cleared
+haskellBlockKeywords cleared
+haskellPragma  cleared
+haskellChar    cleared
+Stlb81109_050505__ cleared
+Stl050505_050505__ cleared
+Stl_050505__   cleared
+Stla0a0a0_000000__ cleared
+Stl878787_NONE__ cleared
+PmenuSet       cleared
+Stlf8f8f2_111111__ cleared
+Stl111111_111111__ cleared
+Stl_111111__   cleared
+EscSequence    cleared
+dEscSequence   cleared
+Stl51a0cf_1c1b19__ cleared
+StlNONE_1c1b19__ cleared
+Stlfce8c3_1c1b19__ cleared
+Stld75f00_1c1b19__ cleared
+Stl1c1b19_1c1b19__ cleared
+Stl_1c1b19__   cleared
+Stl51a0cf_332412__ cleared
+StlNONE_332412__ cleared
+Stl9b8f78_332412__ cleared
+Stl332412_NONE__ cleared
+VimError       cleared
+Stl51a0cf_204040__ cleared
+StlNONE_204040__ cleared
+Stlf5f5dc_204040__ cleared
+Stlffffff_204040__ cleared
+Stl204040_NONE__ cleared
+pythonBuilinObj cleared
+vimHiLink      cleared
+vimHiGuiRgb    cleared
+vimHiKeyList   cleared
+mardownHeadingRule cleared
+markdownUrlTitle cleared
+javascript_asserter cleared
+javascriptTry  cleared
+javascriptConditial cleared
+javascriptFuncComma cleared
+javascriptHtmlEvents cleared
+javascriptFuncExp cleared
+javascriptAjaxProperties cleared
+javascriptDOMObjects cleared
+javascriptGlobalObjects cleared
+javascriptWebAPI cleared
+javascriptQDimensions cleared
+javascriptEventListenerKeywords cleared
+javascriptAjaxMethods cleared
+javascriptDOMMethods cleared
+javascriptFuncEq cleared
+sassMediaQuery cleared
+sassFunctionDecl cleared
+sassDebug      cleared
+sassWarn       cleared
+sassReturn     cleared
+sassPlaceholder cleared
+cssIEUIProp    cleared
+cssMultiColumnProp cleared
+cssAuralProp   cleared
+cssTextAttr    cleared
+cssMultiColumnAttr cleared
+Stl51a0cf_1b1c30__ cleared
+StlNONE_1b1c30__ cleared
+Stlffffff_1b1c30__ cleared
+Stl1b1c30_NONE__ cleared
+Stl51a0cf_405871__ cleared
+StlNONE_405871__ cleared
+Stlbfcfff_405871__ cleared
+Stlffffff_405871__ cleared
+Stl405871_NONE__ cleared
+Stl51a0cf_191515__ cleared
+StlNONE_191515__ cleared
+Stlfff1f3_191515__ cleared
+Stlfd6883_191515__ cleared
+Stl191515_NONE__ cleared
+Match          cleared
+Stl51a0cf_946464__ cleared
+StlNONE_946464__ cleared
+Stlffffff_946464__ cleared
+Stl000000_946464__ cleared
+Stl946464_NONE__ cleared
+djangoFilter   cleared
+treeCWD        cleared
+treeClosable   cleared
+treeOpenable   cleared
+treeDirSlash   cleared
+treeLink       cleared
+Stld0d0d0_1c1c1c__ cleared
+Stl1c1c1c_3a3a3a__ cleared
+Stl_3a3a3a__   cleared
+ColumnMargin   cleared
+Symbol         cleared
+Interpolation  cleared
+erlangBitType  cleared
+rubyBeginend   cleared
+Stl51a0cf_242424__ cleared
+StlNONE_242424__ cleared
+Stlf7f7f7_242424__ cleared
+Stl242424_NONE__ cleared
+Stl51a0cf_393939__ cleared
+StlNONE_393939__ cleared
+Stlf2f2f2_393939__ cleared
+Stlee5396_393939__ cleared
+Stl393939_262626__ cleared
+Stl51a0cf_393939_bolditalic_ cterm=bold,italic gui=bold,italic guifg=#51a0cf guibg=#393939
+StlNONE_393939_bolditalic_ cterm=bold,italic gui=bold,italic guibg=#393939
+Stlf2f2f2_393939_bolditalic_ cterm=bold,italic gui=bold,italic guifg=#f2f2f2 guibg=#393939
+Stlee5396_393939_bolditalic_ cterm=bold,italic gui=bold,italic guifg=#ee5396 guibg=#393939
+StlNONE_161616__ guibg=#161616
+Stlee5396_161616__ guifg=#ee5396 guibg=#161616
+
+

@@ -33,6 +33,7 @@ return {
     slime_target = "kitty",
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     tex_conceal = 'gm',
+    jukit_mappings_ext_enabled = {"py", "ipynb"},
     -- vim.g['pandoc#syntax#conceal#use'] = false
     -- disable conceal in markdown/quarto
     -- vim.g['pandoc#syntax#conceal#use'] = false
