@@ -600,11 +600,15 @@ return {
     "unblevable/quick-scope",
   },
   {
-    require('notify').setup({
-      background_color="#222222",
-    })
   },
-  { 'luk400/vim-jukit' },
+  {
+    'luk400/vim-jukit',
+    config = function()
+      vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
+      -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+      -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
+    end,
+  },
   -- { "tomtom/tcomment_vim" },
   -- {
   --   "Cassin01/wf.nvim",
