@@ -609,6 +609,16 @@ return {
       -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
     end,
   },
+  {
+    -- "code-stats/code-stats-vim",
+    'https://gitlab.com/code-stats/code-stats-vim.git',
+    config = function()
+      -- REQUIRED: set your API key
+      -- TODO: Replace with environment variable ??
+      vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
+      -- vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
+    end
+  }
   -- { "tomtom/tcomment_vim" },
   -- {
   --   "Cassin01/wf.nvim",
