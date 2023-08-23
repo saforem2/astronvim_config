@@ -1,4 +1,7 @@
 return {
+  --   require("notify").setup({
+  --     background_colour = "#000000",
+  -- }),
   -- this table overrides highlights in all themes
   -- Normal = { bg = "#000000" },
   -- Normal = { bg = "#1c1c1c" },
@@ -40,10 +43,7 @@ return {
   termcolorcode_cfg_10_gfg_55FF55 = { fg="#55ff55" },
   termcolorcode_cfg_13_gfg_FF55FF = { fg="#ff55ff" },
   CurSearch = { reverse=true },
-  -- Search = { bg="#00CCFF", fg="#1c1c1c", bold=true },
   Search = { bold=true, fg="#1c1c1c",  bg="#00ccff",  },
-  -- IncSearch = { bg="#FF00FF", fg="#1c1c1c", reverse=true, underline=true, bold=true },
-  -- IncSearch = {bold=true, underline=true, reverse=true, fg="#1c1c1c",  bg="#ff00ff",  },
   NeoTreeGitUnstaged = { fg="#939393", italic=false, bold=false },
   NeoTreeGitUntracked = { fg="#666666", italic=false, bold=false },
   NeoTreeGitConflict = { fg="#FFFF00", italic=false, bold=true },
@@ -51,7 +51,6 @@ return {
   BufferLineBufferSelected = { fg="#9e9e9e", bg="#282828", italic=false, bold=true },
   NotifyBackground = { bg="#222222", fg="#939393" },
   QuickScopePrimary = { bg="#222222", sp="#666666", fg="none", underline=true, bold=true},
-  -- Normal = { fg="#bdbdbd", bold=false, italic=false },
   jukit_textcell_bg_colors = { bg="#333333" },
   Directory = { fg="#3ddbd9" },
   ErrorMsg = { fg="#ee5396" },
@@ -76,82 +75,111 @@ return {
   DiffText = { bg="#2f3f5c",  },
   SignColumn = { fg="#262626",  bg="#161616",  },
   Conceal = {  },
-  SpellBad = { undercurl=true, guisp=Red },
-  SpellCap = { undercurl=true, guisp=Blue },
-  SpellRare = { undercurl=true, guisp=Magenta },
-  SpellLocal = { undercurl=true, guisp=Cyan },
-  Pmenu = { fg="#d0d0d0",  bg="#262626",  },
-  PmenuSel = { fg="#3ddbd9",  bg="#393939",  },
-  -- PmenuKind = { links to Pmenu },
-  -- PmenuKindSel = { links to PmenuSel },
-  -- PmenuExtra = { links to Pmenu },
-  -- PmenuExtraSel = { links to PmenuSel },
-  PmenuSbar = { fg="#d0d0d0",  bg="#262626",  },
-  PmenuThumb = { fg="#3ddbd9",  bg="#393939",  },
-  -- TabLine = { links to StatusLineNC },
-  -- TabLineSel = { links to StatusLine },
-  -- TabLineFill = { links to TabLine },
+  -- SpellBad = { undercurl=true, guisp=Red },
+  -- SpellCap = { undercurl=true, guisp=Blue },
+  -- SpellRare = { undercurl=true, guisp=Magenta },
+  -- SpellLocal = { undercurl=true, guisp=Cyan },
+  -- Pmenu = { fg="#d0d0d0",  bg="#262626",  },
+  -- PmenuSel = { fg="#3ddbd9",  bg="#393939",  },
+  -- PmenuSbar = { fg="#d0d0d0",  bg="#262626",  },
+  -- PmenuThumb = { fg="#3ddbd9",  bg="#393939",  },
   CursorColumn = { bg="#262626",  },
   CursorLine = { bg="#262626",  },
   ColorColumn = { bg="#262626",  },
   QuickFixLine = { bg="#262626",  },
-  -- Whitespace = { links to NonText },
   NormalNC = { fg="#f2f2f2",  bg="#161616",  },
-  -- MsgSeparator = { links to StatusLine },
   NormalFloat = { fg="#f2f2f2",  bg="#131313",  },
   MsgArea = {  },
   FloatBorder = { fg="#131313",  bg="#131313",  },
-  WinBar = { gui=bold },
-  -- WinBarNC = { links to WinBar },
+  WinBar = { bold = true },
   Cursor = { fg="#161616",  bg="#d0d0d0",  },
-  -- FloatTitle = { links to Title },
-  lCursor = { fg=bg bg=fg },
   Normal = { fg="#bdbdbd",  },
   Substitute = { fg="#262626",  bg="#3ddbd9",  },
-  FloatShadow = { bg=Black blend=80 },
-  FloatShadowThrough = { bg=Black blend=100 },
+  FloatShadow = { bg="#000000", blend=80 },
+  FloatShadowThrough = { bg="#000000", blend=100 },
   RedrawDebugNormal = { reverse=true },
-  RedrawDebugClear = { bg=Yellow },
-  RedrawDebugComposed = { bg=Green },
-  RedrawDebugRecompose = { bg=Red },
-  Error = { fg="#ee5396",  bg="#262626",  },
-  Todo = { fg="#42be65",  },
-  String = { fg="#be95ff",  },
-  Constant = { fg="#d0d0d0",  },
-  Character = { fg="#be95ff",  },
-  Number = { fg="#82cfff",  },
-  Boolean = { fg="#78a9ff",  },
-  Float = { links to Number },
-  Function = { fg="#3ddbd9",  },
-  Identifier = { fg="#d0d0d0",  },
-  Conditional = { fg="#78a9ff",  },
-  Statement = { fg="#78a9ff",  },
-  Repeat = { fg="#78a9ff",  },
-  Label = { fg="#78a9ff",  },
-  Operator = { fg="#78a9ff",  },
-  Keyword = { fg="#ff79ff",  },
-  Exception = { fg="#78a9ff",  },
-  Include = { fg="#78a9ff",  },
-  PreProc = { fg="#78a9ff",  },
-  Define = { fg="#78a9ff",  },
-  Macro = { fg="#08bdba",  },
+  RedrawDebugClear = { bg="#FFFF00" },
+  RedrawDebugComposed = { bg="#63ff5b" },
+  RedrawDebugRecompose = { bg="#FF5252" },
+  -- Error = { fg="#ee5396",  bg="#262626",  },
+  -- Todo = { fg="#42be65",  },
+  -- String = { fg="#be95ff",  },
+  -- Constant = { fg="#d0d0d0",  },
+  -- Character = { fg="#be95ff",  },
+  -- Number = { fg="#82cfff",  },
+  -- Boolean = { fg="#78a9ff",  },
+  -- Function = { fg="#3ddbd9",  },
+  -- Identifier = { fg="#d0d0d0",  },
+  -- Conditional = { fg="#78a9ff",  },
+  -- Statement = { fg="#78a9ff",  },
+  -- Repeat = { fg="#78a9ff",  },
+  -- Label = { fg="#78a9ff",  },
+  -- Operator = { fg="#78a9ff",  },
+  -- Keyword = { fg="#ff79ff",  },
+  -- Exception = { fg="#78a9ff",  },
+  -- Include = { fg="#78a9ff",  },
+  -- PreProc = { fg="#78a9ff",  },
+  -- Define = { fg="#78a9ff",  },
+  -- Macro = { fg="#08bdba",  },
+  -- StorageClass = { fg="#78a9ff",  },
+  -- Type = { fg="#78a9ff",  },
+  -- Structure = { fg="#78a9ff",  },
+  -- Typedef = { fg="#78a9ff",  },
+  -- Tag = { fg="#d0d0d0",  },
+  -- Special = { fg="#d0d0d0",  },
+  -- SpecialChar = { fg="#d0d0d0",  },
+  -- SpecialComment = { fg="#3ddbd9",  },
+  -- Debug = { fg="#42be65",  },
+  -- DiagnosticError = { fg="#ee5396",  },
+  -- DiagnosticInfo = { fg="#78a9ff",  },
+  -- DiagnosticHint = { fg="#d0d0d0",  },
+  -- Comment = { italic=true, fg="#525252",  },
+  NotifyERRORBody                        ={ fg="#f8f8f8", bg="#1c1c1c" }, -- NotifyERRORBody xxx links to Normal
+  NotifyWARNBody                         ={ fg="#f8f8f8", bg="#1c1c1c" }, -- NotifyWARNBody xxx links to Normal
+  NotifyINFOBody                         ={ fg="#f8f8f8", bg="#1c1c1c" }, -- NotifyINFOBody xxx links to Normal
+  NotifyDEBUGBody                        ={ fg="#f8f8f8", bg="#1c1c1c" }, -- NotifyDEBUGBody xxx links to Normal
+  NotifyTRACEBody                        ={ fg="#f8f8f8", bg="#1c1c1c" }, -- NotifyTRACEBody xxx links to Normal
+  NotifyLogTitle                         ={ fg="#00CCFF", bg="#1c1c1c" }, -- NotifyLogTitle xxx links to Special
+  NotifyLogTime                          ={ fg="#777777", bg="#1c1c1c" }, -- NotifyLogTime  xxx links to Comment
+  NotifyERRORBorder                      ={ fg="#8a1f1f", }, -- NotifyERRORBorder xxx guifg=#8a1f1f
+  NotifyWARNBorder                       ={ fg="#79491d", }, -- NotifyWARNBorder xxx guifg=#79491d
+  NotifyINFOBorder                       ={ fg="#4f6752", }, -- NotifyINFOBorder xxx guifg=#4f6752
+  NotifyDEBUGBorder                      ={ fg="#8b8b8b", }, -- NotifyDEBUGBorder xxx guifg=#8b8b8b
+  NotifyTRACEBorder                      ={ fg="#4f3552", }, -- NotifyTRACEBorder xxx guifg=#4f3552
+  NotifyERRORIcon                        ={ fg="#f70067", }, -- NotifyERRORIcon xxx guifg=#f70067
+  NotifyWARNIcon                         ={ fg="#f79000", }, -- NotifyWARNIcon xxx guifg=#f79000
+  NotifyINFOIcon                         ={ fg="#a9ff68", }, -- NotifyINFOIcon xxx guifg=#a9ff68
+  NotifyDEBUGIcon                        ={ fg="#8b8b8b", }, -- NotifyDEBUGIcon xxx guifg=#8b8b8b
+  NotifyTRACEIcon                        ={ fg="#d484ff", }, -- NotifyTRACEIcon xxx guifg=#d484ff
+  NotifyERRORTitle                       ={ fg="#f70067", }, -- NotifyERRORTitle xxx guifg=#f70067
+  NotifyWARNTitle                        ={ fg="#f79000", }, -- NotifyWARNTitle xxx guifg=#f79000
+  NotifyINFOTitle                        ={ fg="#a9ff68", }, -- NotifyINFOTitle xxx guifg=#a9ff68
+  NotifyDEBUGTitle                       ={ fg="#8b8b8b", }, -- NotifyDEBUGTitle xxx guifg=#8b8b8b
+  NotifyTRACETitle                       ={ fg="#d484ff", }, -- NotifyTRACETitle xxx guifg=#d484ff
+}
+  -- NotifyBackground                       ={ guibg="#1c1c1c" }, -- NotifyBackground xxx links to Normal
+  -- WinBarNC = { links to WinBar },
+  -- FloatTitle = { links to Title },
+  -- lCursor = { fg=bg bg=fg },
+  -- MsgSeparator = { links to StatusLine },
+  -- Search = { bg="#00CCFF", fg="#1c1c1c", bold=true },
+  -- IncSearch = { bg="#FF00FF", fg="#1c1c1c", reverse=true, underline=true, bold=true },
+  -- IncSearch = {bold=true, underline=true, reverse=true, fg="#1c1c1c",  bg="#ff00ff",  },
+  -- Normal = { fg="#bdbdbd", bold=false, italic=false },
+  -- PmenuKind = { links to Pmenu },
+  -- PmenuKindSel = { links to PmenuSel },
+  -- PmenuExtra = { links to Pmenu },
+  -- PmenuExtraSel = { links to PmenuSel },
+  -- TabLine = { links to StatusLineNC },
+  -- TabLineSel = { links to StatusLine },
+  -- TabLineFill = { links to TabLine },
+  -- Whitespace = { links to NonText },
+  -- Float = { links to Number },
   -- PreCondit = { links to PreProc },
-  StorageClass = { fg="#78a9ff",  },
-  Type = { fg="#78a9ff",  },
-  Structure = { fg="#78a9ff",  },
-  Typedef = { fg="#78a9ff",  },
-  Tag = { fg="#d0d0d0",  },
-  Special = { fg="#d0d0d0",  },
-  SpecialChar = { fg="#d0d0d0",  },
   -- Delimiter = { links to Special },
-  SpecialComment = { fg="#3ddbd9",  },
-  Debug = { fg="#42be65",  },
-  DiagnosticError = { fg="#ee5396",  },
   -- DiagnosticWarn = { fg="#ffb53d",  },
-  DiagnosticInfo = { fg="#78a9ff",  },
-  DiagnosticHint = { fg="#d0d0d0",  },
   -- DiagnosticOk = { fg=LightGreen },
-  Comment = { italic=true fg="#525252",  },
+
   -- ['@parameter'] = { fg = "#FFB53D" },
   -- ['@text'] = { fg="#d0d0d0",  },
   -- @text.literal = { fg="#ae81ff",  },
@@ -548,7 +576,6 @@ return {
   -- DapUIUnavailable = { fg="#424242",  },
   -- DapUIWinSelect = { ctermfg=14 bold=true, fg="#00f1f5",  },
   -- DapUIEndofBuffer = { links to EndOfBuffer },
-}
 
   -- DapUINormalNC = { gui= },
   -- DapUIPlayPauseNC = { gui= fg="#a9ff68",  },
@@ -708,7 +735,7 @@ return {
   -- alpha2 = { fg="#d0d0d0",  },
   -- alpha3 = { fg="#525252",  },
   -- CodeBlock = { bg="#262626",  },
- },
+ -- }
   -- CmpItemKindVariable = { fg="#262626",  bg="#be95ff",  },
   -- CmpItemKindTypeParameter = { fg="#262626",  bg="#3ddbd9",  },
   -- CmpItemKindStruct = { fg="#262626",  bg="#33b1ff",  },
@@ -727,7 +754,7 @@ return {
   -- CmpItemKindConstructor = { fg="#262626",  bg="#ee5396",  },
   -- CmpItemKindConstant = { fg="#262626",  bg="#ee5396",  },
   -- CmpItemKindClass = { fg="#262626",  bg="#33b1ff",  },
- },
+ -- },
   -- CodeiumSuggestion = { fg="#808080",  },
   -- CodeiumAnnotation = { links to Normal },
   -- TSRainbowRed = { fg="#cc241d",  },
@@ -803,7 +830,7 @@ return {
   -- NavicIconsConstructor = {  },
   -- NavicIconsConstant = {  },
   -- DashboardCenter = {  },
- }
+ -- }
   --
   --
   --
@@ -887,7 +914,7 @@ return {
   -- ['@keyword.function'] = { fg = "#ee5396" },
   -- ['@punctuation.bracket'] = { fg = '#8cff48' },
   -- ['@string.documentation'] = { fg = "#697077" },
-}
+-- }
 
 -- Preview
 -- Colors
