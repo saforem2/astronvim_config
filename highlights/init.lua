@@ -11,8 +11,7 @@ return {
   -- this table overrides highlights in all themes
   -- Normal = { bg = "#000000" },
   -- Normal = { bg = "#1c1c1c" },
-  -- lineNr = { bg = "none" },
-  --
+  LineNr = { fg="#383838", bg = "none" },
   -- lineNr = { fg="#202020" },
   -- Normal = { bg="#1c1c1c" },
   -- string = { fg='#f1e05a' },
@@ -56,24 +55,24 @@ return {
   ErrorMsg = { fg="#ee5396" },
   MoreMsg = { fg="#3ddbd9",  },
   ModeMsg = { fg="#d0d0d0",  },
-  LineNr = { fg="#525252",  bg="#161616",  },
+  -- LineNr = { fg="#444444",  bg="none",  },
   CursorLineNr = { fg="#d0d0d0",  },
   Question = { fg="#d0d0d0",  },
-  StatusLine = { fg="#d0d0d0",  bg="#161616",  },
+  StatusLine = { fg="#d0d0d0",  bg="#222222",  },
   StatusLineNC = { fg="#d0d0d0",  bg="#262626",  },
-  VertSplit = { fg="#262626",  bg="#161616",  },
+  VertSplit = { fg="#262626",  bg="none",  },
   Title = { fg="#d0d0d0",  },
   Visual = { bg="#393939",  },
   VisualNC = {  },
   WarningMsg = { fg="#be95ff",  },
   WildMenu = { fg="#3ddbd9",  bg="#262626",  },
   Folded = { fg="#393939",  bg="#262626",  },
-  FoldColumn = { fg="#262626",  bg="#161616",  },
+  FoldColumn = { fg="#262626",  bg="none",  },
   DiffAdd = { bg="#122f2f",  },
   DiffChange = { bg="#222a39",  },
   DiffDelete = { bg="#361c28",  },
   DiffText = { bg="#2f3f5c",  },
-  SignColumn = { fg="#262626",  bg="#161616",  },
+  SignColumn = { fg="#262626",  bg="none",  },
   Conceal = {  },
   -- SpellBad = { undercurl=true, guisp=Red },
   -- SpellCap = { undercurl=true, guisp=Blue },
@@ -156,7 +155,57 @@ return {
   NotifyINFOTitle                        ={ fg="#a9ff68", }, -- NotifyINFOTitle xxx guifg=#a9ff68
   NotifyDEBUGTitle                       ={ fg="#8b8b8b", }, -- NotifyDEBUGTitle xxx guifg=#8b8b8b
   NotifyTRACETitle                       ={ fg="#d484ff", }, -- NotifyTRACETitle xxx guifg=#d484ff
+  -- BufferCurrent  xxx gui=bold,undercurl guifg=#1c1c1c guibg=#f0f0f0
+  -- BufferCurrentIndex xxx guifg=#f0f0f0 guibg=#1c1c1c
+  --   BufferCurrentMod xxx gui=bold guifg=#ffff00
+  --   BufferCurrentSign xxx guifg=#dfdfdf guibg=#1c1c1c
+  --   BufferVisible  xxx gui=bold guifg=#505050 guibg=#252525
+  --   BufferVisibleSign xxx gui=bold guifg=#505050 guibg=#252525
+  --   BufferVisibleIndex xxx gui=bold guifg=#404040 guibg=#252525
+  --   BufferVisibleMod xxx guifg=#404040 guibg=#252525
+  --   BufferInactive xxx guifg=#505050 guibg=#1d1d1d
+  --   BufferInactiveSign xxx guifg=#404040 guibg=#1d1d1d
+  --   BufferInactiveIndex xxx guifg=#353535 guibg=#1d1d1d
+  --   BufferInactiveMod xxx guifg=#353535 guibg=#1d1d1d
+  -- BufferLineDevIconSh xxx guifg=#666666 guibg=#1d1d1d
+  -- BufferLineDevIconVim xxx guibg=#1d1d1d
+  -- BufferLineDevIconVimInactive xxx guifg=#248546 guibg=#1d1d1d
+  -- BufferLineBufferSelected xxx cterm=bold gui=bold guifg=#9e9e9e guibg=#282828
+  -- BufferLineHintSelected xxx cterm=bold,italic gui=bold,italic guifg=#ffff00 guibg=#1c1c1c guisp=#ffff00
+  --   BufferLineBuffer xxx guifg=#404040 guibg=#1d1d1d
+  --   BufferLineCloseButtonSelected xxx guifg=#ffffff guibg=#1c1c1c
+  --   BufferLineError xxx guifg=#404040 guibg=#1d1d1d guisp=#ff0000
+  --   BufferLineHint xxx guifg=#404040 guibg=#1d1d1d guisp=#ffff00
+  --   BufferLineOffsetSeparator xxx guifg=#303030 guibg=#0f0f0f
+  --   BufferLinePickVisible xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#191919
+  --   BufferLinePickSelected xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#1c1c1c
+  --   BufferLineTabSeparatorSelected xxx guifg=#0f0f0f guibg=#1c1c1c
+  --   BufferLineTabSeparator xxx guifg=#0f0f0f guibg=#1d1d1d
+  --   BufferLineSeparatorVisible xxx guifg=#0f0f0f guibg=#191919
+  --   BufferLineSeparatorSelected xxx guifg=#0f0f0f guibg=#1c1c1c
+  --   BufferLineDuplicate xxx cterm=italic gui=italic guifg=#3c3c3c guibg=#1d1d1d
+  --   BufferLineDuplicateVisible xxx cterm=italic gui=italic guifg=#3c3c3c guibg=#191919
+  --   BufferLineDuplicateSelected xxx cterm=italic gui=italic guifg=#3c3c3c guibg=#1c1c1c
+  --   BufferLineTab  xxx guifg=#404040 guibg=#1d1d1d
+  --   BufferLineErrorSelected xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#1c1c1c guisp=#ff0000
+  --   BufferLineErrorVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineWarningSelected xxx cterm=bold,italic gui=bold,italic guifg=#ffa500 guibg=#1c1c1c guisp=#ffa500
+  -- BufferLineWarningVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineInfoSelected xxx cterm=bold,italic gui=bold,italic guifg=#add8e6 guibg=#1c1c1c guisp=#add8e6
+  -- BufferLineInfoVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLinePick xxx cterm=bold,italic gui=bold,italic guifg=#ff0000 guibg=#1d1d1d
+  -- BufferLineInfo xxx guifg=#404040 guibg=#1d1d1d guisp=#add8e6
+  -- BufferLineHintVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineBufferVisible xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineCloseButtonVisible xxx guifg=#404040 guibg=#191919
+  -- BufferLineWarning xxx guifg=#404040 guibg=#1d1d1d guisp=#ffa500
+  -- BufferLineTabClose xxx guifg=#404040 guibg=#1d1d1d
+  -- BufferLineTabSelected xxx guifg=#66d9ef guibg=#1c1c1c
+  -- BufferLineGroupLabel xxx guifg=#0f0f0f guibg=#404040
+  -- BufferLineGroupSeparator xxx guifg=#404040 guibg=#0f0f0f
+  -- BufferLineIndicatorVisible xxx guifg=#191919 guibg=#191919
 }
+
   -- NotifyBackground                       ={ guibg="#1c1c1c" }, -- NotifyBackground xxx links to Normal
   -- WinBarNC = { links to WinBar },
   -- FloatTitle = { links to Title },
