@@ -558,7 +558,7 @@ return {
       vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
     end
   },
-  { 
+  {
     'anuvyklack/pretty-fold.nvim',
     config = function()
       require('pretty-fold').setup({
@@ -604,7 +604,10 @@ return {
   {
     'luk400/vim-jukit',
     config = function()
-      vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
+      -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
+      vim.g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+      vim.g.jukit_layout = -1
+      -- vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
       -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
       -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
     end,
