@@ -35,6 +35,9 @@ return {
   -- })
   -- Set colorscheme to use
   -- colorscheme = "sam_molokai",
+  -- vim.api.nvim_set_option_value('history', 10000),
+  vim.api.nvim_set_option_value('history', 10000, {}),
+
   -- vim.api.nvim_set_option_value('set rtp+=~/.local/share/nvim/runtime/colors'),
   -- vim.api.nvim_set_option_value('rtp+=~/.local/share/nvim/runtime'),
   -- vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
@@ -93,21 +96,30 @@ return {
       otter.activate({ 'r', 'python', 'lua' }, true)
       vim.api.nvim_buf_set_keymap(0, 'n', 'gd', ":lua require'otter'.ask_definition()<cr>", { silent = true })
       vim.api.nvim_buf_set_keymap(0, 'n', 'K', ":lua require'otter'.ask_hover()<cr>", { silent = true })
+      vim.api.nvim_buf_set_keymap(0, 'n', '<C-c>', ":lua require(notify).dismiss()<cr>", { silent = false })
     end,
   }),
+
+
+  -- require("notify").setup({
+  --     background_colour = "#1f1f1f",
+  -- }),
 
   -- This function is run last and is a good place to configuring
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+  -- preselect = require('cmp').PreselectMode.None
+    vim.o.completeopt = "menuone,noselect,preview"
     -- vim.opt.runtimepath:append(',~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
-    require("notify").setup({
-        background_colour = "#1f1f1f",
-    })
-    vim.api.nvim_eval('let g:qs_highlight_on_keys = ["f", "F", "t", "T"]')
-    vim.api.nvim_eval('let g:jukit_mappings_ext_enabled = ["py", "ipynb"]')
+    -- vim.api.nvim_eval('let g:qs_highlight_on_keys = ["f", "F", "t", "T"]')
+    -- vim.api.nvim_eval('let g:jukit_mappings_ext_enabled = ["py", "ipynb"]')
+    -- vim.api.nvim_eval('let g:jukit_layout=-1')
+    vim.g.qs_highlight_on_keys = {"f", "F", "t", "T"}
+    vim.g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+    vim.g.jukit_layout = -1
     -- vim.api.nvim_eval([[
     --     let g:jukit_layout = {
     --         \'split': 'horizontal',
