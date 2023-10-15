@@ -34,6 +34,16 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     tex_conceal = 'gm',
     jukit_mappings_ext_enabled = {"py", "ipynb"},
+    jukit_layout = -1,
+    qs_highlight_on_keys = {"f", "F", "t", "T"},
+    pandoc_syntax_conceal_blacklist = { 'codeblock_delim', 'codeblock_start' },
+    -- tex_conceal = 'm',
+    -- pandoc_syntax_conceal_blacklist = { 'codeblock_delim', 'codeblock_start' },
+
+
+    -- vim.g.qs_highlight_on_keys = {"f", "F", "t", "T"}
+    -- vim.g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+    -- vim.g.jukit_layout = -1
     -- vim.g['pandoc#syntax#conceal#use'] = false
     -- disable conceal in markdown/quarto
     -- vim.g['pandoc#syntax#conceal#use'] = false
