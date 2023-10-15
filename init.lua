@@ -1,3 +1,5 @@
+-- require('neoconf').setup()
+
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -37,7 +39,17 @@ return {
   -- colorscheme = "sam_molokai",
   -- vim.api.nvim_set_option_value('history', 10000),
   vim.api.nvim_set_option_value('history', 10000, {}),
-
+  -- vim.api.nvim_command('set runtimepath')
+  vim.opt.runtimepath:append(',~/.config/nvim/lua/user/highlights'),
+  vim.opt.runtimepath:append(',~/.local/share/nvim/runtime'),
+  vim.opt.runtimepath:append(',/opt/homebrew/opt/fzf'),
+  vim.opt.runtimepath:append(',~/.local/share/nvim/runtime/colors'),
+  vim.opt.runtimepath:append(',~/.config/nvim/lua/user/highlights'),
+  -- vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime')
+  -- vim.api.nvim_eval('set rtp+=/opt/homebrew/opt/fzf')
+  -- set rtp+=/opt/homebrew/opt/fzf
+  -- vim.api.nvim_eval('~/.local/share/nvim/runtime/colors')
+  -- vim.api.nvim_eval('~/.config/nvim/lua/user/highlights')
   -- vim.api.nvim_set_option_value('set rtp+=~/.local/share/nvim/runtime/colors'),
   -- vim.api.nvim_set_option_value('rtp+=~/.local/share/nvim/runtime'),
   -- vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
@@ -113,7 +125,10 @@ return {
     vim.o.completeopt = "menuone,noselect,preview"
     -- vim.opt.runtimepath:append(',~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime')
+    vim.api.nvim_eval('set rtp+=/opt/homebrew/opt/fzf')
+    -- set rtp+=/opt/homebrew/opt/fzf
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime/colors')
+    vim.api.nvim_eval('set rtp+=~/.config/nvim/lua/user/highlights')
     -- vim.api.nvim_eval('let g:qs_highlight_on_keys = ["f", "F", "t", "T"]')
     -- vim.api.nvim_eval('let g:jukit_mappings_ext_enabled = ["py", "ipynb"]')
     -- vim.api.nvim_eval('let g:jukit_layout=-1')
