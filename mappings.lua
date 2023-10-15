@@ -5,42 +5,47 @@
 -- automatically pick-up stored data by this setting.)
 -- vim.api.nvim_set_keymap('n', '0', '^', { silent = true })
 -- vim.api.nvim_set_keymap('n', '<C-J>', 'J', { silent = true })
--- vim.api.nvim_set_keymap('n', 'X', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })                                                                                                                   
--- vim.api.nvim_set_keymap('n', '<C-S>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })                                                                                                               
--- vim.api.nvim_set_keymap('n', '<C-k>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })                                                                                                               
+-- vim.api.nvim_set_keymap('n', 'X', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-S>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
+-- vim.api.nvim_set_keymap('n', '<C-k>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
 return {
-  -- first key is the mode
-  n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["\\"] = { "<cmd>lua require('notify').dismiss()<CR>", desc="Dismiss Notification" },
-    ["<leader>\\"] = { "<cmd>QuartoPreview<cr>", desc = "Quarto Preview" },
-    ["<leader>d"] = { [["_d]], desc = "Beginning of line"},
-    ["0"] = { "^", desc = "Beginning of line"},
-    ["<C-J>"] = { "J", desc="Join line" },
-    ["X"] = {
-      [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]],
-      desc="Split line"
+    -- first key is the mode
+    n = {
+        -- second key is the lefthand side of the map
+        -- mappings seen under group name "Buffer"
+        ["\\"] = {
+            "<cmd>lua require('notify').dismiss()<CR>",
+            desc = "Dismiss Notification"
+        },
+        ["<leader>\\"] = {"<cmd>QuartoPreview<cr>", desc = "Quarto Preview"},
+        ["<leader>d"] = {[["_d]], desc = "Beginning of line"},
+        ["0"] = {"^", desc = "Beginning of line"},
+        ["<C-J>"] = {"J", desc = "Join line"},
+        ["X"] = {
+            [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]],
+            desc = "Split line"
+        },
+        ["<leader>bn"] = {"<cmd>tabnew<cr>", desc = "New tab"},
+        ["<leader>bD"] = {
+            function()
+                require("astronvim.utils.status").heirline.buffer_picker(
+                    function(bufnr)
+                        require("astronvim.utils.buffer").close(bufnr)
+                    end)
+            end,
+            desc = "Pick to close"
+        },
+        -- tables with the `name` key will be registered with which-key if it's installed
+        -- this is useful for naming menus
+        ["<leader>b"] = {name = "Buffers"},
+        ["<leader>tr"] = {"<cmd>IronRepl<cr>", desc = "Iron REPL"},
+        ["<leader>t<space>"] = {"<cmd>IronFocus<cr>", desc = "Iron Focus"},
+        ["<leader>tH"] = {"<cmd>IronHide<cr>", desc = "Iron Hide"}
+        -- quick save
+        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(
-          bufnr) end)
-      end,
-      desc = "Pick to close",
-    },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
-    ["<leader>tr"] = { "<cmd>IronRepl<cr>", desc = "Iron REPL" },
-    ["<leader>t<space>"] = { "<cmd>IronFocus<cr>", desc = "Iron Focus" },
-    ["<leader>tH"] = { "<cmd>IronHide<cr>", desc = "Iron Hide" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-  },
-  t = {
-    -- setting a mapping to false will disable it
-    -- ["<esc>"] = false,
-  },
+    t = {
+        -- setting a mapping to false will disable it
+        -- ["<esc>"] = false,
+    }
 }
