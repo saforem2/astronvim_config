@@ -9,18 +9,35 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- {
+  --   "phaazon/hop.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("hop").setup()
+  --     vim.api.nvim_set_keymap("n", ";", ":HopChar2<CR>", { silent = true })
+  --     vim.api.nvim_set_keymap("n", "W", ":HopWord<CR>", { silent = true })
+  --   end,
+  -- },
   {
-    "phaazon/hop.nvim",
-    event = "BufRead",
+    "folke/flash.nvim",
+    -- event = "VeryLazy",
     config = function()
-      require("hop").setup()
-      vim.api.nvim_set_keymap("n", ";", ":HopChar2<CR>", { silent = true })
-      vim.api.nvim_set_keymap("n", "W", ":HopWord<CR>", { silent = true })
-    end,
+      require("flash").setup({
+        opts = {},
+        -- stylua: ignore
+        -- keys = {
+        --   { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+        --   { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+        --   { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+        --   { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+        --   { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+        -- },
+      })
+    end
   },
-  {
-    "ggandor/lightspeed.nvim", event = "BufRead",
-  },
+  -- {
+  --   "ggandor/lightspeed.nvim", event = "BufRead",
+  -- },
   {
     "nacro90/numb.nvim",
     event = "BufRead",
@@ -36,24 +53,24 @@ return {
     event = { "BufRead", "BufNew" },
     config = function()
       require("bqf").setup({
-        auto_enable = true,
-        preview = {
-          win_height = 12,
-          win_vheight = 12,
-          delay_syntax = 80,
-          border_chars = { "┃", "┃", "━", "━", "┏", "┓", "┗", "┛", "█" },
-        },
-        func_map = {
-          vsplit = "",
-          ptogglemode = "z,",
-          stoggleup = "",
-        },
-        filter = {
-          fzf = {
-            action_for = { ["ctrl-s"] = "split" },
-            extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
-          },
-        },
+        -- auto_enable = true,
+        -- preview = {
+        --   win_height = 12,
+        --   win_vheight = 12,
+        --   delay_syntax = 80,
+        --   border_chars = { "┃", "┃", "━", "━", "┏", "┓", "┗", "┛", "█" },
+        -- },
+        -- func_map = {
+        --   vsplit = "",
+        --   ptogglemode = "z,",
+        --   stoggleup = "",
+        -- },
+        -- filter = {
+        --   fzf = {
+        --     action_for = { ["ctrl-s"] = "split" },
+        --     extra_opts = { "--bind", "ctrl-o:toggle-all", "--prompt", "> " },
+        --   },
+        -- },
       })
     end,
   },
@@ -95,9 +112,9 @@ return {
   {
     'rafi/awesome-vim-colorschemes',
   },
-  {
-    'flazz/vim-colorschemes',
-  },
+  -- {
+  --   'flazz/vim-colorschemes',
+  -- },
   {
     'tpope/vim-repeat',
   },
@@ -167,26 +184,26 @@ return {
       })
     end,
   },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function()
-      require('lsp_signature').setup({
-        bind = true,
-        floating_window = false,
-        hint_enable = true,
-        hint_prefix = " ",
-        hi_parameter = "LspSignatureActiveParameter",
-        -- toggle_key = '<C-s>',
-        handler_opts = {
-          border = "rounded"
-        },
-        always_trigger = true,
-        extra_trigger_chars = { "(", "," },
-        timer_interval = 100,
-      })
-    end,
-  },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require('lsp_signature').setup({
+  --       bind = true,
+  --       floating_window = false,
+  --       hint_enable = true,
+  --       hint_prefix = " ",
+  --       hi_parameter = "LspSignatureActiveParameter",
+  --       -- toggle_key = '<C-s>',
+  --       handler_opts = {
+  --         border = "rounded"
+  --       },
+  --       always_trigger = true,
+  --       extra_trigger_chars = { "(", "," },
+  --       timer_interval = 100,
+  --     })
+  --   end,
+  -- },
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
@@ -291,7 +308,7 @@ return {
       })
     end
   },
-  { "p00f/nvim-ts-rainbow" },
+  -- { "p00f/nvim-ts-rainbow" },
   {
     "romgrk/nvim-treesitter-context",
     config = function()
@@ -530,18 +547,13 @@ return {
       })
     end,
   },
-  {
-    "lvimuser/lsp-inlayhints.nvim"
-  },
-  {
-    "preservim/vim-markdown"
-  },
-  {
-    "HiPhish/nvim-ts-rainbow2"
-  },
-  {
-    'vim-pandoc/vim-pandoc-syntax',
-  },
+  -- {
+  --   "lvimuser/lsp-inlayhints.nvim"
+  -- },
+  { "preservim/vim-markdown" },
+  { "HiPhish/nvim-ts-rainbow2" },
+  { "vim-pandoc/vim-pandoc" },
+  { 'vim-pandoc/vim-pandoc-syntax' },
   {
     'norcalli/nvim-terminal.lua',
     config = function()
@@ -600,8 +612,6 @@ return {
     "unblevable/quick-scope",
   },
   {
-  },
-  {
     'luk400/vim-jukit',
     config = function()
       -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
@@ -621,7 +631,67 @@ return {
       vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
       -- vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
     end
-  }
+  },
+  {
+    'hiphish/rainbow-delimiters.nvim',
+    config = function()
+      require("rainbow-delimiters.setup").setup({
+        local_rainbow_delimiters = require 'rainbow-delimiters',
+        strategy = {
+          [''] = require('rainbow-delimiters').strategy['global'],
+          vim = require('rainbow-delimiters').strategy['local'],
+        },
+        query = {
+          [''] = 'rainbow-delimiters',
+          lua = 'rainbow-blocks',
+        },
+        highlight = {
+          'RainbowDelimiter00',
+          'RainbowDelimiter01',
+          'RainbowDelimiter02',
+          'RainbowDelimiter03',
+          'RainbowDelimiter04',
+          'RainbowDelimiter05',
+          'RainbowDelimiter06',
+        },
+        -- local hooks = require "ibl.hooks",
+        -- hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+        --     vim.api.nvim_set_hl(0, 'RainbowDelimiter00', { bg = "#E06C75" })
+        --     vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#E5C07B" })
+        --     vim.api.nvim_set_hl(0, "RainbowBlue", { fg = "#61AFEF" })
+        --     vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
+        --     vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
+        --     vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
+        --     vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
+        --   end),
+        -- vim.g.rainbow_delimiters = { highlight = highlight },
+        -- require("ibl").setup({ scope = { highlight = highlight } }),
+        -- hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
+      })
+    end,
+  },
+  { "preservim/vim-colors-pencil" },
+  { "stevedylandev/flexoki-nvim", as ="flexoki"},
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main="ibl",
+    opts = {},
+    config = function()
+      local highlight = {
+        "CursorColumn",
+        "Whitespace",
+      }
+      require("ibl").setup({
+        indent = { highlight = highlight, char="" },
+        whitespace = {
+          highlight = highlight,
+          remove_blankline_trail = false,
+        },
+        scope = { enabled = false },
+      })
+    end,
+  },
+  { "folke/neodev.nvim", opts = {} },
   -- { "tomtom/tcomment_vim" },
   -- {
   --   "Cassin01/wf.nvim",
