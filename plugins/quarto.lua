@@ -75,7 +75,7 @@ return {
     branch = 'master',
     run = ':TSUpdate',
     config = function()
-      require 'nvim-treesitter.configs'.setup {
+      require('nvim-treesitter.configs').setup({
         ensure_installed = {
           'r', 'python', 'markdown', 'markdown_inline',
           'julia', 'bash', 'yaml', 'lua', 'vim',
@@ -93,7 +93,7 @@ return {
 
         },
         indent = {
-          enable = true,
+          enable = false,
         },
         incremental_selection = {
           enable = true,
@@ -141,10 +141,12 @@ return {
             },
           },
         },
-      }
+      })
     end
   },
+
   { 'nvim-treesitter/nvim-treesitter-textobjects' },
+
   {
     'neovim/nvim-lspconfig',
     tag = nil,
@@ -188,7 +190,7 @@ return {
       end
 
 
-      local on_attach2 = function(client, bufnr)
+      local on_attach_qmd = function(client, bufnr)
         local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
         local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -221,14 +223,14 @@ return {
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
-      capabilities.textDocument.completion.completionItem.snippetSupport = true
+      capabilities.textDocument.completion.completionItem.snippetSupport = false
 
       -- also needs:
       -- $home/.config/marksman/config.toml :
       -- [core]
       -- markdown.file_extensions = ["md", "markdown", "qmd"]
       lspconfig.marksman.setup {
-        on_attach = on_attach2,
+        on_attach = on_attach_qmd,
         capabilities = capabilities,
         filetypes = { 'markdown', 'quarto' },
         root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
@@ -377,13 +379,13 @@ return {
     end
   },
 
-  -- completion
+    -- completion
   {
     'hrsh7th/nvim-cmp',
     branch = 'main',
     dependencies = {
       { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lsp-signature-help' },
+      -- { 'hrsh7th/cmp-nvim-lsp-signature-help' },
       { 'hrsh7th/cmp-buffer' },
       { 'hrsh7th/cmp-path' },
       { 'hrsh7th/cmp-calc' },
@@ -404,9 +406,7 @@ return {
       -- optional
       -- more things to try:
       -- {
-      --   "zbirenbaum/copilot-cmp",
-      --   after = { "copilot.lua" },
-      --   dependencies = { "zbirenbaum/copilot.lua" },
+      --   "zbirenbaum/copilot.lua",
       --   config = function()
       --     require("copilot").setup({
       --       suggestion = {
@@ -424,7 +424,6 @@ return {
       --       },
       --       panel = { enabled = false },
       --     })
-      --     -- require("copilot_cmp").setup()
       --   end
       -- },
 
@@ -434,7 +433,6 @@ return {
       local luasnip = require 'luasnip'
       local lspkind = require "lspkind"
       lspkind.init()
-
 
       local has_words_before = function()
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -463,7 +461,6 @@ return {
               fallback()
             end
           end, { "i", "s" }),
-          -- ['<c-e>'] = cmp.mapping.complete(),
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({
             select = true,
@@ -491,7 +488,6 @@ return {
             with_text = true,
             menu = {
               otter = "[🦦]",
-              copilot = '[]',
               luasnip = "[snip]",
               nvim_lsp = "[LSP]",
               buffer = "[buf]",
@@ -507,7 +503,6 @@ return {
           },
         },
         sources = {
-          -- { name = 'copilot',                keyword_length = 0, max_item_count = 3 },
           { name = 'otter' }, -- for code chunks in quarto
           { name = 'path' },
           { name = 'nvim_lsp' },
@@ -530,10 +525,11 @@ return {
           },
         },
       })
+
       -- for friendly snippets
       require("luasnip.loaders.from_vscode").lazy_load()
       -- for custom snippets
-      -- require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snips" } })
+      require("luasnip.loaders.from_vscode").lazy_load({ paths = { vim.fn.stdpath("config") .. "/snips" } })
       -- link quarto and rmarkdown to markdown snippets
       luasnip.filetype_extend("quarto", { "markdown" })
       luasnip.filetype_extend("rmarkdown", { "markdown" })
@@ -618,5 +614,13 @@ return {
   -- paste an image to markdown from the clipboard
   -- :PasteImg,
   { 'ekickx/clipboard-image.nvim' },
+    -- preview equations
+  {
+    'jbyuki/nabla.nvim',
+    keys = {
+      { '<leader>ee', ':lua require"nabla".toggle_virt()<cr>', 'toggle equations' },
+      { '<leader>eh', ':lua require"nabla".popup()<cr>', 'hover equation' },
+    },
+  },
 
 }
