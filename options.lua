@@ -1,3 +1,17 @@
+-- return function(local_vim)
+--   local_vim.opt.termguicolors = true
+--   -- local_vim.opt.conceallevel = 1
+--   local_vim.opt.list = true
+--   local_vim.opt.listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" }
+--   local_vim.opt.showbreak =  "↪ "
+--   local_vim.opt.showtabline = (local_vim.t.bufs and #local_vim.t.bufs > 1) and 2 or 1
+--   local_vim.opt.swapfile = false
+--   local_vim.opt.wrap = false
+--   local_vim.opt.backupdir = function(v) return {v.fn.expand('~') .. '/.backup//' } end
+--   local_vim.opt.undodir = function(v) return { v_vim.fn.expand('~') .. "/.undo//" } end
+--   local_vim.opt.backupext = ".bak"
+--   local_vim.opt.completeopt = { "menuone,noselect,preview" }
+-- end
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
@@ -9,19 +23,45 @@ return {
     -- wrap = false,          -- sets vim.opt.wrap
     -- background = "dark",
     -- swapfile = false,
-    conceallevel = 1, -- enable conceallevel
+    -- vim.opt.runtimepath:append(',~/.local/share/nvim/runtime')
+    -- undodir = function(local_vim) return { local_vim.fn.expand('~') .. "/.undo//" } end,
+    -- runtimepath = function(local_vim) return { local_vim.fn.expand('~/') .. '~/.local/share/nvim/runtime/
+    -- runtimepath = function(local_vim) return { local_vim.fn.expand('~/') .. ".local/share/nvim/runtime/colors" } end,
+    -- spellfile = vim.fn.expand "~/.config/nvim/lua/user/spell/en.utf-8.add",
+    -- thesaurus = vim.fn.expand "~/.config/nvim/lua/user/spell/mthesaur.txt",
+    -- backup = true,
+    undofile = true,
+    -- writebackup = true,
+    undolevels = 10000,
+    termguicolors = true,
+    -- backupdir = function(local_vim) return { local_vim.fn.expand('~') .. "/.backup//" } end,
+    -- undodir = function(local_vim) return { local_vim.fn.expand('~') .. "/.undo//" } end,
+    -- backupdir = { function(local_vim) return { local_vim.fn.expand('$HOME/.backup/') } end },
+    -- undodir = { function(local_vim) return { local_vim.fn.expand("$HOME/.undo") } end },
+    -- backupext = ".bak",
+    -- backupcopy = "yes",
+
+    -- conceallevel = 3, -- enable conceallevel
+    spell = false,         -- sets vim.opt.spell
     list = true,  -- show whitespace characters
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
     showbreak = "↪ ",
-    showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1,
-    -- spellfile = vim.fn.expand "~/.config/nvim/lua/user/spell/en.utf-8.add",
+    -- showtabline = function(local_vim) return { (local_vim.t.bufs and #local_vim.t.bufs > 1) and 2 or 1 } end,
     swapfile = false,
-    -- thesaurus = vim.fn.expand "~/.config/nvim/lua/user/spell/mthesaur.txt",
-    wrap = true, -- soft wrap lines
+    wrap = false, -- soft wrap lines
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true,         -- sets vim.opt.number
-    spell = false,         -- sets vim.opt.spell
+    confirm = true,
+    scrolloff = 4,
+    -- shiftround = true,
+    sidescrolloff = 8,
+    foldmethod = "expr",
+    foldlevel = 10000,
+    foldexpr = "v:lua.vim.treesitter.foldexpr()",
+    formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()",
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
+    completeopt = "menuone,noselect,preview",
+    showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
