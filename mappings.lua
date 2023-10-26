@@ -10,6 +10,14 @@
 -- vim.api.nvim_set_keymap('n', '<C-k>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
 return {
     -- first key is the mode
+    c = {
+        ["<S-Enter>"] = {
+            function()
+                require("noice").redirect(vim.fn.getcmdline())
+            end,
+            desc = "Redirect Commandline",
+        },
+    },
     n = {
         -- second key is the lefthand side of the map
         -- mappings seen under group name "Buffer"
@@ -20,7 +28,7 @@ return {
         ["<leader>\\"] = {"<cmd>QuartoPreview<cr>", desc = "Quarto Preview"},
         ["<leader>d"] = {[["_d]], desc = "Beginning of line"},
         ["0"] = {"^", desc = "Beginning of line"},
-        ["<C-J>"] = {"J", desc = "Join line"},
+        -- ["<C-J>"] = {"J", desc = "Join line"},
         ["X"] = {
             [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]],
             desc = "Split line"
@@ -40,9 +48,9 @@ return {
         ["<leader>b"] = {name = "Buffers"},
         ["<leader>tr"] = {"<cmd>IronRepl<cr>", desc = "Iron REPL"},
         ["<leader>t<space>"] = {"<cmd>IronFocus<cr>", desc = "Iron Focus"},
-        ["<leader>tH"] = {"<cmd>IronHide<cr>", desc = "Iron Hide"}
+        ["<leader>tH"] = {"<cmd>IronHide<cr>", desc = "Iron Hide"},
         -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<C-s>"] = { ":w!<cr>", desc = "Save File" }  -- change description but the same command
     },
     t = {
         -- setting a mapping to false will disable it
