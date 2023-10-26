@@ -8,6 +8,7 @@ return {
   { -- further customize the options set by the community
     "catppuccin",
     opts = {
+      transparent_background = true,
       integrations = {
         sandwich = false,
         noice = true,
@@ -38,14 +39,14 @@ return {
   --     },
   --   },
   -- },
-  { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
-  {
-    "m4xshen/smartcolumn.nvim",
-    opts = {
-      colorcolumn = 120,
-      disabled_filetypes = { "help" },
-    },
-  },
+  -- { import = "astrocommunity.bars-and-lines.smartcolumn-nvim" },
+  -- {
+  --   "m4xshen/smartcolumn.nvim",
+  --   opts = {
+  --     colorcolumn = 120,
+  --     disabled_filetypes = { "help" },
+  --   },
+  -- },
 }
 --   return {
 --   -- Add the community repository of plugin specifications
