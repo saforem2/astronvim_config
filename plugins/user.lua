@@ -218,11 +218,11 @@ return {
   },
   {
     'glacambre/firenvim',
-    run = function() vim.fn['firenvim#install'](0) end
+    build = function() vim.fn['firenvim#install'](0) end
   },
   {
     'dccsillag/magma-nvim',
-    run = ':UpdateRemotePlugins',
+    build = ':UpdateRemotePlugins',
   },
   {
     "chaoren/vim-wordmotion",
@@ -238,7 +238,7 @@ return {
   },
   {
     'iamcco/markdown-preview.nvim',
-    run = function()
+    build = function()
       vim.fn['mkdp#util#install']()
     end,
   },
@@ -335,11 +335,11 @@ return {
     event = "BufRead",
   },
   { 'felipec/vim-sanegx' },
-  {
-    "turbio/bracey.vim",
-    cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
-    run = "npm install --prefix server",
-  },
+  -- {
+  --   "turbio/bracey.vim",
+  --   cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
+  --   build = "npm install --prefix server",
+  -- },
   -- {
   --   "johnfrankmorgan/whitespace.nvim",
   --   config = function()
@@ -463,7 +463,7 @@ return {
   { 'bfredl/nvim-ipy' },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make',
+    build = 'make',
     lazy = false
   },
   {
@@ -485,10 +485,10 @@ return {
         },
   },
   { 'Bekaboo/deadcolumn.nvim' },
-  {
-    "projekt0n/circles.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" }
-  },
+  -- {
+  --   "projekt0n/circles.nvim",
+  --   dependencies = { "nvim-tree/nvim-web-devicons" }
+  -- },
   {
     "rktjmp/lush.nvim"
   },
