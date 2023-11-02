@@ -44,8 +44,7 @@ return {
     -- conceallevel = 3, -- enable conceallevel
     spell = false,         -- sets vim.opt.spell
     list = true,  -- show whitespace characters
-    listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
-    showbreak = "↪ ",
+    listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" , showbreak = "↪ " },
     -- showtabline = function(local_vim) return { (local_vim.t.bufs and #local_vim.t.bufs > 1) and 2 or 1 } end,
     swapfile = false,
     wrap = false, -- soft wrap lines
@@ -61,25 +60,42 @@ return {
     formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()",
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
     completeopt = "menuone,noselect,preview",
-    showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1
+    -- showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1
   },
   g = {
+    wrap = false,
+    spell = false,
     mapleader = " ",                 -- sets vim.g.mapleader
     autoformat_enabled = false,      -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
-    cmp_enabled = true,              -- enable completion at start
+    -- cmp_enabled = true,              -- enable completion at start
     autopairs_enabled = true,        -- enable autopairs at start
     diagnostics_mode = 2,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     slime_target = "kitty",
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     tex_conceal = 'gm',
+    -- pandoc = {
+    --   filetypes = {
+    --     handled = {"pandoc", "rst", "text"}
+    --   }
+    -- }
+    -- pandoc_filetypes_handled = {"pandoc", "rst", "text", "quarto", "qmd", "textfiles"},
+    -- *g:pandoc#filetypes#handled*
+    -- vim_markdown_math_auto_extension_ext = { "markdown", "md", "quarto", "qmd" },
+    -- vim_markdown_math = 1,
+    -- vim_markdown_conceal = 1,
     jukit_mappings_ext_enabled = {"py", "ipynb"},
     jukit_layout = -1,
     qs_highlight_on_keys = {"f", "F", "t", "T"},
     pandoc_syntax_conceal_blacklist = { 'codeblock_delim', 'codeblock_start' },
+    pandoc_filetypes_handled = {"pandoc", "rst", "text", "quarto", "qmd", "textfiles"},
+    -- pandoc_extensions_table = {
+    --   "markdown" = {'*.markdown', '*.mkd', '*.md'},
+    --   "rst" = {"*.rst"},
+    -- }
+      -- 'json' = {'json'}, 'html' = {'html', 'htm'}, 'extra' = {'text', 'txt'}, 'pandoc' = {'*.pandoc', '*.pdk', '*.pd', '*.pdc'}, 'textile' = {'*.textile'}, 'beamer' = {'beamer', 'bmr'}, 'latex' = {'latex', 'tex', 'ltx'}, 'native' = {'hs'}},
     -- tex_conceal = 'm',
     -- pandoc_syntax_conceal_blacklist = { 'codeblock_delim', 'codeblock_start' },
-
 
     -- vim.g.qs_highlight_on_keys = {"f", "F", "t", "T"}
     -- vim.g.jukit_mappings_ext_enabled = {"py", "ipynb"}
