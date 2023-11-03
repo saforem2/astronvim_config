@@ -118,6 +118,7 @@ return {
   ['@method.call'] = { fg = "#36ce5e" },
   ['@string.documentation'] = { fg = "#697077", italic=true },
 
+  String = { fg="#d3ff3b", italic=true },
   Headline1 = { bg="#1e2718" },
   Headline2 = { bg="#21262d" },
   Dash = { bg="#222222", bold = true },
@@ -247,7 +248,6 @@ return {
   RedrawDebugClear = { bg="#FFFF00" },
   RedrawDebugComposed = { bg="#63ff5b" },
   RedrawDebugRecompose = { bg="#FF5252" },
-  String = { fg="#d3ff3b", italic=true },
   Comment = { fg="#494949" },
 }
   -- Float = { links to Number },
