@@ -61,8 +61,30 @@ return {
     virtual_text = false,
     underline = true,
   },
-
+  --     lsp = {
+  --     config = {
+  --       lua_ls = {
+  --         settings = {
+  --           Lua = {
+  --             format = { enable = false },
+  --           },
+  --         },
+  --       },
+  --     },
+  --   },
+  -- }
   lsp = {
+    config = {
+      -- lua_ls {
+      --   settings = {
+      --     Lua = {
+      --       format = {
+      --         enable = false
+      --       },
+      --     }
+      --   }
+      -- }
+    },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
