@@ -95,9 +95,9 @@ return {
   {
     'rafi/awesome-vim-colorschemes',
   },
-  {
-    'flazz/vim-colorschemes',
-  },
+  -- {
+  --   'flazz/vim-colorschemes',
+  -- },
   {
     'tpope/vim-repeat',
   },
@@ -291,7 +291,7 @@ return {
       })
     end
   },
-  { "p00f/nvim-ts-rainbow" },
+  -- { "p00f/nvim-ts-rainbow" },
   {
     "romgrk/nvim-treesitter-context",
     config = function()
@@ -344,7 +344,7 @@ return {
   --   end,
   -- },
   { 'godlygeek/tabular' },
-  { 'preservim/vim-markdown', },
+  -- { 'preservim/vim-markdown', },
   -- { 'Iron-E/nvim-highlite' },
   { 'brenoprata10/nvim-highlight-colors' },
   -- {
@@ -426,7 +426,7 @@ return {
       )
     end,
   },
-  { 'preservim/vim-pencil' },
+  -- { 'preservim/vim-pencil' },
   { 'dhruvasagar/vim-table-mode' },
   { 'tanvirtin/monokai.nvim' },
   { 'bluz71/vim-nightfly-guicolors' },
@@ -434,7 +434,7 @@ return {
   { 'sainnhe/sonokai' },
   { 'yonlu/omni.vim' },
   { 'NTBBloodbath/doom-one.nvim' },
-  { 'cpea2506/one_monokai.nvim' },
+  -- { 'cpea2506/one_monokai.nvim' },
   { 'jghauser/mkdir.nvim' },
   { 'navarasu/onedark.nvim', },
   { 'hkupty/iron.nvim' }, -- {
@@ -487,27 +487,27 @@ return {
   {
     "nyoom-engineering/oxocarbon.nvim"
   },
-  {
-    "cpea2506/one_monokai.nvim",
-    config = function()
-      require("one_monokai").setup({
-        transparent = false,   -- enable transparent window
-        colors = {
-          darkbg = "#1c1c1c", -- add new color
-          pink = "#ec6075",   -- replace default color
-        },
-        themes = function(colors)
-          -- change highlight of some groups,
-          -- the key and value will be passed respectively to "nvim_set_hl"
-          return {
-            Normal = { bg = colors.darkbg },
-            ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
-            ["@lsp.type.keyword"] = { link = "@keyword" }
-          }
-        end,
-      })
-    end
-  },
+  -- {
+  --   "cpea2506/one_monokai.nvim",
+  --   config = function()
+  --     require("one_monokai").setup({
+  --       transparent = false,   -- enable transparent window
+  --       colors = {
+  --         darkbg = "#1c1c1c", -- add new color
+  --         pink = "#ec6075",   -- replace default color
+  --       },
+  --       themes = function(colors)
+  --         -- change highlight of some groups,
+  --         -- the key and value will be passed respectively to "nvim_set_hl"
+  --         return {
+  --           Normal = { bg = colors.darkbg },
+  --           ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
+  --           ["@lsp.type.keyword"] = { link = "@keyword" }
+  --         }
+  --       end,
+  --     })
+  --   end
+  -- },
   {
     "norcalli/nvim-terminal.lua",
     config = function()
@@ -533,9 +533,9 @@ return {
   {
     "lvimuser/lsp-inlayhints.nvim"
   },
-  {
-    "preservim/vim-markdown"
-  },
+  -- {
+  --   "preservim/vim-markdown"
+  -- },
   {
     "HiPhish/nvim-ts-rainbow2"
   },
@@ -605,7 +605,7 @@ return {
     'luk400/vim-jukit',
     config = function()
       -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
-      vim.g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+      vim.g.jukit_mappings_ext_enabled = {"ipynb"}
       vim.g.jukit_layout = -1
       -- vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
       -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
@@ -641,6 +641,31 @@ return {
       })
     end,
   },
+
+  {
+    'echasnovski/mini.nvim',
+    version = false,
+    config = function()
+      require("mini.init").setup()
+      require("mini.animate").setup()
+      require("mini.basics").setup()
+      require("mini.hipatterns").setup()
+      require('mini.misc').setup()
+    end
+  },
+
+  {
+    'lukas-reineke/headlines.nvim',
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      config = true,
+    }
+  },
+  -- {
+  --   'KeitaNakamura/tex-conceal.vim',
+  --   ft = { "tex" },
+  --   opts = {},
+  -- },
   -- { "tomtom/tcomment_vim" },
   -- {
   --   "Cassin01/wf.nvim",
