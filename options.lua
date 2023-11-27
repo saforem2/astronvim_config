@@ -9,7 +9,7 @@ return {
     -- wrap = false,          -- sets vim.opt.wrap
     -- background = "dark",
     -- swapfile = false,
-    conceallevel = 1, -- enable conceallevel
+    conceallevel = 2, -- enable conceallevel
     list = true,  -- show whitespace characters
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
     showbreak = "↪ ",
@@ -32,7 +32,7 @@ return {
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     slime_target = "kitty",
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
-    tex_conceal = 'gm',
+    tex_conceal = 'abdmgs',
     jukit_mappings_ext_enabled = {"py", "ipynb"},
     jukit_layout = -1,
     qs_highlight_on_keys = {"f", "F", "t", "T"},
