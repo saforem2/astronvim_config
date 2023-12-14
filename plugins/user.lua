@@ -642,24 +642,34 @@ return {
     end,
   },
 
-  {
-    'echasnovski/mini.nvim',
-    version = false,
-    config = function()
-      require("mini.init").setup()
-      require("mini.animate").setup()
-      require("mini.basics").setup()
-      require("mini.hipatterns").setup()
-      require('mini.misc').setup()
-    end
-  },
+  -- {
+  --   'echasnovski/mini.nvim',
+  --   version = false,
+  --   config = function()
+  --     require("mini.init").setup()
+  --     require("mini.animate").setup()
+  --     require("mini.basics").setup()
+  --     require("mini.hipatterns").setup()
+  --     require('mini.misc').setup()
+  --   end
+  -- },
 
   {
     'lukas-reineke/headlines.nvim',
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
       config = true,
-    }
+    },
+    config = function()
+      -- vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
+      -- vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
+      -- -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
+      -- -- --
+      -- vim.cmd [[highlight Quote guifg=#0099EC]]
+      -- --
+      -- vim.cmd [[highlight Dash guibg=#58DB01]]
+      -- vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
+    end,
   },
   -- {
   --   'KeitaNakamura/tex-conceal.vim',
