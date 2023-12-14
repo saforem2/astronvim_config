@@ -50,7 +50,6 @@ return {
   ['@type.builtin'] = { fg="#26C99E" },
   ['@method.call'] = { fg = "#36ce5e" },
   ['@string.documentation'] = { fg = "#697077", italic=true },
-
   -- Headline1 = { bg="#1e2718" },
   -- Headline2 = { bg="#21262d" },
   Headline1 = { bg="#FB6896"},
