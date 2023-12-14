@@ -1,7 +1,7 @@
 return {
   -- "numiras/semshi",
   "wookayin/semshi", -- use a maintained fork
-  ft = "python",
+  ft = {"python", "quarto", "markdown", "pandoc"},
   build = ":UpdateRemotePlugins",
   init = function()
     -- Disabled these features better provided by LSP or other more general plugins
