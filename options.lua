@@ -17,11 +17,31 @@ return {
     -- spellfile = vim.fn.expand "~/.config/nvim/lua/user/spell/en.utf-8.add",
     swapfile = false,
     -- thesaurus = vim.fn.expand "~/.config/nvim/lua/user/spell/mthesaur.txt",
-    wrap = true, -- soft wrap lines
+    wrap = false, -- soft wrap lines
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true,         -- sets vim.opt.number
     spell = false,         -- sets vim.opt.spell
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
+    sidescrolloff=20,
+    scrolloff=10,
+    undolevels=10000,
+    winminwidth = 10,
+    -- wrap = false,
+    fillchars = {
+      foldopen = "",
+      foldclose = "",
+      -- fold = "⸱",
+      fold = " ",
+      foldsep = " ",
+      diff = "╱",
+      eob = " ",
+    },
+    foldlevel = 99,
+    foldmethod = "expr",
+    foldexpr = "v:lua.vim.treesitter.foldexpr()",
+    formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()",
+
+
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
