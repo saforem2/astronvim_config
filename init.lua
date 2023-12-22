@@ -114,7 +114,7 @@ return {
 
   -- Configure require("lazy").setup() options
   lazy = {
-    defaults = { lazy = false },
+    -- defaults = { lazy = tru },
     performance = {
       rtp = {
         -- customize default disabled vim plugins
@@ -134,7 +134,6 @@ return {
     end,
   }),
 
-
   -- require("notify").setup({
   --     background_colour = "#1f1f1f",
   -- }),
@@ -143,9 +142,14 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-  -- preselect = require('cmp').PreselectMode.None
+    -- Example for configuring Neovim to load user-installed installed Lua rocks:
+    -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/magick/init.lua;"
+    -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/lua;"
+    package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+    package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
+    -- preselect = require('cmp').PreselectMode.None
     vim.o.completeopt = "menuone,noselect,preview"
-    -- vim.opt.runtimepath:append(',~/.local/share/nvim/runtime')
+    -- v.opt.runtimepath:append(',~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=~/.local/share/nvim/runtime')
     vim.api.nvim_eval('set rtp+=/opt/homebrew/opt/fzf')
     -- set rtp+=/opt/homebrew/opt/fzf

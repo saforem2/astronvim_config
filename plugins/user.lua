@@ -167,26 +167,26 @@ return {
       })
     end,
   },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "BufRead",
-    config = function()
-      require('lsp_signature').setup({
-        bind = true,
-        floating_window = false,
-        hint_enable = true,
-        hint_prefix = " ",
-        hi_parameter = "LspSignatureActiveParameter",
-        -- toggle_key = '<C-s>',
-        handler_opts = {
-          border = "rounded"
-        },
-        always_trigger = true,
-        extra_trigger_chars = { "(", "," },
-        timer_interval = 100,
-      })
-    end,
-  },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "BufRead",
+  --   config = function()
+  --     require('lsp_signature').setup({
+  --       bind = true,
+  --       floating_window = false,
+  --       hint_enable = true,
+  --       hint_prefix = " ",
+  --       hi_parameter = "LspSignatureActiveParameter",
+  --       -- toggle_key = '<C-s>',
+  --       handler_opts = {
+  --         border = "rounded"
+  --       },
+  --       always_trigger = true,
+  --       extra_trigger_chars = { "(", "," },
+  --       timer_interval = 100,
+  --     })
+  --   end,
+  -- },
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
@@ -358,6 +358,7 @@ return {
   --   end,
   -- },
   { "nvim-telescope/telescope-file-browser.nvim" },
+
   -- {
   --   "folke/todo-comments.nvim",
   --   lazy = false,
@@ -677,59 +678,91 @@ return {
   },
 
   {
-    '3rd/image.nvim',
-    lazy = false,
+    "AckslD/nvim-FeMaco.lua",
     config = function()
-      require('image').setup({
-        backend = 'kitty',
-        integrations = {
-          markdown = {
-            enabled = true,
-            clear_in_insert_mode = false,
-            download_remote_images = true,
-            only_render_image_at_cursor = false,
-            filetypes = {
-              "markdown",
-              "quarto",
-              "vimwiki"
-            },
-          },
-          neorg = {
-            enabled = true,
-            clear_in_insert_mode = false,
-            download_remote_images = true,
-            only_render_image_at_cursor = false,
-            filetypes = {
-              "norg"
-            },
-          },
-        },
-        max_width = nil,
-        max_height = nil,
-        max_width_window_percentage = nil,
-        max_height_window_percentage = 50,
-        window_overlap_clear_ft_ignore = {
-          "cmp_menu",
-          "cmp_docs",
-          ""
-        },
-        editor_only_render_when_focused = false,
-        tmux_show_only_in_active_window = false,
-        hijack_file_patterns = {
-          "*.png",
-          "*.jpg",
-          "*.jpeg",
-          "*.gif",
-          "*.webg",
-        }
-      })
+      require('femaco').setup()
     end,
+  },
+
+  -- {
+  --   "edluffy/hologram.nvim",
+  --   lazy = false,
+  --   -- opts = {},
+  --   -- confi
+  --   -- = true,
+  --   config = function()
+  --     require('hologram').setup({
+  --       auto_display = true,
+  --     })
+  --   end,
+  --   rocks = { "magick" },
+  -- },
+
+  {
+    '3rd/image.nvim',
+    -- lazy = false,
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      build = ":TSUpdate",
+      config = function()
+        require("nvim-treesitter.configs").setup({
+          ensure_installed = {'markdown'},
+          highlight = { enable = true },
+        })
+      end,
+    },
+    opts = {
+      backend = 'kitty',
+      integrations = {
+        markdown = {
+          enabled = true,
+          clear_in_insert_mode = true,
+          download_remote_images = true,
+          only_render_image_at_cursor = false,
+          filetypes = {
+            "markdown",
+            "quarto",
+            "vimwiki"
+          },
+        },
+        neorg = {
+          enabled = true,
+          clear_in_insert_mode = false,
+          download_remote_images = true,
+          only_render_image_at_cursor = false,
+          filetypes = {
+            "norg"
+          },
+        },
+      },
+      max_width = nil,
+      max_height = nil,
+      max_width_window_percentage = nil,
+      max_height_window_percentage = 50,
+      window_overlap_clear_ft_ignore = {
+        "cmp_menu",
+        "cmp_docs",
+        "notifications",
+        "",
+      },
+      editor_only_render_when_focused = false,
+      tmux_show_only_in_active_window = false,
+      hijack_file_patterns = {
+        "*.png",
+        "*.jpg",
+        "*.jpeg",
+        "*.gif",
+        "*.webg",
+      }
+    },
+    rocks = { "magick" },
   },
 
   {
     'nfrid/markdown-togglecheck',
     dependencies = { 'nfrid/treesitter-utils' },
-    ft = { 'markdown' },
+    ft = { 'markdown', 'quarto', },
   },
 
   {
@@ -759,7 +792,7 @@ return {
                 '(fenced_code_block) @codeblock', -- query
             },
         },
-        minumum_len = 100,          -- minimum len to highlight (number | function)
+        -- minumum_len = ,          -- minimum len to highlight (number | function)
         -- minumum_len = function () return math.max(math.floor(vim.api.nvim_win_get_width(0) * 0.8), 100) end
       })
     end,
@@ -774,7 +807,9 @@ return {
 
   {
     "tadmccorkle/markdown.nvim",
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    -- filetypes = { "markdown", "quarto", ""}
+    lazy = false,
     opts = {
       -- disable all keymaps by setting mappings field to 'false'
       -- selectively disable keymaps by setting corresponding field to 'false'
@@ -834,6 +869,319 @@ return {
     },
   },
 
+  {
+    'mvllow/modes.nvim',
+    lazy = false,
+    config = function()
+      require('modes').setup({
+        colors = {
+          copy = "#AE81FF",
+          delete = "#FF7575",
+          insert = "#222222",
+          visual = "#FFEE58",
+        },
+        -- Set opacity for cursorline and number background
+        line_opacity = 0.15,
+        -- Enable cursor highlights
+        set_cursor = true,
+        -- Enable cursorline initially, and disable cursorline for inactive windows
+        -- or ignored filetypes
+        set_cursorline = true,
+        -- Enable line number highlights to match cursorline
+        set_number = true,
+        -- Disable modes highlights in specified filetypes
+        -- Please PR commonly ignored filetypes
+        ignore_filetypes = { 'NvimTree', 'TelescopePrompt' }
+      })
+    end,
+  },
+
+  {
+    "uga-rosa/ccc.nvim",
+    config = function()
+      local ColorInput = require("ccc.input")
+      local convert = require("ccc.utils.convert")
+
+      local RgbHslCmykInput = setmetatable({
+          name = "RGB/HSL/CMYK",
+          max = { 1, 1, 1, 360, 1, 1, 1, 1, 1, 1 },
+          min = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+          delta = { 1 / 255, 1 / 255, 1 / 255, 1, 0.01, 0.01, 0.005, 0.005, 0.005, 0.005 },
+          bar_name = { "R", "G", "B", "H", "S", "L", "C", "M", "Y", "K" },
+      }, { __index = ColorInput })
+
+      function RgbHslCmykInput.format(n, i)
+          if i <= 3 then
+              -- RGB
+              n = n * 255
+          elseif i == 5 or i == 6 then
+              -- S or L of HSL
+              n = n * 100
+          elseif i >= 7 then
+              -- CMYK
+              return ("%5.1f%%"):format(math.floor(n * 200) / 2)
+          end
+          return ("%6d"):format(n)
+      end
+
+      function RgbHslCmykInput.from_rgb(RGB)
+          local HSL = convert.rgb2hsl(RGB)
+          local CMYK = convert.rgb2cmyk(RGB)
+          local R, G, B = unpack(RGB)
+          local H, S, L = unpack(HSL)
+          local C, M, Y, K = unpack(CMYK)
+          return { R, G, B, H, S, L, C, M, Y, K }
+      end
+
+      function RgbHslCmykInput.to_rgb(value)
+          return { value[1], value[2], value[3] }
+      end
+
+      function RgbHslCmykInput:_set_rgb(RGB)
+          self.value[1] = RGB[1]
+          self.value[2] = RGB[2]
+          self.value[3] = RGB[3]
+      end
+
+      function RgbHslCmykInput:_set_hsl(HSL)
+          self.value[4] = HSL[1]
+          self.value[5] = HSL[2]
+          self.value[6] = HSL[3]
+      end
+
+      function RgbHslCmykInput:_set_cmyk(CMYK)
+          self.value[7] = CMYK[1]
+          self.value[8] = CMYK[2]
+          self.value[9] = CMYK[3]
+          self.value[10] = CMYK[4]
+      end
+
+      function RgbHslCmykInput:callback(index, new_value)
+          self.value[index] = new_value
+          local v = self.value
+          if index <= 3 then
+              local RGB = { v[1], v[2], v[3] }
+              local HSL = convert.rgb2hsl(RGB)
+              local CMYK = convert.rgb2cmyk(RGB)
+              self:_set_hsl(HSL)
+              self:_set_cmyk(CMYK)
+          elseif index <= 6 then
+              local HSL = { v[4], v[5], v[6] }
+              local RGB = convert.hsl2rgb(HSL)
+              local CMYK = convert.rgb2cmyk(RGB)
+              self:_set_rgb(RGB)
+              self:_set_cmyk(CMYK)
+          else
+              local CMYK = { v[7], v[8], v[9], v[10] }
+              local RGB = convert.cmyk2rgb(CMYK)
+              local HSL = convert.rgb2hsl(RGB)
+              self:_set_rgb(RGB)
+              self:_set_hsl(HSL)
+          end
+      end
+
+      local ccc = require("ccc")
+      ccc.setup({
+          inputs = {
+              RgbHslCmykInput,
+          },
+          highlighter = {
+              auto_enable = true,
+              lsp = true,
+          },
+      })
+    end
+  },
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("flash").setup({
+        opts = {},
+        -- stylua: ignore
+        -- keys = {
+        --   { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+        --   { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+        --   { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+        --   { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+        --   { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+        -- },
+      })
+    end
+  },
+
+  {
+      "ixru/nvim-markdown",
+      lazy = false,
+      filetypes = { "markdown" },
+      config = function()
+          vim.cmd('let g:vim_markdown_math = 1')
+          vim.cmd('let g:vim_markdown_frontmatter = 1')
+      end,
+  },
+
+  {
+    "stevearc/dressing.nvim",
+    opts = {},
+    config = function()
+      require("dressing").setup({
+        input = {
+          -- Set to false to disable the vim.ui.input implementation
+          enabled = true,
+          -- Default prompt string
+          default_prompt = "Input:",
+          -- Can be 'left', 'right', or 'center'
+          title_pos = "left",
+          -- When true, <Esc> will close the modal
+          insert_only = true,
+          -- When true, input will start in insert mode.
+          start_in_insert = true,
+          -- These are passed to nvim_open_win
+          border = "rounded",
+          -- 'editor' and 'win' will default to being centered
+          relative = "cursor",
+          -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
+          prefer_width = 40,
+          width = nil,
+          -- min_width and max_width can be a list of mixed types.
+          -- min_width = {20, 0.2} means "the greater of 20 columns or 20% of total"
+          max_width = { 140, 0.9 },
+          min_width = { 20, 0.2 },
+          buf_options = {},
+          win_options = {
+            -- Disable line wrapping
+            wrap = false,
+            -- Indicator for when text exceeds window
+            list = true,
+            listchars = "precedes:…,extends:…",
+            -- Increase this for more context when text scrolls off the window
+            sidescrolloff = 0,
+          },
+          -- Set to `false` to disable
+          mappings = {
+            n = {
+              ["<Esc>"] = "Close",
+              ["<CR>"] = "Confirm",
+            },
+            i = {
+              ["<C-c>"] = "Close",
+              ["<CR>"] = "Confirm",
+              ["<Up>"] = "HistoryPrev",
+              ["<Down>"] = "HistoryNext",
+            },
+          },
+          override = function(conf)
+            -- This is the config that will be passed to nvim_open_win.
+            -- Change values here to customize the layout
+            return conf
+          end,
+
+          -- see :help dressing_get_config
+          get_config = nil,
+        },
+        select = {
+          -- Set to false to disable the vim.ui.select implementation
+          enabled = true,
+
+          -- Priority list of preferred vim.select implementations
+          backend = { "telescope", "fzf_lua", "fzf", "builtin", "nui" },
+
+          -- Trim trailing `:` from prompt
+          trim_prompt = true,
+
+          -- Options for telescope selector
+          -- These are passed into the telescope picker directly. Can be used like:
+          -- telescope = require('telescope.themes').get_ivy({...})
+          telescope = nil,
+
+          -- Options for fzf selector
+          fzf = {
+            window = {
+              width = 0.5,
+              height = 0.4,
+            },
+          },
+
+          -- Options for fzf-lua
+          fzf_lua = {
+            -- winopts = {
+            --   height = 0.5,
+            --   width = 0.5,
+            -- },
+          },
+
+          -- Options for nui Menu
+          nui = {
+            position = "50%",
+            size = nil,
+            relative = "editor",
+            border = {
+              style = "rounded",
+            },
+            buf_options = {
+              swapfile = false,
+              filetype = "DressingSelect",
+            },
+            win_options = {
+              winblend = 0,
+            },
+            max_width = 80,
+            max_height = 40,
+            min_width = 40,
+            min_height = 10,
+          },
+
+          -- Options for built-in selector
+          builtin = {
+            -- Display numbers for options and set up keymaps
+            show_numbers = true,
+            -- These are passed to nvim_open_win
+            border = "rounded",
+            -- 'editor' and 'win' will default to being centered
+            relative = "editor",
+
+            buf_options = {},
+            win_options = {
+              cursorline = true,
+              cursorlineopt = "both",
+            },
+
+            -- These can be integers or a float between 0 and 1 (e.g. 0.4 for 40%)
+            -- the min_ and max_ options can be a list of mixed types.
+            -- max_width = {140, 0.8} means "the lesser of 140 columns or 80% of total"
+            width = nil,
+            max_width = { 140, 0.8 },
+            min_width = { 40, 0.2 },
+            height = nil,
+            max_height = 0.9,
+            min_height = { 10, 0.2 },
+
+            -- Set to `false` to disable
+            mappings = {
+              ["<Esc>"] = "Close",
+              ["<C-c>"] = "Close",
+              ["<CR>"] = "Confirm",
+            },
+
+            override = function(conf)
+              -- This is the config that will be passed to nvim_open_win.
+              -- Change values here to customize the layout
+              return conf
+            end,
+          },
+
+          -- Used to override format_item. See :help dressing-format
+          format_item_override = {},
+
+          -- see :help dressing_get_config
+          get_config = nil,
+        },
+      })
+    end,
+  }
+
+}
+
 
   -- {
   --   'KeitaNakamura/tex-conceal.vim',
@@ -847,4 +1195,3 @@ return {
   --   require('wf').setup()
   --   end
   -- }
-}
