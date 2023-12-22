@@ -671,6 +671,170 @@ return {
       -- vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
     end,
   },
+
+  {
+    'ThePrimeagen/vim-be-good'
+  },
+
+  {
+    '3rd/image.nvim',
+    lazy = false,
+    config = function()
+      require('image').setup({
+        backend = 'kitty',
+        integrations = {
+          markdown = {
+            enabled = true,
+            clear_in_insert_mode = false,
+            download_remote_images = true,
+            only_render_image_at_cursor = false,
+            filetypes = {
+              "markdown",
+              "quarto",
+              "vimwiki"
+            },
+          },
+          neorg = {
+            enabled = true,
+            clear_in_insert_mode = false,
+            download_remote_images = true,
+            only_render_image_at_cursor = false,
+            filetypes = {
+              "norg"
+            },
+          },
+        },
+        max_width = nil,
+        max_height = nil,
+        max_width_window_percentage = nil,
+        max_height_window_percentage = 50,
+        window_overlap_clear_ft_ignore = {
+          "cmp_menu",
+          "cmp_docs",
+          ""
+        },
+        editor_only_render_when_focused = false,
+        tmux_show_only_in_active_window = false,
+        hijack_file_patterns = {
+          "*.png",
+          "*.jpg",
+          "*.jpeg",
+          "*.gif",
+          "*.webg",
+        }
+      })
+    end,
+  },
+
+  {
+    'nfrid/markdown-togglecheck',
+    dependencies = { 'nfrid/treesitter-utils' },
+    ft = { 'markdown' },
+  },
+
+  {
+    "yaocccc/nvim-hl-mdcodeblock.lua",
+    dependencies = { "nvim-treesitter" },
+    config = function()
+      require('hl-mdcodeblock').setup({
+        hl_group = "MDCodeBlock",   -- default highlight group
+        events = {                  -- refresh event
+            "FileChangedShellPost",
+            "Syntax",
+            "TextChanged",
+            "TextChangedI",
+            "InsertLeave",
+            "WinScrolled",
+            "BufEnter",
+        },
+        padding_right = 4,          -- always append 4 space at lineend
+        timer_delay = 20,           -- refresh delay(ms)
+        query_by_ft = {             -- special parser query by filetype
+            markdown = {            -- filetype
+                'markdown',         -- parser
+                '(fenced_code_block) @codeblock', -- query
+            },
+            rmd = {                 -- filetype
+                'markdown',         -- parser
+                '(fenced_code_block) @codeblock', -- query
+            },
+        },
+        minumum_len = 100,          -- minimum len to highlight (number | function)
+        -- minumum_len = function () return math.max(math.floor(vim.api.nvim_win_get_width(0) * 0.8), 100) end
+      })
+    end,
+  },
+
+  {
+    'kiran94/edit-markdown-table.nvim',
+    config = true,
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    cmd = "EditMarkdownTable",
+  },
+
+  {
+    "tadmccorkle/markdown.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- disable all keymaps by setting mappings field to 'false'
+      -- selectively disable keymaps by setting corresponding field to 'false'
+      mappings = {
+        inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+        inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+        inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+        inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+        link_add = "gl", -- (string|boolean) add link
+        link_follow = "gx", -- (string|boolean) follow link
+        go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+        go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+        go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+        go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+      },
+      inline_surround = {
+        -- for the emphasis, strong, strikethrough, and code fields:
+        -- * key: used to specify an inline style in toggle, delete, and change operations
+        -- * txt: text inserted when toggling or changing to the corresponding inline style
+        emphasis = {
+          key = "i",
+          txt = "*",
+        },
+        strong = {
+          key = "b",
+          txt = "**",
+        },
+        strikethrough = {
+          key = "s",
+          txt = "~~",
+        },
+        code = {
+          key = "c",
+          txt = "`",
+        },
+      },
+      link = {
+        paste = {
+          enable = true, -- whether to convert URLs to links on paste
+        },
+      },
+      toc = {
+        -- comment text to flag headings/sections for omission in table of contents
+        omit_heading = "toc omit heading",
+        omit_section = "toc omit section",
+        -- cycling list markers to use in table of contents
+        -- use '.' and ')' for ordered lists
+        markers = { "-" },
+      },
+      -- hook functions allow for overriding or extending default behavior
+      -- fallback function with default behavior is provided as argument
+      hooks = {
+        -- called when following links with `dest` as the link destination
+        follow_link = nil, -- fun(dest: string, fallback: fun())
+      },
+      on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+    },
+  },
+
+
   -- {
   --   'KeitaNakamura/tex-conceal.vim',
   --   ft = { "tex" },

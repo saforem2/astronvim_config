@@ -138,4 +138,13 @@ return {
       })
     end
   },
+  {
+      "ixru/nvim-markdown",
+      lazy = false,
+      filetypes = { "markdown" },
+      config = function()
+          vim.cmd('let g:vim_markdown_math = 1')
+          vim.cmd('let g:vim_markdown_frontmatter = 1')
+      end,
+  },
 }
