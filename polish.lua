@@ -13,6 +13,8 @@ return function()
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = hl})
   end
+  package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+  package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
   -- local function yaml_ft(path, bufnr)
   --   -- get content of buffer as string
   --   local content = vim.filetype.getlines(bufnr)
