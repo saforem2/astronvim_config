@@ -10,6 +10,8 @@ return {
     -- background = "dark",
     -- swapfile = false,
     conceallevel = 2, -- enable conceallevel
+    concealcursor = 'nc',
+    shellslash = true,
     list = true,  -- show whitespace characters
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
     showbreak = "↪ ",
