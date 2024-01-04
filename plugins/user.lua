@@ -490,27 +490,29 @@ return {
   {
     "nyoom-engineering/oxocarbon.nvim"
   },
-  -- {
-  --   "cpea2506/one_monokai.nvim",
-  --   config = function()
-  --     require("one_monokai").setup({
-  --       transparent = false,   -- enable transparent window
-  --       colors = {
-  --         darkbg = "#1c1c1c", -- add new color
-  --         pink = "#ec6075",   -- replace default color
-  --       },
-  --       themes = function(colors)
-  --         -- change highlight of some groups,
-  --         -- the key and value will be passed respectively to "nvim_set_hl"
-  --         return {
-  --           Normal = { bg = colors.darkbg },
-  --           ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
-  --           ["@lsp.type.keyword"] = { link = "@keyword" }
-  --         }
-  --       end,
-  --     })
-  --   end
-  -- },
+
+  {
+    "cpea2506/one_monokai.nvim",
+    config = function()
+      require("one_monokai").setup({
+        transparent = false,   -- enable transparent window
+        colors = {
+          darkbg = "#1c1c1c", -- add new color
+          pink = "#ec6075",   -- replace default color
+        },
+        themes = function(colors)
+          -- change highlight of some groups,
+          -- the key and value will be passed respectively to "nvim_set_hl"
+          return {
+            Normal = { bg = colors.darkbg },
+            ErrorMsg = { fg = colors.pink, bg = "#ec6075", standout = true },
+            ["@lsp.type.keyword"] = { link = "@keyword" }
+          }
+        end,
+      })
+    end
+  },
+
   {
     "norcalli/nvim-terminal.lua",
     config = function()
@@ -625,6 +627,7 @@ return {
       -- vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
     end
   },
+
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
   --   main="ibl",
@@ -662,17 +665,188 @@ return {
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
     },
-    config = true,
-    -- config = function()
-    --   -- vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
-    --   -- vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
-    --   -- -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
-    --   -- -- --
-    --   -- vim.cmd [[highlight Quote guifg=#0099EC]]
-    --   -- --
-    --   -- vim.cmd [[highlight Dash guibg=#58DB01]]
-    --   -- vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
-    -- end,
+    -- config = true,
+    config = function()
+      vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
+      vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
+      -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
+      vim.cmd [[highlight Quote guifg=#0099EC]]
+      -- vim.cmd [[highlight Dash guibg=#58DB01]]
+      vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
+      require("headlines").setup {
+          qmd = {
+              query = vim.treesitter.parse_query(
+                  "markdown",
+                  [[
+                      (atx_heading [
+                          (atx_h1_marker)
+                          (atx_h2_marker)
+                          (atx_h3_marker)
+                          (atx_h4_marker)
+                          (atx_h5_marker)
+                          (atx_h6_marker)
+                      ] @headline)
+
+                      (thematic_break) @dash
+
+                      (fenced_code_block) @codeblock
+
+                      (block_quote_marker) @quote
+                      (block_quote (paragraph (inline (block_continuation) @quote)))
+                      (block_quote (paragraph (block_continuation) @quote))
+                      (block_quote (block_continuation) @quote)
+                  ]]
+              ),
+              headline_highlights = { "Headline1", "Headline2" },
+              codeblock_highlight = "CodeBlock",
+              dash_highlight = "Dash",
+              dash_string = "-",
+              quote_highlight = "Quote",
+              quote_string = "┃",
+              fat_headlines = true,
+              fat_headline_upper_string = "▃",
+              fat_headline_lower_string = "🬂",
+          },
+          markdown = {
+              query = vim.treesitter.query.parse_query(
+                  "markdown",
+                  [[
+                      (atx_heading [
+                          (atx_h1_marker)
+                          (atx_h2_marker)
+                          (atx_h3_marker)
+                          (atx_h4_marker)
+                          (atx_h5_marker)
+                          (atx_h6_marker)
+                      ] @headline)
+
+                      (thematic_break) @dash
+
+                      (fenced_code_block) @codeblock
+
+                      (block_quote_marker) @quote
+                      (block_quote (paragraph (inline (block_continuation) @quote)))
+                      (block_quote (paragraph (block_continuation) @quote))
+                      (block_quote (block_continuation) @quote)
+                  ]]
+              ),
+              headline_highlights = { "Headline1", "Headline2" },
+              codeblock_highlight = "CodeBlock",
+              dash_highlight = "Dash",
+              dash_string = "-",
+              quote_highlight = "Quote",
+              quote_string = "┃",
+              fat_headlines = true,
+              fat_headline_upper_string = "▃",
+              fat_headline_lower_string = "🬂",
+          },
+          rmd = {
+              query = vim.treesitter.query.parse_query(
+                  "markdown",
+                  [[
+                      (atx_heading [
+                          (atx_h1_marker)
+                          (atx_h2_marker)
+                          (atx_h3_marker)
+                          (atx_h4_marker)
+                          (atx_h5_marker)
+                          (atx_h6_marker)
+                      ] @headline)
+
+                      (thematic_break) @dash
+
+                      (fenced_code_block) @codeblock
+
+                      (block_quote_marker) @quote
+                      (block_quote (paragraph (inline (block_continuation) @quote)))
+                      (block_quote (paragraph (block_continuation) @quote))
+                      (block_quote (block_continuation) @quote)
+                  ]]
+              ),
+              treesitter_language = "markdown",
+              headline_highlights = { "Headline1", "Headline2" },
+              codeblock_highlight = "CodeBlock",
+              dash_highlight = "Dash",
+              dash_string = "-",
+              quote_highlight = "Quote",
+              quote_string = "┃",
+              fat_headlines = true,
+              fat_headline_upper_string = "▃",
+              fat_headline_lower_string = "🬂",
+          },
+          norg = {
+              query = vim.treesitter.query.parse_query(
+                  "norg",
+                  [[
+                      [
+                          (heading1_prefix)
+                          (heading2_prefix)
+                          (heading3_prefix)
+                          (heading4_prefix)
+                          (heading5_prefix)
+                          (heading6_prefix)
+                      ] @headline
+
+                      (weak_paragraph_delimiter) @dash
+                      (strong_paragraph_delimiter) @doubledash
+
+                      ([(ranged_tag
+                          name: (tag_name) @_name
+                          (#eq? @_name "code")
+                      )
+                      (ranged_verbatim_tag
+                          name: (tag_name) @_name
+                          (#eq? @_name "code")
+                      )] @codeblock (#offset! @codeblock 0 0 1 0))
+
+                      (quote1_prefix) @quote
+                  ]]
+              ),
+              headline_highlights = { "Headline1", "Headline2" },
+              codeblock_highlight = "CodeBlock",
+              dash_highlight = "Dash",
+              dash_string = "-",
+              doubledash_highlight = "DoubleDash",
+              doubledash_string = "=",
+              quote_highlight = "Quote",
+              quote_string = "┃",
+              fat_headlines = true,
+              fat_headline_upper_string = "▃",
+              fat_headline_lower_string = "🬂",
+          },
+          org = {
+              query = vim.treesitter.query.parse_query(
+                  "org",
+                  [[
+                      (headline (stars) @headline)
+
+                      (
+                          (expr) @dash
+                          (#match? @dash "^-----+$")
+                      )
+
+                      (block
+                          name: (expr) @_name
+                          (#eq? @_name "SRC")
+                      ) @codeblock
+
+                      (paragraph . (expr) @quote
+                          (#eq? @quote ">")
+                      )
+                  ]]
+              ),
+              headline_highlights = { "Headline" },
+              codeblock_highlight = "CodeBlock",
+              dash_highlight = "Dash",
+              dash_string = "-",
+              quote_highlight = "Quote",
+              quote_string = "┃",
+              fat_headlines = true,
+              fat_headline_upper_string = "▃",
+              fat_headline_lower_string = "🬂",
+          },
+      }
+    end,
   },
 
   {
@@ -706,7 +880,7 @@ return {
     event = "VeryLazy",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
-      build = ":TSUpdate",
+      -- build = ":TSUpdate",
       -- config = function()
       --   require("nvim-treesitter.configs").setup({
       --     -- ensure_installed = {'markdown'},
@@ -724,7 +898,7 @@ return {
           enabled = true,
           clear_in_insert_mode = true,
           download_remote_images = true,
-          only_render_image_at_cursor = false,
+          only_render_image_at_cursor = true,
           filetypes = {
             "markdown",
             "quarto",
@@ -733,9 +907,9 @@ return {
         },
         neorg = {
           enabled = true,
-          clear_in_insert_mode = false,
+          clear_in_insert_mode = true,
           download_remote_images = true,
-          only_render_image_at_cursor = false,
+          only_render_image_at_cursor = true,
           filetypes = {
             "norg"
           },
@@ -788,14 +962,18 @@ return {
         padding_right = 4,          -- always append 4 space at lineend
         timer_delay = 20,           -- refresh delay(ms)
         query_by_ft = {             -- special parser query by filetype
-            markdown = {            -- filetype
-                'markdown',         -- parser
-                '(fenced_code_block) @codeblock', -- query
-            },
-            rmd = {                 -- filetype
-                'markdown',         -- parser
-                '(fenced_code_block) @codeblock', -- query
-            },
+          quarto = {
+            'markdown',
+            '(fenced_code_block) @codeblock',
+          },
+          markdown = {            -- filetype
+            'markdown',         -- parser
+            '(fenced_code_block) @codeblock', -- query
+          },
+          rmd = {                 -- filetype
+            'markdown',         -- parser
+            '(fenced_code_block) @codeblock', -- query
+          },
         },
         -- minumum_len = ,          -- minimum len to highlight (number | function)
         -- minumum_len = function () return math.max(math.floor(vim.api.nvim_win_get_width(0) * 0.8), 100) end
@@ -810,77 +988,80 @@ return {
     cmd = "EditMarkdownTable",
   },
 
-  {
-    "tadmccorkle/markdown.nvim",
-    filetypes = {
-      "markdown", "quarto", "txt", "pandoc", "neorg",
-    },
-    opts = {}
-  },
-
   -- {
   --   "tadmccorkle/markdown.nvim",
-  --   -- event = "VeryLazy",
-  --   -- filetypes = { "markdown", "quarto", ""}
-  --   lazy = false,
-  --   opts = {
-  --     -- disable all keymaps by setting mappings field to 'false'
-  --     -- selectively disable keymaps by setting corresponding field to 'false'
-  --     mappings = {
-  --       inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
-  --       inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
-  --       inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
-  --       inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
-  --       link_add = "gl", -- (string|boolean) add link
-  --       link_follow = "gx", -- (string|boolean) follow link
-  --       go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
-  --       go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
-  --       go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
-  --       go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
-  --     },
-  --     inline_surround = {
-  --       -- for the emphasis, strong, strikethrough, and code fields:
-  --       -- * key: used to specify an inline style in toggle, delete, and change operations
-  --       -- * txt: text inserted when toggling or changing to the corresponding inline style
-  --       emphasis = {
-  --         key = "i",
-  --         txt = "*",
-  --       },
-  --       strong = {
-  --         key = "b",
-  --         txt = "**",
-  --       },
-  --       strikethrough = {
-  --         key = "s",
-  --         txt = "~~",
-  --       },
-  --       code = {
-  --         key = "c",
-  --         txt = "`",
-  --       },
-  --     },
-  --     link = {
-  --       paste = {
-  --         enable = true, -- whether to convert URLs to links on paste
-  --       },
-  --     },
-  --     toc = {
-  --       -- comment text to flag headings/sections for omission in table of contents
-  --       omit_heading = "toc omit heading",
-  --       omit_section = "toc omit section",
-  --       -- cycling list markers to use in table of contents
-  --       -- use '.' and ')' for ordered lists
-  --       markers = { "-" },
-  --     },
-  --     -- hook functions allow for overriding or extending default behavior
-  --     -- fallback function with default behavior is provided as argument
-  --     hooks = {
-  --       -- called when following links with `dest` as the link destination
-  --       follow_link = nil, -- fun(dest: string, fallback: fun())
-  --     },
-  --     on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+  --   filetypes = {
+  --     "markdown", "quarto", "txt", "pandoc", "neorg",
   --   },
+  --   opts = {}
   -- },
+
+  {
+    "tadmccorkle/markdown.nvim",
+    -- event = "VeryLazy",
+    -- filetypes = { "markdown", "quarto", ""}
+    filetypes = {
+      "markdown", "qmd", "txt", "pandoc", "neorg", "rmd",
+    },
+    lazy = false,
+    opts = {
+      -- disable all keymaps by setting mappings field to 'false'
+      -- selectively disable keymaps by setting corresponding field to 'false'
+      mappings = {
+        inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+        inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+        inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+        inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+        link_add = "gl", -- (string|boolean) add link
+        link_follow = "gx", -- (string|boolean) follow link
+        go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+        go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+        go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+        go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+      },
+      inline_surround = {
+        -- for the emphasis, strong, strikethrough, and code fields:
+        -- * key: used to specify an inline style in toggle, delete, and change operations
+        -- * txt: text inserted when toggling or changing to the corresponding inline style
+        emphasis = {
+          key = "i",
+          txt = "*",
+        },
+        strong = {
+          key = "b",
+          txt = "**",
+        },
+        strikethrough = {
+          key = "s",
+          txt = "~~",
+        },
+        code = {
+          key = "c",
+          txt = "`",
+        },
+      },
+      link = {
+        paste = {
+          enable = true, -- whether to convert URLs to links on paste
+        },
+      },
+      toc = {
+        -- comment text to flag headings/sections for omission in table of contents
+        omit_heading = "toc omit heading",
+        omit_section = "toc omit section",
+        -- cycling list markers to use in table of contents
+        -- use '.' and ')' for ordered lists
+        markers = { "-" },
+      },
+      -- hook functions allow for overriding or extending default behavior
+      -- fallback function with default behavior is provided as argument
+      hooks = {
+        -- called when following links with `dest` as the link destination
+        follow_link = nil, -- fun(dest: string, fallback: fun())
+      },
+      on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+    },
+  },
 
   {
     'mvllow/modes.nvim',
@@ -894,7 +1075,7 @@ return {
           visual = "#FFEE58",
         },
         -- Set opacity for cursorline and number background
-        line_opacity = 0.15,
+        line_opacity = 0.25,
         -- Enable cursor highlights
         set_cursor = true,
         -- Enable cursorline initially, and disable cursorline for inactive windows
