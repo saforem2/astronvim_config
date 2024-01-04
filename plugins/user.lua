@@ -266,8 +266,8 @@ return {
       })
     end
   },
-  { 'knubie/vim-kitty-navigator' },
-  { "fladson/vim-kitty" },
+  { 'knubie/vim-kitty-navigator', lazy = false },
+  { "fladson/vim-kitty", lazy = false },
   {
     "kdheepak/tabline.nvim",
     config = function()
@@ -285,13 +285,14 @@ return {
           show_bufnr = false,          -- this appends [bufnr] to buffer section,
           show_filename_only = true,   -- shows base filename only instead of relative path in filename
           -- modified_icon = "+ ", -- change the default modified icon
-          modified_italic = false,     -- set to true by default; this determines whether the filename turns italic if modified
+          modified_italic = true,     -- set to true by default; this determines whether the filename turns italic if modified
           show_tabs_only = false,      -- this shows only tabs instead of tabs + buffers
         },
       })
     end
   },
   -- { "p00f/nvim-ts-rainbow" },
+  --
   {
     "romgrk/nvim-treesitter-context",
     config = function()
@@ -313,6 +314,7 @@ return {
       })
     end
   },
+
   {
     "folke/lsp-colors.nvim",
     event = "BufRead",
@@ -623,25 +625,25 @@ return {
       -- vim.g['codestats_api_key'] = {os.getenv('CODESTATS_API_KEY')}
     end
   },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main="ibl",
-    opts = {},
-    config = function()
-      local highlight = {
-        "CursorColumn",
-        "Whitespace",
-      }
-      require("ibl").setup({
-        indent = { highlight = highlight, char="" },
-        whitespace = {
-          highlight = highlight,
-          remove_blankline_trail = false,
-        },
-        scope = { enabled = false },
-      })
-    end,
-  },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  --   main="ibl",
+  --   opts = {},
+  --   config = function()
+  --     local highlight = {
+  --       "CursorColumn",
+  --       "Whitespace",
+  --     }
+  --     require("ibl").setup({
+  --       indent = { highlight = highlight, char="" },
+  --       whitespace = {
+  --         highlight = highlight,
+  --         remove_blankline_trail = false,
+  --       },
+  --       scope = { enabled = false },
+  --     })
+  --   end,
+  -- },
 
   -- {
   --   'echasnovski/mini.nvim',
@@ -659,18 +661,18 @@ return {
     'lukas-reineke/headlines.nvim',
     dependencies = {
       'nvim-treesitter/nvim-treesitter',
-      config = true,
     },
-    config = function()
-      -- vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
-      -- vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
-      -- -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
-      -- -- --
-      -- vim.cmd [[highlight Quote guifg=#0099EC]]
-      -- --
-      -- vim.cmd [[highlight Dash guibg=#58DB01]]
-      -- vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
-    end,
+    config = true,
+    -- config = function()
+    --   -- vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
+    --   -- vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
+    --   -- -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
+    --   -- -- --
+    --   -- vim.cmd [[highlight Quote guifg=#0099EC]]
+    --   -- --
+    --   -- vim.cmd [[highlight Dash guibg=#58DB01]]
+    --   -- vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
+    -- end,
   },
 
   {
@@ -705,16 +707,19 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
       build = ":TSUpdate",
-      config = function()
-        require("nvim-treesitter.configs").setup({
-          ensure_installed = {'markdown'},
-          highlight = { enable = true },
-        })
-      end,
+      -- config = function()
+      --   require("nvim-treesitter.configs").setup({
+      --     -- ensure_installed = {'markdown'},
+      --     highlight = { enable = true },
+      --   })
+      -- end,
     },
     opts = {
       backend = 'kitty',
       integrations = {
+        -- quarto = {
+        --   enabled = true,
+        -- },
         markdown = {
           enabled = true,
           clear_in_insert_mode = true,
@@ -743,10 +748,9 @@ return {
       window_overlap_clear_ft_ignore = {
         "cmp_menu",
         "cmp_docs",
-        "notifications",
         "",
       },
-      editor_only_render_when_focused = false,
+      editor_only_render_when_focused = true,
       tmux_show_only_in_active_window = false,
       hijack_file_patterns = {
         "*.png",
@@ -754,9 +758,10 @@ return {
         "*.jpeg",
         "*.gif",
         "*.webg",
+        "*.svg",
       }
     },
-    rocks = { "magick" },
+    -- rocks = { "magick" },
   },
 
   {
@@ -807,67 +812,75 @@ return {
 
   {
     "tadmccorkle/markdown.nvim",
-    -- event = "VeryLazy",
-    -- filetypes = { "markdown", "quarto", ""}
-    lazy = false,
-    opts = {
-      -- disable all keymaps by setting mappings field to 'false'
-      -- selectively disable keymaps by setting corresponding field to 'false'
-      mappings = {
-        inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
-        inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
-        inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
-        inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
-        link_add = "gl", -- (string|boolean) add link
-        link_follow = "gx", -- (string|boolean) follow link
-        go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
-        go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
-        go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
-        go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
-      },
-      inline_surround = {
-        -- for the emphasis, strong, strikethrough, and code fields:
-        -- * key: used to specify an inline style in toggle, delete, and change operations
-        -- * txt: text inserted when toggling or changing to the corresponding inline style
-        emphasis = {
-          key = "i",
-          txt = "*",
-        },
-        strong = {
-          key = "b",
-          txt = "**",
-        },
-        strikethrough = {
-          key = "s",
-          txt = "~~",
-        },
-        code = {
-          key = "c",
-          txt = "`",
-        },
-      },
-      link = {
-        paste = {
-          enable = true, -- whether to convert URLs to links on paste
-        },
-      },
-      toc = {
-        -- comment text to flag headings/sections for omission in table of contents
-        omit_heading = "toc omit heading",
-        omit_section = "toc omit section",
-        -- cycling list markers to use in table of contents
-        -- use '.' and ')' for ordered lists
-        markers = { "-" },
-      },
-      -- hook functions allow for overriding or extending default behavior
-      -- fallback function with default behavior is provided as argument
-      hooks = {
-        -- called when following links with `dest` as the link destination
-        follow_link = nil, -- fun(dest: string, fallback: fun())
-      },
-      on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+    filetypes = {
+      "markdown", "quarto", "txt", "pandoc", "neorg",
     },
+    opts = {}
   },
+
+  -- {
+  --   "tadmccorkle/markdown.nvim",
+  --   -- event = "VeryLazy",
+  --   -- filetypes = { "markdown", "quarto", ""}
+  --   lazy = false,
+  --   opts = {
+  --     -- disable all keymaps by setting mappings field to 'false'
+  --     -- selectively disable keymaps by setting corresponding field to 'false'
+  --     mappings = {
+  --       inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+  --       inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+  --       inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+  --       inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+  --       link_add = "gl", -- (string|boolean) add link
+  --       link_follow = "gx", -- (string|boolean) follow link
+  --       go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+  --       go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+  --       go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+  --       go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+  --     },
+  --     inline_surround = {
+  --       -- for the emphasis, strong, strikethrough, and code fields:
+  --       -- * key: used to specify an inline style in toggle, delete, and change operations
+  --       -- * txt: text inserted when toggling or changing to the corresponding inline style
+  --       emphasis = {
+  --         key = "i",
+  --         txt = "*",
+  --       },
+  --       strong = {
+  --         key = "b",
+  --         txt = "**",
+  --       },
+  --       strikethrough = {
+  --         key = "s",
+  --         txt = "~~",
+  --       },
+  --       code = {
+  --         key = "c",
+  --         txt = "`",
+  --       },
+  --     },
+  --     link = {
+  --       paste = {
+  --         enable = true, -- whether to convert URLs to links on paste
+  --       },
+  --     },
+  --     toc = {
+  --       -- comment text to flag headings/sections for omission in table of contents
+  --       omit_heading = "toc omit heading",
+  --       omit_section = "toc omit section",
+  --       -- cycling list markers to use in table of contents
+  --       -- use '.' and ')' for ordered lists
+  --       markers = { "-" },
+  --     },
+  --     -- hook functions allow for overriding or extending default behavior
+  --     -- fallback function with default behavior is provided as argument
+  --     hooks = {
+  --       -- called when following links with `dest` as the link destination
+  --       follow_link = nil, -- fun(dest: string, fallback: fun())
+  --     },
+  --     on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+  --   },
+  -- },
 
   {
     'mvllow/modes.nvim',
@@ -1022,7 +1035,7 @@ return {
 
   {
     "stevearc/dressing.nvim",
-    opts = {},
+    -- opts = {},
     config = function()
       require("dressing").setup({
         input = {
@@ -1056,6 +1069,7 @@ return {
             listchars = "precedes:…,extends:…",
             -- Increase this for more context when text scrolls off the window
             sidescrolloff = 0,
+            winhighlight = 'NormalFloat:DiagnosticError'
           },
           -- Set to `false` to disable
           mappings = {
@@ -1178,9 +1192,18 @@ return {
         },
       })
     end,
-  }
+  },
 
-}
+  {
+    "benlubas/molten-nvim",
+    version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
+    build = ":UpdateRemotePlugins",
+    init = function()
+        -- this is an example, not a default. Please see the readme for more configuration options
+        vim.g.molten_output_win_max_height = 12
+    end,
+  },
+
 
 
   -- {
@@ -1195,3 +1218,5 @@ return {
   --   require('wf').setup()
   --   end
   -- }
+  --
+}
