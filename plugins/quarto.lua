@@ -3,6 +3,7 @@ return {
   {
     'quarto-dev/quarto-nvim',
     dev = false,
+    filetypes = { "quarto", "markdown", "rmd", "qmd" },
     dependencies = {
       { 'hrsh7th/nvim-cmp' },
       {
