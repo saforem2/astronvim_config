@@ -52,10 +52,10 @@ return {
     autopairs_enabled = true,        -- enable autopairs at start
     diagnostics_mode = 1,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
-    slime_target = "kitty",
+    -- slime_target = "kitty",
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     tex_conceal = 'abdmgs',
-    jukit_mappings_ext_enabled = {"py", "ipynb"},
+    -- jukit_mappings_ext_enabled = {"py", "ipynb"},
     jukit_layout = -1,
     qs_highlight_on_keys = {"f", "F", "t", "T"},
     pandoc_syntax_conceal_blacklist = { 'codeblock_delim', 'codeblock_start' },

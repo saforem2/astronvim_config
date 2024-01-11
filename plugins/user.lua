@@ -255,7 +255,7 @@ return {
             ruler = false,                  -- disables the ruler text in the cmd line area
             showcmd = false,                -- disables the command in the last line of the screen,
             twilight = { enabled = true },  -- enable to start Twilight when zen mode opens
-            gitsigns = { enabled = false }, -- disables git signs
+            gitsigns = { enabled = true }, -- disables git signs
             tmux = { enabled = false },     -- disables the tmux statusline this will change the font size on kitty when in zen mode
             kitty = {
               enabled = true,
@@ -299,7 +299,16 @@ return {
       require('treesitter-context').setup({
         enable = true,   -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
-        max_lines = 0,   -- How many lines the window should span. Values <= 0 mean no limit.
+        max_lines = 3,   -- How many lines the window should span. Values <= 0 mean no limit.
+        line_numbers = true,
+        multiline_threshold = 20,
+        min_window_height = 100,
+        trim_scope = 'outer',
+        mode = 'cursor', -- Line used to calculate context. Choices: 'cursor', 'topline'
+        -- separator between context and content. Should be a snigle character string, like '-'.
+        -- when separator is set, the context will only show up when ther are at least 2 lines above cursorline
+        separator = nil,
+        zindex = 20,
         patterns = {     -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
           -- For all filetypes
           -- Note that setting an entry here replaces all other patterns for this entry.
@@ -319,12 +328,15 @@ return {
     "folke/lsp-colors.nvim",
     event = "BufRead",
   },
+
   { 'felipec/vim-sanegx' },
+
   {
     "turbio/bracey.vim",
     cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
     run = "npm install --prefix server",
   },
+
   -- {
   --   "johnfrankmorgan/whitespace.nvim",
   --   config = function()
@@ -346,8 +358,10 @@ return {
   --   end,
   -- },
   { 'godlygeek/tabular' },
+
   -- { 'preservim/vim-markdown', },
   -- { 'Iron-E/nvim-highlite' },
+  --
   { 'brenoprata10/nvim-highlight-colors' },
   -- {
   --   'rrethy/vim-hexokinase',
@@ -361,16 +375,16 @@ return {
   -- },
   { "nvim-telescope/telescope-file-browser.nvim" },
 
-  -- {
-  --   "folke/todo-comments.nvim",
-  --   lazy = false,
-  --   -- config = function()
-  --   --   require('todo-comments.nvim').setup({})
-  --   -- end
-  --   -- config = function()
-  --   -- require("user.todo-comments").config()
-  --   -- end,
-  -- },
+  {
+    "folke/todo-comments.nvim",
+    lazy = false,
+    -- config = function()
+    --   require('todo-comments.nvim').setup({})
+    -- end
+    -- config = function()
+    -- require("user.todo-comments").config()
+    -- end,
+  },
   {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
@@ -555,6 +569,8 @@ return {
   },
   {
     'Exafunction/codeium.vim',
+    lazy = false,
+    event = 'BufEnter',
     config = function()
       vim.g.codeium_disable_bindings = 1
       vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
@@ -606,17 +622,17 @@ return {
   },
   {
   },
-  {
-    'luk400/vim-jukit',
-    config = function()
-      -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
-      vim.g.jukit_mappings_ext_enabled = {"ipynb"}
-      vim.g.jukit_layout = -1
-      -- vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
-      -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
-      -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
-    end,
-  },
+  -- {
+  --   'luk400/vim-jukit',
+  --   config = function()
+  --     -- vim.api.nvim_set_var('jukit#mappings#ext#enabled', {'py', 'ipynb'})
+  --     vim.g.jukit_mappings_ext_enabled = {"ipynb"}
+  --     vim.g.jukit_layout = -1
+  --     -- vim.g['jukit#mappings#ext#enabled'] = {"py", "ipynb"}
+  --     -- g.jukit_mappings_ext_enabled = {"py", "ipynb"}
+  --     -- vim.opt.jukit_mappings_ext_enabled = {"py", "ipynb"}
+  --   end,
+  -- },
   {
     -- "code-stats/code-stats-vim",
     'https://gitlab.com/code-stats/code-stats-vim.git',
@@ -628,25 +644,25 @@ return {
     end
   },
 
-  -- {
-  --   "lukas-reineke/indent-blankline.nvim",
-  --   main="ibl",
-  --   opts = {},
-  --   config = function()
-  --     local highlight = {
-  --       "CursorColumn",
-  --       "Whitespace",
-  --     }
-  --     require("ibl").setup({
-  --       indent = { highlight = highlight, char="" },
-  --       whitespace = {
-  --         highlight = highlight,
-  --         remove_blankline_trail = false,
-  --       },
-  --       scope = { enabled = false },
-  --     })
-  --   end,
-  -- },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main="ibl",
+    opts = {},
+    config = function()
+      local highlight = {
+        "CursorColumn",
+        "Whitespace",
+      }
+      require("ibl").setup({
+        indent = { highlight = highlight, char="" },
+        whitespace = {
+          highlight = highlight,
+          remove_blankline_trail = false,
+        },
+        scope = { enabled = false },
+      })
+    end,
+  },
 
   -- {
   --   'echasnovski/mini.nvim',
@@ -937,7 +953,66 @@ return {
     },
     -- rocks = { "magick" },
   },
-
+  -- {
+  --   '3rd/image.nvim',
+  --   -- lazy = false,
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     build = ":TSUpdate",
+  --     config = function()
+  --       require("nvim-treesitter.configs").setup({
+  --         ensure_installed = {'markdown'},
+  --         highlight = { enable = true },
+  --       })
+  --     end,
+  --   },
+  --   opts = {
+  --     backend = 'kitty',
+  --     integrations = {
+  --       markdown = {
+  --         enabled = true,
+  --         clear_in_insert_mode = true,
+  --         download_remote_images = true,
+  --         only_render_image_at_cursor = false,
+  --         filetypes = {
+  --           "markdown",
+  --           "quarto",
+  --           "vimwiki"
+  --         },
+  --       },
+  --       neorg = {
+  --         enabled = true,
+  --         clear_in_insert_mode = false,
+  --         download_remote_images = true,
+  --         only_render_image_at_cursor = false,
+  --         filetypes = {
+  --           "norg"
+  --         },
+  --       },
+  --     },
+  --     max_width = nil,
+  --     max_height = nil,
+  --     max_width_window_percentage = nil,
+  --     max_height_window_percentage = 50,
+  --     window_overlap_clear_ft_ignore = {
+  --       "cmp_menu",
+  --       "cmp_docs",
+  --       "notifications",
+  --       "",
+  --     },
+  --     editor_only_render_when_focused = false,
+  --     tmux_show_only_in_active_window = false,
+  --     hijack_file_patterns = {
+  --       "*.png",
+  --       "*.jpg",
+  --       "*.jpeg",
+  --       "*.gif",
+  --       "*.webg",
+  --     }
+  --   },
+  --   rocks = { "magick" },
+  -- },
   {
     'nfrid/markdown-togglecheck',
     dependencies = { 'nfrid/treesitter-utils' },
@@ -1062,6 +1137,132 @@ return {
       on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
     },
   },
+  {
+    "tadmccorkle/markdown.nvim",
+    -- event = "VeryLazy",
+    -- filetypes = { "markdown", "quarto", ""}
+    lazy = false,
+    opts = {
+      -- disable all keymaps by setting mappings field to 'false'
+      -- selectively disable keymaps by setting corresponding field to 'false'
+      mappings = {
+        inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+        inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+        inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+        inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+        link_add = "gl", -- (string|boolean) add link
+        link_follow = "gx", -- (string|boolean) follow link
+        go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+        go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+        go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+        go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+      },
+      inline_surround = {
+        -- for the emphasis, strong, strikethrough, and code fields:
+        -- * key: used to specify an inline style in toggle, delete, and change operations
+        -- * txt: text inserted when toggling or changing to the corresponding inline style
+        emphasis = {
+          key = "i",
+          txt = "*",
+        },
+        strong = {
+          key = "b",
+          txt = "**",
+        },
+        strikethrough = {
+          key = "s",
+          txt = "~~",
+        },
+        code = {
+          key = "c",
+          txt = "`",
+        },
+      },
+      link = {
+        paste = {
+          enable = true, -- whether to convert URLs to links on paste
+        },
+      },
+      toc = {
+        -- comment text to flag headings/sections for omission in table of contents
+        omit_heading = "toc omit heading",
+        omit_section = "toc omit section",
+        -- cycling list markers to use in table of contents
+        -- use '.' and ')' for ordered lists
+        markers = { "-" },
+      },
+      -- hook functions allow for overriding or extending default behavior
+      -- fallback function with default behavior is provided as argument
+      hooks = {
+        -- called when following links with `dest` as the link destination
+        follow_link = nil, -- fun(dest: string, fallback: fun())
+      },
+      on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+    },
+  },
+  -- {
+  --   "tadmccorkle/markdown.nvim",
+  --   -- event = "VeryLazy",
+  --   -- filetypes = { "markdown", "quarto", ""}
+  --   lazy = false,
+  --   opts = {
+  --     -- disable all keymaps by setting mappings field to 'false'
+  --     -- selectively disable keymaps by setting corresponding field to 'false'
+  --     mappings = {
+  --       inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+  --       inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+  --       inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+  --       inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+  --       link_add = "gl", -- (string|boolean) add link
+  --       link_follow = "gx", -- (string|boolean) follow link
+  --       go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+  --       go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+  --       go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+  --       go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+  --     },
+  --     inline_surround = {
+  --       -- for the emphasis, strong, strikethrough, and code fields:
+  --       -- * key: used to specify an inline style in toggle, delete, and change operations
+  --       -- * txt: text inserted when toggling or changing to the corresponding inline style
+  --       emphasis = {
+  --         key = "i",
+  --         txt = "*",
+  --       },
+  --       strong = {
+  --         key = "b",
+  --         txt = "**",
+  --       },
+  --       strikethrough = {
+  --         key = "s",
+  --         txt = "~~",
+  --       },
+  --       code = {
+  --         key = "c",
+  --         txt = "`",
+  --       },
+  --     },
+  --     link = {
+  --       paste = {
+  --         enable = true, -- whether to convert URLs to links on paste
+  --       },
+  --     },
+  --     toc = {
+  --       -- comment text to flag headings/sections for omission in table of contents
+  --       omit_heading = "toc omit heading",
+  --       omit_section = "toc omit section",
+  --       -- cycling list markers to use in table of contents
+  --       -- use '.' and ')' for ordered lists
+  --       markers = { "-" },
+  --     },
+  --     -- hook functions allow for overriding or extending default behavior
+  --     -- fallback function with default behavior is provided as argument
+  --     hooks = {
+  --       -- called when following links with `dest` as the link destination
+  --       follow_link = nil, -- fun(dest: string, fallback: fun())
+  --     },
+  --     on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+  --   },
+  -- },
 
   {
     'mvllow/modes.nvim',
@@ -1216,6 +1417,9 @@ return {
 
   {
     "stevearc/dressing.nvim",
+    -- opts = {},
+    opts = {},
+    lazy = false,
     -- opts = {},
     config = function()
       require("dressing").setup({
@@ -1384,8 +1588,172 @@ return {
         vim.g.molten_output_win_max_height = 12
     end,
   },
+  -- {
+  --   "nvim-focus/focus.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require('focus').setup({
+  --       enable = true, -- Enable module
+  --       commands = true, -- Create Focus commands
+  --       autoresize = {
+  --         enable = true, -- Enable or disable auto-resizing of splits
+  --         width = 0, -- Force width for the focused window
+  --         height = 0, -- Force height for the focused window
+  --         minwidth = 40, -- Force minimum width for the unfocused window
+  --         minheight = 0, -- Force minimum height for the unfocused window
+  --         height_quickfix = 10, -- Set the height of quickfix panel
+  --       },
+  --       split = {
+  --         bufnew = false, -- Create blank buffer for new split windows
+  --         tmux = false, -- Create tmux splits instead of neovim splits
+  --       },
+  --       ui = {
+  --         number = true, -- Display line numbers in the focussed window only
+  --         relativenumber = false, -- Display relative line numbers in the focussed window only
+  --         hybridnumber = false, -- Display hybrid line numbers in the focussed window only
+  --         absolutenumber_unfocussed = false, -- Preserve absolute numbers in the unfocussed windows
+  --         cursorline = true, -- Display a cursorline in the focussed window only
+  --         cursorcolumn = true, -- Display cursorcolumn in the focussed window only
+  --         colorcolumn = {
+  --           enable = false, -- Display colorcolumn in the foccused window only
+  --           list = '+1', -- Set the comma-saperated list for the colorcolumn
+  --         },
+  --         signcolumn = true, -- Display signcolumn in the focussed window only
+  --         winhighlight = false, -- Auto highlighting for focussed/unfocussed windows
+  --       }
+  --     })
+  --   end,
+  -- },
 
+  {
+    "anuvyklack/windows.nvim",
+    lazy = false,
+    dependencies = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+    },
+    config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup()
+    end
+  },
 
+  {
+    "HiPhish/rainbow-delimiters.nvim",
+    lazy = false,
+    opts = {},
+    -- config = function()
+    -- end,
+  },
+
+  {
+    "SmiteshP/nvim-navic",
+    dependencies = {"neovim/nvim-lspconfig"},
+    lazy = false,
+    config = function()
+      require('nvim-navic').setup({
+        icons = {
+          File          = "󰈙 ",
+          Module        = " ",
+          Namespace     = "󰌗 ",
+          Package       = " ",
+          Class         = "󰌗 ",
+          Method        = "󰆧 ",
+          Property      = " ",
+          Field         = " ",
+          Constructor   = " ",
+          Enum          = "󰕘",
+          Interface     = "󰕘",
+          Function      = "󰊕 ",
+          Variable      = "󰆧 ",
+          Constant      = "󰏿 ",
+          String        = "󰀬 ",
+          Number        = "󰎠 ",
+          Boolean       = "◩ ",
+          Array         = "󰅪 ",
+          Object        = "󰅩 ",
+          Key           = "󰌋 ",
+          Null          = "󰟢 ",
+          EnumMember    = " ",
+          Struct        = "󰌗 ",
+          Event         = " ",
+          Operator      = "󰆕 ",
+          TypeParameter = "󰊄 ",
+        },
+        lsp = {
+          auto_attach = false,
+          preference = nil,
+        },
+        highlight = false,
+        separator = " > ",
+        depth_limit = 0,
+        depth_limit_indicator = "..",
+        safe_output = true,
+        lazy_update_context = false,
+        click = false,
+        format_text = function(text)
+          return text
+        end,
+      })
+    end,
+  },
+
+  {
+    "kylechui/nvim-surround",
+    lazy = false,
+    config = function()
+      require('nvim-surround').setup({})
+    end,
+  },
+
+  {
+    require('gitsigns').setup {
+      signs = {
+        add          = { text = '│' },
+        change       = { text = '│' },
+        delete       = { text = '_' },
+        topdelete    = { text = '‾' },
+        changedelete = { text = '~' },
+        untracked    = { text = '┆' },
+      },
+      signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+      numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+      linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+      word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+      watch_gitdir = {
+        follow_files = true
+      },
+      attach_to_untracked = true,
+      current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+      current_line_blame_opts = {
+        virt_text = true,
+        virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+        delay = 1000,
+        ignore_whitespace = false,
+        virt_text_priority = 100,
+      },
+      current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
+      sign_priority = 6,
+      update_debounce = 100,
+      status_formatter = nil, -- Use default
+      max_file_length = 40000, -- Disable if file is longer than this (in lines)
+      preview_config = {
+        -- Options passed to nvim_open_win
+        border = 'single',
+        style = 'minimal',
+        relative = 'cursor',
+        row = 0,
+        col = 1
+      },
+      yadm = {
+        enable = false
+      },
+    }
+  },
+
+}
 
   -- {
   --   'KeitaNakamura/tex-conceal.vim',
@@ -1400,4 +1768,4 @@ return {
   --   end
   -- }
   --
-}
+-- }

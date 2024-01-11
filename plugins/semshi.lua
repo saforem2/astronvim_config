@@ -1,6 +1,7 @@
 return {
   -- "numiras/semshi",
   "wookayin/semshi", -- use a maintained fork
+  lazy = false,
   ft = {"python", "quarto", "markdown", "pandoc"},
   build = ":UpdateRemotePlugins",
   init = function()
