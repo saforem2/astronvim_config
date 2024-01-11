@@ -1,6 +1,43 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
+-- vim.opt.shortmess:append("sIW")
 return {
   opt = {
+        showmode = false,
+        -- number = true,
+        -- signcolumn = "yes",
+        numberwidth = 6,
+        colorcolumn = "100",
+        guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
+        cursorline = true,
+        cursorlineopt = "number",
+        expandtab = true,
+        tabstop = 2,
+        softtabstop = 2,
+        shiftwidth = 2,
+        updatetime = 100,
+        linebreak = true,
+        showbreak = "=>>",
+        textwidth = 100,
+        breakindent = true,
+        breakindentopt = "shift:2,min:40,sbr",
+        smartcase = true,
+        ignorecase = true,
+        -- foldmethod = "expr",
+        foldexpr = "nvim_treesitter#foldexpr()",
+        foldlevel = 99,
+        foldlevelstart = 99,
+        foldopen = "jump,block,hor,mark,percent,quickfix,search,tag,undo",
+        foldenable = true,
+        clipboard = "unnamedplus",
+        -- scrolloff = 5,
+        autowrite = true,
+        confirm = true,
+        autochdir = true,
+        termguicolors = true,
+        undofile = true,
+        sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions",
+        hidden = true,
+        laststatus = 3,
     -- set to true or false etc.
     -- relativenumber = true, -- sets vim.opt.relativenumber
     -- number = true,         -- sets vim.opt.number
@@ -14,7 +51,7 @@ return {
     -- shellslash = true,
     list = true,  -- show whitespace characters
     listchars = { tab = "│→", extends = "⟩", precedes = "⟨", trail = "·", nbsp = "␣" },
-    showbreak = "↪ ",
+    -- showbreak = "↪ ",
     showtabline = (vim.t.bufs and #vim.t.bufs > 1) and 2 or 1,
     -- spellfile = vim.fn.expand "~/.config/nvim/lua/user/spell/en.utf-8.add",
     swapfile = false,
@@ -38,9 +75,9 @@ return {
       diff = "╱",
       eob = " ",
     },
-    foldlevel = 99,
+    -- foldlevel = 99,
     foldmethod = "expr",
-    foldexpr = "v:lua.vim.treesitter.foldexpr()",
+    -- foldexpr = "v:lua.vim.treesitter.foldexpr()",
     formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()",
 
 
@@ -52,10 +89,10 @@ return {
     autopairs_enabled = true,        -- enable autopairs at start
     diagnostics_mode = 1,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
-    -- slime_target = "kitty",
+    slime_target = "kitty",
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     tex_conceal = 'abdmgs',
-    -- jukit_mappings_ext_enabled = {"py", "ipynb"},
+    jukit_mappings_ext_enabled = {"py", "ipynb"},
     jukit_layout = -1,
     qs_highlight_on_keys = {"f", "F", "t", "T"},
     pandoc_syntax_conceal_blacklist = { 'codeblock_delim', 'codeblock_start' },
