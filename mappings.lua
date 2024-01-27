@@ -17,6 +17,9 @@ return {
             "<cmd>lua require('notify').dismiss()<CR>",
             desc = "Dismiss Notification"
         },
+        ["gD"] = {
+            vim.lsp.buf.declaration,
+        },
         ["<leader>\\"] = {"<cmd>QuartoPreview<cr>", desc = "Quarto Preview"},
         ["<leader>d"] = {[["_d]], desc = "Beginning of line"},
         ["0"] = {"^", desc = "Beginning of line"},
