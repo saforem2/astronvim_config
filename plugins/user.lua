@@ -683,15 +683,15 @@ return {
     },
     -- config = true,
     config = function()
-      vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
-      vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
+      -- vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
+      -- vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
       -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
       vim.cmd [[highlight Quote guifg=#0099EC]]
       -- vim.cmd [[highlight Dash guibg=#58DB01]]
       vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
       require("headlines").setup {
           qmd = {
-              query = vim.treesitter.parse_query(
+              query = vim.treesitter.query.parse(
                   "markdown",
                   [[
                       (atx_heading [
@@ -724,7 +724,7 @@ return {
               fat_headline_lower_string = "🬂",
           },
           markdown = {
-              query = vim.treesitter.query.parse_query(
+              query = vim.treesitter.query.parse(
                   "markdown",
                   [[
                       (atx_heading [
@@ -757,7 +757,7 @@ return {
               fat_headline_lower_string = "🬂",
           },
           rmd = {
-              query = vim.treesitter.query.parse_query(
+              query = vim.treesitter.query.parse(
                   "markdown",
                   [[
                       (atx_heading [
@@ -791,7 +791,7 @@ return {
               fat_headline_lower_string = "🬂",
           },
           norg = {
-              query = vim.treesitter.query.parse_query(
+              query = vim.treesitter.query.parse(
                   "norg",
                   [[
                       [
@@ -831,7 +831,7 @@ return {
               fat_headline_lower_string = "🬂",
           },
           org = {
-              query = vim.treesitter.query.parse_query(
+              query = vim.treesitter.query.parse(
                   "org",
                   [[
                       (headline (stars) @headline)
@@ -917,7 +917,8 @@ return {
           only_render_image_at_cursor = true,
           filetypes = {
             "markdown",
-            "quarto",
+            "qmd",
+            -- "quarto",
             "vimwiki"
           },
         },
@@ -1016,7 +1017,7 @@ return {
   {
     'nfrid/markdown-togglecheck',
     dependencies = { 'nfrid/treesitter-utils' },
-    ft = { 'markdown', 'quarto', },
+    ft = { 'markdown', 'qmd', },
   },
 
   {
@@ -1071,135 +1072,137 @@ return {
   --   opts = {}
   -- },
 
-  {
-    "tadmccorkle/markdown.nvim",
-    -- event = "VeryLazy",
-    -- filetypes = { "markdown", "quarto", ""}
-    filetypes = {
-      "markdown", "qmd", "txt", "pandoc", "neorg", "rmd",
-    },
-    lazy = false,
-    opts = {
-      -- disable all keymaps by setting mappings field to 'false'
-      -- selectively disable keymaps by setting corresponding field to 'false'
-      mappings = {
-        inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
-        inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
-        inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
-        inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
-        link_add = "gl", -- (string|boolean) add link
-        link_follow = "gx", -- (string|boolean) follow link
-        go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
-        go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
-        go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
-        go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
-      },
-      inline_surround = {
-        -- for the emphasis, strong, strikethrough, and code fields:
-        -- * key: used to specify an inline style in toggle, delete, and change operations
-        -- * txt: text inserted when toggling or changing to the corresponding inline style
-        emphasis = {
-          key = "i",
-          txt = "*",
-        },
-        strong = {
-          key = "b",
-          txt = "**",
-        },
-        strikethrough = {
-          key = "s",
-          txt = "~~",
-        },
-        code = {
-          key = "c",
-          txt = "`",
-        },
-      },
-      link = {
-        paste = {
-          enable = true, -- whether to convert URLs to links on paste
-        },
-      },
-      toc = {
-        -- comment text to flag headings/sections for omission in table of contents
-        omit_heading = "toc omit heading",
-        omit_section = "toc omit section",
-        -- cycling list markers to use in table of contents
-        -- use '.' and ')' for ordered lists
-        markers = { "-" },
-      },
-      -- hook functions allow for overriding or extending default behavior
-      -- fallback function with default behavior is provided as argument
-      hooks = {
-        -- called when following links with `dest` as the link destination
-        follow_link = nil, -- fun(dest: string, fallback: fun())
-      },
-      on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
-    },
-  },
-  {
-    "tadmccorkle/markdown.nvim",
-    -- event = "VeryLazy",
-    -- filetypes = { "markdown", "quarto", ""}
-    lazy = false,
-    opts = {
-      -- disable all keymaps by setting mappings field to 'false'
-      -- selectively disable keymaps by setting corresponding field to 'false'
-      mappings = {
-        inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
-        inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
-        inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
-        inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
-        link_add = "gl", -- (string|boolean) add link
-        link_follow = "gx", -- (string|boolean) follow link
-        go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
-        go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
-        go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
-        go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
-      },
-      inline_surround = {
-        -- for the emphasis, strong, strikethrough, and code fields:
-        -- * key: used to specify an inline style in toggle, delete, and change operations
-        -- * txt: text inserted when toggling or changing to the corresponding inline style
-        emphasis = {
-          key = "i",
-          txt = "*",
-        },
-        strong = {
-          key = "b",
-          txt = "**",
-        },
-        strikethrough = {
-          key = "s",
-          txt = "~~",
-        },
-        code = {
-          key = "c",
-          txt = "`",
-        },
-      },
-      link = {
-        paste = {
-          enable = true, -- whether to convert URLs to links on paste
-        },
-      },
-      toc = {
-        -- comment text to flag headings/sections for omission in table of contents
-        omit_heading = "toc omit heading",
-        omit_section = "toc omit section",
-        -- cycling list markers to use in table of contents
-        -- use '.' and ')' for ordered lists
-        markers = { "-" },
-      },
-      -- hook functions allow for overriding or extending default behavior
-      -- fallback function with default behavior is provided as argument
-      hooks = {
-        -- called when following links with `dest` as the link destination
-        follow_link = nil, -- fun(dest: string, fallback: fun())
-      },
-      on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
-    },
-  },
+  -- {
+  --   "tadmccorkle/markdown.nvim",
+  --   -- event = "VeryLazy",
+  --   -- filetypes = { "markdown", "quarto", ""}
+  --   filetypes = {
+  --     "markdown", "quarto", "qmd", "txt", "pandoc", "neorg", "rmd",
+  --   },
+  --   lazy = false,
+  --   opts = {
+  --     -- disable all keymaps by setting mappings field to 'false'
+  --     -- selectively disable keymaps by setting corresponding field to 'false'
+  --     mappings = {
+  --       inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+  --       inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+  --       inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+  --       inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+  --       link_add = "gl", -- (string|boolean) add link
+  --       link_follow = "gx", -- (string|boolean) follow link
+  --       go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+  --       go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+  --       go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+  --       go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+  --     },
+  --     inline_surround = {
+  --       -- for the emphasis, strong, strikethrough, and code fields:
+  --       -- * key: used to specify an inline style in toggle, delete, and change operations
+  --       -- * txt: text inserted when toggling or changing to the corresponding inline style
+  --       emphasis = {
+  --         key = "i",
+  --         txt = "*",
+  --       },
+  --       strong = {
+  --         key = "b",
+  --         txt = "**",
+  --       },
+  --       strikethrough = {
+  --         key = "s",
+  --         txt = "~~",
+  --       },
+  --       code = {
+  --         key = "c",
+  --         txt = "`",
+  --       },
+  --     },
+  --     link = {
+  --       paste = {
+  --         enable = true, -- whether to convert URLs to links on paste
+  --       },
+  --     },
+  --     toc = {
+  --       -- comment text to flag headings/sections for omission in table of contents
+  --       omit_heading = "toc omit heading",
+  --       omit_section = "toc omit section",
+  --       -- cycling list markers to use in table of contents
+  --       -- use '.' and ')' for ordered lists
+  --       markers = { "•" },
+  --     },
+  --     -- hook functions allow for overriding or extending default behavior
+  --     -- fallback function with default behavior is provided as argument
+  --     hooks = {
+  --       -- called when following links with `dest` as the link destination
+  --       follow_link = nil, -- fun(dest: string, fallback: fun())
+  --     },
+  --     on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+  --   },
+  -- },
+
+  -- {
+  --   "tadmccorkle/markdown.nvim",
+  --   -- event = "VeryLazy",
+  --   -- filetypes = { "markdown", "quarto", ""}
+  --   lazy = false,
+  --   opts = {
+  --     -- disable all keymaps by setting mappings field to 'false'
+  --     -- selectively disable keymaps by setting corresponding field to 'false'
+  --     mappings = {
+  --       inline_surround_toggle = "gs", -- (string|boolean) toggle inline style
+  --       inline_surround_toggle_line = "gss", -- (string|boolean) line-wise toggle inline style
+  --       inline_surround_delete = "ds", -- (string|boolean) delete emphasis surrounding cursor
+  --       inline_surround_change = "cs", -- (string|boolean) change emphasis surrounding cursor
+  --       link_add = "gl", -- (string|boolean) add link
+  --       link_follow = "gx", -- (string|boolean) follow link
+  --       go_curr_heading = "]c", -- (string|boolean) set cursor to current section heading
+  --       go_parent_heading = "]p", -- (string|boolean) set cursor to parent section heading
+  --       go_next_heading = "]]", -- (string|boolean) set cursor to next section heading
+  --       go_prev_heading = "[[", -- (string|boolean) set cursor to previous section heading
+  --     },
+  --     inline_surround = {
+  --       -- for the emphasis, strong, strikethrough, and code fields:
+  --       -- * key: used to specify an inline style in toggle, delete, and change operations
+  --       -- * txt: text inserted when toggling or changing to the corresponding inline style
+  --       emphasis = {
+  --         key = "i",
+  --         txt = "*",
+  --       },
+  --       strong = {
+  --         key = "b",
+  --         txt = "**",
+  --       },
+  --       strikethrough = {
+  --         key = "s",
+  --         txt = "~~",
+  --       },
+  --       code = {
+  --         key = "c",
+  --         txt = "`",
+  --       },
+  --     },
+  --     link = {
+  --       paste = {
+  --         enable = true, -- whether to convert URLs to links on paste
+  --       },
+  --     },
+  --     toc = {
+  --       -- comment text to flag headings/sections for omission in table of contents
+  --       omit_heading = "toc omit heading",
+  --       omit_section = "toc omit section",
+  --       -- cycling list markers to use in table of contents
+  --       -- use '.' and ')' for ordered lists
+  --       markers = { "-" },
+  --     },
+  --     -- hook functions allow for overriding or extending default behavior
+  --     -- fallback function with default behavior is provided as argument
+  --     hooks = {
+  --       -- called when following links with `dest` as the link destination
+  --       follow_link = nil, -- fun(dest: string, fallback: fun())
+  --     },
+  --     on_attach = nil, -- (fun(bufnr: integer)) callback when plugin attaches to a buffer
+  --   },
+  -- },
+
   -- {
   --   "tadmccorkle/markdown.nvim",
   --   -- event = "VeryLazy",
@@ -1708,50 +1711,55 @@ return {
     end,
   },
 
+  -- {
+  --   require('gitsigns').setup {
+  --     signs = {
+  --       add          = { text = '│' },
+  --       change       = { text = '│' },
+  --       delete       = { text = '_' },
+  --       topdelete    = { text = '‾' },
+  --       changedelete = { text = '~' },
+  --       untracked    = { text = '┆' },
+  --     },
+  --     signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
+  --     numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
+  --     linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
+  --     word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
+  --     watch_gitdir = {
+  --       follow_files = true
+  --     },
+  --     attach_to_untracked = true,
+  --     current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+  --     current_line_blame_opts = {
+  --       virt_text = true,
+  --       virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
+  --       delay = 1000,
+  --       ignore_whitespace = false,
+  --       virt_text_priority = 100,
+  --     },
+  --     current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
+  --     sign_priority = 6,
+  --     update_debounce = 100,
+  --     status_formatter = nil, -- Use default
+  --     max_file_length = 40000, -- Disable if file is longer than this (in lines)
+  --     preview_config = {
+  --       -- Options passed to nvim_open_win
+  --       border = 'single',
+  --       style = 'minimal',
+  --       relative = 'cursor',
+  --       row = 0,
+  --       col = 1
+  --     },
+  --     yadm = {
+  --       enable = false
+  --     },
+  --   }
+  -- },
+
   {
-    require('gitsigns').setup {
-      signs = {
-        add          = { text = '│' },
-        change       = { text = '│' },
-        delete       = { text = '_' },
-        topdelete    = { text = '‾' },
-        changedelete = { text = '~' },
-        untracked    = { text = '┆' },
-      },
-      signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
-      numhl      = false, -- Toggle with `:Gitsigns toggle_numhl`
-      linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
-      word_diff  = false, -- Toggle with `:Gitsigns toggle_word_diff`
-      watch_gitdir = {
-        follow_files = true
-      },
-      attach_to_untracked = true,
-      current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
-      current_line_blame_opts = {
-        virt_text = true,
-        virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
-        delay = 1000,
-        ignore_whitespace = false,
-        virt_text_priority = 100,
-      },
-      current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
-      sign_priority = 6,
-      update_debounce = 100,
-      status_formatter = nil, -- Use default
-      max_file_length = 40000, -- Disable if file is longer than this (in lines)
-      preview_config = {
-        -- Options passed to nvim_open_win
-        border = 'single',
-        style = 'minimal',
-        relative = 'cursor',
-        row = 0,
-        col = 1
-      },
-      yadm = {
-        enable = false
-      },
-    }
-  },
+    "meatballs/vim-xonsh",
+    lazy = false,
+  }
 
 }
 
