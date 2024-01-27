@@ -1,5 +1,3 @@
--- require('neoconf').setup()
-
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -142,10 +140,11 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-    tsconfig = function()
+    local tsconfig = function()
       local configs = require('nvim-treesitter.configs')
       configs.setup({ highlight = { enable = true } })
     end
+    tsconfig()
     -- Example for configuring Neovim to load user-installed installed Lua rocks:
     -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/magick/init.lua;"
     -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/lua;"
