@@ -3,7 +3,7 @@ return {
   {
     'quarto-dev/quarto-nvim',
     dev = false,
-    filetypes = { "quarto", "markdown", "rmd", "qmd" },
+    filetypes = { "markdown", "rmd", "qmd" },
     dependencies = {
       { 'hrsh7th/nvim-cmp' },
       {
@@ -21,7 +21,8 @@ return {
       -- optional
       {
         'quarto-dev/quarto-vim',
-        ft = 'quarto',
+        -- ft = 'quarto',
+        ft = { "quarto", "markdown", "rmd", "qmd" },
         dependencies = { 'vim-pandoc/vim-pandoc-syntax' },
         -- note: needs additional syntax highlighting enabled for markdown
         --       in `nvim-treesitter`
@@ -85,12 +86,10 @@ return {
           enable = true,
           -- additional_vim_regex_highlighting = false,
           -- optional (with quarto-vim extension and pandoc-syntax)
-          additional_vim_regex_highlighting = { 'markdown' },
-
+          additional_vim_regex_highlighting = { 'markdown', "quarto" },
           -- note: the vim regex based highlighting from
           -- quarto-vim / vim-pandoc sets the wrong comment character
           -- for some sections where there is `$` math.
-
         },
         indent = {
           enable = true,
@@ -251,7 +250,7 @@ return {
       lspconfig.marksman.setup({
         on_attach = on_attach_qmd,
         capabilities = capabilities,
-        filetypes = { "markdown", "quarto" },
+        filetypes = { "markdown", "quarto", "md", "qmd" },
         root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
       })
 
