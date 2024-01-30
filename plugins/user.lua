@@ -1415,6 +1415,14 @@ return {
       config = function()
           vim.cmd('let g:vim_markdown_math = 1')
           vim.cmd('let g:vim_markdown_frontmatter = 1')
+          vim.cmd('let g:vim_markdown_json_frontmatter = 0')
+          vim.cmd('let g:vim_markdown_toc_autofit = 1')
+          vim.cmd('let g:vim_markdown_conceal = 2')
+          vim.cmd('let g:vim_markdown_folding_style_pythonic = 1')
+          vim.cmd('let g:vim_markdown_override_foldtext = 0')
+          vim.cmd('let g:vim_markdown_conceal_code_blocks = 0')
+          vim.cmd('let g:vim_markdown_strikethrough = 1')
+          vim.cmd('let g:vim_markdown_auto_extension_ext = "qmd"')
       end,
   },
 
@@ -1706,9 +1714,9 @@ return {
   {
     "kylechui/nvim-surround",
     lazy = false,
-    config = function()
-      require('nvim-surround').setup({})
-    end,
+    -- config = function()
+    --   require('nvim-surround').setup({})
+    -- end,
   },
 
   -- {
@@ -1759,7 +1767,46 @@ return {
   {
     "meatballs/vim-xonsh",
     lazy = false,
-  }
+  },
+
+  {
+    "epwalsh/obsidian.nvim",
+    -- tag = "*",
+    requires = {
+      -- Required.
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require('obsidian').setup({
+        workspaces = {
+          {
+            name = "personal",
+            path = "~/Obsidian/Notes",
+          },
+        },
+      })
+    end,
+  },
+
+  {
+    "levouh/tint.nvim",
+    config = function()
+      require('tint').setup({})
+    end
+  },
+
+  {
+    "cpea2506/one_monokai.nvim"
+  },
+
+  {
+    "glepnir/zephyr-nvim",
+    requires = {
+      'nvim-treesitter/nvim-treesitter',
+      opt = true
+    },
+  },
+
 
 }
 
