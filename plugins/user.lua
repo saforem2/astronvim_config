@@ -1,4 +1,45 @@
 return {
+  { 'ThePrimeagen/vim-be-good' },
+  { "unblevable/quick-scope", },
+  { "lvimuser/lsp-inlayhints.nvim" },
+  { "HiPhish/nvim-ts-rainbow2" },
+  { 'vim-pandoc/vim-pandoc-syntax', },
+  { 'bfredl/nvim-ipy' },
+  { 'knubie/vim-kitty-navigator', lazy = false },
+  { "fladson/vim-kitty", lazy = false },
+  { "chaoren/vim-wordmotion" },
+  { 'jbyuki/nabla.nvim' },
+  { 'felipec/vim-sanegx' },
+  { 'godlygeek/tabular' },
+  { 'rrethy/vim-illuminate' },
+  { 'dhruvasagar/vim-table-mode' },
+  { 'tanvirtin/monokai.nvim' },
+  { 'bluz71/vim-nightfly-guicolors' },
+  { 'rafamadriz/neon' },
+  { 'sainnhe/sonokai' },
+  { 'yonlu/omni.vim' },
+  { 'NTBBloodbath/doom-one.nvim' },
+  { 'jghauser/mkdir.nvim' },
+  { 'navarasu/onedark.nvim', },
+  { 'hkupty/iron.nvim' }, -- {
+  { 'Bekaboo/deadcolumn.nvim' },
+  { "rktjmp/lush.nvim" },
+  { "marko-cerovac/material.nvim" },
+  { "navarasu/onedark.nvim" },
+  { "sainnhe/sonokai" },
+  { "nyoom-engineering/oxocarbon.nvim" },
+  { 'brenoprata10/nvim-highlight-colors' },
+  { 'kosayoda/nvim-lightbulb' },
+  { 'machakann/vim-sandwich' },
+  { 'rktjmp/lush.nvim' },
+  { 'vim-python/python-syntax' },
+  { 'Vimjas/vim-python-pep8-indent' },
+  { 'rafcamlet/nvim-luapad', },
+  { 'rafi/awesome-vim-colorschemes', },
+  { 'tpope/vim-repeat', },
+  { 'kreskij/Repeatable.vim', },
+  { 'easymotion/vim-easymotion', },
+
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
@@ -64,49 +105,16 @@ return {
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end,
   },
-  {
-    'wakatime/vim-wakatime'
-  },
-  {
-    'mbbill/undotree'
-  },
+  { 'wakatime/vim-wakatime' },
+  { 'mbbill/undotree' },
   {
     "nvim-treesitter/playground",
     cmd = "TSHighlightCapturesUnderCursor",
   },
-  {
-    'kosayoda/nvim-lightbulb'
-  },
-  {
-    'machakann/vim-sandwich'
-  },
-  {
-    'rktjmp/lush.nvim'
-  },
-  {
-    'vim-python/python-syntax'
-  },
-  {
-    'Vimjas/vim-python-pep8-indent'
-  },
-  {
-    'rafcamlet/nvim-luapad',
-  },
-  {
-    'rafi/awesome-vim-colorschemes',
-  },
+
   -- {
   --   'flazz/vim-colorschemes',
   -- },
-  {
-    'tpope/vim-repeat',
-  },
-  {
-    'kreskij/Repeatable.vim',
-  },
-  {
-    'easymotion/vim-easymotion',
-  },
   {
     'chentoast/marks.nvim',
     config = function()
@@ -208,12 +216,6 @@ return {
     run = ':UpdateRemotePlugins',
   },
   {
-    "chaoren/vim-wordmotion",
-  },
-  {
-    'jbyuki/nabla.nvim'
-  },
-  {
     'hoschi/yode-nvim',
     config = function()
       require('yode-nvim').setup({})
@@ -266,8 +268,6 @@ return {
       })
     end
   },
-  { 'knubie/vim-kitty-navigator', lazy = false },
-  { "fladson/vim-kitty", lazy = false },
   {
     "kdheepak/tabline.nvim",
     config = function()
@@ -329,8 +329,6 @@ return {
     event = "BufRead",
   },
 
-  { 'felipec/vim-sanegx' },
-
   {
     "turbio/bracey.vim",
     cmd = { "Bracey", "BraceyStop", "BraceyReload", "BraceyEval" },
@@ -357,12 +355,10 @@ return {
   --     })
   --   end,
   -- },
-  { 'godlygeek/tabular' },
 
   -- { 'preservim/vim-markdown', },
   -- { 'Iron-E/nvim-highlite' },
   --
-  { 'brenoprata10/nvim-highlight-colors' },
   -- {
   --   'rrethy/vim-hexokinase',
   --   run = 'make hexokinase',
@@ -377,26 +373,13 @@ return {
 
   {
     "folke/todo-comments.nvim",
-    lazy = false,
-    -- config = function()
-    --   require('todo-comments.nvim').setup({})
-    -- end
-    -- config = function()
-    -- require("user.todo-comments").config()
-    -- end,
-  },
-  {
-    "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup({
-        -- your configuration comes here
-          -- or leave it empty to use the default settings
-          -- refer to the configuration section below
-      })
-    end,
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
   },
-  { 'rrethy/vim-illuminate' },
   {
     "mfussenegger/nvim-dap-python",
     config = function()
@@ -444,23 +427,12 @@ return {
     end,
   },
   -- { 'preservim/vim-pencil' },
-  { 'dhruvasagar/vim-table-mode' },
-  { 'tanvirtin/monokai.nvim' },
-  { 'bluz71/vim-nightfly-guicolors' },
-  { 'rafamadriz/neon' },
-  { 'sainnhe/sonokai' },
-  { 'yonlu/omni.vim' },
-  { 'NTBBloodbath/doom-one.nvim' },
   -- { 'cpea2506/one_monokai.nvim' },
-  { 'jghauser/mkdir.nvim' },
-  { 'navarasu/onedark.nvim', },
-  { 'hkupty/iron.nvim' }, -- {
   --   'hkupty/iron.nvim',
   --   config = function()
   --     require('user.plugins.iron')
   --   end
   -- },
-  { 'bfredl/nvim-ipy' },
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'make',
@@ -484,25 +456,10 @@ return {
           }
         },
   },
-  { 'Bekaboo/deadcolumn.nvim' },
+
   {
     "projekt0n/circles.nvim",
     requires = { "nvim-tree/nvim-web-devicons" }
-  },
-  {
-    "rktjmp/lush.nvim"
-  },
-  {
-    "marko-cerovac/material.nvim"
-  },
-  {
-    "navarasu/onedark.nvim"
-  },
-  {
-    "sainnhe/sonokai"
-  },
-  {
-    "nyoom-engineering/oxocarbon.nvim"
   },
 
   {
@@ -549,18 +506,10 @@ return {
       })
     end,
   },
-  {
-    "lvimuser/lsp-inlayhints.nvim"
-  },
+
   -- {
   --   "preservim/vim-markdown"
   -- },
-  {
-    "HiPhish/nvim-ts-rainbow2"
-  },
-  {
-    'vim-pandoc/vim-pandoc-syntax',
-  },
   {
     'norcalli/nvim-terminal.lua',
     config = function()
@@ -616,11 +565,6 @@ return {
         ft_ignore = { 'neorg' },
       })
     end
-  },
-  {
-    "unblevable/quick-scope",
-  },
-  {
   },
   -- {
   --   'luk400/vim-jukit',
@@ -683,9 +627,12 @@ return {
     },
     -- config = true,
     config = function()
-      -- vim.cmd [[ highlight Headline1 guibg=#2C6E00 guifg=#58DB01 gui=italic ]]
-      -- vim.cmd [[ highlight Headline2 guibg=#C8DB01 guifg=#2C6E00 gui=italic ]]
+      -- vim.cmd [[ highlight Headline1 guibg=#1e2718 guifg=#cccccc gui=bold ]]
+      -- vim.cmd [[ highlight Headline2 guibg=#002933 guifg=#cccccc gui=italic ]]
+      -- vim.cmd [[ highlight Headline3 guibg=#37255F guifg=#ffffff gui=italic ]]
       -- vim.cmd [[highlight CodeBlock guibg=#07230E guifg=lightyellow]]
+      -- Headline1 = { bg="#1e2718" },
+      -- Headline2 = { bg="#002933", bold=false },
       vim.cmd [[highlight Quote guifg=#0099EC]]
       -- vim.cmd [[highlight Dash guibg=#58DB01]]
       vim.cmd [[highlight Dash guifg=#58DB01 gui=bold]]
@@ -865,9 +812,6 @@ return {
     end,
   },
 
-  {
-    'ThePrimeagen/vim-be-good'
-  },
 
   {
     "AckslD/nvim-FeMaco.lua",
@@ -1772,20 +1716,63 @@ return {
   {
     "epwalsh/obsidian.nvim",
     -- tag = "*",
+    lazy = true,
+    ft = {"markdown", "quarto"},
     requires = {
       -- Required.
       "nvim-lua/plenary.nvim",
     },
-    config = function()
-      require('obsidian').setup({
-        workspaces = {
+    opts = {
+      workspaces = {
           {
             name = "personal",
             path = "~/Obsidian/Notes",
           },
         },
-      })
-    end,
+      -- Optional, if you keep notes in a specific subdirectory of your vault.
+      notes_subdir = "notes",
+      -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the log
+      -- levels defined by "vim.log.levels.*".
+      log_level = vim.log.levels.INFO,
+      -- Optional, configure additional syntax highlighting / extmarks.
+      -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
+      ui = {
+        enable = true,  -- set to false to disable all additional syntax features
+        update_debounce = 200,  -- update delay after a text change (in milliseconds)
+        -- Define how various check-boxes are displayed
+        checkboxes = {
+          -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
+          [" "] = { char = "󰄱 ", hl_group = "ObsidianTodo" },
+          ["x"] = { char = " ", hl_group = "ObsidianDone" },
+          [">"] = { char = " ", hl_group = "ObsidianRightArrow" },
+          ["~"] = { char = "󰰱 ", hl_group = "ObsidianTilde" },
+          -- Replace the above with this if you don't have a patched font:
+          -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
+          -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
+          -- You can also add more custom ones...
+        },
+        -- Use bullet marks for non-checkbox lists.
+        bullets = { char = "•", hl_group = "ObsidianBullet" },
+        external_link_icon = { char = " ", hl_group = "ObsidianExtLinkIcon" },
+        -- Replace the above with this if you don't have a patched font:
+        -- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
+        reference_text = { hl_group = "ObsidianRefText" },
+        highlight_text = { hl_group = "ObsidianHighlightText" },
+        tags = { hl_group = "ObsidianTag" },
+        hl_groups = {
+          -- The options are passed directly to `vim.api.nvim_set_hl()`. See `:help nvim_set_hl`.
+          ObsidianTodo = { bold = true, fg = "#838383" },
+          ObsidianDone = { bold = true, fg = "#36CE5E" },
+          ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
+          ObsidianTilde = { bold = true, fg = "#ff5370" },
+          ObsidianBullet = { bold = true, fg = "#89ddff" },
+          ObsidianRefText = { underline = true, fg = "#c792ea" },
+          ObsidianExtLinkIcon = { fg = "#c792ea" },
+          ObsidianTag = { italic = true, fg = "#89ddff" },
+          ObsidianHighlightText = { bg = "#75662e" },
+        },
+      },
+    }
   },
 
   {
@@ -1807,6 +1794,58 @@ return {
     },
   },
 
+  {
+    "b0o/incline.nvim",
+    opts = {},
+  },
+
+  {
+    "tris203/hawtkeys.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {},
+  },
+
+  {
+    "ukyouz/syntax-highlighted-cursor.nvim",
+    config = function()
+        require("syntax-highlighted-cursor").setup()
+    end,
+  },
+
+  {
+    "gelguy/wilder.nvim",
+    config = function()
+      local  wilder = require('wilder')
+      wilder.setup({modes = {":", "/", "?"}})
+      local gradient = {
+        '#f4468f', '#fd4a85', '#ff507a', '#ff566f', '#ff5e63',
+        '#ff6658', '#ff704e', '#ff7a45', '#ff843d', '#ff9036',
+        '#f89b31', '#efa72f', '#e6b32e', '#dcbe30', '#d2c934',
+        '#c8d43a', '#bfde43', '#b6e84e', '#aff05b'
+      }
+      for i, fg in ipairs(gradient) do
+        gradient[i] = wilder.make_hl('WilderGradient' .. i, 'Pmenu', {{a = 1}, {a = 1}, {foreground = fg}})
+      end
+      wilder.set_option('renderer', wilder.popupmenu_renderer({
+        highlights = {
+          gradient = gradient, -- must be set
+          -- selected_gradient key can be set to apply gradient highlighting for the selected candidate.
+        },
+        highlighter = wilder.highlighter_with_gradient({
+          wilder.basic_highlighter(), -- or wilder.lua_fzy_highlighter(),
+        }),
+      }))
+    end,
+  },
+  -- lazy.nvim
+  -- {
+  --   "m4xshen/hardtime.nvim",
+  --   dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+  --   opts = {}
+  -- },
 
 }
 
