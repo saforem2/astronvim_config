@@ -1,4 +1,6 @@
 return {
+  ['BufferCurrent'] = { bg ="#222222", fg="#cccccc" },
+  ['BufferCurrentMod'] = { bg ="#444444", fg="#00ccff" },
   -- NOTE:
   ['@tag.delimiter'] = { fg="#82cfff" },
   ['@tag.attribute'] = { fg="#82cfff" },

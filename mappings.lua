@@ -8,9 +8,19 @@
 -- vim.api.nvim_set_keymap('n', 'X', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
 -- vim.api.nvim_set_keymap('n', '<C-S>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
 -- vim.api.nvim_set_keymap('n', '<C-k>', [[:keeppatterns substitute/\s*\%#\s*/\r/e <bar> normal! ==<CR>]], { silent = true })
+local opts = { noremap = true, silent = false }
+
 return {
     -- first key is the mode
     n = {
+        ["<C-S-,>"] = {
+            "<cmd>BufferMovePrevious<cr>",
+            desc="[BarBar] Buffer Move Previous"
+        },
+        ["<C-S-.>"] = {
+            "<cmd>BufferMoveNext<cr>",
+            desc="[BarBar] Buffer Move Next"
+        },
         -- second key is the lefthand side of the map
         -- mappings seen under group name "Buffer"
         ["\\"] = {
