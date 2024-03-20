@@ -13,11 +13,19 @@ local opts = { noremap = true, silent = false }
 return {
     -- first key is the mode
     n = {
-        ["<C-S-,>"] = {
+        ["<S-W"] = {
+            "<cmd>HopWord<CR>",
+            desc = "Hop Word",
+        },
+        ["<S-h>"] = {
+            "<cmd>HopChar2<CR>",
+            desc = "Hop Char 2"
+        },
+        ["<leader>b<"] = {
             "<cmd>BufferMovePrevious<cr>",
             desc="[BarBar] Buffer Move Previous"
         },
-        ["<C-S-.>"] = {
+        ["<leader>b>"] = {
             "<cmd>BufferMoveNext<cr>",
             desc="[BarBar] Buffer Move Next"
         },

@@ -10,7 +10,7 @@ return {
     end,
   },
   {
-    'hiphish/rainbow-delimiters.nvim',
+    'HiPhish/rainbow-delimiters.nvim',
     config = function()
       require("rainbow-delimiters.setup").setup({
         local_rainbow_delimiters = require 'rainbow-delimiters',

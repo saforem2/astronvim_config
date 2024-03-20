@@ -1,7 +1,7 @@
 local utils = require("astronvim.utils")
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.utility.noice-nvim" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.python-ruff", enabled = true },
   { import = "astrocommunity.pack.rust" },

@@ -1,7 +1,7 @@
 return {
   {
     "RRethy/vim-hexokinase",
-    run = "make hexokinase",
+    build = "make hexokinase",
   },
   {
     'NvChad/nvim-colorizer.lua',

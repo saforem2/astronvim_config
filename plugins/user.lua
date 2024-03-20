@@ -380,7 +380,7 @@ return {
 
   {
     "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     opts = {
       -- your configuration comes here
       -- or leave it empty to use the default settings
@@ -389,7 +389,7 @@ return {
   },
   {
     "mfussenegger/nvim-dap-python",
-    config = function()
+    opts = function()
       require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
     end,
   },
@@ -440,14 +440,16 @@ return {
   --     require('user.plugins.iron')
   --   end
   -- },
+  --
   {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'make',
-    lazy = false
+    "nvim-telescope/telescope-fzf-native.nvim",
+    lazy = false,
+    build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
   },
+
   {
     'quarto-dev/quarto-nvim',
-    requires = {
+    dependencies = {
       'neovim/nvim-lspconfig',
       'jmbuhr/otter.nvim'
     },
@@ -466,7 +468,7 @@ return {
 
   {
     "projekt0n/circles.nvim",
-    requires = { "nvim-tree/nvim-web-devicons" }
+    dependencies = { "nvim-tree/nvim-web-devicons" }
   },
 
   {
@@ -1341,23 +1343,24 @@ return {
       })
     end
   },
-  {
-    "folke/flash.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("flash").setup({
-        opts = {},
-        -- stylua: ignore
-        -- keys = {
-        --   { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-        --   { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-        --   { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-        --   { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-        --   { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-        -- },
-      })
-    end
-  },
+
+  -- {
+  --   "folke/flash.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("flash").setup({
+  --       opts = {},
+  --       -- stylua: ignore
+  --       -- keys = {
+  --       --   { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+  --       --   { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+  --       --   { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+  --       --   { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
+  --       --   { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+  --       -- },
+  --     })
+  --   end
+  -- },
 
   {
       "ixru/nvim-markdown",
@@ -1711,7 +1714,7 @@ return {
   --   -- tag = "*",
   --   lazy = true,
   --   ft = {"markdown", "quarto"},
-  --   requires = {
+  --   dependencies = {
   --     -- Required.
   --     "nvim-lua/plenary.nvim",
   --   },
@@ -1773,7 +1776,7 @@ return {
     -- tag = "*",
     lazy = true,
     ft = {"markdown", "quarto"},
-    requires = {
+    dependencies = {
       -- Required.
       "nvim-lua/plenary.nvim",
     },
@@ -1800,48 +1803,48 @@ return {
           },
         },
       },
-    },
-    -- Optional, if you keep notes in a specific subdirectory of your vault.
-    -- notes_subdir = "notes",
-    -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the
-    -- log levels defined by "vim.log.levels.*".
-    log_level = vim.log.levels.INFO,
-    -- Optional, configure additional syntax highlighting / extmarks.
-    -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
-    ui = {
-      enable = true,  -- set to false to disable all additional syntax features
-      update_debounce = 200,  -- update delay after a text change (in milliseconds)
-      -- Define how various check-boxes are displayed
-      checkboxes = {
-        -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
-        [" "] = { char = "󰄱 ", hl_group = "ObsidianTodo" },
-        ["x"] = { char = " ", hl_group = "ObsidianDone" },
-        [">"] = { char = " ", hl_group = "ObsidianRightArrow" },
-        ["~"] = { char = "󰰱 ", hl_group = "ObsidianTilde" },
+      -- Optional, if you keep notes in a specific subdirectory of your vault.
+      -- notes_subdir = "notes",
+      -- Optional, set the log level for obsidian.nvim. This is an integer corresponding to one of the
+      -- log levels defined by "vim.log.levels.*".
+      log_level = vim.log.levels.INFO,
+      -- Optional, configure additional syntax highlighting / extmarks.
+      -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
+      ui = {
+        enable = true,  -- set to false to disable all additional syntax features
+        update_debounce = 200,  -- update delay after a text change (in milliseconds)
+        -- Define how various check-boxes are displayed
+        checkboxes = {
+          -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
+          [" "] = { char = "󰄱 ", hl_group = "ObsidianTodo" },
+          ["x"] = { char = " ", hl_group = "ObsidianDone" },
+          [">"] = { char = " ", hl_group = "ObsidianRightArrow" },
+          ["~"] = { char = "󰰱 ", hl_group = "ObsidianTilde" },
+          -- Replace the above with this if you don't have a patched font:
+          -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
+          -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
+          -- You can also add more custom ones...
+        },
+        -- Use bullet marks for non-checkbox lists.
+        bullets = { char = "•", hl_group = "ObsidianBullet" },
+        external_link_icon = { char = " ", hl_group = "ObsidianExtLinkIcon" },
         -- Replace the above with this if you don't have a patched font:
-        -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
-        -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
-        -- You can also add more custom ones...
-      },
-      -- Use bullet marks for non-checkbox lists.
-      bullets = { char = "•", hl_group = "ObsidianBullet" },
-      external_link_icon = { char = " ", hl_group = "ObsidianExtLinkIcon" },
-      -- Replace the above with this if you don't have a patched font:
-      -- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
-      reference_text = { hl_group = "ObsidianRefText" },
-      highlight_text = { hl_group = "ObsidianHighlightText" },
-      tags = { hl_group = "ObsidianTag" },
-      hl_groups = {
-        -- The options are passed directly to `vim.api.nvim_set_hl()`. See `:help nvim_set_hl`.
-        ObsidianTodo = { bold = true, fg = "#838383" },
-        ObsidianDone = { bold = true, fg = "#36CE5E" },
-        ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
-        ObsidianTilde = { bold = true, fg = "#ff5370" },
-        ObsidianBullet = { bold = true, fg = "#89ddff" },
-        ObsidianRefText = { underline = true, fg = "#c792ea" },
-        ObsidianExtLinkIcon = { fg = "#c792ea" },
-        ObsidianTag = { italic = true, fg = "#89ddff" },
-        ObsidianHighlightText = { bg = "#75662e" },
+        -- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
+        reference_text = { hl_group = "ObsidianRefText" },
+        highlight_text = { hl_group = "ObsidianHighlightText" },
+        tags = { hl_group = "ObsidianTag" },
+        hl_groups = {
+          -- The options are passed directly to `vim.api.nvim_set_hl()`. See `:help nvim_set_hl`.
+          ObsidianTodo = { bold = true, fg = "#838383" },
+          ObsidianDone = { bold = true, fg = "#36CE5E" },
+          ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
+          ObsidianTilde = { bold = true, fg = "#ff5370" },
+          ObsidianBullet = { bold = true, fg = "#89ddff" },
+          ObsidianRefText = { underline = true, fg = "#c792ea" },
+          ObsidianExtLinkIcon = { fg = "#c792ea" },
+          ObsidianTag = { italic = true, fg = "#89ddff" },
+          ObsidianHighlightText = { bg = "#75662e" },
+        },
       },
     },
   },
@@ -1859,9 +1862,8 @@ return {
 
   {
     "glepnir/zephyr-nvim",
-    requires = {
+    dependencies = {
       'nvim-treesitter/nvim-treesitter',
-      opt = true
     },
   },
 
@@ -1935,6 +1937,19 @@ return {
         --
     end,
     -- opts = {}
+  },
+
+  {
+    'mikesmithgh/kitty-scrollback.nvim',
+    enabled = true,
+    lazy = true,
+    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth' },
+    event = { 'User KittyScrollbackLaunch' },
+    -- version = '*', -- latest stable version, may have breaking changes if major version changed
+    version = '^4.0.0', -- pin major version, include fixes and features that do not have breaking changes
+    config = function()
+      require('kitty-scrollback').setup()
+    end,
   }
 
 

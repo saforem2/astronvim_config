@@ -155,7 +155,7 @@ return {
       { "williamboman/mason-lspconfig.nvim" },
       { "williamboman/mason.nvim" },
       { "hrsh7th/cmp-nvim-lsp" },
-      { "folke/neodev.nvim",                opt = {} },
+      { "folke/neodev.nvim" },
       {
         "microsoft/python-type-stubs",
         cond = false
