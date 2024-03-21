@@ -1950,7 +1950,12 @@ return {
     config = function()
       require('kitty-scrollback').setup()
     end,
-  }
+  },
+
+  {
+    "nvim-neotest/nvim-nio",
+    opts = {},
+  },
 
 
 
