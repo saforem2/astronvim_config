@@ -1,11 +1,11 @@
 return {
-  {
-    'folke/neoconf.nvim',
-    lazy = false,
-    config = function()
-      require('neoconf').setup()
-    end,
-  },
+  -- {
+  --   'folke/neoconf.nvim',
+  --   lazy = false,
+  --   config = function()
+  --     require('neoconf').setup()
+  --   end,
+  -- },
   { 'ThePrimeagen/vim-be-good' },
   { "unblevable/quick-scope", },
   { "lvimuser/lsp-inlayhints.nvim" },
@@ -316,17 +316,17 @@ return {
         -- when separator is set, the context will only show up when ther are at least 2 lines above cursorline
         separator = nil,
         zindex = 20,
-        patterns = {     -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
-          -- For all filetypes
-          -- Note that setting an entry here replaces all other patterns for this entry.
-          -- By setting the 'default' entry below, you can control which nodes you want to
-          -- appear in the context window.
-          -- default = {
-            'class',
-            'function',
-            'method',
-          -- },
-        },
+        -- patterns = {     -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+        --   -- For all filetypes
+        --   -- Note that setting an entry here replaces all other patterns for this entry.
+        --   -- By setting the 'default' entry below, you can control which nodes you want to
+        --   -- appear in the context window.
+        --   -- default = {
+        --     'class',
+        --     'function',
+        --     'method',
+        --   -- },
+        -- },
       })
     end
   },
@@ -1782,10 +1782,10 @@ return {
     },
     opts = {
       workspaces = {
-        {
-          name = "personal",
-          path = "~/Obsidian/Notes",
-        },
+        -- {
+        --   name = "personal",
+        --   path = "~/Obsidian/Notes",
+        -- },
         {
           name = "no-vault",
           path = function()
@@ -1954,6 +1954,7 @@ return {
 
   {
     "nvim-neotest/nvim-nio",
+    lazy = false,
     opts = {},
   },
 
