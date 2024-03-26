@@ -17,11 +17,11 @@ return {
     },
   },
 
-  options = {
-    opt = {
-      laststatus = 2,
-    }
-  },
+  -- options = {
+  --   opt = {
+  --     laststatus = 2,
+  --   }
+  -- },
 
   -- -- Apply custom highlights on colorscheme change.
   -- -- Must be declared before executing ':colorscheme'.
@@ -142,8 +142,8 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "marksman",
-      "ruff",
+      -- "ruff",
+      -- "marksman",
       -- "pyright"
     },
   },
@@ -159,16 +159,16 @@ return {
     },
   },
 
-  vim.api.nvim_create_autocmd({ "BufEnter" }, {
-    pattern = { "*.md" },
-    callback = function()
-      local otter = require('otter')
-      otter.activate({ 'r', 'python', 'lua' }, true)
-      vim.api.nvim_buf_set_keymap(0, 'n', 'gd', ":lua require'otter'.ask_definition()<cr>", { silent = true })
-      vim.api.nvim_buf_set_keymap(0, 'n', 'K', ":lua require'otter'.ask_hover()<cr>", { silent = true })
-      vim.api.nvim_buf_set_keymap(0, 'n', '<C-c>', ":lua require(notify).dismiss()<cr>", { silent = false })
-    end,
-  }),
+  -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  --   pattern = { "*.md" },
+  --   callback = function()
+  --     local otter = require('otter')
+  --     otter.activate({ 'r', 'python', 'lua' }, true)
+  --     vim.api.nvim_buf_set_keymap(0, 'n', 'gd', ":lua require'otter'.ask_definition()<cr>", { silent = true })
+  --     vim.api.nvim_buf_set_keymap(0, 'n', 'K', ":lua require'otter'.ask_hover()<cr>", { silent = true })
+  --     vim.api.nvim_buf_set_keymap(0, 'n', '<C-c>', ":lua require(notify).dismiss()<cr>", { silent = false })
+  --   end,
+  -- }),
 
   -- require("notify").setup({
   --     background_colour = "#1f1f1f",
@@ -235,15 +235,15 @@ return {
     -- Configure `ruff-lsp`.
     -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ruff_lsp
     -- For the default config, along with instructions on how to customize the settings
-    -- require('lspconfig').ruff_lsp.setup {
-    --   on_attach = on_attach,
-    --   init_options = {
-    --     settings = {
-    --       -- Any extra CLI arguments for `ruff` go here.
-    --       args = {},
-    --     }
-    --   }
-    -- }
+    require('lspconfig').ruff_lsp.setup {
+      on_attach = on_attach,
+      init_options = {
+        settings = {
+          -- Any extra CLI arguments for `ruff` go here.
+          args = {},
+        }
+      }
+    }
     -- vim.api.nvim_eval([[
     --     let g:jukit_layout = {
     --         \'split': 'horizontal',
