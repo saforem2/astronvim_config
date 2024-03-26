@@ -17,7 +17,7 @@ return {
         updatetime = 100,
         linebreak = true,
         showbreak = "=>>",
-        textwidth = 100,
+        textwidth = 80,
         breakindent = true,
         breakindentopt = "shift:2,min:40,sbr",
         smartcase = true,
@@ -32,12 +32,12 @@ return {
         -- scrolloff = 5,
         autowrite = true,
         confirm = true,
-        autochdir = true,
+        autochdir = false,
         termguicolors = true,
         undofile = true,
         sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions",
         hidden = true,
-        laststatus = 3,
+        laststatus = 2,
     -- set to true or false etc.
     -- relativenumber = true, -- sets vim.opt.relativenumber
     -- number = true,         -- sets vim.opt.number
@@ -46,7 +46,7 @@ return {
     -- wrap = false,          -- sets vim.opt.wrap
     -- background = "dark",
     -- swapfile = false,
-    conceallevel = 2, -- enable conceallevel
+    conceallevel = 0, -- enable conceallevel
     concealcursor = 'nc',
     -- shellslash = true,
     list = true,  -- show whitespace characters
@@ -61,7 +61,7 @@ return {
     number = true,         -- sets vim.opt.number
     spell = false,         -- sets vim.opt.spell
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
-    sidescrolloff=20,
+    sidescrolloff=30,
     scrolloff=10,
     undolevels=10000,
     winminwidth = 10,
