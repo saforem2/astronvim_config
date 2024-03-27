@@ -32,7 +32,7 @@ return {
           -- regex vim syntax files can define conceal
           -- s
           -- see `:h conceallevel`
-          vim.opt.conceallevel = 2
+          vim.opt.conceallevel = 1
           -- -- disable conceal in markdown/quarto
           vim.g['pandoc#syntax#conceal#use'] = true
           --
@@ -72,11 +72,16 @@ return {
 
   {
     'nvim-treesitter/nvim-treesitter',
-    tag = nil,
-    branch = 'master',
+    -- tag = nil,
+    -- branch = 'master',
+    dependencies = {
+      { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    },
     run = ':TSUpdate',
     config = function()
+      ---@diagnostic disable-next-line: missing-fields
       require 'nvim-treesitter.configs'.setup({
+        auto_install = true,
         ensure_installed = {
           'python', 'markdown', 'markdown_inline',
           'julia', 'bash', 'yaml', 'lua', 'vim',
@@ -152,8 +157,16 @@ return {
     branch = "master",
     event = "BufReadPre",
     dependencies = {
-      { "williamboman/mason-lspconfig.nvim" },
+      { "folke/neoconf.nvim" },
       { "williamboman/mason.nvim" },
+      { "williamboman/mason-lspconfig.nvim" },
+      { 'WhoIsSethDaniel/mason-tool-installer.nvim' },
+      { -- nice loading notifications
+        -- PERF: but can slow down startup
+        'j-hui/fidget.nvim',
+        enabled = true,
+        opts = {},
+      },
       { "hrsh7th/cmp-nvim-lsp" },
       { "folke/neodev.nvim" },
       {
@@ -247,12 +260,12 @@ return {
       -- $home/.config/marksman/config.toml :
       -- [core]
       -- markdown.file_extensions = ["md", "markdown", "qmd"]
-      lspconfig.marksman.setup({
-        on_attach = on_attach_qmd,
-        capabilities = capabilities,
-        filetypes = { "markdown", "quarto", "md", "qmd" },
-        root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
-      })
+      -- lspconfig.marksman.setup({
+      --   on_attach = on_attach_qmd,
+      --   capabilities = capabilities,
+      --   filetypes = { "markdown", "quarto", "md", "qmd" },
+      --   root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
+      -- })
 
       -- -- another optional language server for grammar and spelling
       -- -- <https://github.com/valentjn/ltex-ls>
@@ -262,52 +275,52 @@ return {
       --   filetypes = { "markdown", "tex", "quarto" },
       -- }
 
-      lspconfig.r_language_server.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-        settings = {
-          r = {
-            lsp = {
-              rich_documentation = false,
-            },
-          },
-        },
-      })
+      -- lspconfig.r_language_server.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      --   settings = {
+      --     r = {
+      --       lsp = {
+      --         rich_documentation = false,
+      --       },
+      --     },
+      --   },
+      -- })
 
-      lspconfig.cssls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-      })
-
-      lspconfig.html.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-      })
-
-      lspconfig.emmet_language_server.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-      })
-
-      lspconfig.yamlls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-        settings = {
-          yaml = {
-            schemas = {
-              -- add custom schemas here
-              -- e.g.
-              ["https://raw.githubusercontent.com/hits-mbm-dev/kimmdy/main/src/kimmdy/kimmdy-yaml-schema.json"] =
-              "kimmdy.yml",
-            },
-          },
-        },
-      })
+      -- lspconfig.cssls.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      -- })
+      --
+      -- lspconfig.html.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      -- })
+      --
+      -- lspconfig.emmet_language_server.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      -- })
+      --
+      -- lspconfig.yamlls.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      --   settings = {
+      --     yaml = {
+      --       schemas = {
+      --         -- add custom schemas here
+      --         -- e.g.
+      --         ["https://raw.githubusercontent.com/hits-mbm-dev/kimmdy/main/src/kimmdy/kimmdy-yaml-schema.json"] =
+      --         "kimmdy.yml",
+      --       },
+      --     },
+      --   },
+      -- })
 
       local function strsplit(s, delimiter)
         local result = {}
@@ -336,33 +349,33 @@ return {
 
       -- not upadated yet in automatic mason-lspconfig install,
       -- open mason manually with `<space>vm` and `/` search for lua.
-      lspconfig.lua_ls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-        settings = {
-          Lua = {
-            completion = {
-              callSnippet = "Replace",
-            },
-            runtime = {
-              version = "LuaJIT",
-              plugin = lua_plugin_paths,
-            },
-            diagnostics = {
-              globals = { "vim", "quarto", "pandoc", "io", "string", "print", "require", "table" },
-              disable = { "trailing-space" },
-            },
-            workspace = {
-              library = lua_library_files,
-              checkThirdParty = false,
-            },
-            telemetry = {
-              enable = false,
-            },
-          },
-        },
-      })
+      -- lspconfig.lua_ls.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      --   settings = {
+      --     Lua = {
+      --       completion = {
+      --         callSnippet = "Replace",
+      --       },
+      --       runtime = {
+      --         version = "LuaJIT",
+      --         plugin = lua_plugin_paths,
+      --       },
+      --       diagnostics = {
+      --         globals = { "vim", "quarto", "pandoc", "io", "string", "print", "require", "table" },
+      --         disable = { "trailing-space" },
+      --       },
+      --       workspace = {
+      --         library = lua_library_files,
+      --         checkThirdParty = false,
+      --       },
+      --       telemetry = {
+      --         enable = false,
+      --       },
+      --     },
+      --   },
+      -- })
 
       -- See https://github.com/neovim/neovim/issues/23291
       -- disable lsp watcher.
@@ -379,26 +392,26 @@ return {
       --   end
       -- end
 
-      lspconfig.pyright.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-        settings = {
-          python = {
-            stubPath = vim.fn.stdpath("data") .. "/lazy/python-type-stubs",
-            analysis = {
-              autoSearchPaths = true,
-              useLibraryCodeForTypes = false,
-              diagnosticMode = "openFilesOnly",
-            },
-          },
-        },
-        root_dir = function(fname)
-          return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(
-            fname
-          ) or util.path.dirname(fname)
-        end,
-      })
+      -- lspconfig.pyright.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      --   settings = {
+      --     python = {
+      --       stubPath = vim.fn.stdpath("data") .. "/lazy/python-type-stubs",
+      --       analysis = {
+      --         autoSearchPaths = true,
+      --         useLibraryCodeForTypes = false,
+      --         diagnosticMode = "openFilesOnly",
+      --       },
+      --     },
+      --   },
+      --   root_dir = function(fname)
+      --     return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(
+      --       fname
+      --     ) or util.path.dirname(fname)
+      --   end,
+      -- })
 
       -- lspconfig.jedi_language_server.setup({
       --   on_attach = on_attach,
@@ -466,19 +479,19 @@ return {
       --   end,
       -- })
 
-      lspconfig.julials.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-      })
-
-      lspconfig.bashls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        flags = lsp_flags,
-        filetypes = { "sh", "bash" },
-      })
-
+      -- lspconfig.julials.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      -- })
+      --
+      -- lspconfig.bashls.setup({
+      --   on_attach = on_attach,
+      --   capabilities = capabilities,
+      --   flags = lsp_flags,
+      --   filetypes = { "sh", "bash" },
+      -- })
+      --
       -- Add additional languages here.
       -- See `:h lspconfig-all` for the configuration.
       -- Like e.g. Haskell:
@@ -841,7 +854,7 @@ return {
             end
           end, { "i", "s" }),
         },
-        autocomplete = false,
+        autocomplete = true,
         formatting = {
           format = lspkind.cmp_format {
             with_text = true,
