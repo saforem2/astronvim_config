@@ -1,11 +1,12 @@
 return {
-  -- {
-  --   'folke/neoconf.nvim',
-  --   lazy = false,
-  --   config = function()
-  --     require('neoconf').setup()
-  --   end,
-  -- },
+  {
+    'folke/neoconf.nvim',
+    -- lazy = false,
+    -- lazy = false,
+    -- config = function()
+    --   require('neoconf').setup()
+    -- end,
+  },
   { 'ThePrimeagen/vim-be-good' },
   { "unblevable/quick-scope", },
   { "lvimuser/lsp-inlayhints.nvim" },
@@ -1954,8 +1955,8 @@ return {
 
   {
     "nvim-neotest/nvim-nio",
-    lazy = false,
-    opts = {},
+    -- lazy = false,
+    -- opts = {},
   },
 
 
