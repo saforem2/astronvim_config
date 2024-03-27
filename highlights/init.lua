@@ -1,4 +1,5 @@
 return {
+  ['@markup.quote'] = { fg="#777777", italic=true },
   ['BufferCurrent'] = { bg ="#222222", fg="#cccccc" },
   ['BufferCurrentMod'] = { bg ="#444444", fg="#00ccff" },
   -- NOTE:
