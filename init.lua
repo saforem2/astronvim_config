@@ -95,6 +95,7 @@ return {
     virtual_text = false,
     underline = true,
   },
+
   --     lsp = {
   --     config = {
   --       lua_ls = {
@@ -119,6 +120,9 @@ return {
       --   }
       -- }
     },
+    -- diagnostics = {
+    --   virtual_text = false,
+    -- },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -142,11 +146,18 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      -- "ruff",
-      -- "marksman",
-      -- "pyright"
+      "marksman",
+      "ruff",
+      "basedpyright"
     },
   },
+
+  vim.diagnostic.config({
+    -- Diagnostic settings
+    virtual_text = false,
+    signs = false,
+    underline = false,
+  }),
 
   -- Configure require("lazy").setup() options
   lazy = {
@@ -158,6 +169,19 @@ return {
       },
     },
   },
+  -- local lsp = require('lsp-inlayhints.config')
+  --   nvim_lsp[lsp].setup {
+  --     on_attach = on_attach,
+  --     capabilities=capabilities,
+  --     handlers = {
+  --        ["textDocument/publishDiagnostics"] = vim.lsp.with(
+  --          vim.lsp.diagnostic.on_publish_diagnostics, {
+  --           -- Disable virtual_text
+  --           virtual_text = true
+  --          }
+  --       ),
+  --   }
+  -- }
 
   -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
   --   pattern = { "*.md" },
