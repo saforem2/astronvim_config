@@ -1,3 +1,5 @@
+package.path = package.path .. ";~/.luarocks.share/lua/5.1/?/init.lua;"
+
 return {
   -- Configure AstroNvim updates
   updater = {
