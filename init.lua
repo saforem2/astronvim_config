@@ -148,17 +148,17 @@ return {
     },
     -- enable servers that you already have installed without mason
     servers = {
-      "marksman",
-      "ruff",
-      "basedpyright"
+      -- "marksman",
+      -- "ruff",
+      -- "basedpyright"
     },
   },
 
   vim.diagnostic.config({
     -- Diagnostic settings
     virtual_text = false,
-    signs = false,
-    underline = false,
+    signs = true,
+    underline = true,
   }),
 
   -- Configure require("lazy").setup() options
