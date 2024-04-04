@@ -572,10 +572,11 @@ return {
           { '%(', ')' }, -- % to escape lua pattern char
           { '%[', ']' }, -- % to escape lua pattern char
         },
-        ft_ignore = { 'neorg' },
+        ft_ignore = { 'neorg', 'markdown' },
       })
     end
   },
+
   -- {
   --   'luk400/vim-jukit',
   --   config = function()
@@ -747,77 +748,77 @@ return {
               fat_headline_upper_string = "▃",
               fat_headline_lower_string = "🬂",
           },
-          norg = {
-              query = vim.treesitter.query.parse(
-                  "norg",
-                  [[
-                      [
-                          (heading1_prefix)
-                          (heading2_prefix)
-                          (heading3_prefix)
-                          (heading4_prefix)
-                          (heading5_prefix)
-                          (heading6_prefix)
-                      ] @headline
-
-                      (weak_paragraph_delimiter) @dash
-                      (strong_paragraph_delimiter) @doubledash
-
-                      ([(ranged_tag
-                          name: (tag_name) @_name
-                          (#eq? @_name "code")
-                      )
-                      (ranged_verbatim_tag
-                          name: (tag_name) @_name
-                          (#eq? @_name "code")
-                      )] @codeblock (#offset! @codeblock 0 0 1 0))
-
-                      (quote1_prefix) @quote
-                  ]]
-              ),
-              headline_highlights = { "Headline1", "Headline2" },
-              codeblock_highlight = "CodeBlock",
-              dash_highlight = "Dash",
-              dash_string = "-",
-              doubledash_highlight = "DoubleDash",
-              doubledash_string = "=",
-              quote_highlight = "Quote",
-              quote_string = "┃",
-              fat_headlines = true,
-              fat_headline_upper_string = "▃",
-              fat_headline_lower_string = "🬂",
-          },
-          org = {
-              query = vim.treesitter.query.parse(
-                  "org",
-                  [[
-                      (headline (stars) @headline)
-
-                      (
-                          (expr) @dash
-                          (#match? @dash "^-----+$")
-                      )
-
-                      (block
-                          name: (expr) @_name
-                          (#eq? @_name "SRC")
-                      ) @codeblock
-
-                      (paragraph . (expr) @quote
-                          (#eq? @quote ">")
-                      )
-                  ]]
-              ),
-              headline_highlights = { "Headline" },
-              codeblock_highlight = "CodeBlock",
-              dash_highlight = "Dash",
-              dash_string = "-",
-              quote_highlight = "Quote",
-              quote_string = "┃",
-              fat_headlines = true,
-              fat_headline_upper_string = "▃",
-              fat_headline_lower_string = "🬂",
-          },
+          -- norg = {
+          --     query = vim.treesitter.query.parse(
+          --         "norg",
+          --         [[
+          --             [
+          --                 (heading1_prefix)
+          --                 (heading2_prefix)
+          --                 (heading3_prefix)
+          --                 (heading4_prefix)
+          --                 (heading5_prefix)
+          --                 (heading6_prefix)
+          --             ] @headline
+          --
+          --             (weak_paragraph_delimiter) @dash
+          --             (strong_paragraph_delimiter) @doubledash
+          --
+          --             ([(ranged_tag
+          --                 name: (tag_name) @_name
+          --                 (#eq? @_name "code")
+          --             )
+          --             (ranged_verbatim_tag
+          --                 name: (tag_name) @_name
+          --                 (#eq? @_name "code")
+          --             )] @codeblock (#offset! @codeblock 0 0 1 0))
+          --
+          --             (quote1_prefix) @quote
+          --         ]]
+          --     ),
+          --     headline_highlights = { "Headline1", "Headline2" },
+          --     codeblock_highlight = "CodeBlock",
+          --     dash_highlight = "Dash",
+          --     dash_string = "-",
+          --     doubledash_highlight = "DoubleDash",
+          --     doubledash_string = "=",
+          --     quote_highlight = "Quote",
+          --     quote_string = "┃",
+          --     fat_headlines = true,
+          --     fat_headline_upper_string = "▃",
+          --     fat_headline_lower_string = "🬂",
+          -- },
+          -- org = {
+          --     query = vim.treesitter.query.parse(
+          --         "org",
+          --         [[
+          --             (headline (stars) @headline)
+          --
+          --             (
+          --                 (expr) @dash
+          --                 (#match? @dash "^-----+$")
+          --             )
+          --
+          --             (block
+          --                 name: (expr) @_name
+          --                 (#eq? @_name "SRC")
+          --             ) @codeblock
+          --
+          --             (paragraph . (expr) @quote
+          --                 (#eq? @quote ">")
+          --             )
+          --         ]]
+          --     ),
+          --     headline_highlights = { "Headline" },
+          --     codeblock_highlight = "CodeBlock",
+          --     dash_highlight = "Dash",
+          --     dash_string = "-",
+          --     quote_highlight = "Quote",
+          --     quote_string = "┃",
+          --     fat_headlines = true,
+          --     fat_headline_upper_string = "▃",
+          --     fat_headline_lower_string = "🬂",
+          -- },
       }
     end,
   },
@@ -868,7 +869,7 @@ return {
           enabled = true,
           clear_in_insert_mode = true,
           download_remote_images = true,
-          only_render_image_at_cursor = true,
+          only_render_image_at_cursor = false,
           filetypes = {
             "markdown",
             "qmd",
@@ -876,15 +877,15 @@ return {
             "vimwiki"
           },
         },
-        neorg = {
-          enabled = true,
-          clear_in_insert_mode = true,
-          download_remote_images = true,
-          only_render_image_at_cursor = true,
-          filetypes = {
-            "norg"
-          },
-        },
+        -- neorg = {
+        --   enabled = true,
+        --   clear_in_insert_mode = true,
+        --   download_remote_images = true,
+        --   only_render_image_at_cursor = true,
+        --   filetypes = {
+        --     "norg"
+        --   },
+        -- },
       },
       max_width = nil,
       max_height = nil,
@@ -1364,22 +1365,28 @@ return {
   -- },
 
   {
-      "ixru/nvim-markdown",
-      lazy = false,
-      filetypes = { "markdown" },
-      config = function()
-          vim.cmd('let g:vim_markdown_math = 1')
-          vim.cmd('let g:vim_markdown_frontmatter = 1')
-          vim.cmd('let g:vim_markdown_json_frontmatter = 0')
-          vim.cmd('let g:vim_markdown_toc_autofit = 1')
-          vim.cmd('let g:vim_markdown_conceal = 2')
-          vim.cmd('let g:vim_markdown_folding_style_pythonic = 1')
-          vim.cmd('let g:vim_markdown_override_foldtext = 0')
-          vim.cmd('let g:vim_markdown_conceal_code_blocks = 0')
-          vim.cmd('let g:vim_markdown_strikethrough = 1')
-          vim.cmd('let g:vim_markdown_auto_extension_ext = "qmd"')
-      end,
+    "preservim/vim-markdown",
+    branch = "master",
+    dependencies = { "godlygeek/tabular" },
   },
+
+  -- {
+  --     "ixru/nvim-markdown",
+  --     lazy = false,
+  --     filetypes = { "markdown" },
+  --     config = function()
+  --         vim.cmd('let g:vim_markdown_math = 1')
+  --         vim.cmd('let g:vim_markdown_frontmatter = 1')
+  --         vim.cmd('let g:vim_markdown_json_frontmatter = 0')
+  --         vim.cmd('let g:vim_markdown_toc_autofit = 1')
+  --         vim.cmd('let g:vim_markdown_conceal = 2')
+  --         vim.cmd('let g:vim_markdown_folding_style_pythonic = 1')
+  --         vim.cmd('let g:vim_markdown_override_foldtext = 0')
+  --         vim.cmd('let g:vim_markdown_conceal_code_blocks = 0')
+  --         vim.cmd('let g:vim_markdown_strikethrough = 1')
+  --         vim.cmd('let g:vim_markdown_auto_extension_ext = "qmd"')
+  --     end,
+  -- },
 
   {
     "stevearc/dressing.nvim",
